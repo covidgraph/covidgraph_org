@@ -10,3 +10,6 @@ To help developing the website/web app, all you need is a Structr instance (http
 
 To start development, just import the content of this repo into a running Structr instance using the deployment import which can be found on the dashboard.
 
+The easiest way is to just use the ZIP file from here: https://github.com/covidgraph/covidgraph_org/raw/master/covidgraph-structr-app.zip
+
+![](/structr-dashboard-import.png)
