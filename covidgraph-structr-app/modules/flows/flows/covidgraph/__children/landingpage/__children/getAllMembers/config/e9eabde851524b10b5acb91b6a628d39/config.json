@@ -1,0 +1,9 @@
+{
+  "configJson": "{\"7ba29c0bb748475a9256c3ec493d2234\":[217,233],\"548276c305164731be01ce0421faa16b\":[834,462]}",
+  "validForEditor": "structr-flow-editor@0.1.0",
+  "name": "e9eabde851524b10b5acb91b6a628d39",
+  "visibleToAuthenticatedUsers": true,
+  "visibleToPublicUsers": true,
+  "id": "e9eabde851524b10b5acb91b6a628d39",
+  "type": "FlowContainerConfiguration"
+}

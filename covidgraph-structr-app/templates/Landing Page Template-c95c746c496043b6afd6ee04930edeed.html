@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>COVIDGRAPH Project</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="font/iconsmind/style.css">
+		<link rel="stylesheet" href="font/simple-line-icons/css/simple-line-icons.css">
+
+		<link rel="stylesheet" href="css/vendor/bootstrap-stars.css">
+		<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+		<link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/vendor/bootstrap-stars.css">
+		<link rel="stylesheet" href="css/vendor/video-js.css">
+		<link rel="stylesheet" href="css/dore.light.blue.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/custom.css">
+	</head>
+
+	<body class="show-spinner">
+		<div class="landing-page">
+			<div class="mobile-menu">
+				<a href="#home" class="logo-mobile scrollTo">
+					<span></span>
+				</a>
+				<ul class="navbar-nav">
+					<li class="nav-item"><a href="#what-we-do" class="scrollTo">WHAT WE DO</a></li>
+					<li class="nav-item"><a href="#who-we-are" class="scrollTo">WHO WE ARE</a></li>
+					<li class="nav-item"><a href="#how-to-help" class="scrollTo">HOW TO HELP</a></li>
+					<li class="nav-item"><a href="#data" class="scrollTo">DATA</a></li>
+					<li class="nav-item"><a href="#use-cases" class="scrollTo">USE CASES</a></li>
+					<li class="nav-item">
+						<div class="separator"></div>
+					</li>
+					<li class="nav-item pl-4">
+						<a class="btn btn-outline-semi-light btn-sm pr-4 pl-4" target="_top" href="#get-in-touch">GET IN TOUCH</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="main-container">
+				<nav class="landing-page-nav">
+					<div class="container d-flex align-items-center justify-content-between">
+						<a class="navbar-logo pull-left scrollTo" href="/">
+							<span class="white"></span>
+							<span class="dark"></span>
+						</a>
+						<ul class="navbar-nav d-none d-lg-flex flex-row">
+							<li class="nav-item"><a href="#what-we-do" class="scrollTo">WHAT WE DO</a></li>
+							<li class="nav-item"><a href="#who-we-are" class="scrollTo">WHO WE ARE</a></li>
+							<li class="nav-item"><a href="#how-to-help" class="scrollTo">HOW TO HELP</a></li>
+							<li class="nav-item"><a href="#data" class="scrollTo">DATA</a></li>
+							<li class="nav-item"><a href="#use-cases" class="scrollTo">USE CASES</a></li>
+							<li class="nav-item pl-4">
+								<a class="btn btn-outline-semi-light btn-sm pr-4 pl-4" target="_top" href="#get-in-touch">GET IN TOUCH</a>
+							</li>
+						</ul>
+						<a href="#" class="mobile-menu-button">
+							<i class="simple-icon-menu"></i>
+						</a>
+					</div>
+				</nav>
+
+				<div class="content-container" id="home">
+					
+					<div class="section hero">
+						<div class="container">
+							<div class="row home-row">
+								<div class="col-12 d-block d-md-none">
+									<a href="/" target="_blank">
+										<img alt="mobile hero" class="mobile-hero" src="/img/content-img/neo4j-hero-01-mobile.png">
+									</a>
+								</div>
+
+								<div class="col-12 col-xl-4 col-lg-5 col-md-6">
+									<div class="home-text">
+										<div class="display-1">We Build a<br>Knowledge Graph<br>on COVID-19</div>
+										<p class="white mb-5">
+											The <span class="covid-graph">COVID❋GRAPH</span> project is a voluntary initiative of graph enthusiasts and companies with the goal to build a knowledge graph with relevant information about the COVID-19 virus.
+										</p>
+										<a class="btn btn-outline-semi-light btn-xl mr-2 mb-2 scrollTo" href="#what-we-do">READ MORE <i class="simple-icon-arrow-right"></i></a>
+
+									</div>
+								</div>
+								<div class="col-12 col-xl-7 offset-xl-1 col-lg-7 col-md-6 d-none d-md-block">
+									<img class="hero" alt="hero" src="/img/content-img/neo4j-hero-01.png">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="section">
+						<div class="container" id="what-we-do">
+							<div class="row">
+								<div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center">
+									<h2>What We Do</h2>
+									<p>
+										We build a knowledge graph on COVID-19 that integrates various public datasets. This includes relevant publications, case statistics, genes and functions, molecular data and much more.
+										<br>
+									</p>
+								</div>
+							</div>
+
+							<div class="row feature-row">
+								<div class="col-12 col-md-6 col-lg-5 d-flex align-items-center">
+									<div class="d-flex">
+										<div class="feature-icon-container">
+											<div class="icon-background">
+												<i class="fas fa-fw fa-ban"></i>
+											</div>
+										</div>
+										<div class="feature-text-container">
+											<h3>Open Data in Neo4j</h3>
+											<p>
+												The graph is implemented in Neo4j. A public version is available at:
+												<br>
+												<a target="_blank" href="https://covid.petesis.com:7473">https://covid.petesis.com:7473</a>
+												<br><br>
+												
+												There's also HTTP access available in case of TSL/SSL issues:<br>
+												<a target="_blank" href="http://covid.petesis.com:7474">http://covid.petesis.com:7474</a><br>
+
+												<br>
+												<b>User:</b> public<br>
+												<b>Password:</b> corona
+
+												<br><br>
+												<b>Note: There is an issue with Chrome/Chromium and SSL. Use Firefox/Safari. We are working on a solution.</b>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-6 col-lg-6 offset-lg-1 offset-md-0 position-relative">
+									<div class="background-item-1"></div>
+									<img alt="feature" class="feature-image feature-image-right feature-image-shadow position-relative" src="img/content-img/graph3.png">
+								</div>
+							</div>
+
+							
+							
+							<div class="row feature-row">
+								<div class="col-12 col-md-6 col-lg-6 order-2 order-md-1">
+									<img alt="feature" class="feature-image feature-image-left feature-image-charts feature-image-shadow" src="/img/content-img/schema-graph-yed.png">
+								</div>
+
+								<div class="col-12 col-md-6 offset-md-0 col-lg-5 offset-lg-1 d-flex align-items-center order-1 order-md-2">
+									<div class="d-flex">
+										<div class="feature-icon-container">
+											<div class="icon-background">
+												<i class="fas fa-fw fa-ban"></i>
+											</div>
+										</div>
+										<div class="feature-text-container">
+											<h3>Schema</h3>
+											<p>										
+												The schema describes the structure of the graph data. The diagram on the left was created with yEd Live and can be viewed in an interactive diagram editor provided by yWorks <a target="_blank" href="https://www.yworks.com/yed-live/?file=https://gist.githubusercontent.com/yGuy/27c2412bbf0724464c396fe2dc2a6851/raw/1bbd411619478ba1d500cea079de4d25ce947707/CovidGraphSchemaCleaned">here</a>.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+<!-- Who we are -->					
+					<div class="section background">
+						<div class="container" id="who-we-are">
+							<div class="row">
+								<div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center">
+									<h2>Who we are</h2>
+									<p>
+										We are a diverse team of scientists, developers and data people from academia and industry.
+										<br>
+										We are from Kaiser &amp; Preusse, yWorks, Prodyna, Neo4j, University of Freiburg, Structr and more to come!
+									</p>
+								</div>
+							</div>							
+							<div class="row">
+								<div class="col-12 p-0">
+									<div class="owl-container">
+										<div class="owl-carousel home-carousel">
+${include('Member Card Landing Page 1')}
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 p-0">
+									<div class="owl-container">
+										<div class="owl-carousel home-carousel">
+${include('Member Card Landing Page 2')}
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 offset-0 col-lg-6 offset-lg-3 newsletter-input-container">
+									<div class="text-center mb-3">
+										<a class="btn btn-secondary btn-xl" target="_top" href="/team">TEAM PAGE</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="section mb-0">
+						<div class="container" id="data">
+
+							<div class="row mb-5">
+								<div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center">
+									<h2>Data</h2>
+									<p>
+										We integrate data from various sources and link them in our knowledge graph:
+									</p>
+								</div>
+							</div>
+
+							<div class="row pt-5">
+
+								<div class="col-12 col-md-6 col-lg-6 mb-3">
+									<h3>COVID-19 Open Research Dataset (CORD-19)</h3>
+
+									<p>In response to the COVID-19 pandemic, the Allen Institute for AI has partnered with leading research groups to prepare and distribute the COVID-19 Open Research Dataset (CORD-19), a free resource of over 44,000 scholarly articles, including over 29,000 with full text, about COVID-19 and the coronavirus family of viruses for use by the global research community.</p>
+									<a href="https://pages.semanticscholar.org/coronavirus-research">https://pages.semanticscholar.org/coronavirus-research</a>
+								</div>
+								<div class="col-12 col-md-6 col-lg-6 mb-3">
+									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="/img/content-img/semantic-scholar-corona.jpg">
+								</div>
+								<div class="col-12 mb-5">
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-6 mb-3 pl-3">
+									<h3>The Lens COVID-19 Datasets</h3>
+									<p>
+										The Lens has assembled free and open datasets of patent documents, scholarly research works metadata and biological sequences from patents, and deposited them in a machine-readable and explorable form.</p>
+									<a href="https://about.lens.org/covid-19/">https://about.lens.org/covid-19/</a>
+								</div>
+								<div class="col-12 col-md-6 col-lg-6 mb-3">
+									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="/img/content-img/the-lens-covid-19.jpg">
+								</div>
+								<div class="col-12 mb-5">
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-6 mb-3 pl-3">
+									<h3>Ensembl Genome Browser</h3>
+									<p>
+										Ensembl is a genome browser for vertebrate genomes that supports research in comparative genomics, evolution, sequence variation and transcriptional regulation. Ensembl annotate genes, computes multiple alignments, predicts regulatory function and collects disease data. Ensembl tools include BLAST, BLAT, BioMart and the Variant Effect Predictor (VEP) for all supported species.</p>
+									<a href="http://www.ensembl.org">http://www.ensembl.org</a>
+								</div>
+								<div class="col-12 col-md-6 col-lg-6 mb-3">
+									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="/img/content-img/ensembl-org.jpg">
+								</div>
+								<div class="col-12 mb-5">
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-6 mb-3 pl-3">
+									<h3>NCBI Gene Database</h3>
+									<p>
+										Gene integrates information from a wide range of species. A record may include nomenclature, Reference Sequences (RefSeqs), maps, pathways, variations, phenotypes, and links to genome-, phenotype-, and locus-specific resources worldwide.</p>
+									<a href="https://www.ncbi.nlm.nih.gov/gene">https://www.ncbi.nlm.nih.gov/gene</a>
+								</div>
+								<div class="col-12 col-md-6 col-lg-6 mb-3">
+									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="/img/content-img/NCBI Gene Database.png">
+								</div>
+								<div class="col-12 mb-5">
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-6 mb-3 pl-3">
+									<h3>The Gene Ontology Resource</h3>
+									<p>The Gene Ontology (GO) knowledgebase is the world’s largest source of information on the functions of genes. This knowledge is both human-readable and machine-readable, and is a foundation for computational analysis of large-scale molecular biology and genetics experiments in biomedical research.</p>
+									<a href="http://geneontology.org">http://geneontology.org</a>
+								</div>
+								<div class="col-12 col-md-6 col-lg-6 mb-3">
+									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="/img/content-img/gene-ontology-org.jpg">
+								</div>
+								<div class="col-12 mb-5">
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-6 mb-3 pl-3">
+									<h3>Experimental data from clinical studies and molecular genetics</h3>
+									<p>(t.b.d.)</p>
+									<a href=""></a>
+								</div>
+								<div class="col-12 col-md-6 col-lg-6 mb-3">
+									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="/img/landing-page/layout-11.jpg">
+								</div>
+								<div class="col-12 mb-5">
+								</div>
+							
+								<div class="col-12 col-md-6 col-lg-6 mb-3 pl-3">
+									<h3>2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE</h3>
+									<p>This is the data repository for the 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE). Also, Supported by ESRI Living Atlas Team and the Johns Hopkins University Applied Physics Lab (JHU APL).</p>
+									<a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a>
+								</div>
+								<div class="col-12 col-md-6 col-lg-6 mb-3">
+									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="https://covidgraph.org/img/content-img/github-john-s-hopkins.png">
+								</div>
+								<div class="col-12 mb-5">
+								</div>
+								
+								<div class="col-12 col-md-6 col-lg-6 mb-3 pl-3">
+									<h3>United Nations World Population Prospects 2019</h3>
+									<p>The 2019 Revision of World Population Prospects is the twenty-sixth round of official United Nations population estimates and projections that have been prepared by the Population Division of the Department of Economic and Social Affairs of the United Nations Secretariat.</p>
+									<a href="https://population.un.org/wpp/">https://population.un.org/wpp/</a>
+								</div>
+								<div class="col-12 col-md-6 col-lg-6 mb-3">
+									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="https://covidgraph.org/img/content-img/united-nations-population-data.png">
+								</div>
+								<div class="col-12 mb-5">
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<!--div class="section background">
+						<div class="container" id="apps">
+							<div class="row">
+								<div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center mb-4">
+									<h2>Use Cases</h2>
+
+									<p class="section-text">
+										Cross reference case data and population data
+										<br>
+
+									</p>
+								</div>
+							</div>
+
+							<div class="row screenshots">
+								<div class="col-12 text-center mb-4">
+									<ul class="nav nav-tabs justify-content-center mb-4" role="tablist">
+										<li class="nav-item">
+											<a class="nav-link active" data-toggle="tab" href="#library" role="tab">
+												<p>Library</p>
+											</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" data-toggle="tab" href="#survey" role="tab">
+												<p>Survey</p>
+											</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" data-toggle="tab" href="#chat" role="tab">
+												<p>Chat</p>
+											</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" data-toggle="tab" href="#todo" role="tab">
+												<p>Todo</p>
+											</a>
+										</li>
+									</ul>
+									<div class="tab-content">
+										<div class="tab-pane fade show active justify-content-center" id="library" role="tabpanel">
+											<a target="_blank" href="https://dore-jquery.coloredstrategies.com/Apps.MediaLibrary.html">
+												<img alt="app image" class="app-image" src="img/landing-page/application-library.jpg">
+											</a>
+										</div>
+										<div class="tab-pane fade justify-content-center" id="survey" role="tabpanel">
+											<a target="_blank" href="https://dore-jquery.coloredstrategies.com/Apps.Survey.List.html">
+												<img alt="app image" class="app-image" src="img/landing-page/application-survey.jpg">
+											</a>
+										</div>
+										<div class="tab-pane fade justify-content-center" id="chat" role="tabpanel">
+											<a target="_blank" href="https://dore-jquery.coloredstrategies.com/Apps.Chat.html">
+												<img alt="app image" class="app-image" src="img/landing-page/application-chat.jpg">
+											</a>
+										</div>
+										<div class="tab-pane fade justify-content-center" id="todo" role="tabpanel">
+											<a target="_blank" href="https://dore-jquery.coloredstrategies.com/Apps.Todo.List.html">
+												<img alt="app image" class="app-image" src="img/landing-page/application-todo.jpg">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div-->
+
+					<div class="section">
+						<div class="container" id="how-to-help">
+							<div class="row">
+								<div class="col-12 offset-0 col-lg-8 offset-lg-2">
+									<h2>How to Help</h2>
+									<p>
+										We need your help to learn more about Covid-19! You can help with:
+										<ul>
+											<li>data analysis on the integrated data set</li>
+											<li>load more datasets to Neo4j</li>
+											<li>improve our website</li>
+											<li>communicate and share our project</li>
+										</ul>
+									</p>
+								</div>
+							</div>
+
+							<!--div class="row pt-5">
+
+								<div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5">
+									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="img/landing-page/layout-1.jpg">
+									<h4 class="text-center">data analysis on the integrated data set</h4>
+								</div>
+
+								<div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5">
+									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="img/landing-page/layout-2.jpg">
+									<h4 class="text-center">load more datasets to Neo4j</h4>
+								</div>
+
+								<div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5">
+									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="img/landing-page/layout-3.jpg">
+									<h4 class="text-center">improve our website</h4>
+								</div>
+
+								<div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5">
+									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="img/landing-page/layout-4.jpg">
+									<h4 class="text-center">communicate and share our project</h4>
+								</div>
+
+
+							</div-->
+						</div>
+					</div>
+
+					<div class="section background background-no-bottom mb-0">
+						<div class="container" id="get-in-touch">
+							<div class="row">
+								<div class="col-12 offset-0 col-lg-8 offset-lg-2">
+									<h2>Get in Touch</h2>
+									<p>
+										We use <a href="https://matrix.org">Matrix</a> to communicate. It's a free and federated Slack.
+										<br><br>
+										<a href="https://about.riot.im/">Riot</a> is the standard client for Matrix.
+										<br><br>
+										How to get started:
+										<br>
+									</p>
+									<ul>
+										<li>Download Riot or start the web app: <a href="https://about.riot.im/downloads">https://about.riot.im/downloads</a></li>
+										<li>When asked to login/signup: create a free account on the matrix.org homeserver</li>
+										<li>Contact <code>@mpreusse:matrix.org</code> on Riot!</li>
+									</ul>
+									(If this does not work you can contact us by email: martin.preusse@gmail.com)
+								</div>
+
+								<div class="col-12 offset-0 col-lg-6 offset-lg-3 newsletter-input-container">
+									<div class="text-center mb-3">
+										<a class="btn btn-secondary btn-xl" target="_top" href="https://about.riot.im/downloads">DOWNLOAD RIOT</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="section footer mb-0">
+						<div class="container">
+							<div class="row footer-row">
+								<div class="col-12 text-right">
+									<a class="btn btn-circle btn-outline-semi-light footer-circle-button scrollTo" href="#home" id="footerCircleButton"><i class="simple-icon-arrow-up"></i></a>
+								</div>
+								<div class="col-12 text-center footer-content">
+									<a href="#home" class="scrollTo">
+										<img class="footer-logo" alt="footer logo" src="img/virus-logo.svg">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="separator mt-5"></div>
+						<div class="container copyright pt-5 pb-5">
+							<div class="row">
+								<div class="col-12"></div>
+								<div class="col-12 text-center">
+									<p class="mb-0">2020 © The COVID❋GRAPH Project.</p>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<script src="js/vendor/jquery-3.3.1.min.js"></script>
+		<script src="js/vendor/bootstrap.bundle.min.js"></script>
+		<script src="js/vendor/owl.carousel.min.js"></script>
+		<script src="js/vendor/jquery.barrating.min.js"></script>
+		<script src="js/vendor/jquery.barrating.min.js"></script>
+		<script src="js/vendor/landing-page/headroom.min.js"></script>
+		<script src="js/vendor/landing-page/jQuery.headroom.js"></script>
+		<script src="js/vendor/landing-page/jquery.scrollTo.min.js"></script>
+		<script src="js/vendor/landing-page/jquery.autoellipsis.js"></script>
+		<script src="js/dore.scripts.landingpage.js"></script>
+		<script src="js/scripts.single.theme.js"></script>
+	</body>
+
+</html>

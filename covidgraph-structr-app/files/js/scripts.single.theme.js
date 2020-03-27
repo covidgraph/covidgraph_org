@@ -1,0 +1,1 @@
+!function(o){o().dropzone&&(Dropzone.autoDiscover=!1);o("body").dore()}(jQuery);

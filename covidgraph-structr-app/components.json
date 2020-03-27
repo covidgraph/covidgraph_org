@@ -1,0 +1,58 @@
+{
+  "Landing Page Template-c95c746c496043b6afd6ee04930edeed": {
+    "contentType": "text/html",
+    "id": "c95c746c496043b6afd6ee04930edeed",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "Member Card 1-57605fb0c4ae40148682f7958c03af11": {
+    "contentType": "text/html",
+    "id": "57605fb0c4ae40148682f7958c03af11",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "Member Card 2-e668f2d7232e4032bdc71f0d8af24db1": {
+    "contentType": "text/html",
+    "id": "e668f2d7232e4032bdc71f0d8af24db1",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "Member Card 3-826f74e2e48745d49dcc6d676b984c34": {
+    "contentType": "text/html",
+    "id": "826f74e2e48745d49dcc6d676b984c34",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "Member Card Landing Page 1-a54fd4e81cb245d2a798e1810204dc1f": {
+    "contentType": "text/html",
+    "id": "a54fd4e81cb245d2a798e1810204dc1f",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "Member Card Landing Page 2-ab8c3f0ddc21428d8c7160263b928d41": {
+    "contentType": "text/html",
+    "id": "ab8c3f0ddc21428d8c7160263b928d41",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "Member Card Small-fcc7e9c4af9b46b99386ab4efa2b2539": {
+    "contentType": "text/html",
+    "id": "fcc7e9c4af9b46b99386ab4efa2b2539",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "Sub Page Template-03c69b87b4f8420186f9393f469c678d": {
+    "contentType": "text/html",
+    "id": "03c69b87b4f8420186f9393f469c678d",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  }
+}

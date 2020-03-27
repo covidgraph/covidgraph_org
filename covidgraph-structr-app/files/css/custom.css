@@ -1,0 +1,228 @@
+b, strong {
+	font-weight: 700;
+}
+
+.landing-page b, .landing-page strong {
+	color: #555;
+}
+
+.landing-page .section.home {
+	background: none;
+}
+
+.landing-page h1,
+.landing-page h2,
+.landing-page h3,
+.landing-page h4,
+.landing-page h5,
+.landing-page h6 {
+	font-family: var(--font-family-special);
+}
+
+.landing-page img.hero {
+	width: 50rem;
+}
+
+.landing-page .section.hero {
+	/*background-image: url('/img/coronavirus-header-big.jpg');*/
+	background:linear-gradient(rgba(30,30,30,0.2),rgba(30,30,30,0.2)), url('/img/coronavirus-header-big.jpg') center center no-repeat;
+	background-repeat: no-repeat;
+	background-position-y: 0;
+	background-color: transparent;
+	height: calc(600px + 10vw);
+	padding-top: 0;
+	padding-bottom: 0;
+	position: relative;
+	background-size: cover;
+}
+
+
+.landing-page .section.hero-subpage {
+	/*background-image: url('/img/coronavirus-header-big.jpg');*/
+	background:linear-gradient(rgba(30,30,30,0.2),rgba(30,30,30,0.2)), url('/img/coronavirus-header-big.jpg') center center no-repeat;
+	background-repeat: no-repeat;
+	background-position-y: 0;
+	background-color: transparent;
+	height: 120px;
+	padding-top: 0;
+	padding-bottom: 0;
+	position: relative;
+	background-size: cover;
+	margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+	.landing-page .section.hero {
+		height: 920px;
+	}
+}
+
+.landing-page .logo-mobile span {
+	font-family: var(--font-family-logo);
+	font-size: 1em;
+	color: #333;
+	margin-left: 62px;
+}
+
+.landing-page .landing-page-nav .navbar-logo .white {
+	font-family: var(--font-family-logo);
+	margin-left: 114px;
+	font-weight: 400;
+}
+
+.landing-page .landing-page-nav .navbar-logo .white:before {
+	content: 'COVID';
+	font-size: 64px;
+	margin-left: -114px;
+	line-height: 49px;
+}
+
+.landing-page .landing-page-nav .navbar-logo .white:after {
+	content: 'GRAPH';
+	font-size: 64px;
+	margin-left: 44px;
+	line-height: 49px;
+}
+
+
+.landing-page .logo-mobile span:before {
+    content: 'COVID';
+    font-size: 47px;
+    margin-left: -84px;
+    line-height: 37px;
+}
+
+.landing-page .logo-mobile span:after {
+    content: 'GRAPH';
+    font-size: 47px;
+    margin-left: 33px;
+    line-height: 37px;
+}
+
+.landing-page h2 {
+	font-size: 4rem;
+	line-height: 3rem;
+}
+
+.landing-page h2 + p {
+	font-weight: 200;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+}
+
+.landing-page h3 {
+	font-size: 3rem;
+	line-height: 3rem;
+	margin-bottom: 2rem;
+}
+
+.landing-page h3 + p {
+	font-weight: 200;
+	font-size: 1.1rem;
+	line-height: 1.8rem;
+}
+
+.landing-page h4 {
+	font-size: 2rem;
+	line-height: 2rem;
+	margin-bottom: 1rem;
+}
+
+.landing-page {
+	font-size: 1.2rem;
+	line-height: 2rem;
+}
+
+.landing-page .home-text p {
+    color: #fff;
+    font-size: 1.2rem;
+	line-height: 2rem;
+}
+
+.landing-page .detail-text {
+}
+
+.landing-page .home-carousel .card .detail-text {
+    padding: 1rem .25rem;
+    margin-bottom: 0;
+}
+
+.owl-item .card .card-body {
+    flex-direction: column;
+    display: block;
+    justify-content: space-between;
+}
+
+.landing-page .btn-outline-semi-light {
+    background-color: rgba(91,158,45,0.75);
+}
+
+.landing-page .btn-outline-semi-light:hover {
+    background-color: rgba(91,158,45,0.5);
+	border-color: rgba(91,158,45,0.75);
+}
+
+.landing-page .landing-page-nav.headroom--not-top.headroom--pinned .navbar-nav .btn-outline-semi-light {
+    border-color: rgba(91,158,45,0.75);
+    color: #fff;
+}
+
+.landing-page .feature-image {
+    width: 50em;
+}
+
+.landing-page .feature-image-shadow {
+    box-shadow: 0 0 100px rgba(125,125,125,.1);
+    border-radius: 10px;
+}
+
+.landing-page .font-weight-semibold {
+    font-weight: 400;
+}
+
+.landing-page .img-fluid, .img-thumbnail {
+    max-width: 85%;
+}
+
+.landing-page .section.footer {
+	margin-top: 0;
+	padding-top: 0;
+	background-image: none;
+    background-color: #222;
+    background-repeat: no-repeat;
+    padding-bottom: 0;
+    background-size: cover;
+    background-size: auto 1100px;
+}
+
+.landing-page .footer .footer-content {
+    padding-top: 0;
+}
+
+.subpage .card {
+	font-size: 1rem;
+	width: calc(25% - 2rem);
+	height: calc(42rem - 9vw);
+	display: inline-block;
+	float: left;
+	margin: 1rem;
+}
+
+.subpage .card h4 {
+	height: 3rem;
+}
+
+.subpage .card .card-body .detail-text {
+	margin-top: 1rem;
+	font-size: .8rem;
+	line-height: 1.3rem;
+}
+
+.subpage .card img {
+	width: 8rem;
+	padding-bottom: 1rem;
+}
+
+.subpage .card-body > div:first-child {
+	text-align: center;
+}
