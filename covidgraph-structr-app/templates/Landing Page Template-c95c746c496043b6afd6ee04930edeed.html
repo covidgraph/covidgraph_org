@@ -63,7 +63,7 @@
 				</nav>
 
 				<div class="content-container" id="home">
-					
+
 					<div class="section hero">
 						<div class="container">
 							<div class="row home-row">
@@ -117,7 +117,7 @@
 												<br>
 												<a target="_blank" href="https://covid.petesis.com:7473">https://covid.petesis.com:7473</a>
 												<br><br>
-												
+
 												There's also HTTP access available in case of TSL/SSL issues:<br>
 												<a target="_blank" href="http://covid.petesis.com:7474">http://covid.petesis.com:7474</a><br>
 
@@ -137,8 +137,8 @@
 								</div>
 							</div>
 
-							
-							
+
+
 							<div class="row feature-row">
 								<div class="col-12 col-md-6 col-lg-6 order-2 order-md-1">
 									<img alt="feature" class="feature-image feature-image-left feature-image-charts feature-image-shadow" src="/img/content-img/schema-graph-yed.png">
@@ -164,44 +164,60 @@
 						</div>
 					</div>
 
-<!-- Who we are -->					
+					<!-- Who we are -->					
 					<div class="section background">
 						<div class="container" id="who-we-are">
-							<div class="row">
+							<div class="row mb-3">
 								<div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center">
 									<h2>Who we are</h2>
 									<p>
 										We are a diverse team of scientists, developers and data people from academia and industry.
-										<br>
-										We are from Kaiser &amp; Preusse, yWorks, Prodyna, Neo4j, University of Freiburg, Structr and more to come!
 									</p>
 								</div>
-							</div>							
-							<div class="row">
-								<div class="col-12 p-0">
-									<div class="owl-container">
-										<div class="owl-carousel home-carousel">
-${include('Member Card Landing Page 1')}
-										</div>
-									</div>
-								</div>
 							</div>
 							<div class="row">
-								<div class="col-12 p-0">
-									<div class="owl-container">
-										<div class="owl-carousel home-carousel">
-${include('Member Card Landing Page 2')}
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-12 offset-0 col-lg-6 offset-lg-3 newsletter-input-container">
-									<div class="text-center mb-3">
+								<div class="col-12 offset-0 col-lg-6 offset-lg-3">
+									<div class="text-center mb-5">
 										<a class="btn btn-secondary btn-xl" target="_top" href="/team">TEAM PAGE</a>
 									</div>
 								</div>
 							</div>
+							<div class="row company-logos">
+								<style type="text/css">
+									.company-logos > div {
+										text-align: center;
+									}
+									.company-logos .helper {
+										display: inline-block;
+										height: 100%;
+										vertical-align: middle;
+									}
+									.company-logos img {
+										vertical-align: middle;
+										max-width: 200px;
+										max-height: 100px;
+										margin-bottom: 50px;
+										/*filter: gray;
+										-webkit-filter: grayscale(1);
+										filter: grayscale(1);*/
+									}
+									.company-logos img:hover {
+										filter: none;
+										-webkit-filter: grayscale(0);
+									}
+								</style>
+								<div class="col-lg-3 col-md-4 col-sm-6 p-0"><span class="helper"></span><a href="https://kaiser-preusse.com/"><img src="/img/company-logos/kaiser-preusse.jpg"></a></div>
+								<div class="col-lg-3 col-md-4 col-sm-6 p-0"><span class="helper"></span><a href="https://www.dzd-ev.de/en/"><img src="/img/company-logos/DZD_Logo.svg"></a></div>
+								<div class="col-lg-3 col-md-4 col-sm-6 p-0"><span class="helper"></span><a href="https://www.yworks.com/"><img src="/img/company-logos/yWorks_logo.svg"></a></div>
+								<div class="col-lg-3 col-md-4 col-sm-6 p-0"><span class="helper"></span><a href="https://www.uni-freiburg.de/?set_language=en"><img src="/img/company-logos/uni-freiburg_logo.svg"></a></div>
+								<div class="col-lg-3 col-md-4 col-sm-6 p-0"><span class="helper"></span><a href="https://www.prodyna.com/"><img src="/img/company-logos/prodyna_logo.png"></a></div>
+								<div class="col-lg-3 col-md-4 col-sm-6 p-0"><span class="helper"></span><a href="https://www.qnit.de/en/"><img src="/img/company-logos/Qnit_logo_blue_Signatur.jpg"></a></div>
+								<div class="col-lg-3 col-md-4 col-sm-6 p-0"><span class="helper"></span><a href="https://structr.com/"><img src="/img/company-logos/structr_141414_300dpi.png"></a></div>
+								<div class="col-lg-3 col-md-4 col-sm-6 p-0"><span class="helper"></span><a href="https://neo4.com/"><img src="/img/company-logos/neo4j_logo.svg"></a></div>
+								<div class="col-lg-3 col-md-4 col-sm-6 p-0"><span class="helper"></span><a href="https://graphaware.com/"><img src="/img/company-logos/graphaware_logo.png"></a></div>
+								<div class="col-lg-3 col-md-4 col-sm-6 p-0"><span class="helper"></span><a href="http://graphileon.com/"><img src="/img/company-logos/graphileonlogo.png"></a></div>
+							</div>
+
 						</div>
 					</div>
 
@@ -289,7 +305,7 @@ ${include('Member Card Landing Page 2')}
 								</div>
 								<div class="col-12 mb-5">
 								</div>
-							
+
 								<div class="col-12 col-md-6 col-lg-6 mb-3 pl-3">
 									<h3>2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE</h3>
 									<p>This is the data repository for the 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE). Also, Supported by ESRI Living Atlas Team and the Johns Hopkins University Applied Physics Lab (JHU APL).</p>
@@ -300,7 +316,7 @@ ${include('Member Card Landing Page 2')}
 								</div>
 								<div class="col-12 mb-5">
 								</div>
-								
+
 								<div class="col-12 col-md-6 col-lg-6 mb-3 pl-3">
 									<h3>United Nations World Population Prospects 2019</h3>
 									<p>The 2019 Revision of World Population Prospects is the twenty-sixth round of official United Nations population estimates and projections that have been prepared by the Population Division of the Department of Economic and Social Affairs of the United Nations Secretariat.</p>
@@ -315,72 +331,18 @@ ${include('Member Card Landing Page 2')}
 						</div>
 					</div>
 
-
-					<!--div class="section background">
-						<div class="container" id="apps">
+					<div class="section background">
+						<div class="container" id="use-cases">
 							<div class="row">
-								<div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center mb-4">
+								<div class="col-12 offset-0 col-lg-8 offset-lg-2">
 									<h2>Use Cases</h2>
-
-									<p class="section-text">
-										Cross reference case data and population data
-										<br>
-
-									</p>
-								</div>
-							</div>
-
-							<div class="row screenshots">
-								<div class="col-12 text-center mb-4">
-									<ul class="nav nav-tabs justify-content-center mb-4" role="tablist">
-										<li class="nav-item">
-											<a class="nav-link active" data-toggle="tab" href="#library" role="tab">
-												<p>Library</p>
-											</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link" data-toggle="tab" href="#survey" role="tab">
-												<p>Survey</p>
-											</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link" data-toggle="tab" href="#chat" role="tab">
-												<p>Chat</p>
-											</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link" data-toggle="tab" href="#todo" role="tab">
-												<p>Todo</p>
-											</a>
-										</li>
-									</ul>
-									<div class="tab-content">
-										<div class="tab-pane fade show active justify-content-center" id="library" role="tabpanel">
-											<a target="_blank" href="https://dore-jquery.coloredstrategies.com/Apps.MediaLibrary.html">
-												<img alt="app image" class="app-image" src="img/landing-page/application-library.jpg">
-											</a>
-										</div>
-										<div class="tab-pane fade justify-content-center" id="survey" role="tabpanel">
-											<a target="_blank" href="https://dore-jquery.coloredstrategies.com/Apps.Survey.List.html">
-												<img alt="app image" class="app-image" src="img/landing-page/application-survey.jpg">
-											</a>
-										</div>
-										<div class="tab-pane fade justify-content-center" id="chat" role="tabpanel">
-											<a target="_blank" href="https://dore-jquery.coloredstrategies.com/Apps.Chat.html">
-												<img alt="app image" class="app-image" src="img/landing-page/application-chat.jpg">
-											</a>
-										</div>
-										<div class="tab-pane fade justify-content-center" id="todo" role="tabpanel">
-											<a target="_blank" href="https://dore-jquery.coloredstrategies.com/Apps.Todo.List.html">
-												<img alt="app image" class="app-image" src="img/landing-page/application-todo.jpg">
-											</a>
-										</div>
-									</div>
+									<p>Scientists around the world have been given the task to work on covid19. Many publications around the virus have been published in the past months, but relevant work around the family of coronaviruses already existed before covid 19 appeared.</p>
+									<p>We would like to help researchers and scientists to quickly and efficiently find their way through the more than 40.000 existing publications. We provide them with tools that use artificial intelligence, advanced visualization techniques, and intuitive user interfaces to explore papers and patents around the family of the corona viruses, existing treatments and medications.</p>
 								</div>
 							</div>
 						</div>
-					</div-->
-
+					</div>
+				
 					<div class="section">
 						<div class="container" id="how-to-help">
 							<div class="row">
@@ -397,105 +359,95 @@ ${include('Member Card Landing Page 2')}
 									</p>
 								</div>
 							</div>
-
-							<!--div class="row pt-5">
-
-								<div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5">
-									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="img/landing-page/layout-1.jpg">
-									<h4 class="text-center">data analysis on the integrated data set</h4>
-								</div>
-
-								<div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5">
-									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="img/landing-page/layout-2.jpg">
-									<h4 class="text-center">load more datasets to Neo4j</h4>
-								</div>
-
-								<div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5">
-									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="img/landing-page/layout-3.jpg">
-									<h4 class="text-center">improve our website</h4>
-								</div>
-
-								<div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5">
-									<img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="img/landing-page/layout-4.jpg">
-									<h4 class="text-center">communicate and share our project</h4>
-								</div>
-
-
-							</div-->
 						</div>
 					</div>
-
-					<div class="section background background-no-bottom mb-0">
-						<div class="container" id="get-in-touch">
-							<div class="row">
-								<div class="col-12 offset-0 col-lg-8 offset-lg-2">
-									<h2>Get in Touch</h2>
-									<p>
-										We use <a href="https://matrix.org">Matrix</a> to communicate. It's a free and federated Slack.
-										<br><br>
-										<a href="https://about.riot.im/">Riot</a> is the standard client for Matrix.
-										<br><br>
-										How to get started:
-										<br>
-									</p>
-									<ul>
-										<li>Download Riot or start the web app: <a href="https://about.riot.im/downloads">https://about.riot.im/downloads</a></li>
-										<li>When asked to login/signup: create a free account on the matrix.org homeserver</li>
-										<li>Contact <code>@mpreusse:matrix.org</code> on Riot!</li>
-									</ul>
-									(If this does not work you can contact us by email: martin.preusse@gmail.com)
-								</div>
-
-								<div class="col-12 offset-0 col-lg-6 offset-lg-3 newsletter-input-container">
-									<div class="text-center mb-3">
-										<a class="btn btn-secondary btn-xl" target="_top" href="https://about.riot.im/downloads">DOWNLOAD RIOT</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-					<div class="section footer mb-0">
-						<div class="container">
-							<div class="row footer-row">
-								<div class="col-12 text-right">
-									<a class="btn btn-circle btn-outline-semi-light footer-circle-button scrollTo" href="#home" id="footerCircleButton"><i class="simple-icon-arrow-up"></i></a>
-								</div>
-								<div class="col-12 text-center footer-content">
-									<a href="#home" class="scrollTo">
-										<img class="footer-logo" alt="footer logo" src="img/virus-logo.svg">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="separator mt-5"></div>
-						<div class="container copyright pt-5 pb-5">
-							<div class="row">
-								<div class="col-12"></div>
-								<div class="col-12 text-center">
-									<p class="mb-0">2020 © The COVID❋GRAPH Project.</p>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
 				</div>
-			</div>
-		</div>
 
-		<script src="js/vendor/jquery-3.3.1.min.js"></script>
-		<script src="js/vendor/bootstrap.bundle.min.js"></script>
-		<script src="js/vendor/owl.carousel.min.js"></script>
-		<script src="js/vendor/jquery.barrating.min.js"></script>
-		<script src="js/vendor/jquery.barrating.min.js"></script>
-		<script src="js/vendor/landing-page/headroom.min.js"></script>
-		<script src="js/vendor/landing-page/jQuery.headroom.js"></script>
-		<script src="js/vendor/landing-page/jquery.scrollTo.min.js"></script>
-		<script src="js/vendor/landing-page/jquery.autoellipsis.js"></script>
-		<script src="js/dore.scripts.landingpage.js"></script>
-		<script src="js/scripts.single.theme.js"></script>
+				<div class="section background background-no-bottom mb-0">
+					<div class="container" id="get-in-touch">
+						<div class="row">
+							<div class="col-12 offset-0 col-lg-8 offset-lg-2">
+								<h2>Get in Touch</h2>
+								<p>
+									We use <a href="https://matrix.org">Matrix</a> to communicate. It's a free and federated Slack.
+									<br><br>
+									<a href="https://about.riot.im/">Riot</a> is the standard client for Matrix.
+									<br><br>
+									How to get started:
+									<br>
+								</p>
+								<ul>
+									<li>Download Riot or start the web app: <a href="https://about.riot.im/downloads">https://about.riot.im/downloads</a></li>
+									<li>When asked to login/signup: create a free account on the matrix.org homeserver</li>
+									<li>Contact <code>@mpreusse:matrix.org</code> on Riot!</li>
+								</ul>
+								(If this does not work you can contact us by email: martin.preusse@gmail.com)
+							</div>
+
+							<div class="col-12 offset-0 col-lg-6 offset-lg-3 newsletter-input-container">
+								<div class="text-center mb-3">
+									<a class="btn btn-secondary btn-xl" target="_top" href="https://about.riot.im/downloads">DOWNLOAD RIOT</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="section footer mb-0">
+					<div class="container">
+						<div class="row footer-row">
+							<div class="col-12 text-right">
+								<a class="btn btn-circle btn-outline-semi-light footer-circle-button scrollTo" href="#home" id="footerCircleButton"><i class="simple-icon-arrow-up"></i></a>
+							</div>
+							<div class="col-12 text-center footer-content">
+								<a href="#home" class="scrollTo">
+									<img class="footer-logo" alt="footer logo" src="img/virus-logo.svg">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="separator mt-5"></div>
+					<div class="container copyright pt-5 pb-5">
+						<div class="row">
+							<div class="col-12"></div>
+							<div class="col-12 text-center">
+								<p class="mb-0">2020 © The COVID❋GRAPH Project.</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<script src="js/vendor/jquery-3.3.1.min.js"></script>
+			<script src="js/vendor/bootstrap.bundle.min.js"></script>
+			<script src="js/vendor/owl.carousel.min.js"></script>
+			<script src="js/vendor/jquery.barrating.min.js"></script>
+			<script src="js/vendor/jquery.barrating.min.js"></script>
+			<script src="js/vendor/landing-page/headroom.min.js"></script>
+			<script src="js/vendor/landing-page/jQuery.headroom.js"></script>
+			<script src="js/vendor/landing-page/jquery.scrollTo.min.js"></script>
+			<script src="js/vendor/landing-page/jquery.autoellipsis.js"></script>
+			<script src="js/dore.scripts.landingpage.js"></script>
+			<script src="js/scripts.single.theme.js"></script>
+			<!-- Matomo -->
+			<script type="text/javascript">
+				var _paq = window._paq || [];
+				/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+				_paq.push(['trackPageView']);
+				_paq.push(['enableLinkTracking']);
+				(function() {
+					var u="//covidgraph.org/matomo/";
+					_paq.push(['setTrackerUrl', u+'matomo.php']);
+					_paq.push(['setSiteId', '1']);
+					var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+					g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+				})();
+			</script>
+			<!-- End Matomo Code -->
+
 	</body>
 
 </html>

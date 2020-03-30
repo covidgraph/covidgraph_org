@@ -13320,6 +13320,7 @@
       "viewOrder": {},
       "views": {
         "custom": [
+          "bio",
           "positionInOrderJoined",
           "websiteLink",
           "websiteLinkText"

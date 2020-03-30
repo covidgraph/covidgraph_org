@@ -201,11 +201,10 @@ b, strong {
 
 .subpage .card {
 	font-size: 1rem;
-	width: calc(25% - 2rem);
-	height: calc(42rem - 9vw);
+	height: 35rem;
 	display: inline-block;
 	float: left;
-	margin: 1rem;
+	margin: 1rem;*/
 }
 
 .subpage .card h4 {
@@ -225,4 +224,10 @@ b, strong {
 
 .subpage .card-body > div:first-child {
 	text-align: center;
+}
+
+.subpage .card-body h4 + a {
+	line-height: 1.2;
+	display: block;
+	padding-top: 1rem;
 }
