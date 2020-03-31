@@ -751,8 +751,8 @@
     },
     "type": "Folder",
     "useAsJavascriptLibrary": false,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
   },
   "/img/company-logos/DZD_Logo.svg": {
     "basicAuthRealm": null,
@@ -777,8 +777,8 @@
     },
     "type": "Image",
     "useAsJavascriptLibrary": false,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
     "width": null
   },
   "/img/company-logos/Qnit_logo_blue_Signatur.jpg": {
@@ -804,8 +804,8 @@
     },
     "type": "Image",
     "useAsJavascriptLibrary": false,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
     "width": 256
   },
   "/img/company-logos/graphaware_logo.png": {
@@ -831,8 +831,8 @@
     },
     "type": "Image",
     "useAsJavascriptLibrary": false,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
     "width": 612
   },
   "/img/company-logos/graphileonlogo.png": {
@@ -858,8 +858,8 @@
     },
     "type": "Image",
     "useAsJavascriptLibrary": false,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
     "width": 2102
   },
   "/img/company-logos/kaiser-preusse.jpg": {
@@ -885,8 +885,8 @@
     },
     "type": "Image",
     "useAsJavascriptLibrary": false,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
     "width": 400
   },
   "/img/company-logos/neo4j_logo.svg": {
@@ -912,8 +912,8 @@
     },
     "type": "Image",
     "useAsJavascriptLibrary": false,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
     "width": null
   },
   "/img/company-logos/prodyna_logo.png": {
@@ -939,8 +939,8 @@
     },
     "type": "Image",
     "useAsJavascriptLibrary": false,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
     "width": 934
   },
   "/img/company-logos/structr_141414_300dpi.png": {
@@ -966,8 +966,8 @@
     },
     "type": "Image",
     "useAsJavascriptLibrary": false,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
     "width": 397
   },
   "/img/company-logos/uni-freiburg_logo.svg": {
@@ -993,8 +993,8 @@
     },
     "type": "Image",
     "useAsJavascriptLibrary": false,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
     "width": null
   },
   "/img/company-logos/yWorks_logo.svg": {
@@ -1020,8 +1020,8 @@
     },
     "type": "Image",
     "useAsJavascriptLibrary": false,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
     "width": null
   },
   "/img/content-img": {
