@@ -68,5 +68,12 @@
     "shared": "false",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
+  },
+  "fe70a2a580d141998aa94d099f5cfa92": {
+    "contentType": "text/html",
+    "id": "fe70a2a580d141998aa94d099f5cfa92",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
   }
 }
