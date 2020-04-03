@@ -9951,6 +9951,72 @@
       "isInterface": false,
       "type": "object"
     },
+    "NewsArticle": {
+      "$extends": "#/definitions/ContentItem",
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "properties": {
+        "authors": {
+          "$link": "#/definitions/NewsArticleAUTHORProjectMember",
+          "items": {
+            "$ref": "#/definitions/ProjectMember"
+          },
+          "type": "array"
+        },
+        "imageURL": {
+          "type": "string"
+        },
+        "introText": {
+          "indexed": true,
+          "type": "string"
+        },
+        "linkText": {
+          "type": "string"
+        },
+        "linkURL": {
+          "type": "string"
+        },
+        "publicationDate": {
+          "format": "date-time",
+          "indexed": true,
+          "type": "string"
+        },
+        "text": {
+          "contentType": "text/html",
+          "default": "",
+          "format": "",
+          "indexed": true,
+          "type": "string"
+        },
+        "title": {
+          "indexed": true,
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "imageURL",
+          "introText",
+          "linkText",
+          "linkURL",
+          "publicationDate",
+          "title"
+        ]
+      }
+    },
+    "NewsArticleAUTHORProjectMember": {
+      "$source": "#/definitions/NewsArticle",
+      "$target": "#/definitions/ProjectMember",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "AUTHOR",
+      "sourceName": "newsArticleAuthors",
+      "targetName": "authors",
+      "type": "object"
+    },
     "NodeLabel": {
       "$implements": [
         "https://structr.org/v1.1/definitions/NodeLabel"
@@ -13304,6 +13370,13 @@
         "bio": {
           "indexed": true,
           "type": "string"
+        },
+        "newsArticleAuthors": {
+          "$link": "#/definitions/NewsArticleAUTHORProjectMember",
+          "items": {
+            "$ref": "#/definitions/NewsArticle"
+          },
+          "type": "array"
         },
         "positionInOrderJoined": {
           "indexed": true,

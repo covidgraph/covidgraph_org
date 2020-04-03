@@ -6,11 +6,32 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "Documentation Section-f5e7351bc57144569d88077df33f7203": {
+    "contentType": "text/html",
+    "id": "f5e7351bc57144569d88077df33f7203",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "Landing Page Template-c95c746c496043b6afd6ee04930edeed": {
     "contentType": "text/html",
     "id": "c95c746c496043b6afd6ee04930edeed",
     "shared": "true",
     "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "Legal Section-cdc9dd5260714f90960b611ba505e0cc": {
+    "contentType": "text/html",
+    "id": "cdc9dd5260714f90960b611ba505e0cc",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "Login Page Template-718ffe75a28640a8b148eb2cc955dae6": {
+    "contentType": "text/html",
+    "id": "718ffe75a28640a8b148eb2cc955dae6",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": true
   },
   "Member Card Landing Page 1-a54fd4e81cb245d2a798e1810204dc1f": {
@@ -48,6 +69,20 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "News Article Template-8fa193441c8c41d8b8082e9154cf7aba": {
+    "contentType": "text/html",
+    "id": "8fa193441c8c41d8b8082e9154cf7aba",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "News Section-3362a362475e42b19870a6adeb350a8a": {
+    "contentType": "text/html",
+    "id": "3362a362475e42b19870a6adeb350a8a",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "Sub Page Template-03c69b87b4f8420186f9393f469c678d": {
     "contentType": "text/html",
     "id": "03c69b87b4f8420186f9393f469c678d",
@@ -62,18 +97,18 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "f5e7351bc57144569d88077df33f7203": {
-    "contentType": "text/html",
-    "id": "f5e7351bc57144569d88077df33f7203",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
-  "fe70a2a580d141998aa94d099f5cfa92": {
+  "Use Cases Section-fe70a2a580d141998aa94d099f5cfa92": {
     "contentType": "text/html",
     "id": "fe70a2a580d141998aa94d099f5cfa92",
     "shared": "false",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
+  },
+  "User Profile Section-3fe7fa643bb44eb3a23a2f200d50de01": {
+    "contentType": "text/html",
+    "id": "3fe7fa643bb44eb3a23a2f200d50de01",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": false
   }
 }

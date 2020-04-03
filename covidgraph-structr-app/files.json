@@ -89,6 +89,259 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/css/dore.dark.blue.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "c17e3b9d3ba04ada8d336b5842878709",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.dark.blue.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "2f33bcda5f224507913c11fc1d3e4e17",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.dark.green.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "c5c1496f4abd4ca59a747538466d0dd1",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.dark.green.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "76b1f5ba8b59488baec6d3665e0ace52",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.dark.orange.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "75f01763f5644ec5ae97c1069c0b535a",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.dark.orange.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "3abe00ede9444ad6b91f98ae3b7aad1f",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.dark.purple.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "6b78e315069748f8aeecb670a9d4a8b8",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.dark.purple.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "afde2b4782df42b59615c5fd2136106b",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.dark.red.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "ec08298635fe45728abc4be7f4d67d56",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.dark.red.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "85d7f5765fa545aeb6dd148b335d891a",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.light.blue.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "90d835da8ed24c84a5aa6968ae8e8ff9",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/css/dore.light.blue.min.css": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -103,6 +356,213 @@
     ],
     "id": "5e0c50fcb2134855912abfc70637bcea",
     "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.light.blue.min.css_2020-04-01-124421305": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "d93136cb3e584087a0a7c01eb0d10ec7",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.light.green.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "9d27fc6fc2fa49699d57d6c305d30844",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.light.green.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "aa67fc8b197742d5ace6acd359a0dd7f",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.light.orange.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "e9a6b07d032e4083837707222a346ce8",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.light.orange.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "d78c20e454d24e128ed3f11ef7a4b16c",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.light.purple.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "edbaef11e3374abba7da470aba045013",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.light.purple.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "25696183b2b04cb2a8a884d4c6073a16",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.light.red.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "8b77f13490184a61b56428a8e3df84f2",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/dore.light.red.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "90755572be1c47c789ecc5be2b407225",
+    "includeInFrontendExport": false,
     "isTemplate": false,
     "owner": {
       "name": "admin"
@@ -156,6 +616,75 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/css/vendor/baguetteBox.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "b5c600a83e1b4806a1db4c6e54c4d3c5",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/bootstrap-datepicker3.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "9d4ef35ad6614714a69d6a1acb67185a",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/bootstrap-float-label.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "d1958c0abc6945c6bc283d76f5ac8b34",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/css/vendor/bootstrap-stars.css": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -170,6 +699,52 @@
     ],
     "id": "5d105fdb0ed54c9f93fa4942d86f546e",
     "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/bootstrap-stars.css_2020-04-01-123325854": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "c1f98beaf7f04c9e9dfde423777871c7",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/bootstrap-tagsinput.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "18a1fdbfaec4439da4eb76ae2b1e1a7a",
+    "includeInFrontendExport": false,
     "isTemplate": false,
     "owner": {
       "name": "admin"
@@ -202,6 +777,282 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/css/vendor/bootstrap.min.css_2020-04-01-123325583": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "968a976ed68048e5a2061af0bba9f529",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/bootstrap.rtl.only.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "062dd7377daf41db8e60f9cedbea0139",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/component-custom-switch.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "189f366aacf54a04947d763ad539aa2a",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/cropper.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "ad8404ca5de94f2381a8ba77b10f701f",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/dataTables.bootstrap4.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "40b53cccc5e745a98acb19ce7e9c0697",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/datatables.responsive.bootstrap4.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "2ca5c6c84a4c4ff59342bc82cf7dcefc",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/dropzone.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "5cab48bf3689446790ba42a6eec076df",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/fullcalendar.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "084ec369c4df487c9a089a5e8aa0f8cb",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/glide.core.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "62dc3d8091314bb8a08d55697555b6eb",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/jquery.contextMenu.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "ee0000b94ebc43c0af67dba7b315f8ad",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/jquery.dataTables.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "a0e653dbffbf4f3cb48125019a314f5e",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/nouislider.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "aee7098a0ac44527aa61cdbf7f63145f",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/css/vendor/owl.carousel.min.css": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -216,6 +1067,29 @@
     ],
     "id": "a59aa1ceba8a4a5aa42fec6168171ca6",
     "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/owl.carousel.min.css_2020-04-01-123324118": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "95cdcbce16a646c39b2c2cfee37474be",
+    "includeInFrontendExport": false,
     "isTemplate": false,
     "owner": {
       "name": "admin"
@@ -252,6 +1126,167 @@
     "visibleToPublicUsers": true,
     "width": null
   },
+  "/css/vendor/perfect-scrollbar.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "0f4d4edf321d4de68b2d9ced0a04179b",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/quill.bubble.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "9bf72638fab94f7290eb0ae01eefa88e",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/quill.snow.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "93431fdb1c6e4c6fa2230b08e5739682",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/select2-bootstrap.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "accfd1f95a1d48c3a2760360b6019ae8",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/select2.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "e2d6146377d1475b8a3214db06c658e9",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/slick.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "b8e075ee1a09415e850d1c4074051581",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/smart_wizard.min.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "04601d8419514402a6f9c79e67b88241",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/css/vendor/video-js.css": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -266,6 +1301,29 @@
     ],
     "id": "69b8ebf16dcd4e779ec03c422faf97cc",
     "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/vendor/video-js.css_2020-04-01-123323081": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "93f18724e94e4911a371a89d844aeae7",
+    "includeInFrontendExport": false,
     "isTemplate": false,
     "owner": {
       "name": "admin"
@@ -313,6 +1371,186 @@
       "name": "admin"
     },
     "type": "Folder",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/font/iconsmind-s": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": null,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "f5e9e673a37b445ab5d4637c808b2857",
+    "includeInFrontendExport": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Folder",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/font/iconsmind-s/css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": null,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "40f5f745f9534cb791239b2b9f424c23",
+    "includeInFrontendExport": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Folder",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/font/iconsmind-s/css/animation.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "7373fd091237421c938f7120aa6cdf03",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/font/iconsmind-s/css/iconsminds-codes.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "c492a1cf5cd8449bb8305475e9d4050b",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/font/iconsmind-s/css/iconsminds-embedded.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "19b5d177516a4555a7a910d4f8128fa4",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/font/iconsmind-s/css/iconsminds-ie7-codes.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "68c7235df8d547698faf4ac1a4b80c9e",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/font/iconsmind-s/css/iconsminds-ie7.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "c0ac44a05e2b41c0a14957072f39b62d",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/font/iconsmind-s/css/iconsminds.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "6a998f44ffd442579956c893fed537e0",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
@@ -719,8 +1957,8 @@
       }
     ],
     "height": 1080,
-    "id": "d3b3aea459dd456788c367245efae35d",
-    "includeInFrontendExport": true,
+    "id": "6ee9e109bcf845f2b9e8a1f4b14e225a",
+    "includeInFrontendExport": false,
     "isImage": true,
     "isTemplate": false,
     "isThumbnail": false,
@@ -888,6 +2126,33 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true,
     "width": 400
+  },
+  "/img/company-logos/linkurious_logo.svg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/svg+xml",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": null,
+    "id": "fff01d8a226949898e0d30e72165d3fd",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": null
   },
   "/img/company-logos/neo4j_logo.svg": {
     "basicAuthRealm": null,
@@ -1071,6 +2336,33 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true,
     "width": 2660
+  },
+  "/img/content-img/covidgraph-news-section.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 2134,
+    "id": "7706a4dfed0e4ab0833876b65b51cbaa",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 3012
   },
   "/img/content-img/ensembl-org.jpg": {
     "basicAuthRealm": null,
@@ -2416,6 +3708,189 @@
     "visibleToPublicUsers": true,
     "width": null
   },
+  "/img/logos": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": null,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "fd93d16a1fe14cc1b7d0714ee4248270",
+    "includeInFrontendExport": true,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Folder",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/img/logos/covid❋graph-logo-blue.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 326,
+    "id": "799b06c7c6f14516b6e53e50eae7e98d",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 1754
+  },
+  "/img/logos/covid❋graph-logo-blue.svg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/svg+xml",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": null,
+    "id": "73e0e6bcc2984ac686f19429f36dd21c",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": null
+  },
+  "/img/logos/covid❋graph-logo-light.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 326,
+    "id": "9f91cd4ce58843f1987b083a31465d04",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 1754
+  },
+  "/img/logos/covid❋graph-logo-square-blue.svg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/svg+xml",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": null,
+    "id": "d7bb8ba6d7724180a18864bf7c81249e",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": null
+  },
+  "/img/logos/covid❋graph-logo-square-white.svg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/svg+xml",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": null,
+    "id": "aa983530180f4d93b5c30fb200284da5",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": null
+  },
+  "/img/logos/covid❋graph-logo-white.svg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/svg+xml",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": null,
+    "id": "7236ca97665f4360885f83ce75978e8f",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": null
+  },
   "/img/members": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -2598,6 +4073,33 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true,
     "width": 300
+  },
+  "/img/members/jean.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 600,
+    "id": "954fac3b839746819f52b38010be2c91",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 685
   },
   "/img/members/juliane.jpg": {
     "basicAuthRealm": null,
@@ -2863,6 +4365,29 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/js/dore.script.js": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "2eacee4ba09045c399b807690e9ea31a",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/js/dore.scripts.landingpage.js": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -2877,6 +4402,29 @@
     ],
     "id": "ce262e2f6c5d4787bd84494164ead95b",
     "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/js/scripts.js": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "ac8445a27b994261af6f4e7dde8767c6",
+    "includeInFrontendExport": false,
     "isTemplate": false,
     "owner": {
       "name": "admin"

@@ -1,0 +1,17 @@
+							<div class="row pt-5">
+
+								<div class="col-12 col-md-6 col-lg-6 mb-3">
+									<small>${date_format(article.publicationDate, 'MMMM dd, YYYY')}</small>
+									<h3>${article.title}</h3>
+									<p class="intro-text">${article.introText}</p>
+									<p>${article.text}</p>
+								</div>
+								<div class="col-12 col-md-6 col-lg-6" style="padding: 7rem 0 0 3rem">
+									<a href="${article.linkURL}"><img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="${article.imageURL}"></a>
+									<br><br>
+									<a href="${article.linkURL}">${article.linkText}</a>
+								</div>
+								<div class="col-12 mb-5">
+								</div>
+
+							</div>

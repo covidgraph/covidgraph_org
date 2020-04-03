@@ -1,0 +1,30 @@
+					<div class="section">
+						<div class="container" id="who-we-are">
+							<div class="row">
+								<div class="col-12 offset-0 col-lg-8 offset-lg-2">
+									<h2>User Profile</h2>
+									<form id="user-profile" action="javascript:void(0">
+										<div class="form-group">
+											<label for="name">Name</label>
+											<input class="form-control" id="name" name="name" value="${me.name}"/>
+										</div>
+
+										<div class="form-group">
+											<label for="e-mail">E-Mail</label>
+											<input class="form-control readonly disabled" id="e-mail" name="e-mail" type="e-mail" value="${me.eMail}" readonly disabled/>
+										</div>
+
+										<div class="form-group mb-5">
+											<label for="password">Password</label>
+											<input class="form-control" name="password" name="password" type="password" value="***********"/>
+										</div>
+
+										<div class="d-flex justify-content-between align-items-center">
+											<!--a href="#">Forgot password?</a-->
+											<button class="btn btn-primary btn-lg btn-shadow" id="save-button" type="button">SAVE</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
