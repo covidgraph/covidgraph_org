@@ -2337,6 +2337,87 @@
     "visibleToPublicUsers": true,
     "width": 2660
   },
+  "/img/content-img/Neo4j_graphs4good.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 665,
+    "id": "f69819d3492f4b8387ad37e7b3aa6a9e",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 1617
+  },
+  "/img/content-img/bruggen-blog-graphistania-2-6.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 2540,
+    "id": "c067d8d6d0bc413d8335141097497fbb",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 2930
+  },
+  "/img/content-img/covid-graph-schema-2020-04-07.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 3146,
+    "id": "4e8957ad43954b78a9a2f3e429da294b",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 4276
+  },
   "/img/content-img/covidgraph-news-section.png": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,

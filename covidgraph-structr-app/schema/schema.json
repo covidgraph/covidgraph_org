@@ -9971,6 +9971,18 @@
           "indexed": true,
           "type": "string"
         },
+        "link2Desc": {
+          "type": "string"
+        },
+        "link2Text": {
+          "contentType": "",
+          "default": "",
+          "format": "",
+          "type": "string"
+        },
+        "link2URL": {
+          "type": "string"
+        },
         "linkText": {
           "type": "string"
         },
@@ -10000,6 +10012,9 @@
         "custom": [
           "imageURL",
           "introText",
+          "link2Desc",
+          "link2Text",
+          "link2URL",
           "linkText",
           "linkURL",
           "publicationDate",

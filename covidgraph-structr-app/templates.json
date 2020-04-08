@@ -34,6 +34,13 @@
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": true
   },
+  "Main Nav-135e3aacfc3b4516bb3871045009e940": {
+    "contentType": "text/html",
+    "id": "135e3aacfc3b4516bb3871045009e940",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "Member Card Landing Page 1-a54fd4e81cb245d2a798e1810204dc1f": {
     "contentType": "text/html",
     "id": "a54fd4e81cb245d2a798e1810204dc1f",
@@ -65,6 +72,13 @@
   "Member Card-57605fb0c4ae40148682f7958c03af11": {
     "contentType": "text/html",
     "id": "57605fb0c4ae40148682f7958c03af11",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "Mobile Menu-812dd7476ae44032978b19cb2fbc32f7": {
+    "contentType": "text/html",
+    "id": "812dd7476ae44032978b19cb2fbc32f7",
     "shared": "true",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
