@@ -328,3 +328,29 @@ b, strong {
 .landing-page .semi-rounded {
     border-radius: .5rem !important;
 }
+
+.papers {
+	color: #555;
+	font-size: .75em;
+	line-height: 1.2em;
+}
+
+.papers .authors-column {
+	width: 20%;
+	line-height: 2em;
+}
+
+.papers .authors-column a {
+	text-decoration: underline;
+	color: var(--theme-color-1);
+}
+
+.papers .authors-column a:hover, .papers .authors-column a:active {
+	color: var(--theme-color-2);
+}
+
+.pager li {
+	list-style-type: none;
+    display: inline-block;
+    padding-right: 1rem;
+}

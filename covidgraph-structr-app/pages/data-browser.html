@@ -1,0 +1,104 @@
+<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Sub Page Template-03c69b87b4f8420186f9393f469c678d" data-structr-meta-name="Sub Page Template">
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Data Browser Section-9077de3ecc834b2d99cfa190baf9ad3b" data-structr-meta-name="Data Browser Section">
+		<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<div class="float-right"><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->&lt;a href="?type=papers"&gt;Papers&lt;/a&gt;
+&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;
+&lt;a href="?type=patents"&gt;Patents&lt;/a&gt;</div>
+		<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<div class="papers" data-structr-meta-show-conditions="eq(request.type, 'papers')">
+			<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<h1><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${store('papers-count', first(remote_cypher('bolt://covid.petesis.com:7687', 'public', 'corona', '
+MATCH (n:Paper) RETURN COUNT(DISTINCT n) AS c
+')).c)}
+Papers (${retrieve('papers-count')})</h1>
+			<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div class="row pager">
+				<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="col-2">
+					<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<form>
+						<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<input name="type" type="hidden" value="${request.type}">
+						<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<div class="form-group">
+							<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<label><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Display</label>
+							<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<select name="pageSize" onchange="this.form.submit()">
+								<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<option selected="${is(eq(request.pageSize, 10), 'selected')}"><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->10</option>
+								<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<option selected="${is(eq(request.pageSize, 50), 'selected')}"><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->50</option>
+								<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<option selected="${is(eq(request.pageSize, 100), 'selected')}"><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->100</option>
+								<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<option selected="${is(eq(request.pageSize, 1000), 'selected')}"><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->1000</option>
+							</select>
+							<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<label><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->results</label>
+						</div>
+					</form>
+				</div>
+				<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="col-10"><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->&lt;ul&gt;
+${{
+	let papersCount = $.retrieve('papers-count');
+	let req = $.get('request');
+	let pageSize = parseInt(req.pageSize);
+	//$.log(papersCount);
+	for (let page=1; page&lt;=papersCount/pageSize; page++) {
+		let p = (page-1)*pageSize;
+		$.print('&lt;li&gt;&lt;a href="?type=' + req.type + '&amp;pageSize=' +  pageSize +'&amp;page=' + page + '"&gt;' + (p+1) + '…' + (p + pageSize) + '&lt;/a&gt;&lt;/li&gt;');
+	
+	}
+}}
+&lt;/ul&gt;</div>
+			</div>
+			<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div class="table-responsive">
+				<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<table class="table table-bordered table-striped">
+					<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<thead>
+						<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<tr>
+							<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Published</th>
+							<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Title</th>
+							<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Authors</th>
+							<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Abstract</th>
+						</tr>
+					</thead>
+					<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<tbody>
+						<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<tr data-structr-meta-data-key="result" data-structr-meta-function-query="remote_cypher('bolt://covid.petesis.com:7687', 'public', 'corona', concat('MATCH (n:Paper)-[:PAPER_HAS_ABSTRACT]-&gt;(a1:Abstract)-[:ABSTRACT_HAS_ABSTRACT]-&gt;(a2:Abstract), (n)-[:PAPER_HAS_METADATA]-&gt;(m:Metadata)-[:METADATA_HAS_AUTHOR]-&gt;(ch:CollectionHub:Author)-[:AUTHOR_HAS_AUTHOR]-(auth:Author) RETURN {paper:n, authors: collect(distinct auth), abstracts:collect(distinct a2)} SKIP ', int(mult(subt(request.page!1,1), request.pageSize!10)), ' LIMIT ', request.pageSize!10))">
+							<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<td><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${result.paper.publish_time}</td>
+							<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<td><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${result.paper.title}</td>
+							<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<td class="authors-column"><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${{
+	let result = Structr.get('result');
+	return result.authors.map(function(author) {
+		return '&lt;a href="/author?authorId=' + author._hash_id + '"&gt;' + author.first + ' ' + author.last + '&lt;/a&gt;';
+	}).join('&lt;br&gt;');
+}}</td>
+							<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<td><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${{
+	let result = Structr.get('result');
+	return result.abstracts.map(function(abstract) {
+		return abstract.text;
+	}).join('&lt;br&gt;&lt;br&gt;\n');
+}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</structr:template>
+
+</structr:template>
