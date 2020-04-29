@@ -2073,6 +2073,33 @@
     "visibleToPublicUsers": true,
     "width": 256
   },
+  "/img/company-logos/aulogo_uk_var2_blue.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 107,
+    "id": "ca61da541c4846ad9b6675f56c0ac05d",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 506
+  },
   "/img/company-logos/derivo_logo_rgb-600dpi.png": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -2418,6 +2445,33 @@
     "visibleToPublicUsers": true,
     "width": 1617
   },
+  "/img/content-img/bloom-Gene_ACE2_MENTIONED_Paper.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 934,
+    "id": "7525e642fbcb4ae5a8a0d2205aaead8b",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 934
+  },
   "/img/content-img/bruggen-blog-graphistania-2-6.png": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -2498,6 +2552,33 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true,
     "width": 3012
+  },
+  "/img/content-img/covidgraph-schema.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 1024,
+    "id": "7a5c2948cdd84f89b9ce7d249db0b97e",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 1024
   },
   "/img/content-img/covidgraph.png": {
     "basicAuthRealm": null,
@@ -2606,6 +2687,33 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true,
     "width": 2644
+  },
+  "/img/content-img/github-screenshot.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 1170,
+    "id": "a1dc06faafea495d8184511089e6a564",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 1024
   },
   "/img/content-img/graph-1.png": {
     "basicAuthRealm": null,
@@ -2741,6 +2849,114 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true,
     "width": 4864
+  },
+  "/img/content-img/screenshot-databrowser.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 1244,
+    "id": "22cbae052e644b5090bcc95da2148e4c",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 2046
+  },
+  "/img/content-img/screenshot-github.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 1024,
+    "id": "4f052bf0baf94c17879b5fd4d3fbb9b7",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 1024
+  },
+  "/img/content-img/screenshot-neo4j-browser.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 1476,
+    "id": "73d6a0001dc0469292f53672b572bddb",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 2755
+  },
+  "/img/content-img/screenshot-news.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 1024,
+    "id": "6ec472ff9f73461b8bfe7141a7dae9cd",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 1024
   },
   "/img/content-img/semantic-scholar-corona.jpg": {
     "basicAuthRealm": null,
@@ -4182,6 +4398,33 @@
     "visibleToPublicUsers": true,
     "width": 300
   },
+  "/img/members/alexander-malic.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "height": 446,
+    "id": "dd380915b2f54f538e5929d36fbb9548",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "Axel Morgner"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 446
+  },
   "/img/members/axel.jpg": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -4262,6 +4505,60 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true,
     "width": 300
+  },
+  "/img/members/davide.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "height": 1415,
+    "id": "06e43a09a3b24d99966e8cd575e582ff",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "Axel Morgner"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 1415
+  },
+  "/img/members/jamie.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 1206,
+    "id": "13f2912bf5c149109632d2fe9b06fcc2",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 1017
   },
   "/img/members/jean.jpg": {
     "basicAuthRealm": null,

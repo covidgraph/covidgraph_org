@@ -1374,6 +1374,36 @@
       "targetName": "subGroups",
       "type": "object"
     },
+    "ContactRequest": {
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "properties": {
+        "comment": {
+          "default": "",
+          "format": "",
+          "type": "string"
+        },
+        "eMail": {
+          "default": "",
+          "format": "",
+          "indexed": true,
+          "type": "string"
+        },
+        "interests": {
+          "default": "",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "policyAccepted": {
+          "default": "",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
     "Content": {
       "$extends": "#/definitions/DOMNode",
       "$implements": [
@@ -13400,7 +13430,17 @@
         "websiteLink": {
           "type": "string"
         },
+        "websiteLink2": {
+          "default": "",
+          "format": "",
+          "type": "string"
+        },
         "websiteLinkText": {
+          "type": "string"
+        },
+        "websiteLinkText2": {
+          "default": "",
+          "format": "",
           "type": "string"
         }
       },
@@ -13411,7 +13451,9 @@
           "bio",
           "positionInOrderJoined",
           "websiteLink",
-          "websiteLinkText"
+          "websiteLink2",
+          "websiteLinkText",
+          "websiteLinkText2"
         ]
       }
     },

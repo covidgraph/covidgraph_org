@@ -177,15 +177,27 @@ $(function() {
 $(function() {
 	$('#save-button').on('click', function() {
 		let form = $('form#user-profile');
+		let id = $(form).find('#id').val();
+		
+		let password = $(form).find('#password').val();
+		
+		let data = {
+			name: $(form).find('#name').val(),
+			eMail: $(form).find('#e-mail').val(),
+			bio: $(form).find('#bio').val()
+		};
+		
+		console.log(password);
+		
+		if (password !== '***********') {
+			data.password = password;
+		}
+		
 		$.ajax({
-			url: "/structr/rest/me",
+			url: "/structr/rest/ProjectMember/" + id,
 			type: 'PUT',
 			contentType: 'application/json',
-			data: JSON.stringify({
-				name: $(form).find('#name').val(),
-				eMail: $(form).find('#e-mail').val(),
-				password: $(form).find('#passwd').val(),
-			}),
+			data: JSON.stringify(data),
 			statusCode: {
 				200: function(resp) {
 					window.location.href = "/user-profile?login";
@@ -198,4 +210,39 @@ $(function() {
 
 		});    
 	});
-});									
+});					
+
+$(function() {
+	$('#send-button').on('click', function() {
+		let form = $('form#contact-form');
+		
+		let data = {
+			name: $(form).find('#name').val(),
+			eMail: $(form).find('#e-mail').val(),
+			interests: $(form).find('input[name=interest]:checked').map(function(_, el) { return $(el).val(); }).get(),
+			comment: $(form).find('#comment').val(),
+			policyAccepted: $(form).find('#policy-accepted').val()
+		};
+
+		if (!data.name || !data.eMail || data.policyAccepted !== 'true') return;
+		
+		console.log(data); //return;
+		
+		$.ajax({
+			url: "/structr/rest/ContactRequest",
+			type: 'POST',
+			contentType: 'application/json',
+			data: JSON.stringify(data),
+			statusCode: {
+				201: function(resp) {
+					window.location.href = "/contact?thanks=1";
+				},
+				401: function() {
+					//toastr.error("Wrong e-mail or password, please try again.", "Invalid Login!");
+					//$(form).find('#passwd').select();
+				}
+			}
+
+		});    
+	});
+});				
