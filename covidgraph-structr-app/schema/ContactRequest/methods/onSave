@@ -1,0 +1,24 @@
+(
+	mail_begin('no-reply@covidgraph.org', 'CovidGraph Contact Form', 'Contact request on covidgraph.org has been updated',
+	
+		concat(
+			'<b>Name:</b> ', this.name, '<br>\n',
+			'<b>E-Mail:</b> ', this.eMail, '<br>\n',
+			'<b>Interests: </b>', join(this.interests, ', '), '<br>\n',
+			'<b>Comment: </b><br>', str_replace(this.comment, '\n', '<br>\n')
+		)
+		
+		concat(
+			'Name: ', this.name, '\n',
+			'E-Mail: ', this.eMail, '\n',
+			'Interests: ', join(this.interests, ', '), '\n',
+			'Comment: \n', this.comment, '\n'
+		)
+	),
+	
+	mail_add_to('contact@covidgraph.org', 'CovidGraph Contact Mailbox'),
+	mail_add_cc('covidgraph@neotechnology.com', 'CovidGraph Mailing List at Neo4j'),
+	
+	mail_add_header('X-Mailer', 'Structr'),
+	mail_send()
+)

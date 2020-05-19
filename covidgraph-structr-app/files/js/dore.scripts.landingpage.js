@@ -21,15 +21,18 @@ $.dore = function(e, o) {
 			autoplay: false,
 			responsive: {
 				0: {
-					items: 4
+					items: 1
 				},
 				768: {
-					items: 4
+					items: 1
 				},
 				992: {
-					items: 4
+					items: 2
 				},
 				1200: {
+					items: 2
+				},
+				1440: {
 					items: 4
 				}
 			}

@@ -1,0 +1,7 @@
+{
+  "dataType": "SoftwareApplication",
+  "visibleToAuthenticatedUsers": true,
+  "visibleToPublicUsers": true,
+  "id": "2673207292b14d44b1b7f5bbc2f97a58",
+  "type": "FlowTypeQuery"
+}

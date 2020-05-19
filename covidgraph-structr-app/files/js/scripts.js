@@ -213,7 +213,7 @@ $(function() {
 });					
 
 $(function() {
-	$('#send-button').on('click', function() {
+	$('#contact-form .send-button').on('click', function() {
 		let form = $('form#contact-form');
 		
 		let data = {
@@ -221,15 +221,51 @@ $(function() {
 			eMail: $(form).find('#e-mail').val(),
 			interests: $(form).find('input[name=interest]:checked').map(function(_, el) { return $(el).val(); }).get(),
 			comment: $(form).find('#comment').val(),
-			policyAccepted: $(form).find('#policy-accepted').val()
+			policyAccepted: $(form).find('#policy-accepted:checked').val()
 		};
 
 		if (!data.name || !data.eMail || data.policyAccepted !== 'true') return;
 		
-		console.log(data); //return;
+		//console.log(data); //return;
 		
 		$.ajax({
 			url: "/structr/rest/ContactRequest",
+			type: 'POST',
+			contentType: 'application/json',
+			data: JSON.stringify(data),
+			statusCode: {
+				201: function(resp) {
+					window.location.href = "/contact?thanks=1";
+				},
+				401: function() {
+					//toastr.error("Wrong e-mail or password, please try again.", "Invalid Login!");
+					//$(form).find('#passwd').select();
+				}
+			}
+
+		});    
+	});
+});				
+
+$(function() {
+	$('#feedback-form .send-button').on('click', function() {
+		let form = $('form#feedback-form');
+		
+		let data = {
+			name: $(form).find('#name').val(),
+			eMail: $(form).find('#e-mail').val(),
+			application: $(form).find('input[name=application]:checked').val(),
+			messageText: $(form).find('#comment').val(),
+			policyAccepted: $(form).find('#policy-accepted:checked').val(),
+			publicationAccepted: $(form).find('#publication-accepted:checked').val()
+		};
+
+		if (!data.messageText || data.policyAccepted !== 'true') return;
+		
+		//console.log(data); //return;
+		
+		$.ajax({
+			url: "/structr/rest/FeedbackMessage",
 			type: 'POST',
 			contentType: 'application/json',
 			data: JSON.stringify(data),

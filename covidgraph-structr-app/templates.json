@@ -1,4 +1,11 @@
 {
+  "Contact Form Section-699fbe0d92a741fd8eeb1e875eb141c2": {
+    "contentType": "text/html",
+    "id": "699fbe0d92a741fd8eeb1e875eb141c2",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "Contact Form Section-f349530096ce48cbaf190a7aac09df0e": {
     "contentType": "text/html",
     "id": "f349530096ce48cbaf190a7aac09df0e",
@@ -38,8 +45,8 @@
     "contentType": "text/html",
     "id": "cdc9dd5260714f90960b611ba505e0cc",
     "shared": "false",
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
   },
   "Login Page Template-718ffe75a28640a8b148eb2cc955dae6": {
     "contentType": "text/html",
@@ -146,6 +153,13 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "Thanks-78c681a24a8b4d21bfe19d00769d646f": {
+    "contentType": "text/html",
+    "id": "78c681a24a8b4d21bfe19d00769d646f",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "Thanks-7a88c7e638e341e59ead30961115953b": {
     "contentType": "text/html",
     "id": "7a88c7e638e341e59ead30961115953b",
@@ -166,5 +180,12 @@
     "shared": "false",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": false
+  },
+  "f7586eae18834057aaca1491e87a0946": {
+    "contentType": "text/html",
+    "id": "f7586eae18834057aaca1491e87a0946",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
   }
 }

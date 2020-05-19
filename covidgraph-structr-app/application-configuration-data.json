@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "configType": "layout",
+    "content": "{\"_version\":2,\"positions\":{\"FeedbackMessage\":{\"top\":0,\"left\":0}},\"hiddenTypes\":[\"A\",\"Abbr\",\"AbstractFile\",\"AbstractMinifiedFile\",\"Address\",\"ApplicationConfigurationDataNode\",\"Area\",\"Article\",\"Aside\",\"Audio\",\"B\",\"Base\",\"Bdi\",\"Bdo\",\"Blockquote\",\"Body\",\"Br\",\"Button\",\"Canvas\",\"Caption\",\"Cdata\",\"Cite\",\"Code\",\"Col\",\"Colgroup\",\"Command\",\"Comment\",\"Component\",\"ConceptGroup\",\"ConceptGroupLabel\",\"ContactRequest\",\"Content\",\"ContentContainer\",\"ContentItem\",\"CsvFile\",\"CustomConceptAttribute\",\"CustomNote\",\"CustomTermAttribute\",\"DOMElement\",\"DOMNode\",\"DataFeed\",\"Datalist\",\"Dd\",\"Definition\",\"Del\",\"Details\",\"Dfn\",\"Div\",\"Dl\",\"DocumentFragment\",\"Dt\",\"EMailMessage\",\"EditorialNote\",\"Em\",\"Embed\",\"Favoritable\",\"FeedItem\",\"FeedItemContent\",\"FeedItemEnclosure\",\"Fieldset\",\"Figcaption\",\"Figure\",\"File\",\"Folder\",\"Footer\",\"Form\",\"G\",\"Group\",\"H1\",\"H2\",\"H3\",\"H4\",\"H5\",\"H6\",\"Head\",\"Header\",\"Hgroup\",\"HistoryNote\",\"Hr\",\"Html\",\"I\",\"Iframe\",\"Image\",\"Img\",\"Indexable\",\"IndexedWord\",\"Input\",\"Ins\",\"JavaScriptSource\",\"KafkaClient\",\"Kbd\",\"Keygen\",\"LDAPGroup\",\"LDAPUser\",\"Label\",\"Legend\",\"Li\",\"Link\",\"LinkSource\",\"Linkable\",\"Localization\",\"Location\",\"MQTTClient\",\"MailTemplate\",\"Mailbox\",\"Main\",\"Map\",\"Mark\",\"Menu\",\"MessageClient\",\"MessageSubscriber\",\"Meta\",\"MetadataNode\",\"Meter\",\"MinifiedCssFile\",\"MinifiedJavaScriptFile\",\"Nav\",\"NewsArticle\",\"NodeLabel\",\"Noscript\",\"Note\",\"ODFExporter\",\"ODSExporter\",\"ODTExporter\",\"Object\",\"Ol\",\"Optgroup\",\"Option\",\"Organisation\",\"Output\",\"P\",\"Page\",\"Param\",\"PaymentItemNode\",\"PaymentNode\",\"Person\",\"Pre\",\"PreferredTerm\",\"Principal\",\"Progress\",\"ProjectMember\",\"Q\",\"RemoteDocument\",\"Rp\",\"Rt\",\"Ruby\",\"S\",\"Samp\",\"ScopeNote\",\"Script\",\"Section\",\"Select\",\"ShadowDocument\",\"SimpleNonPreferredTerm\",\"Site\",\"Small\",\"SoftwareApplication\",\"Source\",\"Span\",\"SplitNonPreferredTerm\",\"Strong\",\"StructuredDocument\",\"StructuredTextNode\",\"Style\",\"Sub\",\"Summary\",\"Sup\",\"Table\",\"Tbody\",\"Td\",\"Template\",\"Textarea\",\"Tfoot\",\"Th\",\"Thead\",\"Thesaurus\",\"ThesaurusArray\",\"ThesaurusConcept\",\"ThesaurusTerm\",\"Time\",\"Title\",\"Tr\",\"Track\",\"Trash\",\"U\",\"Ul\",\"User\",\"Var\",\"VersionHistory\",\"Video\",\"VideoFile\",\"VirtualProperty\",\"VirtualType\",\"Wbr\",\"Widget\",\"XMPPClient\",\"XMPPRequest\"],\"zoom\":1,\"connectorStyle\":\"Flowchart\",\"showRelLabels\":true}",
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "86410bf26db1400cb9ca7323651bf4dd",
+    "name": "Recently Used Types",
+    "owner": {
+      "name": "admin"
+    }
+  }
+]

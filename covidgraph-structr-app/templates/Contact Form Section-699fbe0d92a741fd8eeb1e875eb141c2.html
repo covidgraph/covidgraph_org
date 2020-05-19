@@ -1,0 +1,56 @@
+<div class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 offset-0 col-lg-8 offset-lg-2">
+				<h2>Feedback</h2>
+				<p>
+					Please give us your feedback and select below the application to which your comments relate.
+				<form id="feedback-form" action="javascript:void(0)">
+
+					<div class="form-group mb-5">
+						<label for="publication-disclaimer">Consent to processing and publication (optional)</label><br>
+						<input name="publication-disclaimer" id="publication-accepted" type="checkbox" value="true">&nbsp;&nbsp; I consent to including my name and e-mail address so that CovidGraph can follow up on this issue. Note that these will be published in a public ticketing system in GitHub.
+					</div>
+
+					<div class="form-group">
+						<label for="application">Application <b style="color:red">*</b></label>
+						<p class="small">
+							${render(children)}
+						</p>
+					</div>
+
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input class="form-control" id="name" name="name" placeholder="Enter your name">
+					</div>
+
+					<div class="form-group">
+						<label for="e-mail">E-Mail</label>
+						<input class="form-control" id="e-mail" name="e-mail" type="e-mail" placeholder="Enter your e-mail address">
+					</div>
+
+					<div class="form-group mb-5">
+						<label for="bio">Feedback <b style="color:red">*</b></label>
+						<textarea class="form-control" id="comment" name="comment" required></textarea>
+					</div>
+
+					<div class="form-group">
+						<label for="privacy-policy-disclaimer">Accept privacy policy <b style="color:red">*</b></label><br>
+						<input name="privacy-policy-disclaimer" id="policy-accepted" type="checkbox" value="true" required>&nbsp;&nbsp; I accept the Privacy Policy available at <a href="/privacy-policy">https://covidgraph.org/privacy-policy</a>.
+					</div>
+
+					<div class="d-flex justify-content-between align-items-center mb-5">
+						<input type="submit" class="btn btn-primary btn-lg btn-shadow send-button" type="button" value="SEND">
+					</div>
+					
+					<div class="form-group">
+						<p class="small">
+							(<b style="color:red">*</b>) Mandatory fields
+						</p>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
