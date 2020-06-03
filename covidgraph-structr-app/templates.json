@@ -181,6 +181,20 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": false
   },
+  "Video Section-841d9a01afaf4064ad5bc84d5e44b70c": {
+    "contentType": "text/html",
+    "id": "841d9a01afaf4064ad5bc84d5e44b70c",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "Video Template-f2aff19e7a0d4f6eb2de886694b088de": {
+    "contentType": "text/html",
+    "id": "f2aff19e7a0d4f6eb2de886694b088de",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "f7586eae18834057aaca1491e87a0946": {
     "contentType": "text/html",
     "id": "f7586eae18834057aaca1491e87a0946",

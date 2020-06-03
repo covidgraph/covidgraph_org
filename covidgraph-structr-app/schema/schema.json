@@ -16484,6 +16484,13 @@
         ]
       }
     },
+    "VideoArticle": {
+      "$extends": "#/definitions/NewsArticle",
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "type": "object"
+    },
     "VideoFile": {
       "$extends": "#/definitions/File",
       "$implements": [

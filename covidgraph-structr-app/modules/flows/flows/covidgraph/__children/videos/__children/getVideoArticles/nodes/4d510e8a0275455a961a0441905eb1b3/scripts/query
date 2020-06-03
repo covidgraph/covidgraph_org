@@ -1,0 +1,1 @@
+{"type":"group","op":"and","operations":[{"type":"sort","key":"publicationDate","order":"desc","queryType":"VideoArticle"}],"queryType":"VideoArticle"}

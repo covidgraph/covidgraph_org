@@ -18,7 +18,7 @@
 	
 	mail_add_to('contact@covidgraph.org', 'CovidGraph Contact Mailbox'),
 	mail_add_cc('covidgraph@neotechnology.com', 'CovidGraph Mailing List at Neo4j'),
-	mail_add_cc('contact@covidgraph.hubspot-inbox.com', 'CovidGraph HubSpot Contact Inbox')
+	mail_add_cc('contact@covidgraph.hubspot-inbox.com', 'CovidGraph HubSpot Contact Inbox'),
 	
 	mail_add_header('X-Mailer', 'Structr'),
 	mail_send()

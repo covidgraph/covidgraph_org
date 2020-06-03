@@ -1,0 +1,7 @@
+{
+  "name": "getVideoArticles",
+  "visibleToAuthenticatedUsers": true,
+  "visibleToPublicUsers": true,
+  "id": "ae002a8767c84ddaa06b2e391fd260db",
+  "type": "FlowContainer"
+}

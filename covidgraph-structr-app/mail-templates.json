@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "filename": "RESET_PASSWORD_SENDER_ADDRESS_-_null.html",
+    "id": "4fbef01d788747fb9cbed68d709061f3",
+    "locale": null,
+    "name": "RESET_PASSWORD_SENDER_ADDRESS",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  }
+]

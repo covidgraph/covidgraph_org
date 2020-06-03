@@ -328,7 +328,7 @@
     "cacheForSeconds": null,
     "category": null,
     "contentType": "text/html",
-    "dontCache": false,
+    "dontCache": true,
     "enableBasicAuth": false,
     "grantees": [
       {
@@ -403,5 +403,32 @@
     "showOnErrorCodes": null,
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": false
+  },
+  "videos": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "category": null,
+    "contentType": "text/html",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "hidden": false,
+    "hideConditions": null,
+    "id": "c8e68940b1d64469bf32b445c89f78e8",
+    "owner": {
+      "name": "admin"
+    },
+    "pageCreatesRawData": false,
+    "path": null,
+    "position": 150,
+    "showConditions": null,
+    "showOnErrorCodes": null,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
   }
 }

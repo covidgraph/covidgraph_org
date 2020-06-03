@@ -150,7 +150,9 @@ function loadStyle(href, callback) {
 
 $(function() {
 	$('#e-mail').focus();
+
 	$('#login-button').on('click', function() {
+		
 		let form = $('form#login');
 		$.ajax({
 			url: "/structr/rest/login",
@@ -165,12 +167,51 @@ $(function() {
 					window.location.href = "/user-profile";
 				},
 				401: function() {
-					//toastr.error("Wrong e-mail or password, please try again.", "Invalid Login!");
+					$.notify({
+						message: 'Wrong e-mail or password, please try again.',
+						type: 'warning'
+					});
 					$(form).find('#passwd').select();
 				}
 			}
 
 		});    
+	});
+
+	$('#forgot-password-link').on('click', function() {
+		let form = $('form#login');
+		$('#login-button').off('click').attr('id', 'request-password-button');
+		$('#forgot-password-link').hide();
+		$(form).find('#password-field-group').hide();
+		
+		$('#form-title').text('Enter your e-mail address so we can send you a link to reset your password.');
+		$('#request-password-button').text('Request password link');
+		
+		//return;
+		
+		$('#request-password-button').off('click').on('click', function() {
+			$.ajax({
+				url: "/structr/rest/reset-password",
+				type: 'POST',
+				contentType: 'application/json',
+				data: JSON.stringify({
+					eMail: $(form).find('#e-mail').val(),
+				}),
+				statusCode: {
+					200: function(resp) {
+						window.setTimeout(function() {
+							window.location.href = "/login";
+						}, 1000);
+					},
+					401: function() {
+						//toastr.error("Wrong e-mail or password, please try again.", "Invalid Login!");
+						$(form).find('#passwd').select();
+					}
+				}
+
+			});
+		});
+		
 	});
 });
 
@@ -187,7 +228,7 @@ $(function() {
 			bio: $(form).find('#bio').val()
 		};
 		
-		console.log(password);
+		//console.log(password);
 		
 		if (password !== '***********') {
 			data.password = password;
