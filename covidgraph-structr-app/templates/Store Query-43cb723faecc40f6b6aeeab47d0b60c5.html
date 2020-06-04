@@ -1,11 +1,10 @@
 ${{
 
-	const prologue = 'MATCH (paper:Paper),';
+	const prologue = 'MATCH (patent:Patent),';
 	const matchClauses = [
-		'(paper)-[:PAPER_HAS_ABSTRACTCOLLECTION]->(:AbstractCollection)-[:ABSTRACTCOLLECTION_HAS_ABSTRACT]->(abstract:Abstract),',
-		'(paper)-[:PAPER_HAS_AUTHORCOLLECTION]->(:AuthorCollection)-[:AUTHORCOLLECTION_HAS_AUTHOR]->(author:Author)'
+		'(patent)-[:INVENTOR]->(inventor:Entity)',
 	];
-	const returnClause = 'RETURN {paper:paper, authors: collect(distinct author), abstracts: collect(distinct abstract)}';
+	const returnClause = 'RETURN {patent:patent, inventors: collect(distinct inventor)}';
 
 	const request = $.get('request');
 	const pageSetup = {};

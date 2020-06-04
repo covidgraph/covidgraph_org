@@ -44,7 +44,7 @@ Papers (${retrieve('papers-count')})</h1>
 ${{
 	let papersCount = $.retrieve('papers-count');
 	let req = $.get('request');
-	let pageSize = parseInt(req.pageSize);
+	let pageSize = $.empty(req.pageSize) ? 10 : parseInt(req.pageSize);
 	//$.log(papersCount);
 	for (let page=1; page&lt;=papersCount/pageSize; page++) {
 		let p = (page-1)*pageSize;
@@ -109,6 +109,112 @@ ${{
 		return abstract.text;
 	}).join('&lt;br&gt;&lt;br&gt;\n');
 }}</td>
+							</tr>
+						</structr:template>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<div class="papers" data-structr-meta-show-conditions="eq(request.type, 'patents')">
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<h1><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${store('patents-count', first(remote_cypher('bolt://covid.petesis.com:7687', 'public', 'corona', '
+MATCH (n:Patent) RETURN COUNT(DISTINCT n) AS c
+')).c)}
+Patents (${retrieve('patents-count')})</h1>
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div class="row pager">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="col-2">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<form>
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<input name="type" type="hidden" value="${request.type}">
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<div class="form-group">
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<label><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Display</label>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<select name="pageSize" onchange="this.form.submit()">
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<option selected="${is(eq(request.pageSize, 10), 'selected')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->10</option>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<option selected="${is(eq(request.pageSize, 50), 'selected')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->50</option>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<option selected="${is(eq(request.pageSize, 100), 'selected')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->100</option>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<option selected="${is(eq(request.pageSize, 1000), 'selected')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->1000</option>
+							</select>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<label><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->results</label>
+						</div>
+					</form>
+				</div>
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="col-10"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->&lt;ul&gt;
+${{
+	let papersCount = $.retrieve('patents-count');
+	let req = $.get('request');
+	let pageSize = $.empty(req.pageSize) ? 10 : parseInt(req.pageSize);
+	//$.log(papersCount);
+	for (let page=1; page&lt;=papersCount/pageSize; page++) {
+		let p = (page-1)*pageSize;
+		$.print('&lt;li&gt;&lt;a href="?type=' + req.type + '&amp;pageSize=' +  pageSize +'&amp;page=' + page + '"&gt;' + (p+1) + '…' + (p + pageSize) + '&lt;/a&gt;&lt;/li&gt;');
+	
+	}
+}}
+&lt;/ul&gt;</div>
+			</div>
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div class="table-responsive">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<table class="table table-bordered table-striped">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<thead>
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<tr>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Published</th>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Inventors</th>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Authors</th>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Type</th>
+						</tr>
+					</thead>
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<tbody>
+						<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --><structr:template src="Store Query-43cb723faecc40f6b6aeeab47d0b60c5" data-structr-meta-name="Store Query">
+							<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<tr data-structr-meta-data-key="result" data-structr-meta-function-query="{
+
+  const credentials = {
+    url : 'bolt://covid.petesis.com:7687', 
+    username : 'public', 
+    password : 'corona'
+  };
+  
+  const query = $.retrieve('query');
+  
+  const results = $.remote_cypher(credentials.url, credentials.username, credentials.password, query);
+  
+  return results;
+
+}">
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<td><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${result.patent.pub_date}</td>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<td><!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) --><a href="${result.patent.lens_url}"><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${result.patent.pub_key}</a></td>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<td class="authors-column"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${{
+	let result = Structr.get('result');
+	return result.inventors.map(function(inventor) {
+		return inventor.name;
+	}).join('&lt;br&gt;');
+}}</td>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<td><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${result.patent.type}</td>
 							</tr>
 						</structr:template>
 					</tbody>

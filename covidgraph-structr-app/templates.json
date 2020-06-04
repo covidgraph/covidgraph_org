@@ -139,6 +139,20 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "Store Query-43cb723faecc40f6b6aeeab47d0b60c5": {
+    "contentType": "text/plain",
+    "id": "43cb723faecc40f6b6aeeab47d0b60c5",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "Store Query-89bc3191114f4a6f82296d0979e2cc84": {
+    "contentType": "text/plain",
+    "id": "89bc3191114f4a6f82296d0979e2cc84",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "Sub Page Template-03c69b87b4f8420186f9393f469c678d": {
     "contentType": "text/html",
     "id": "03c69b87b4f8420186f9393f469c678d",
