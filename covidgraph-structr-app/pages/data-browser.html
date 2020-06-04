@@ -5,7 +5,7 @@
 &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;
 &lt;a href="?type=patents"&gt;Patents&lt;/a&gt;</div>
 		<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
-		<div class="papers" data-structr-meta-show-conditions="eq(request.type, 'papers')">
+		<div class="papers" data-structr-meta-show-conditions="or(eq(request.type, 'papers'),empty(request.type))">
 			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 			<h1><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${store('papers-count', first(remote_cypher('bolt://covid.petesis.com:7687', 'public', 'corona', '
 MATCH (n:Paper) RETURN COUNT(DISTINCT n) AS c
@@ -74,27 +74,43 @@ ${{
 					</thead>
 					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 					<tbody>
-						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-						<tr data-structr-meta-data-key="result" data-structr-meta-function-query="remote_cypher('bolt://covid.petesis.com:7687', 'public', 'corona', concat('MATCH (n:Paper)-[:PAPER_HAS_ABSTRACT]-&gt;(a1:Abstract)-[:ABSTRACT_HAS_ABSTRACT]-&gt;(a2:Abstract), (n)-[:PAPER_HAS_METADATA]-&gt;(m:Metadata)-[:METADATA_HAS_AUTHOR]-&gt;(ch:CollectionHub:Author)-[:AUTHOR_HAS_AUTHOR]-(auth:Author) RETURN {paper:n, authors: collect(distinct auth), abstracts:collect(distinct a2)} SKIP ', int(mult(subt(request.page!1,1), request.pageSize!10)), ' LIMIT ', request.pageSize!10))">
-							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-							<td><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${result.paper.publish_time}</td>
-							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-							<td><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${result.paper.title}</td>
-							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-							<td class="authors-column"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${{
+						<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --><structr:template src="Store Query-89bc3191114f4a6f82296d0979e2cc84" data-structr-meta-name="Store Query">
+							<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<tr data-structr-meta-data-key="result" data-structr-meta-function-query="{
+
+  const credentials = {
+    url : 'bolt://covid.petesis.com:7687', 
+    username : 'public', 
+    password : 'corona'
+  };
+  
+  const query = $.retrieve('query');
+  
+  const results = $.remote_cypher(credentials.url, credentials.username, credentials.password, query);
+  
+  return results;
+
+}">
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<td><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${result.paper.publish_time}</td>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<td><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${result.paper.title}</td>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<td class="authors-column"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${{
 	let result = Structr.get('result');
 	return result.authors.map(function(author) {
 		return '&lt;a href="/author?authorId=' + author._hash_id + '"&gt;' + author.first + ' ' + author.last + '&lt;/a&gt;';
 	}).join('&lt;br&gt;');
 }}</td>
-							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-							<td><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${{
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<td><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${{
 	let result = Structr.get('result');
 	return result.abstracts.map(function(abstract) {
 		return abstract.text;
 	}).join('&lt;br&gt;&lt;br&gt;\n');
 }}</td>
-						</tr>
+							</tr>
+						</structr:template>
 					</tbody>
 				</table>
 			</div>

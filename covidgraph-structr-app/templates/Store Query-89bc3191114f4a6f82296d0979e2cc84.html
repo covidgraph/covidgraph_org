@@ -1,0 +1,26 @@
+${{
+
+	const prologue = 'MATCH (paper:Paper),';
+	const matchClauses = [
+		'(paper)-[:PAPER_HAS_ABSTRACTCOLLECTION]->(:AbstractCollection)-[:ABSTRACTCOLLECTION_HAS_ABSTRACT]->(abstract:Abstract),',
+		'(paper)-[:PAPER_HAS_AUTHORCOLLECTION]->(:AuthorCollection)-[:AUTHORCOLLECTION_HAS_AUTHOR]->(author:Author)'
+	];
+	const returnClause = 'RETURN {paper:paper, authors: collect(distinct author), abstracts: collect(distinct abstract)}';
+
+	const request = $.get('request');
+	const pageSetup = {};
+	pageSetup.pageSize = $.empty(request.pageSize) ? 10 : request.pageSize
+	pageSetup.page     = $.empty(request.page)     ? 1  : request.page,
+	pageSetup.page     = pageSetup.page * pageSetup.pageSize;
+
+	const epilogue = 'SKIP ' + pageSetup.page + ' LIMIT ' + pageSetup.pageSize;
+
+	const query = prologue + ' ' + matchClauses.join(' ') + ' ' + returnClause + ' ' + epilogue;
+
+	$.log(query);
+	$.store('query', query);
+
+	const children = $.get('children');
+	$.render(children);
+
+}}
