@@ -2,9 +2,10 @@ ${{
 
 	const prologue = 'MATCH (patent:Patent),';
 	const matchClauses = [
-		'(patent)-[:INVENTOR]->(inventor:Entity)',
+		'(patent)-[:PATENT_HAS_PATENTTITLE]->(patentTitle:PatentTitle),',
+		'(patent)-[:INVENTOR]->(inventor:Entity)'
 	];
-	const returnClause = 'RETURN {patent:patent, inventors: collect(distinct inventor)}';
+	const returnClause = 'RETURN {patent:patent, patentTitles: collect(distinct patentTitle), inventors: collect(distinct inventor)}';
 
 	const request = $.get('request');
 	const pageSetup = {};

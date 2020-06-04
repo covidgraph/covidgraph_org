@@ -176,9 +176,9 @@ ${{
 							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 							<th><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Published</th>
 							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-							<th><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Inventors</th>
+							<th><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Title or Number</th>
 							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-							<th><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Authors</th>
+							<th><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Inventors</th>
 							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 							<th><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Type</th>
 						</tr>
@@ -205,7 +205,24 @@ ${{
 								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 								<td><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${result.patent.pub_date}</td>
 								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-								<td><!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) --><a href="${result.patent.lens_url}"><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${result.patent.pub_key}</a></td>
+								<td><!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) --><a href="${result.patent.lens_url}"><!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${{
+
+	const result = $.get('result');
+	
+	const title = result.patentTitles.find(patentTitle =&gt; patentTitle.lang === 'en');
+	
+	if(!$.empty(title)) {
+
+		$.print(title.text);
+
+	} else {
+
+		const number = result.patent.pub_key;
+		$.print(number);
+
+	}
+	
+}}</a></td>
 								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 								<td class="authors-column"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${{
 	let result = Structr.get('result');
