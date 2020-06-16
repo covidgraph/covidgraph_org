@@ -1,0 +1,26 @@
+${{
+
+	const prologue = 'MATCH (patent:Patent),';
+	const matchClauses = [
+		'(patent)-[:PATENT_HAS_PATENTTITLE]->(patentTitle:PatentTitle),',
+		'(patent)-[:INVENTOR]->(inventor:Entity)'
+	];
+	const returnClause = 'RETURN {patent:patent, patentTitles: collect(distinct patentTitle), inventors: collect(distinct inventor)}';
+
+	const request = $.get('request');
+	const pageSetup = {};
+	pageSetup.pageSize = $.empty(request.pageSize) ? 10 : request.pageSize
+	pageSetup.page     = $.empty(request.page)     ? 1  : request.page,
+	pageSetup.page     = pageSetup.page * pageSetup.pageSize;
+
+	const epilogue = 'SKIP ' + pageSetup.page + ' LIMIT ' + pageSetup.pageSize;
+
+	const query = prologue + ' ' + matchClauses.join(' ') + ' ' + returnClause + ' ' + epilogue;
+
+	//$.log(query);
+	$.store('query', query);
+
+	const children = $.get('children');
+	$.render(children);
+
+}}
