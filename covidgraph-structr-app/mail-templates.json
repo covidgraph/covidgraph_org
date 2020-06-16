@@ -6,5 +6,13 @@
     "name": "RESET_PASSWORD_SENDER_ADDRESS",
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
+  },
+  {
+    "filename": "RESET_PASSWORD_TARGET_PAGE_-_null.html",
+    "id": "6a0391cb720440bebbc9efa3183a0df5",
+    "locale": null,
+    "name": "RESET_PASSWORD_TARGET_PAGE",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
   }
 ]

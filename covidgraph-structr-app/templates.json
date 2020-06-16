@@ -1,4 +1,11 @@
 {
+  "Confirmation successful-d12be2c6e42a4b00a4137c7f1b90f1af": {
+    "contentType": "text/html",
+    "id": "d12be2c6e42a4b00a4137c7f1b90f1af",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": false
+  },
   "Contact Form Section-699fbe0d92a741fd8eeb1e875eb141c2": {
     "contentType": "text/html",
     "id": "699fbe0d92a741fd8eeb1e875eb141c2",

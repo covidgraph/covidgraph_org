@@ -388,6 +388,29 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/css/dore.light.blue.min.css_2020-06-04-155624257": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "id": "277d5b9a773a4b8a9c67ea83cbdacbb5",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Axel Morgner"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/css/dore.light.green.css": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -589,6 +612,29 @@
     "isTemplate": false,
     "owner": {
       "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/main.css_2020-06-04-155624294": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "id": "a3c5239f1dbe4b84b2eabc566c5d2eab",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Axel Morgner"
     },
     "type": "File",
     "useAsJavascriptLibrary": false,
@@ -1900,6 +1946,29 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/fonts.googleapis.com/css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/plain",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "id": "f387c5019a414e388a7ef2065e09c7a3",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Axel Morgner"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/fonts.googleapis.com/css.family.Nunito.300.400.400i.600.700": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -2445,6 +2514,33 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/img/content-img/CovidGraph_partners.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 1080,
+    "id": "3ef8605fe7534a5fb72187817ca6b58e",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 1920
+  },
   "/img/content-img/NCBI Gene Database.png": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -2660,6 +2756,33 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true,
     "width": 2622
+  },
+  "/img/content-img/data_model_with_logos_and_numbers.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 1080,
+    "id": "641ca603951d420abee54ca5aae4a6c9",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 1920
   },
   "/img/content-img/ensembl-org.jpg": {
     "basicAuthRealm": null,
@@ -4398,6 +4521,33 @@
     "visibleToPublicUsers": true,
     "width": 96
   },
+  "/img/members/Axel_Morgner_420x420.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "height": 420,
+    "id": "c17af15944ca46e1b3037daaa9535b2d",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "Axel Morgner"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 420
+  },
   "/img/members/alessandro.jpg": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -4722,6 +4872,33 @@
     "visibleToPublicUsers": true,
     "width": 300
   },
+  "/img/members/placeholder.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 128,
+    "id": "7ff06ec3296f4fc4aa59116d386c6ad4",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 128
+  },
   "/img/members/sebastian.png": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -5005,6 +5182,29 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/js/dore.scripts.landingpage.js_2020-06-04-155624783": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "id": "97df0220864b47309550b6b639dffa77",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Axel Morgner"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/js/scripts.js": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -5063,7 +5263,7 @@
       }
     ],
     "id": "e15456e9047340e3b8d9e026b6054301",
-    "includeInFrontendExport": false,
+    "includeInFrontendExport": true,
     "owner": {
       "name": "admin"
     },
@@ -5273,6 +5473,29 @@
     "isTemplate": false,
     "owner": {
       "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/js/vendor/bootstrap.bundle.min.js_2020-06-04-155624676": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "id": "5f391aec0b724687ae2e4caf13e294ac",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Axel Morgner"
     },
     "type": "File",
     "useAsJavascriptLibrary": false,
@@ -6655,6 +6878,29 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/js/vendor/jquery-3.3.1.min.js_2020-06-04-155624658": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "id": "91420b818ab442a0a4dd75a5c029b7bb",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Axel Morgner"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/js/vendor/jquery.autoellipsis.js": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -6695,6 +6941,29 @@
     "isTemplate": false,
     "owner": {
       "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/js/vendor/jquery.barrating.min.js_2020-06-04-155624716": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "id": "2419c796ea3a42d2914c33a9b0450c6f",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Axel Morgner"
     },
     "type": "File",
     "useAsJavascriptLibrary": false,
@@ -9733,6 +10002,119 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/js/vendor/landing-page": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": null,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "id": "13d5402293b74140ba4279e82c23c82a",
+    "includeInFrontendExport": true,
+    "owner": {
+      "name": "Axel Morgner"
+    },
+    "type": "Folder",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/js/vendor/landing-page/headroom.min.js": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "id": "d4a78069e932455fba212245cf85a336",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Axel Morgner"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/js/vendor/landing-page/jQuery.headroom.js": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "id": "e8f4e5e79a3e4271a9a53eccee0a99b9",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Axel Morgner"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/js/vendor/landing-page/jquery.autoellipsis.js": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "id": "daaa02a0abb944f4872abe75c99de15b",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Axel Morgner"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/js/vendor/landing-page/jquery.scrollTo.min.js": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "id": "478cb2d0d7e14b5e8553e1639bce38ad",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Axel Morgner"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/js/vendor/moment.min.js": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -9842,6 +10224,29 @@
     "isTemplate": false,
     "owner": {
       "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/js/vendor/owl.carousel.min.js_2020-06-04-155624695": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "id": "088ce7e908954065b156ca8be5577e66",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Axel Morgner"
     },
     "type": "File",
     "useAsJavascriptLibrary": false,

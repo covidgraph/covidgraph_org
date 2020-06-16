@@ -121,9 +121,16 @@ b, strong {
 	height: 60px;
 }
 
+.landing-page .card {
+	min-height: 48rem;
+}
+
 @media (max-width:1440px) {
 	.navbar-logo img, .landing-page .landing-page-nav .navbar-logo {
 		height: 40px;
+	}
+	.landing-page .card {
+		min-height: 50rem;
 	}
 }
 
@@ -131,6 +138,15 @@ b, strong {
 	.navbar-logo img, .landing-page .landing-page-nav .navbar-logo {
 		height: 30px;
 		vertical-align: top;
+	}
+	.landing-page .card {
+		min-height: 54.5rem;
+	}
+}
+
+@media (max-width:991px) {
+	.landing-page .card {
+		min-height: 47rem;
 	}
 }
 
@@ -315,8 +331,14 @@ b, strong {
 	line-height: 1.3rem;
 }
 
-.landing-page .card {
-	min-height: 50rem;
+.landing-page .card .card-footer {
+	background-color: transparent;
+	border-top: none;
+}
+
+.landing-page .card .card-body .btn {
+	/*position: absolute;
+	bottom: 5%;*/
 }
 
 .subpage .card {
@@ -405,4 +427,8 @@ b, strong {
 	list-style-type: none;
     display: inline-block;
     padding-right: 1rem;
+}
+
+.user-img {
+	cursor: pointer;
 }

@@ -216,6 +216,46 @@ $(function() {
 });
 
 $(function() {
+	
+	$('#remove-profile-image').on('click', function() {
+		let form = $('form#user-profile');
+		let id = $(form).find('#id').val();
+		
+		$.ajax({
+			url: "/structr/rest/User/" + id,
+			type: 'PUT',
+			contentType: 'application/json',
+			data: JSON.stringify({img:null}),
+			statusCode: {
+				200: function(resp) {
+					window.location.href = "/user-profile";
+				},
+				401: function() {
+					$.notify({
+						message: 'Unable to remove profile image.',
+						type: 'warning'
+					});
+				}
+			}
+		});   
+	});
+	
+	$('.user-img img').dropzone({
+		url: '/structr/upload',
+		params: {
+			type: 'Image',
+			parent: 'c313847e43ff4e15a2f96b81813f50d1',
+			user: $('#user-id').val(),
+			visibleToPublicUsers: true,
+			visibleToAuthenticatedUsers: true
+		},
+		complete: function() {
+			if (this.getUploadingFiles().length === 0 && this.getQueuedFiles().length === 0) {
+				location.reload();
+			}
+		}
+	});
+	
 	$('#save-button').on('click', function() {
 		let form = $('form#user-profile');
 		let id = $(form).find('#id').val();
@@ -248,7 +288,6 @@ $(function() {
 					//$(form).find('#passwd').select();
 				}
 			}
-
 		});    
 	});
 });					

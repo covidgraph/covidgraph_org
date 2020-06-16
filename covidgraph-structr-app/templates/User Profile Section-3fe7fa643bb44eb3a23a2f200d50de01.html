@@ -4,6 +4,14 @@
 								<div class="col-12 offset-0 col-lg-8 offset-lg-2">
 									<h2>User Profile</h2>
 									<form id="user-profile" action="javascript:void(0)">
+										
+										<div class="form-group">
+											<label for="name">Profile Image</label><button id="remove-profile-image" class="ml-4 mb-1 btn btn-xs">Remove</button>
+											<div class="user-img"><img alt="user-pic" class="img-circle" src="${if(empty(me.img), '/img/members/placeholder.png', me.img.tnMid.path)}"></div>
+											<input type="hidden" id="user-id" name="user-id" value="${me.id}"/>
+											<small>Click on the image to change it.</small>
+										</div>
+										
 										<div class="form-group">
 											<label for="name">Name</label>
 											<input class="form-control" id="name" name="name" value="${me.name}"/>

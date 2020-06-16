@@ -7124,8 +7124,16 @@
             "$ref": "#/definitions/Principal"
           },
           "type": "array"
+        },
+        "name": {
+          "indexed": true,
+          "type": "string",
+          "unique": true
         }
       },
+      "required": [
+        "name"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -16289,8 +16297,13 @@
         }
       },
       "type": "object",
-      "viewOrder": {},
+      "viewOrder": {
+        "custom": "twitterName"
+      },
       "views": {
+        "custom": [
+          "twitterName"
+        ],
         "public": [
           "isUser",
           "name"
@@ -16315,6 +16328,7 @@
           "publicKey",
           "sessionIds",
           "skipSecurityRelationships",
+          "twitterName",
           "twoFactorConfirmed",
           "twoFactorToken",
           "workingDirectory"

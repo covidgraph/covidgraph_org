@@ -1,4 +1,31 @@
 {
+  "confirmation-successful": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "category": null,
+    "contentType": "text/html",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Axel Morgner"
+      }
+    ],
+    "hidden": false,
+    "hideConditions": null,
+    "id": "0d1aa0b300604e9a980177b66e39f0b2",
+    "owner": {
+      "name": "admin"
+    },
+    "pageCreatesRawData": false,
+    "path": null,
+    "position": 1000,
+    "showConditions": null,
+    "showOnErrorCodes": "404",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": false
+  },
   "contact": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,

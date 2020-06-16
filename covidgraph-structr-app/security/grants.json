@@ -417,7 +417,7 @@
 	{"flags":0,"id":"bc0e8cd764d8402c88379f939a591dfe","signature":"Principal/_Ui"},
 	{"flags":0,"id":"7d07cf4f019743f78870f016494daf81","signature":"Progress"},
 	{"flags":0,"id":"448dd92a55404862810dd39b6c09c5db","signature":"Progress/_Ui"},
-	{"flags":0,"id":"7eb42b63025a42af80f4a8c09f76d5f7","signature":"ProjectMember"},
+	{"flags":3,"id":"7eb42b63025a42af80f4a8c09f76d5f7","signature":"ProjectMember"},
 	{"flags":0,"id":"0b40e2dbc77548829019bbf822a4ef6b","signature":"ProjectMember/NewsArticle"},
 	{"flags":0,"id":"c884e5af8224492faff797e84f97fa14","signature":"ProjectMember/NewsArticle/_Ui"},
 	{"flags":0,"id":"3d9948e24c4b4af7bcbe0bb1d1ac53ab","signature":"ProjectMember/_Ui"},
