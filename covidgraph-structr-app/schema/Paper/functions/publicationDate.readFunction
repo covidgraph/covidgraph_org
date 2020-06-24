@@ -1,0 +1,10 @@
+{
+
+	const self = $.this;
+	
+	const covidGraphProperties = self.getCovidGraphProperties();
+	const publicationDate = covidGraphProperties.publish_time;
+	
+	return publicationDate;
+
+}

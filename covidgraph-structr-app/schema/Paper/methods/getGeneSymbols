@@ -1,0 +1,22 @@
+{
+	
+	const self = $.this;
+
+	const neoConnector = $.call('getCovidGraphConnector');
+
+	const query = 'MATCH (paper:Paper)' + 
+		'-[:PAPER_HAS_BODYTEXTCOLLECTION]->(:BodyTextCollection)' +
+		'-[:BODYTEXTCOLLECTION_HAS_BODYTEXT]->(:BodyText)' +
+		'-[:HAS_FRAGMENT]->(:Fragment)' +
+		'-[:MENTIONS]->(geneSymbol:GeneSymbol) ' +
+		'WHERE ID(paper) = ' + self.covidGraphId + ' ' +
+		'RETURN DISTINCT ID(geneSymbol) AS id';
+
+	const geneSymbolIds = neoConnector.query({query : query});
+	const geneSymbols = geneSymbolIds.map(geneSymbol => $.get_or_create('GeneSymbol', {
+		covidGraphId : geneSymbol.id
+	}));
+	
+	return geneSymbols;
+
+}

@@ -1385,6 +1385,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./ContactRequest/methods/afterCreate"
         },
         "onSave": {
@@ -1393,6 +1394,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./ContactRequest/methods/onSave"
         }
       },
@@ -2009,6 +2011,20 @@
           "position"
         ]
       }
+    },
+    "CovidGraphNode": {
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "properties": {
+        "covidGraphId": {
+          "default": "",
+          "format": "",
+          "indexed": true,
+          "type": "string"
+        }
+      },
+      "type": "object"
     },
     "CsvFile": {
       "$extends": "#/definitions/File",
@@ -5777,6 +5793,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./FeedbackMessage/methods/afterCreate"
         }
       },
@@ -5813,6 +5830,8 @@
       "viewOrder": {},
       "views": {
         "custom": [
+          "eMail",
+          "messageText",
           "policyAccepted",
           "publicationAccepted"
         ]
@@ -7047,6 +7066,73 @@
         }
       },
       "type": "object"
+    },
+    "Gene": {
+      "$extends": "#/definitions/CovidGraphNode",
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "type": "object"
+    },
+    "GeneSymbol": {
+      "$extends": "#/definitions/CovidGraphNode",
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "methods": {
+        "getCovidGraphProperties": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./GeneSymbol/methods/getCovidGraphProperties"
+        },
+        "getGene": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./GeneSymbol/methods/getGene"
+        },
+        "getSynonyms": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./GeneSymbol/methods/getSynonyms"
+        },
+        "onCreate": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./GeneSymbol/methods/onCreate"
+        }
+      },
+      "properties": {
+        "name": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./GeneSymbol/functions/name.readFunction",
+          "type": "function",
+          "writeFunction": "./GeneSymbol/functions/name.writeFunction"
+        }
+      },
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "name"
+        ]
+      }
     },
     "Group": {
       "$extends": "#/definitions/Principal",
@@ -9886,6 +9972,138 @@
         ]
       }
     },
+    "MetaSchema": {
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "properties": {
+        "connector": {
+          "$link": "#/definitions/MetaSchemaHAS_NEOCONNECTORNeoConnector",
+          "$ref": "#/definitions/NeoConnector",
+          "type": "object"
+        },
+        "edges": {
+          "$link": "#/definitions/MetaSchemaMETASCHEMA_HAS_METASCHEMAEDGEMetaSchemaEdge",
+          "items": {
+            "$ref": "#/definitions/MetaSchemaEdge"
+          },
+          "type": "array"
+        },
+        "nodes": {
+          "$link": "#/definitions/MetaSchemaMETASCHEMA_HAS_METASCHEMANODEMetaSchemaNode",
+          "items": {
+            "$ref": "#/definitions/MetaSchemaNode"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "MetaSchemaEdge": {
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "properties": {
+        "metaschema": {
+          "$link": "#/definitions/MetaSchemaMETASCHEMA_HAS_METASCHEMAEDGEMetaSchemaEdge",
+          "$ref": "#/definitions/MetaSchema",
+          "type": "object"
+        },
+        "source": {
+          "$link": "#/definitions/MetaSchemaNodeMETASCHEMANODE_HAS_OUTGOINGMETASCHEMA_EDGEMetaSchemaEdge",
+          "$ref": "#/definitions/MetaSchemaNode",
+          "type": "object"
+        },
+        "target": {
+          "$link": "#/definitions/MetaSchemaNodeMETASCHEMANODE_HAS_INCOMINGMETASCHEMA_EDGEMetaSchemaEdge",
+          "$ref": "#/definitions/MetaSchemaNode",
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "MetaSchemaHAS_NEOCONNECTORNeoConnector": {
+      "$source": "#/definitions/MetaSchema",
+      "$target": "#/definitions/NeoConnector",
+      "cardinality": "OneToOne",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "HAS_NEOCONNECTOR",
+      "sourceName": "metaschema",
+      "targetName": "connector",
+      "type": "object"
+    },
+    "MetaSchemaMETASCHEMA_HAS_METASCHEMAEDGEMetaSchemaEdge": {
+      "$source": "#/definitions/MetaSchema",
+      "$target": "#/definitions/MetaSchemaEdge",
+      "cardinality": "OneToMany",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "METASCHEMA_HAS_METASCHEMAEDGE",
+      "sourceName": "metaschema",
+      "targetName": "edges",
+      "type": "object"
+    },
+    "MetaSchemaMETASCHEMA_HAS_METASCHEMANODEMetaSchemaNode": {
+      "$source": "#/definitions/MetaSchema",
+      "$target": "#/definitions/MetaSchemaNode",
+      "cardinality": "OneToMany",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "METASCHEMA_HAS_METASCHEMANODE",
+      "sourceName": "metaschema",
+      "targetName": "nodes",
+      "type": "object"
+    },
+    "MetaSchemaNode": {
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "properties": {
+        "incomingEdges": {
+          "$link": "#/definitions/MetaSchemaNodeMETASCHEMANODE_HAS_INCOMINGMETASCHEMA_EDGEMetaSchemaEdge",
+          "items": {
+            "$ref": "#/definitions/MetaSchemaEdge"
+          },
+          "type": "array"
+        },
+        "metaschema": {
+          "$link": "#/definitions/MetaSchemaMETASCHEMA_HAS_METASCHEMANODEMetaSchemaNode",
+          "$ref": "#/definitions/MetaSchema",
+          "type": "object"
+        },
+        "outgoingEdges": {
+          "$link": "#/definitions/MetaSchemaNodeMETASCHEMANODE_HAS_OUTGOINGMETASCHEMA_EDGEMetaSchemaEdge",
+          "items": {
+            "$ref": "#/definitions/MetaSchemaEdge"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "MetaSchemaNodeMETASCHEMANODE_HAS_INCOMINGMETASCHEMA_EDGEMetaSchemaEdge": {
+      "$source": "#/definitions/MetaSchemaNode",
+      "$target": "#/definitions/MetaSchemaEdge",
+      "cardinality": "OneToMany",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "METASCHEMANODE_HAS_INCOMINGMETASCHEMA_EDGE",
+      "sourceName": "target",
+      "targetName": "incomingEdges",
+      "type": "object"
+    },
+    "MetaSchemaNodeMETASCHEMANODE_HAS_OUTGOINGMETASCHEMA_EDGEMetaSchemaEdge": {
+      "$source": "#/definitions/MetaSchemaNode",
+      "$target": "#/definitions/MetaSchemaEdge",
+      "cardinality": "OneToMany",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "METASCHEMANODE_HAS_OUTGOINGMETASCHEMA_EDGE",
+      "sourceName": "source",
+      "targetName": "outgoingEdges",
+      "type": "object"
+    },
     "MetadataNode": {
       "$implements": [
         "https://structr.org/v1.1/definitions/MetadataNode"
@@ -10070,6 +10288,48 @@
       "isInterface": false,
       "type": "object"
     },
+    "NeoConnector": {
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "methods": {
+        "query": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./NeoConnector/methods/query"
+        }
+      },
+      "properties": {
+        "metaschema": {
+          "$link": "#/definitions/MetaSchemaHAS_NEOCONNECTORNeoConnector",
+          "$ref": "#/definitions/MetaSchema",
+          "type": "object"
+        },
+        "password": {
+          "default": "",
+          "format": "",
+          "indexed": true,
+          "type": "string"
+        },
+        "url": {
+          "default": "",
+          "format": "",
+          "indexed": true,
+          "type": "string"
+        },
+        "username": {
+          "default": "",
+          "format": "",
+          "indexed": true,
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
     "NewsArticle": {
       "$extends": "#/definitions/ContentItem",
       "isAbstract": false,
@@ -10137,6 +10397,7 @@
           "linkText",
           "linkURL",
           "publicationDate",
+          "text",
           "title"
         ]
       }
@@ -11762,6 +12023,94 @@
           "showOnErrorCodes",
           "sites",
           "version"
+        ]
+      }
+    },
+    "Paper": {
+      "$extends": "#/definitions/CovidGraphNode",
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "methods": {
+        "getAbstracts": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Paper/methods/getAbstracts"
+        },
+        "getAuthors": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Paper/methods/getAuthors"
+        },
+        "getCovidGraphProperties": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Paper/methods/getCovidGraphProperties"
+        },
+        "getGeneSymbols": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Paper/methods/getGeneSymbols"
+        },
+        "onCreate": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Paper/methods/onCreate"
+        }
+      },
+      "properties": {
+        "name": {
+          "cachingEnabled": true,
+          "default": "",
+          "readFunction": "./Paper/functions/name.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Paper/functions/name.writeFunction"
+        },
+        "publicationDate": {
+          "cachingEnabled": true,
+          "default": "",
+          "readFunction": "./Paper/functions/publicationDate.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Paper/functions/publicationDate.writeFunction"
+        },
+        "url": {
+          "cachingEnabled": true,
+          "default": "",
+          "readFunction": "./Paper/functions/url.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Paper/functions/url.writeFunction"
+        }
+      },
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "name",
+          "publicationDate",
+          "url"
         ]
       }
     },
@@ -17538,5 +17887,20 @@
       }
     }
   },
-  "methods": []
+  "methods": [
+    {
+      "comment": "",
+      "name": "getCovidGraphConnector",
+      "source": "./_globalMethods/getCovidGraphConnector",
+      "visibleToAuthenticatedUsers": false,
+      "visibleToPublicUsers": false
+    },
+    {
+      "comment": "",
+      "name": "inferMetaSchema",
+      "source": "./_globalMethods/inferMetaSchema",
+      "visibleToAuthenticatedUsers": false,
+      "visibleToPublicUsers": false
+    }
+  ]
 }

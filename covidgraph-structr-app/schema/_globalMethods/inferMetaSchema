@@ -1,0 +1,15 @@
+{
+
+	$.includeJs('meta_schema.js');
+
+	const credentials = {
+		url      : $.retrieve('url'),
+		username : $.retrieve('username'),
+		password : $.retrieve('password')
+	};
+	
+	const name = $.retrieve('name');
+	
+	MetaSchema.infer(name, credentials);
+
+}
