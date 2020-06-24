@@ -16651,6 +16651,10 @@
       },
       "views": {
         "custom": [
+          "confirmationKey",
+          "isUser",
+          "localStorage",
+          "skipSecurityRelationships",
           "twitterName"
         ],
         "public": [

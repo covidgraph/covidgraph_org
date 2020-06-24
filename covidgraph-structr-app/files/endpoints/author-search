@@ -1,0 +1,37 @@
+${{
+
+	$.includeJs('covid-graph-connector.js');
+
+	const request = $.get('request');
+	const term  = request.term;
+	$.log('Term: ', term);
+	
+	// construct query
+	const prefix = 'MATCH (a:Author)';
+	
+	const suffix      = 'RETURN a ORDER BY a.first LIMIT 100';
+	const whereClause = "WHERE a.first =~ '(?i)" + term + ".*' OR a.last =~ '(?i)" + term + ".*'";
+	const query       = prefix + ' ' + whereClause + ' ' + suffix;
+
+	// send query to covid-graph DB
+	CovidGraphConnector.initialize();
+	const authors = CovidGraphConnector.query(query);
+
+	// format result
+	const results = authors.map(function(author) {
+		return {
+			id   : author._hash_id,
+			text : author.first + ' ' + author.last
+		}
+	});
+	const result = {
+		results : results,
+		//pagination : {
+		//	more : true
+		//}
+	};
+	
+	// print result as json
+	$.print(JSON.stringify(result));
+
+}}
