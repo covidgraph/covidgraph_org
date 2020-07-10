@@ -1,0 +1,140 @@
+${{
+
+	const request = $.get('request');
+	const debug = $.empty(request['debug']) ? false : (request['debug'] === 'true');
+	//$.log('Request: ', $.get('parameter_map'));
+
+	
+	
+	
+	
+	/****************************************\
+	 #CONSTRUCT-QUERY
+	\****************************************/
+	
+	// prologue
+	const prologue = 'MATCH (patent:Patent)';
+	
+	// return
+	const countReturnClause  = 'RETURN COUNT(DISTINCT patent) AS numPatents';
+	const resultReturnClause = 'RETURN DISTINCT ID(patent) AS id';
+
+	// epilogue
+	const pagingSetup = {
+		pageStart : $.empty(request.start)  ?  0 : request.start,
+		pageSize  : $.empty(request.length) ? 10 : request.length
+	};
+	const epilogue = 'SKIP ' + pagingSetup.pageStart + ' LIMIT ' + pagingSetup.pageSize;
+	
+	// match clauses
+	const matchClauses = [];
+	
+	const filterGeneIds = [];
+	
+	
+	
+	
+	
+	/****************************************\
+	 #QUERY-DB
+	\****************************************/
+	
+	const countQuery   =
+		prologue + '\n' + matchClauses.join('\n') + '\n' + countReturnClause;
+	const resultQuery  =
+		prologue + '\n' + matchClauses.join('\n') + '\n' + resultReturnClause + ' ' + epilogue;
+
+	//$.log('Paper-Patent-Search Result Query: ', resultQuery);
+	//$.log('Paper-Patent-Search Count Query: ', countQuery);
+
+	// query covid-graph
+	const covidGraphConnector = $.call('getCovidGraphConnector');
+	const count   = covidGraphConnector.query({query : countQuery});
+	const results = covidGraphConnector.query({query : resultQuery});
+	const patents  = results.map(patentId => $.get_or_create('Patent', {
+		covidGraphId : patentId.id
+	}));
+
+	
+	
+	
+	
+	/****************************************\
+	 #TRANSFORM-OUTPUT
+	\****************************************/
+
+	const output = {
+		draw            : $.empty(request.draw) ? 0 : request.draw,
+		recordsTotal    : $.first(count).numPatents,
+		recordsFiltered : $.first(count).numPatents,
+		data            : patents.map(patent => {
+
+			const id = patent.id
+			const publicationDate = patent.publicationDate;
+			const title           = patent.getTitle();
+			const type            = patent.patentType;
+			const geneSymbols       = patent.getGeneSymbols();
+			const referencedPatents = patent.getReferencedPatents();
+
+			let result = [];
+			if(debug) {
+				result.push(id);
+			}
+			result = result.concat([
+				publicationDate,
+				title,
+				type,
+				geneSymbols.map(transformGeneSymbol).join(', '),
+				referencedPatents.map(transformReferencedPatents).join('<br>')
+			]);
+			return result;
+		})
+	};
+	
+	function transformGeneSymbol(geneSymbol) {
+		
+		const markupClass =
+			'gene gene-' + 
+			($.contains(filterGeneIds, geneSymbol.covidGraphId) ? 'found' : 'default');
+		
+		const markupString = 
+			  "<a class='" + 
+			  markupClass + 
+			  "' href='/gene-symbol/" + 
+			  geneSymbol.id +
+			  "'>" +
+			  geneSymbol.name +
+			  '</a>';
+		
+		return markupString;
+		
+	}
+	
+	function transformReferencedPatents(patent) {
+	
+		const markupString = 
+			  "<a href='/patent/" + 
+			  patent.id +
+			  "'>" +
+			  patent.getTitle() +
+			  '</a>';
+		
+		return markupString;
+		
+	}
+
+	
+	
+	
+	
+	/****************************************\
+	 #PRINT-RESULT
+	\****************************************/
+	
+	if(debug) {
+		return JSON.stringify(output, null, 2);
+	} else {
+		return JSON.stringify(output);
+	}
+
+}}

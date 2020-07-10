@@ -1,0 +1,66 @@
+${{
+
+	const request = $.get('request');
+	const term  = request.term;
+	$.log('Term: ', term);
+	
+	
+	
+	
+	
+	/****************************************\
+	 #CONSTRUCT-QUERY
+	\****************************************/
+	
+	const prefix = 'MATCH (author:Author)';
+	
+	const suffix      = 'RETURN ID(author) AS id LIMIT 100';
+	const whereClause = 'WHERE ' + "(author.first + author.last) =~ '(?i).*" + term + ".*'";
+	const query       = prefix + ' ' + whereClause + ' ' + suffix;
+
+	
+	
+	
+	
+	/****************************************\
+	 #QUERY-DB
+	\****************************************/
+	
+	const covidGraphConnector = $.call('getCovidGraphConnector');
+	const authorIds = covidGraphConnector.query({query : query});
+
+	
+	
+	
+	
+	/****************************************\
+	 #FORMAT-RESULT
+	\****************************************/
+	
+	const authors = authorIds.map(authorId => $.get_or_create('Author', {
+		covidGraphId : authorId.id
+	}));
+	
+	const result = {
+		results : authors.map(function(author) {
+			return {
+				id   : author.covidGraphId,
+				text : author.first + ' ' + author.last
+			}
+		})
+		//pagination : {
+		//	more : true
+		//}
+	};
+	
+	
+	
+	
+	
+	/****************************************\
+	 #PRINT-RESULT
+	\****************************************/
+
+	$.print(JSON.stringify(result));
+
+}}

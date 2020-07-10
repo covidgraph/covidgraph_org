@@ -1,0 +1,198 @@
+${{
+
+	const request = $.get('request');
+	const debug = $.empty(request['debug']) ? false : (request['debug'] === 'true');
+	//$.log('Request: ', $.get('parameter_map'));
+
+	
+	
+	
+	
+	/****************************************\
+	 #CONSTRUCT-QUERY
+	\****************************************/
+	
+	// prologue
+	const prologue = 'MATCH (paper:Paper)'; //, MATCH (patent:Patent)';
+	
+	// return
+	const countReturnClause  = 'RETURN COUNT(DISTINCT paper) AS numDocuments';
+	const resultReturnClause = 'RETURN DISTINCT ID(paper) AS id';
+
+	// epilogue
+	const pagingSetup = {
+		pageStart : $.empty(request.start)  ?  0 : request.start,
+		pageSize  : $.empty(request.length) ? 10 : request.length
+	};
+	const epilogue = 'SKIP ' + pagingSetup.pageStart + ' LIMIT ' + pagingSetup.pageSize;
+	
+	// match clauses
+	const matchClauses = [];
+	
+	// filter based on genes
+	const filterGeneIds = $.empty(request['genes']) ? [] : request['genes'].split(',');
+	if(!$.empty(filterGeneIds)) {
+
+		for(let i=0; i<filterGeneIds.length; ++i) {
+			matchClauses.push(
+				'MATCH (paper)-[:PAPER_HAS_BODYTEXTCOLLECTION]->(:BodyTextCollection)' +
+				'-[:BODYTEXTCOLLECTION_HAS_BODYTEXT]->(:BodyText)' +
+				'-[:HAS_FRAGMENT]->(:Fragment)' +
+				'-[:MENTIONS]->(geneSymbol' + i + ':GeneSymbol) ' +
+				'WHERE ID(geneSymbol' + i + ') = ' + filterGeneIds[i]
+			);
+		}
+
+	}
+	
+	// filter based on authors
+	const filterAuthorIds = $.empty(request['authors']) ? [] : request['authors'].split(',');
+	if(!$.empty(filterAuthorIds)) {
+		for(let i=0; i<filterAuthorIds.length; ++i) {
+
+			matchClauses.push(
+				'MATCH (paper)-[:PAPER_HAS_AUTHORCOLLECTION]->(:AuthorCollection)' +
+				'-[:AUTHORCOLLECTION_HAS_AUTHOR]->(author' + i + ':Author) ' +
+				'WHERE ID(author' + i + ') = ' + filterAuthorIds[i]
+			);
+
+		}
+
+	}
+	
+	// filter based on title
+	const filterTitle = $.empty(request['title']) ? '' : request['title'];
+	if(!$.empty(filterTitle)) {
+
+		matchClauses.push(
+			'MATCH (paper) ' +
+			"WHERE paper.title =~ '(?i).*" + filterTitle + ".*'"
+		);
+
+	}
+	
+	// filter based on publication date
+	const filterDate = $.empty(request['publicationDate']) ? {} : JSON.parse(request['publicationDate']);
+	if(!$.empty(filterDate)) {
+
+		matchClauses.push(
+			'MATCH (paper) ' +
+			'WHERE ' +
+			"'" + filterDate.startDate + "'" +
+			' <= paper.publish_time AND paper.publish_time <= ' +
+			"'" + filterDate.endDate, 'yyyy-MM-dd' + "'"
+		);
+
+	}	
+	
+	
+	
+	
+	
+	/****************************************\
+	 #QUERY-DB
+	\****************************************/
+	
+	const countQuery   =
+		prologue + '\n' + matchClauses.join('\n') + '\n' + countReturnClause;
+	const resultQuery  =
+		prologue + '\n' + matchClauses.join('\n') + '\n' + resultReturnClause + ' ' + epilogue;
+
+	//$.log('Paper-Patent-Search Result Query: ', resultQuery);
+	//$.log('Paper-Patent-Search Count Query: ', countQuery);
+
+	// query covid-graph
+	const covidGraphConnector = $.call('getCovidGraphConnector');
+	const count   = covidGraphConnector.query({query : countQuery});
+	const results = covidGraphConnector.query({query : resultQuery});
+	const papers  = results.map(paperId => $.get_or_create('Paper', {
+		covidGraphId : paperId.id
+	}));
+
+	
+	
+	
+	
+	/****************************************\
+	 #TRANSFORM-OUTPUT
+	\****************************************/
+
+	const output = {
+		draw            : $.empty(request.draw) ? 0 : request.draw,
+		recordsTotal    : $.first(count).numDocuments,
+		recordsFiltered : $.first(count).numDocuments,
+		data            : papers.map(paper => {
+
+			const publicationDate = paper.publicationDate;
+			const title           = transformTitle(paper);
+			const authors         = paper.getAuthors();
+			const abstracts       = paper.getAbstracts();
+			const geneSymbols     = paper.getGeneSymbols();
+
+			let result = [];
+			if(debug) {
+				result.push(paper.covidGraphId);
+			}
+			result = result.concat([
+				publicationDate,
+				title,
+				authors.map(transformAuthor).join('<br>'),
+				abstracts.map(transformAbstract).join('<br><br>'),
+				geneSymbols.map(transformGeneSymbol).join(', ')
+			]);
+			return result;
+		})
+	};
+	
+	function transformTitle(paper) {
+	
+		return "<a href='/paper/" + paper.id + "'>" + paper.name + '</a>';
+		
+	}
+	
+	function transformAuthor(author) {
+	
+		return author.first + ' ' + author.last;
+		
+	}
+	
+	function transformAbstract(abstract) {
+	
+		return abstract.text.substring(0, 100) + '...';
+		
+	}
+	
+	function transformGeneSymbol(geneSymbol) {
+		
+		const markupClass =
+			'gene gene-' + 
+			($.contains(filterGeneIds, geneSymbol.covidGraphId) ? 'found' : 'default');
+		
+		const markupString = 
+			  "<a class='" + 
+			  markupClass + 
+			  "' href='/gene-symbol/" + 
+			  geneSymbol.id +
+			  "'>" +
+			  geneSymbol.name +
+			  '</a>';
+		
+		return markupString;
+		
+	}
+
+	
+	
+	
+	
+	/****************************************\
+	 #PRINT-RESULT
+	\****************************************/
+	
+	if(debug) {
+		return JSON.stringify(output, null, 2);
+	} else {
+		return JSON.stringify(output);
+	}
+
+}}

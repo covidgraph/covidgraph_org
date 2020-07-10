@@ -1,0 +1,108 @@
+${{
+
+	const request = $.get('request');
+	const debug = $.empty(request['debug']) ? false : (request['debug'] === 'true');
+	//$.log('Request: ', $.get('parameter_map'));
+
+	
+	
+	
+	
+	/****************************************\
+	 #CONSTRUCT-QUERY
+	\****************************************/
+	
+	// prologue
+	const prologue = 'MATCH (tissue:GtexTissue)';
+	
+	// return
+	const countReturnClause  = 'RETURN COUNT(DISTINCT tissue) AS numTissues';
+	const resultReturnClause = 'RETURN DISTINCT ID(tissue) AS id';
+
+	// epilogue
+	const pagingSetup = {
+		pageStart : $.empty(request.start)  ?  0 : request.start,
+		pageSize  : $.empty(request.length) ? 10 : request.length
+	};
+	const epilogue = 'SKIP ' + pagingSetup.pageStart + ' LIMIT ' + pagingSetup.pageSize;
+	
+	// match clauses
+	const matchClauses = [];
+	
+	const filterGeneIds = [];
+	
+	
+	
+	
+	
+	/****************************************\
+	 #QUERY-DB
+	\****************************************/
+	
+	const countQuery   =
+		prologue + '\n' + matchClauses.join('\n') + '\n' + countReturnClause;
+	const resultQuery  =
+		prologue + '\n' + matchClauses.join('\n') + '\n' + resultReturnClause + ' ' + epilogue;
+
+	//$.log('Paper-Patent-Search Result Query: ', resultQuery);
+	//$.log('Paper-Patent-Search Count Query: ', countQuery);
+
+	// query covid-graph
+	const covidGraphConnector = $.call('getCovidGraphConnector');
+	const count   = covidGraphConnector.query({query : countQuery});
+	const results = covidGraphConnector.query({query : resultQuery});
+	const tissues  = results.map(tissueId => $.get_or_create('Tissue', {
+		covidGraphId : tissueId.id
+	}));
+
+	
+	
+	
+	
+	/****************************************\
+	 #TRANSFORM-OUTPUT
+	\****************************************/
+
+	const output = {
+		draw            : $.empty(request.draw) ? 0 : request.draw,
+		recordsTotal    : $.first(count).numTissues,
+		recordsFiltered : $.first(count).numTissues,
+		data            : tissues.map(tissue => {
+
+			const id = tissue.id;
+			const name            = tissue.name;
+			const detailedTissues = tissue.getDetailedTissues();
+
+			let result = [];
+			if(debug) {
+				result.push(id);
+			}
+			result = result.concat([
+				name,
+				detailedTissues.map(transformDetailedTissue).join('<br>')
+			]);
+			return result;
+		})
+	};
+	
+	function transformDetailedTissue(detailedTissue) {
+
+		return detailedTissue.name;
+		
+	}
+
+	
+	
+	
+	
+	/****************************************\
+	 #PRINT-RESULT
+	\****************************************/
+	
+	if(debug) {
+		return JSON.stringify(output, null, 2);
+	} else {
+		return JSON.stringify(output);
+	}
+
+}}

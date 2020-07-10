@@ -1,0 +1,65 @@
+${{
+
+	const request = $.get('request');
+	const term  = request.term;
+	$.log('Term: ', term);
+	
+	
+	
+	
+	
+	/****************************************\
+	 #CONSTRUCT-QUERY
+	\****************************************/
+	
+	const prefix      = 'MATCH (geneSymbol:GeneSymbol)';
+	const suffix      = 'RETURN ID(geneSymbol) AS id LIMIT 100';
+	const whereClause = "WHERE geneSymbol.sid =~ '(?i).*" + term + ".*'";
+	const query       = prefix + ' ' + whereClause + ' ' + suffix;
+
+	
+	
+	
+	
+	/****************************************\
+	 #QUERY-DB
+	\****************************************/
+
+	const neoConnector = $.call('getCovidGraphConnector');
+	const geneSymbolsIds = neoConnector.query({query : query});
+
+	
+	
+	
+	
+	/****************************************\
+	 #FORMAT-RESULT
+	\****************************************/
+	
+	const geneSymbols = geneSymbolsIds.map(geneSymbolId => $.get_or_create('GeneSymbol', {
+		covidGraphId : geneSymbolId.id
+	}));
+
+	const result = {
+		results : geneSymbols.map(geneSymbol => {
+			return {
+				id   : geneSymbol.covidGraphId,
+				text : geneSymbol.name
+			}
+		})
+		//pagination : {
+		//	more : true
+		//}
+	};
+	
+	
+	
+	
+	
+	/****************************************\
+	 #PRINT-RESULT
+	\****************************************/
+	
+	$.print(JSON.stringify(result));
+
+}}

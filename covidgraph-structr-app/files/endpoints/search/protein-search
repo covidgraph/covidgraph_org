@@ -1,0 +1,117 @@
+${{
+
+	const request = $.get('request');
+	const debug = $.empty(request['debug']) ? false : (request['debug'] === 'true');
+	//$.log('Request: ', $.get('parameter_map'));
+
+	
+	
+	
+	
+	/****************************************\
+	 #CONSTRUCT-QUERY
+	\****************************************/
+	
+	// prologue
+	const prologue = 'MATCH (protein:Protein)';
+	
+	// return
+	const countReturnClause  = 'RETURN COUNT(DISTINCT protein) AS numProteins';
+	const resultReturnClause = 'RETURN DISTINCT ID(protein) AS id';
+
+	// epilogue
+	const pagingSetup = {
+		pageStart : $.empty(request.start)  ?  0 : request.start,
+		pageSize  : $.empty(request.length) ? 10 : request.length
+	};
+	const epilogue = 'SKIP ' + pagingSetup.pageStart + ' LIMIT ' + pagingSetup.pageSize;
+	
+	// match clauses
+	const matchClauses = [];
+	
+	const filterGeneIds = [];
+	
+	
+	
+	
+	
+	/****************************************\
+	 #QUERY-DB
+	\****************************************/
+	
+	const countQuery   =
+		prologue + '\n' + matchClauses.join('\n') + '\n' + countReturnClause;
+	const resultQuery  =
+		prologue + '\n' + matchClauses.join('\n') + '\n' + resultReturnClause + ' ' + epilogue;
+
+	//$.log('Paper-Patent-Search Result Query: ', resultQuery);
+	//$.log('Paper-Patent-Search Count Query: ', countQuery);
+
+	// query covid-graph
+	const covidGraphConnector = $.call('getCovidGraphConnector');
+	const count   = covidGraphConnector.query({query : countQuery});
+	const results = covidGraphConnector.query({query : resultQuery});
+	const proteins  = results.map(proteinId => $.get_or_create('Protein', {
+		covidGraphId : proteinId.id
+	}));
+
+	
+	
+	
+	
+	/****************************************\
+	 #TRANSFORM-OUTPUT
+	\****************************************/
+
+	const output = {
+		draw            : $.empty(request.draw) ? 0 : request.draw,
+		recordsTotal    : $.first(count).numProteins,
+		recordsFiltered : $.first(count).numProteins,
+		data            : proteins.map(protein => {
+
+			const id = protein.id;
+			const name        = protein.name;
+			const category    = protein.category;
+			const description = protein.description;
+
+			let result = [];
+			if(debug) {
+				result.push(id);
+			}
+			result = result.concat([
+				name,
+				category,
+				description
+			]);
+			return result;
+		})
+	};
+	
+	function transformAffiliation(affiliation) {
+
+		const institution = affiliation['institution'];
+		const laboratory  = affiliation['laboratory'];
+		if(!$.empty(institution)) {
+			return institution;
+		} else if(!$.empty(laboratory)) {
+			return laboratory;
+		}
+		return '';
+		
+	}
+
+	
+	
+	
+	
+	/****************************************\
+	 #PRINT-RESULT
+	\****************************************/
+	
+	if(debug) {
+		return JSON.stringify(output, null, 2);
+	} else {
+		return JSON.stringify(output);
+	}
+
+}}

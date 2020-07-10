@@ -1,0 +1,58 @@
+${{
+
+	const request      = $.get('request');
+	const metaSchemaId = request['metaschema'];
+
+	
+	
+	
+	
+	/****************************************\
+	 #COLLECT-SCHEMA
+	\****************************************/
+	
+	const metaSchema = $.find('MetaSchema', metaSchemaId);
+	const metaNodes = $.empty(metaSchema) ? [] : metaSchema.nodes;
+	const metaEdges = $.empty(metaSchema) ? [] : metaSchema.edges;
+
+
+	
+	
+	
+	/****************************************\
+	 #TRANSFORM-OUTPUT
+	\****************************************/
+
+	const nodes = metaNodes.map(node => {
+		return {
+			id    : node.id,
+			value : node.getCount(),
+			label : node.name
+		};
+	});
+	
+	const edges = metaEdges.map(edge => {
+		return {
+			from    : edge.source.id,
+			to      : edge.target.id,
+			value   : edge.getCount(),
+			label   : edge.name
+		};
+	});
+
+	const result = {
+		nodes : nodes,
+		edges : edges
+	};
+	
+	
+	
+	
+	
+	/****************************************\
+	 #PRINT-RESULT
+	\****************************************/
+	
+	return JSON.stringify(result, null, 2);
+
+}}

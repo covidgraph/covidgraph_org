@@ -1,0 +1,126 @@
+${{
+
+	const request = $.get('request');
+	const debug = $.empty(request['debug']) ? false : (request['debug'] === 'true');
+	//$.log('Request: ', $.get('parameter_map'));
+
+
+
+
+
+	/****************************************\
+	 #CONSTRUCT-QUERY
+	\****************************************/
+
+	// prologue
+	const prologue = 'MATCH (gene:Gene)';
+
+	// return
+	const countReturnClause  = 'RETURN COUNT(DISTINCT gene) AS numGenes';
+	const resultReturnClause = 'RETURN DISTINCT ID(gene) AS id';
+
+	// epilogue
+	const pagingSetup = {
+		pageStart : $.empty(request.start)  ?  0 : request.start,
+		pageSize  : $.empty(request.length) ? 10 : request.length
+	};
+	const epilogue = 'SKIP ' + pagingSetup.pageStart + ' LIMIT ' + pagingSetup.pageSize;
+	
+	// match clauses
+	const matchClauses = [];	
+	
+	// filter based on geneSymbols
+	const filterGeneSymbolIds = $.empty(request['symbols']) ? [] : request['symbols'].split(',');
+	
+	
+	
+	
+	
+	/****************************************\
+	 #QUERY-DB
+	\****************************************/
+	
+	const countQuery   =
+		prologue + '\n' + matchClauses.join('\n') + '\n' + countReturnClause;
+	const resultQuery  =
+		prologue + '\n' + matchClauses.join('\n') + '\n' + resultReturnClause + ' ' + epilogue;
+
+	//$.log('Search-Genes Result Query: ', resultQuery);
+	//$.log('Search-Genes Count Query: ', countQuery);
+
+	// query covid-graph
+	const covidGraphConnector = $.call('getCovidGraphConnector');
+	const count   = covidGraphConnector.query({query : countQuery});
+	const results = covidGraphConnector.query({query : resultQuery});
+	const genes   = results.map(geneId => $.get_or_create('Gene', {
+		covidGraphId : geneId.id
+	}));
+
+	
+	
+	
+	
+	/****************************************\
+	 #TRANSFORM-OUTPUT
+	\****************************************/
+
+	const output = {
+		draw            : $.empty(request.draw) ? 0 : request.draw,
+		recordsTotal    : $.first(count).numGenes,
+		recordsFiltered : $.first(count).numGenes,
+		data            : genes.map(gene => {
+			const id   = gene.covidGraphId;
+			const name = gene.name;
+			const geneType = gene.geneType;
+			const description = gene.description;
+			const chromosome = gene.chromosome;
+			const featureType = gene.featureType;
+			
+			const symbols = [];
+			const geneSymbols = gene.getGeneSymbols();
+			for(let geneSymbol of geneSymbols) {
+				let markupClass = 'gene gene-';
+				markupClass += $.contains(filterGeneSymbolIds, geneSymbol.covidGraphId) ? 'found' : 'default';
+				let markupString = 
+					  "<a class='" + 
+					  markupClass + 
+					  "' href='/gene-symbol/" + 
+					  geneSymbol.id +
+					  "'>" +
+					  geneSymbol.name +
+					  '</a>';
+				symbols.push(markupString);
+			}
+			
+			let result = [];
+			if(debug) {
+				result.push(id);
+			}
+			result = result.concat([
+				name,
+				geneType,
+				description,
+				chromosome,
+				featureType,
+				symbols.join(', ')
+			]);
+			return result;
+
+		})
+	};
+
+	
+	
+	
+	
+	/****************************************\
+	 #PRINT-RESULT
+	\****************************************/
+	
+	if(debug) {
+		return JSON.stringify(output, null, 2);
+	} else {
+		return JSON.stringify(output);
+	}
+
+}}
