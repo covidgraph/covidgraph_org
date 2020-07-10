@@ -590,7 +590,6 @@
     },
     "Author": {
       "$extends": "#/definitions/CovidGraphNode",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -2066,7 +2065,6 @@
       }
     },
     "CovidGraphNode": {
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -4862,7 +4860,6 @@
     },
     "DetailedTissue": {
       "$extends": "#/definitions/CovidGraphNode",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -5430,7 +5427,6 @@
     },
     "Entity": {
       "$extends": "#/definitions/CovidGraphNode",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -7222,7 +7218,6 @@
     },
     "Gene": {
       "$extends": "#/definitions/CovidGraphNode",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -7302,7 +7297,6 @@
     },
     "GeneSymbol": {
       "$extends": "#/definitions/CovidGraphNode",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -10201,7 +10195,6 @@
       }
     },
     "MetaSchema": {
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -10249,7 +10242,6 @@
       "type": "object"
     },
     "MetaSchemaEdge": {
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -10287,7 +10279,6 @@
       "$source": "#/definitions/MetaSchema",
       "$target": "#/definitions/NeoConnector",
       "cardinality": "OneToOne",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isInterface": false,
       "rel": "HAS_NEOCONNECTOR",
@@ -10299,7 +10290,6 @@
       "$source": "#/definitions/MetaSchema",
       "$target": "#/definitions/MetaSchemaEdge",
       "cardinality": "OneToMany",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isInterface": false,
       "rel": "METASCHEMA_HAS_METASCHEMAEDGE",
@@ -10311,7 +10301,6 @@
       "$source": "#/definitions/MetaSchema",
       "$target": "#/definitions/MetaSchemaNode",
       "cardinality": "OneToMany",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isInterface": false,
       "rel": "METASCHEMA_HAS_METASCHEMANODE",
@@ -10320,7 +10309,6 @@
       "type": "object"
     },
     "MetaSchemaNode": {
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -10373,7 +10361,6 @@
       "$source": "#/definitions/MetaSchemaNode",
       "$target": "#/definitions/MetaSchemaEdge",
       "cardinality": "OneToMany",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isInterface": false,
       "rel": "METASCHEMANODE_HAS_INCOMINGMETASCHEMA_EDGE",
@@ -10385,7 +10372,6 @@
       "$source": "#/definitions/MetaSchemaNode",
       "$target": "#/definitions/MetaSchemaEdge",
       "cardinality": "OneToMany",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isInterface": false,
       "rel": "METASCHEMANODE_HAS_OUTGOINGMETASCHEMA_EDGE",
@@ -10578,7 +10564,6 @@
       "type": "object"
     },
     "NeoConnector": {
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -12333,7 +12318,6 @@
       }
     },
     "PageVisit": {
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -12375,7 +12359,6 @@
       "$source": "#/definitions/PageVisit",
       "$target": "#/definitions/Page",
       "cardinality": "ManyToOne",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isInterface": false,
       "rel": "PAGEVISIT_HAS_PAGE",
@@ -12385,7 +12368,6 @@
     },
     "Paper": {
       "$extends": "#/definitions/CovidGraphNode",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -12507,7 +12489,6 @@
     },
     "Patent": {
       "$extends": "#/definitions/CovidGraphNode",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -14332,7 +14313,6 @@
       "type": "object"
     },
     "Profile": {
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -14367,7 +14347,6 @@
       "$source": "#/definitions/Profile",
       "$target": "#/definitions/PageVisit",
       "cardinality": "OneToMany",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isInterface": false,
       "rel": "PROFILE_HAS_PAGEVISIT",
@@ -14439,7 +14418,6 @@
     },
     "Protein": {
       "$extends": "#/definitions/CovidGraphNode",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -16947,7 +16925,6 @@
     },
     "Tissue": {
       "$extends": "#/definitions/CovidGraphNode",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -17332,7 +17309,6 @@
       "$source": "#/definitions/User",
       "$target": "#/definitions/Profile",
       "cardinality": "OneToOne",
-      "changelogDisabled": false,
       "isAbstract": false,
       "isInterface": false,
       "rel": "USER_HAS_PROFILE",

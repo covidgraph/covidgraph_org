@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- @structr:owner(admin), @structr:grant(admin,arwd) --><html>
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+	<head>
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<script src="/applications/js/libs/vis-network.min.js" type="text/javascript"></script>
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<style type="text/css"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/css) -->    html, body {
+      font: 10pt arial;
+    }
+    #mynetwork {
+      width: 600px;
+      height: 600px;
+      border: 1px solid lightgray;
+    }
+  </style>
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<script type="text/javascript"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) -->async function draw() {
+
+	const container = document.getElementById('schema-graph');
+	
+	const endpoint = await fetch('/endpoints/schema?metaschema=${current}');
+	const text     = await endpoint.text();
+	const data     = JSON.parse(text);
+	
+	const options = {
+		nodes: {
+			shape: 'dot'
+		}
+	};
+
+	const graph = new vis.Network(container, data, options);
+
+}</script>
+	</head>
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+	<body onload="draw()">
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<div id="schema-graph" style="width: 750px; height: 750px;"></div>
+	</body>
+</html>
