@@ -102,5 +102,12 @@
     "shared": "true",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
+  },
+  "Table Card-e2e3acb68b924649bda36d0d6c7ea916": {
+    "contentType": "text/html",
+    "id": "e2e3acb68b924649bda36d0d6c7ea916",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
   }
 }

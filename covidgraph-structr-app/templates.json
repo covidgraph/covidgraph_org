@@ -209,6 +209,13 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "Table Card-e2e3acb68b924649bda36d0d6c7ea916": {
+    "contentType": "text/html",
+    "id": "e2e3acb68b924649bda36d0d6c7ea916",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "Team Section-c3bb7893c59741c094cae337a0089317": {
     "contentType": "text/html",
     "id": "c3bb7893c59741c094cae337a0089317",

@@ -1,2 +1,124 @@
-<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application)">
-</structr:template>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<!--TITLE-->
+		<title>${capitalize(page.name)}</title>
+		
+		<!--METADATA-->
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport">
+
+		<!--STYLES-->
+		<link rel="stylesheet" href="/applications/font/iconsmind-s/css/iconsminds.css">
+		<link rel="stylesheet" href="/applications/font/simple-line-icons/css/simple-line-icons.css">
+		<link rel="stylesheet" href="/applications/css/vendor/bootstrap.min.css">
+		<link rel="stylesheet" href="/applications/css/vendor/bootstrap.rtl.only.min.css">
+		<link rel="stylesheet" href="/applications/css/vendor/fullcalendar.min.css">
+		<link rel="stylesheet" href="/applications/css/vendor/dataTables.bootstrap4.min.css">
+		<link rel="stylesheet" href="/applications/css/vendor/datatables.responsive.bootstrap4.min.css">
+		<link rel="stylesheet" href="/applications/css/vendor/select2.min.css">
+		<link rel="stylesheet" href="/applications/css/vendor/perfect-scrollbar.css">
+		<link rel="stylesheet" href="/applications/css/vendor/glide.core.min.css">
+		<link rel="stylesheet" href="/applications/css/vendor/bootstrap-stars.css">
+		<link rel="stylesheet" href="/applications/css/vendor/nouislider.min.css">
+		<link rel="stylesheet" href="/applications/css/vendor/bootstrap-datepicker3.min.css">
+		<link rel="stylesheet" href="/applications/css/vendor/component-custom-switch.min.css">
+		
+		
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+		<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
+		
+		<link rel="stylesheet" href="/applications/css/main.css">
+		<link rel="stylesheet" href="/applications/css/custom.css">
+		
+		<!--SCRIPTS-->
+		<script type="text/javascript" src="/applications/js/vendor/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="/applications/js/vendor/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="/applications/js/vendor/Chart.bundle.min.js"></script>
+		<script type="text/javascript" src="/applications/js/vendor/chartjs-plugin-datalabels.js"></script>
+		<script type="text/javascript" src="/applications/js/vendor/moment.min.js"></script>
+		<script type="text/javascript" src="/applications/js/vendor/fullcalendar.min.js"></script>
+		<!--<script type="text/javascript" src="/applications/js/vendor/datatables.min.js"></script>-->
+		<script type="text/javascript" src="/applications/js/vendor/perfect-scrollbar.min.js"></script>
+		<script type="text/javascript" src="/applications/js/vendor/progressbar.min.js"></script>
+		<script type="text/javascript" src="/applications/js/vendor/jquery.barrating.min.js"></script>
+		<script type="text/javascript" src="/applications/js/vendor/select2.full.js"></script>
+		<script type="text/javascript" src="/applications/js/vendor/nouislider.min.js"></script>
+		<script type="text/javascript" src="/applications/js/vendor/bootstrap-datepicker.js"></script>
+		<script type="text/javascript" src="/applications/js/vendor/Sortable.js"></script>
+		<script type="text/javascript" src="/applications/js/vendor/mousetrap.min.js"></script>
+		<script type="text/javascript" src="/applications/js/vendor/glide.min.js"></script>
+
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+		<script type="text/javascript" src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+		<script type="text/javascript" src="/applications/js/dore.script.js"></script>
+		<script type="text/javascript" src="/applications/js/dashboard-scripts.js"></script>
+		
+	</head>
+	<body id="app-container" class="menu-default show-spinner">
+		${include('Navigation Top (Application)')}
+		${include('Navigation Left (Application)')}
+		<main>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12">
+						<h1>${capitalize(page.name)}</h1>
+						<nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+							<ol class="breadcrumb pt-0">
+								
+								<!--RENDER BREADCRUMBS-->
+								${{
+
+									/*const user = $.get('me');
+									if(!$.empty(user)) {
+										
+										// get page, parameters and profile
+										const page = $.get('page');
+										const parameters = JSON.stringify($.get('parameter_map'));
+										const profile = $.get_or_create('Profile', {
+											user : user
+										});
+										
+										// create page visit
+										$.create('PageVisit', {
+											page       : page,
+											profile    : profile,
+											parameters : parameters,
+											time       : new Date()
+										});
+
+										const breadCrumbs = $.empty(profile) ? [] : profile.getBreadCrumbs();
+										for(let i=0; i<breadCrumbs.length; ++i) {
+
+											$.print(
+												"<li class='breadcrumb-item'><a href='" +
+												breadCrumbs[i].link +
+												"'>" +
+												breadCrumbs[i].name +
+												'</a></li>'
+											);
+
+										}
+										
+									}*/
+
+								}}
+								
+								<li class="breadcrumb-item active" aria-current="page">${capitalize(page.name)}</li>
+								
+							</ol>
+						</nav>
+						<div class="separator mb-5"></div>
+					</div>
+				</div>
+				${render(children)}
+			</div>
+		</main>
+		${include('Navigation Bottom (Application)')}
+	</body>
+</html>
