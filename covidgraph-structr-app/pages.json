@@ -6,12 +6,7 @@
     "contentType": "text/html",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Axel Morgner"
-      }
-    ],
+    "grantees": [],
     "hidden": false,
     "hideConditions": null,
     "id": "0d1aa0b300604e9a980177b66e39f0b2",
