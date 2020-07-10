@@ -10,8 +10,8 @@
 		'WHERE ID(paper) = ' + self.covidGraphId + ' ' +
 		'RETURN DISTINCT abstract';
 
-	const abstract = neoConnector.query({query : query});
+	const abstracts = neoConnector.query({query : query});
 
-	return abstract;
+	return abstracts;
 
 }

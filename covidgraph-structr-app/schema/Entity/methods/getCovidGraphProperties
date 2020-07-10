@@ -1,0 +1,23 @@
+{
+	
+	const self = $.this;
+
+	const neoConnector = $.call('getCovidGraphConnector');
+
+	const query = 'MATCH (entity:Entity) ' +
+		'WHERE ID(entity) = ' + self.covidGraphId + ' ' +
+		'RETURN entity';
+
+	
+	const results = neoConnector.query({query : query});
+	
+	if(results.length !== 1) {
+		$.log('Cardinality Mismatch for Entity.getCovidGraphProperties(', self.id, ')');
+		$.log('Query: ', query);
+		return {};
+	}
+	
+	const entity = $.first(results);
+	return entity;
+
+}

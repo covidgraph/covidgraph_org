@@ -588,6 +588,59 @@
         ]
       }
     },
+    "Author": {
+      "$extends": "#/definitions/CovidGraphNode",
+      "changelogDisabled": false,
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "methods": {
+        "getAffiliations": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Author/methods/getAffiliations"
+        },
+        "getCovidGraphProperties": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Author/methods/getCovidGraphProperties"
+        }
+      },
+      "properties": {
+        "first": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Author/functions/first.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Author/functions/first.writeFunction"
+        },
+        "last": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Author/functions/last.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Author/functions/last.writeFunction"
+        }
+      },
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "first",
+          "last"
+        ]
+      }
+    },
     "B": {
       "$extends": "#/definitions/DOMElement",
       "$implements": [
@@ -2013,9 +2066,21 @@
       }
     },
     "CovidGraphNode": {
+      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
+      "methods": {
+        "onSave": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./CovidGraphNode/methods/onSave"
+        }
+      },
       "properties": {
         "covidGraphId": {
           "default": "",
@@ -4795,6 +4860,50 @@
       "isInterface": false,
       "type": "object"
     },
+    "DetailedTissue": {
+      "$extends": "#/definitions/CovidGraphNode",
+      "changelogDisabled": false,
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "methods": {
+        "getCovidGraphProperties": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./DetailedTissue/methods/getCovidGraphProperties"
+        },
+        "getTissues": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./DetailedTissue/methods/getTissues"
+        }
+      },
+      "properties": {
+        "name": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./DetailedTissue/functions/name.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./DetailedTissue/functions/name.writeFunction"
+        }
+      },
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "name"
+        ]
+      }
+    },
     "Details": {
       "$extends": "#/definitions/DOMElement",
       "$implements": [
@@ -5316,6 +5425,41 @@
           "_html_src",
           "_html_type",
           "_html_width"
+        ]
+      }
+    },
+    "Entity": {
+      "$extends": "#/definitions/CovidGraphNode",
+      "changelogDisabled": false,
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "methods": {
+        "getCovidGraphProperties": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Entity/methods/getCovidGraphProperties"
+        }
+      },
+      "properties": {
+        "name": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Entity/functions/name.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Entity/functions/name.writeFunction"
+        }
+      },
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "name"
         ]
       }
     },
@@ -7078,13 +7222,87 @@
     },
     "Gene": {
       "$extends": "#/definitions/CovidGraphNode",
+      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
-      "type": "object"
+      "methods": {
+        "getCovidGraphProperties": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Gene/methods/getCovidGraphProperties"
+        },
+        "getGeneSymbols": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Gene/methods/getGeneSymbols"
+        }
+      },
+      "properties": {
+        "chromosome": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Gene/functions/chromosome.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Gene/functions/chromosome.writeFunction"
+        },
+        "description": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Gene/functions/description.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Gene/functions/description.writeFunction"
+        },
+        "featureType": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Gene/functions/featureType.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Gene/functions/featureType.writeFunction"
+        },
+        "geneType": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Gene/functions/geneType.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Gene/functions/geneType.writeFunction"
+        },
+        "name": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Gene/functions/name.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Gene/functions/name.writeFunction"
+        }
+      },
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "chromosome",
+          "description",
+          "featureType",
+          "geneType",
+          "name"
+        ]
+      }
     },
     "GeneSymbol": {
       "$extends": "#/definitions/CovidGraphNode",
+      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -7132,6 +7350,7 @@
           "default": "",
           "readFunction": "./GeneSymbol/functions/name.readFunction",
           "type": "function",
+          "typeHint": "string",
           "writeFunction": "./GeneSymbol/functions/name.writeFunction"
         }
       },
@@ -9982,9 +10201,30 @@
       }
     },
     "MetaSchema": {
+      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
+      "methods": {
+        "infer": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./MetaSchema/methods/infer"
+        },
+        "onCreate": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./MetaSchema/methods/onCreate"
+        }
+      },
       "properties": {
         "connector": {
           "$link": "#/definitions/MetaSchemaHAS_NEOCONNECTORNeoConnector",
@@ -10009,11 +10249,23 @@
       "type": "object"
     },
     "MetaSchemaEdge": {
+      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
+      "methods": {
+        "getCount": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./MetaSchemaEdge/methods/getCount"
+        }
+      },
       "properties": {
-        "metaschema": {
+        "metaSchema": {
           "$link": "#/definitions/MetaSchemaMETASCHEMA_HAS_METASCHEMAEDGEMetaSchemaEdge",
           "$ref": "#/definitions/MetaSchema",
           "type": "object"
@@ -10035,10 +10287,11 @@
       "$source": "#/definitions/MetaSchema",
       "$target": "#/definitions/NeoConnector",
       "cardinality": "OneToOne",
+      "changelogDisabled": false,
       "isAbstract": false,
       "isInterface": false,
       "rel": "HAS_NEOCONNECTOR",
-      "sourceName": "metaschema",
+      "sourceName": "metaSchema",
       "targetName": "connector",
       "type": "object"
     },
@@ -10046,10 +10299,11 @@
       "$source": "#/definitions/MetaSchema",
       "$target": "#/definitions/MetaSchemaEdge",
       "cardinality": "OneToMany",
+      "changelogDisabled": false,
       "isAbstract": false,
       "isInterface": false,
       "rel": "METASCHEMA_HAS_METASCHEMAEDGE",
-      "sourceName": "metaschema",
+      "sourceName": "metaSchema",
       "targetName": "edges",
       "type": "object"
     },
@@ -10057,17 +10311,30 @@
       "$source": "#/definitions/MetaSchema",
       "$target": "#/definitions/MetaSchemaNode",
       "cardinality": "OneToMany",
+      "changelogDisabled": false,
       "isAbstract": false,
       "isInterface": false,
       "rel": "METASCHEMA_HAS_METASCHEMANODE",
-      "sourceName": "metaschema",
+      "sourceName": "metaSchema",
       "targetName": "nodes",
       "type": "object"
     },
     "MetaSchemaNode": {
+      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
+      "methods": {
+        "getCount": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./MetaSchemaNode/methods/getCount"
+        }
+      },
       "properties": {
         "incomingEdges": {
           "$link": "#/definitions/MetaSchemaNodeMETASCHEMANODE_HAS_INCOMINGMETASCHEMA_EDGEMetaSchemaEdge",
@@ -10076,7 +10343,7 @@
           },
           "type": "array"
         },
-        "metaschema": {
+        "metaSchema": {
           "$link": "#/definitions/MetaSchemaMETASCHEMA_HAS_METASCHEMANODEMetaSchemaNode",
           "$ref": "#/definitions/MetaSchema",
           "type": "object"
@@ -10087,14 +10354,26 @@
             "$ref": "#/definitions/MetaSchemaEdge"
           },
           "type": "array"
+        },
+        "showOnDashboard": {
+          "default": "",
+          "indexed": true,
+          "type": "boolean"
         }
       },
-      "type": "object"
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "showOnDashboard"
+        ]
+      }
     },
     "MetaSchemaNodeMETASCHEMANODE_HAS_INCOMINGMETASCHEMA_EDGEMetaSchemaEdge": {
       "$source": "#/definitions/MetaSchemaNode",
       "$target": "#/definitions/MetaSchemaEdge",
       "cardinality": "OneToMany",
+      "changelogDisabled": false,
       "isAbstract": false,
       "isInterface": false,
       "rel": "METASCHEMANODE_HAS_INCOMINGMETASCHEMA_EDGE",
@@ -10106,6 +10385,7 @@
       "$source": "#/definitions/MetaSchemaNode",
       "$target": "#/definitions/MetaSchemaEdge",
       "cardinality": "OneToMany",
+      "changelogDisabled": false,
       "isAbstract": false,
       "isInterface": false,
       "rel": "METASCHEMANODE_HAS_OUTGOINGMETASCHEMA_EDGE",
@@ -10298,10 +10578,20 @@
       "type": "object"
     },
     "NeoConnector": {
+      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
       "methods": {
+        "inferMetaSchema": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./NeoConnector/methods/inferMetaSchema"
+        },
         "query": {
           "callSuper": false,
           "comment": "",
@@ -10313,7 +10603,7 @@
         }
       },
       "properties": {
-        "metaschema": {
+        "metaSchema": {
           "$link": "#/definitions/MetaSchemaHAS_NEOCONNECTORNeoConnector",
           "$ref": "#/definitions/MetaSchema",
           "type": "object"
@@ -11968,6 +12258,13 @@
           "default": "false",
           "type": "boolean"
         },
+        "pageVisits": {
+          "$link": "#/definitions/PageVisitPAGEVISIT_HAS_PAGEPage",
+          "items": {
+            "$ref": "#/definitions/PageVisit"
+          },
+          "type": "array"
+        },
         "path": {
           "indexed": true,
           "type": "string"
@@ -12035,8 +12332,60 @@
         ]
       }
     },
+    "PageVisit": {
+      "changelogDisabled": false,
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "properties": {
+        "page": {
+          "$link": "#/definitions/PageVisitPAGEVISIT_HAS_PAGEPage",
+          "$ref": "#/definitions/Page",
+          "type": "object"
+        },
+        "parameters": {
+          "default": "",
+          "format": "",
+          "indexed": true,
+          "type": "string"
+        },
+        "profile": {
+          "$link": "#/definitions/ProfilePROFILE_HAS_PAGEVISITPageVisit",
+          "$ref": "#/definitions/Profile",
+          "type": "object"
+        },
+        "time": {
+          "datePattern": "",
+          "default": "",
+          "format": "date-time",
+          "indexed": true,
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "parameters",
+          "time"
+        ]
+      }
+    },
+    "PageVisitPAGEVISIT_HAS_PAGEPage": {
+      "$source": "#/definitions/PageVisit",
+      "$target": "#/definitions/Page",
+      "cardinality": "ManyToOne",
+      "changelogDisabled": false,
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "PAGEVISIT_HAS_PAGE",
+      "sourceName": "pageVisits",
+      "targetName": "page",
+      "type": "object"
+    },
     "Paper": {
       "$extends": "#/definitions/CovidGraphNode",
+      "changelogDisabled": false,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -12153,6 +12502,131 @@
       "views": {
         "_html_": [
           "_html_value"
+        ]
+      }
+    },
+    "Patent": {
+      "$extends": "#/definitions/CovidGraphNode",
+      "changelogDisabled": false,
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "methods": {
+        "getApplicants": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Patent/methods/getApplicants"
+        },
+        "getCovidGraphProperties": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Patent/methods/getCovidGraphProperties"
+        },
+        "getGeneSymbols": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Patent/methods/getGeneSymbols"
+        },
+        "getInventors": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Patent/methods/getInventors"
+        },
+        "getOwners": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Patent/methods/getOwners"
+        },
+        "getReferencedPatents": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Patent/methods/getReferencedPatents"
+        },
+        "getReferencingPatents": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Patent/methods/getReferencingPatents"
+        },
+        "getTitle": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Patent/methods/getTitle"
+        }
+      },
+      "properties": {
+        "filingDate": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Patent/functions/filingDate.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Patent/functions/filingDate.writeFunction"
+        },
+        "patentType": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Patent/functions/patentType.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Patent/functions/patentType.writeFunction"
+        },
+        "publicationDate": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Patent/functions/publicationDate.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Patent/functions/publicationDate.writeFunction"
+        },
+        "url": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Patent/functions/url.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Patent/functions/url.writeFunction"
+        }
+      },
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "filingDate",
+          "patentType",
+          "publicationDate",
+          "url"
         ]
       }
     },
@@ -13857,6 +14331,50 @@
       "targetName": "favorites",
       "type": "object"
     },
+    "Profile": {
+      "changelogDisabled": false,
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "methods": {
+        "getBreadCrumbs": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Profile/methods/getBreadCrumbs"
+        }
+      },
+      "properties": {
+        "pageVisits": {
+          "$link": "#/definitions/ProfilePROFILE_HAS_PAGEVISITPageVisit",
+          "items": {
+            "$ref": "#/definitions/PageVisit"
+          },
+          "type": "array"
+        },
+        "user": {
+          "$link": "#/definitions/UserUSER_HAS_PROFILEProfile",
+          "$ref": "#/definitions/User",
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "ProfilePROFILE_HAS_PAGEVISITPageVisit": {
+      "$source": "#/definitions/Profile",
+      "$target": "#/definitions/PageVisit",
+      "cardinality": "OneToMany",
+      "changelogDisabled": false,
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "PROFILE_HAS_PAGEVISIT",
+      "sourceName": "profile",
+      "targetName": "pageVisits",
+      "type": "object"
+    },
     "Progress": {
       "$extends": "#/definitions/DOMElement",
       "$implements": [
@@ -13916,6 +14434,59 @@
           "websiteLink2",
           "websiteLinkText",
           "websiteLinkText2"
+        ]
+      }
+    },
+    "Protein": {
+      "$extends": "#/definitions/CovidGraphNode",
+      "changelogDisabled": false,
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "methods": {
+        "getCovidGraphProperties": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Protein/methods/getCovidGraphProperties"
+        }
+      },
+      "properties": {
+        "category": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Protein/functions/category.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Protein/functions/category.writeFunction"
+        },
+        "description": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Protein/functions/description.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Protein/functions/description.writeFunction"
+        },
+        "name": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Protein/functions/name.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Protein/functions/name.writeFunction"
+        }
+      },
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "category",
+          "description",
+          "name"
         ]
       }
     },
@@ -16374,6 +16945,50 @@
         ]
       }
     },
+    "Tissue": {
+      "$extends": "#/definitions/CovidGraphNode",
+      "changelogDisabled": false,
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "methods": {
+        "getCovidGraphProperties": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Tissue/methods/getCovidGraphProperties"
+        },
+        "getDetailedTissues": {
+          "callSuper": false,
+          "comment": "",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./Tissue/methods/getDetailedTissues"
+        }
+      },
+      "properties": {
+        "name": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./Tissue/functions/name.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Tissue/functions/name.writeFunction"
+        }
+      },
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "name"
+        ]
+      }
+    },
     "Title": {
       "$extends": "#/definitions/DOMElement",
       "$implements": [
@@ -16639,6 +17254,11 @@
         "localStorage": {
           "type": "string"
         },
+        "profile": {
+          "$link": "#/definitions/UserUSER_HAS_PROFILEProfile",
+          "$ref": "#/definitions/Profile",
+          "type": "object"
+        },
         "skipSecurityRelationships": {
           "default": "false",
           "indexed": true,
@@ -16706,6 +17326,18 @@
       "rel": "HOME_DIR",
       "sourceName": "homeFolderOfUser",
       "targetName": "homeDirectory",
+      "type": "object"
+    },
+    "UserUSER_HAS_PROFILEProfile": {
+      "$source": "#/definitions/User",
+      "$target": "#/definitions/Profile",
+      "cardinality": "OneToOne",
+      "changelogDisabled": false,
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "USER_HAS_PROFILE",
+      "sourceName": "user",
+      "targetName": "profile",
       "type": "object"
     },
     "UserWORKING_DIRFolder": {

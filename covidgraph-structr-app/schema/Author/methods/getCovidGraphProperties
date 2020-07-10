@@ -1,0 +1,23 @@
+{
+	
+	const self = $.this;
+
+	const neoConnector = $.call('getCovidGraphConnector');
+
+	const query = 'MATCH (autor:Author) ' +
+		'WHERE ID(autor) = ' + self.covidGraphId + ' ' +
+		'RETURN autor';
+
+	
+	const results = neoConnector.query({query : query});
+	
+	if(results.length !== 1) {
+		$.log('Cardinality Mismatch for Author.getCovidGraphProperties(', self.id, ')');
+		$.log('Query: ', query);
+		return {};
+	}
+
+	const author = $.first(results);
+	return author;
+
+}

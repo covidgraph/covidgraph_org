@@ -1,0 +1,10 @@
+{
+
+	const self = $.this;
+	
+	const covidGraphProperties = self.getCovidGraphProperties();
+	const geneType = covidGraphProperties['type_of_gene'];
+	
+	return geneType;
+
+}

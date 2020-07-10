@@ -8,8 +8,7 @@
 		password : $.retrieve('password')
 	};
 	
-	const name = $.retrieve('name');
-	
-	MetaSchema.infer(name, credentials);
+	const neoConnector = $.get_or_create('NeoConnector', credentials);
+	neoConnector.inferMetaSchema();
 
 }

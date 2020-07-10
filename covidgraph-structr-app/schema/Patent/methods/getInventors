@@ -1,0 +1,19 @@
+{
+	
+	const self = $.this;
+
+	const neoConnector = $.call('getCovidGraphConnector');
+
+	const query = 'MATCH (patent:Patent)' +
+		'-[:INVENTOR]->(entity:Entity)' +
+		'WHERE ID(patent) = ' + self.covidGraphId + ' ' +
+		'RETURN DISTINCT ID(entity) AS id';
+
+	const entityIds = neoConnector.query({query : query});
+	const entities = entityIds.map(entityId => $.get_or_create('Entity', {
+		covidGraphId : entityId.id
+	}));
+	
+	return entities;
+
+}

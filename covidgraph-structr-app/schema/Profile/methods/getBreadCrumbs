@@ -1,0 +1,47 @@
+{
+
+	const self = $.this;
+	const historyLength = $.retrieve(historyLength);
+
+
+
+
+
+	/****************************************\
+	 #COLLECT-CRUMBS
+	\****************************************/
+
+	const numCrumbs = $.empty(historyLength) ? 10 : historyLength;
+	// sort page visits by time, descending
+	const allPageVisits = $.sort(self.pageVisits, 'time', true);
+	const pageVisits = allPageVisits.slice(0, numCrumbs);
+	
+	const breadCrumbs = pageVisits.map(pageVisit => {
+
+		// name
+		const page = pageVisit.page;
+		const name = page.name;
+		
+		// link
+		let link = '/' + page.name;
+		const parameters = JSON.parse(pageVisit.parameters);
+		const parameterStrings = [];
+		for(let key in parameters) {
+			parameterStrings.push(key + '=' + parameters[key]);
+		}
+		const parameterString = parameterStrings.join('&');
+		if(!$.empty(parameterString)) {
+			link = link + '?' + parameterString;
+		}
+		
+		// result
+		return {
+			name : name,
+			link : link
+		};
+
+	});
+	
+	return $.to_graph_object(breadCrumbs);
+	
+}

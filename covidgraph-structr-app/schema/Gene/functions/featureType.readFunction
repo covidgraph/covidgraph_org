@@ -1,0 +1,30 @@
+{
+
+	const self = $.this;
+	
+	const covidGraphProperties = self.getCovidGraphProperties();
+	const rawFeatureType = covidGraphProperties['Feature_type'];
+	
+	const featureType = {};
+	if(!$.empty(rawFeatureType) && rawFeatureType !== '-') {
+
+		const featureArray = rawFeatureType.split('|');
+
+		for(let featureString of featureArray) {
+
+			let keyValue = featureString.split(':');
+			let key      = keyValue[0];
+			let value    = keyValue[1];
+
+			if($.empty(featureType[key])) {
+				featureType[key] = [];
+			}
+			featureType[key].push(value);
+
+		}
+
+	}
+	
+	return JSON.stringify(featureType);
+
+}

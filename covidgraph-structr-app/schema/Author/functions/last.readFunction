@@ -1,0 +1,10 @@
+{
+
+	const self = $.this;
+	
+	const covidGraphProperties = self.getCovidGraphProperties();
+	const last = covidGraphProperties.last;
+	
+	return last;
+
+}

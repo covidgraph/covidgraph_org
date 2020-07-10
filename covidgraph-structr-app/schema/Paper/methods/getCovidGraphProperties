@@ -12,7 +12,8 @@
 	const results = neoConnector.query({query : query});
 	
 	if(results.length !== 1) {
-		$.log('Cardinality Mismatch for Paper ', self.id);
+		$.log('Cardinality Mismatch for Paper.getCovidGraphProperties(', self.id, ')');
+		$.log('Query: ', query);
 		return {};
 	}
 	

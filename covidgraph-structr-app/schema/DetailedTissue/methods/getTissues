@@ -1,0 +1,19 @@
+{
+	
+	const self = $.this;
+
+	const neoConnector = $.call('getCovidGraphConnector');
+
+	const query = 'MATCH (detailedTissue:GtexDetailedTissue)' + 
+		'<-[:PARENT]-(tissue:GtexTissue)' +
+		'WHERE ID(detailedTissue) = ' + self.covidGraphId + ' ' +
+		'RETURN DISTINCT ID(tissue) AS id';
+
+	const tissueIds = neoConnector.query({query : query});
+	const tissues = tissueIds.map(tissueId => $.get_or_create('Tissue', {
+		covidGraphId : tissueId.id
+	}));
+	
+	return tissues;
+
+}

@@ -1,0 +1,16 @@
+{
+	
+	const self = $.this;
+
+	const neoConnector = $.call('getCovidGraphConnector');
+
+	const query = 'MATCH (author:Author)' + 
+		'-[:AUTHOR_HAS_AFFILIATION]->(affiliation:Affiliation)' +
+		'WHERE ID(author) = ' + self.covidGraphId + ' ' +
+		'RETURN DISTINCT affiliation';
+
+	const affiliations = neoConnector.query({query : query});
+
+	return affiliations;
+
+}

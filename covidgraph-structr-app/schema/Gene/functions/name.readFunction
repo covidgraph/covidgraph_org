@@ -1,0 +1,24 @@
+{
+
+	const self = $.this;
+	
+	const covidGraphProperties = self.getCovidGraphProperties();
+	
+	const name = covidGraphProperties['name'];
+	if(!$.empty(name) && name !== '-') {
+		return name;
+	}
+	
+	const fullName = covidGraphProperties['Full_name_from_nomenclature_authority'];
+	if(!$.empty(fullName) && fullName !== '-') {
+		return fullName;
+	}
+	
+	const symbol = covidGraphProperties['Symbol'];
+	if(!$.empty(symbol) && symbol !== '-') {
+		return symbol;
+	}
+	
+	return 'unknown';
+
+}

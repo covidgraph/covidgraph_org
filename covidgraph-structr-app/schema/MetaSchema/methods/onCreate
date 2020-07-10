@@ -1,0 +1,11 @@
+{
+
+	const self = $.this;
+
+	$.assert(
+		!$.empty(self.connector),
+		'creation_with_empty_neo_connector_disallowed',
+		"Creating 'MetaSchema' with empty 'neoConnector' disallowed."
+	);
+
+}

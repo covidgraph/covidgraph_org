@@ -1,0 +1,23 @@
+{
+	
+	const self = $.this;
+
+	const neoConnector = $.call('getCovidGraphConnector');
+
+	const query = 'MATCH (detailedTissue:GtexDetailedTissue) ' +
+		'WHERE ID(detailedTissue) = ' + self.covidGraphId + ' ' +
+		'RETURN detailedTissue';
+
+	
+	const results = neoConnector.query({query : query});
+	
+	if(results.length !== 1) {
+		$.log('Cardinality Mismatch for detailedTissue.getCovidGraphProperties(', self.id, ')');
+		$.log('Query: ', query);
+		return {};
+	}
+
+	const detailedTissue = $.first(results);
+	return detailedTissue;
+
+}

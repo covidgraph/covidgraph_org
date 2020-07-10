@@ -1,0 +1,16 @@
+{
+
+	const self         = $.this;
+	const metaSchema   = self.metaSchema;
+	const neoConnector = metaSchema.connector;
+	
+	const countQuery = 
+		'MATCH (node:' + self.name + ') ' +
+		'RETURN COUNT(DISTINCT node) AS numNodes';
+	
+	const result = neoConnector.query({query : countQuery});
+	const count  = $.first(result).numNodes;
+	
+	return count;
+	
+}

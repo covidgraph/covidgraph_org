@@ -1,0 +1,15 @@
+{
+
+	const self = $.this;
+	
+	if($.empty(self.metaSchema)) {
+		
+		const metaSchema = $.get_or_create('MetaSchema', {
+			name      : self.name,
+			connector : self
+		});
+		metaSchema.infer();
+		
+	}
+
+}

@@ -1,0 +1,50 @@
+{
+
+	const self         = $.this;
+	const neoConnector = self.connector;
+	
+	// delete existing
+	$.delete(self.nodes);
+	$.delete(self.edges);
+	
+	// query schema for nodes
+	const nodeLabelQuery = 'MATCH (node) RETURN DISTINCT LABELS(node)';
+	const nodeLabels     = neoConnector.query({query : nodeLabelQuery});
+	const typeNames      = nodeLabels.map(nodeLabel => $.first(nodeLabel));
+	
+	// create nodes
+	for(let typeName of typeNames) {
+		$.get_or_create('MetaSchemaNode', {
+			name       : typeName,
+			metaSchema : self
+		});
+	}
+	
+	// query schema for edges
+	const edgeTypeQuery     = 'MATCH ()-[edge]-() RETURN DISTINCT TYPE(edge) AS type';
+	const edgeTypes         = neoConnector.query({query : edgeTypeQuery});
+	const relationshipNames = edgeTypes.map(edgeType => edgeType.type);
+	
+	// create edges
+	for(let relationshipName of relationshipNames) {
+		let sourceTargetQuery = 'MATCH (s)-[:' + relationshipName + ']->(t) RETURN {source : LABELS(s), target : LABELS(t)} LIMIT 1';
+		let sourceTarget      = $.first(neoConnector.query({query : sourceTargetQuery}));
+		let sourceName = $.first(sourceTarget.source);
+		let targetName = $.first(sourceTarget.target);
+		let source = $.get_or_create('MetaSchemaNode', {
+			name       : sourceName,
+			metaSchema : self
+		});
+		let target = $.get_or_create('MetaSchemaNode', {
+			name       : targetName,
+			metaSchema : self
+		})
+		$.get_or_create('MetaSchemaEdge', {
+			name       : relationshipName,
+			metaSchema : self,
+			source     : source,
+			target     : target
+		});
+	}
+	
+}

@@ -1,0 +1,18 @@
+{
+
+	const self         = $.this;
+	const metaSchema   = self.metaSchema;
+	const neoConnector = metaSchema.connector;
+	
+	const countQuery = 
+		'MATCH (:' + self.source.name + ')' +
+		'-[edge:'  + self.name + ']-' +
+		'(:' + self.target.name + ') ' +
+		'RETURN COUNT(DISTINCT edge) AS numEdges';
+	
+	const result = neoConnector.query({query : countQuery});
+	const count  = $.first(result).numEdges;
+	
+	return count;
+	
+}

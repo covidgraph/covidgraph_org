@@ -1,0 +1,22 @@
+{
+	
+	const self = $.this;
+
+	const neoConnector = $.call('getCovidGraphConnector');
+
+	const query = 'MATCH (patent:Patent)' +
+		'-[:PATENT_HAS_PATENTCITATIONCOLLECTION]->(:PatentCitationCollection)' +
+		'-[:PATENTCITATIONCOLLECTION_HAS_PATENTLITERATURECITATION]->(:PatentLiteratureCitation)' +
+		'-[:PATENTLITERATURECITATION_HAS_PATENTNUMBER]->(:PatentNumber)' +
+		'<-[:PATENT_HAS_PATENTNUMBER]-(referencedPatent:Patent)' +
+		'WHERE ID(patent) = ' + self.covidGraphId + ' ' +
+		'RETURN DISTINCT ID(referencedPatent) AS id';
+
+	const patentIds = neoConnector.query({query : query});
+	const patents = patentIds.map(patentId => $.get_or_create('Patent', {
+		covidGraphId : patentId.id
+	}));
+	
+	return patents;
+
+}

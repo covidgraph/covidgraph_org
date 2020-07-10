@@ -1,0 +1,10 @@
+{
+
+	const self = $.this;
+	
+	const covidGraphProperties = self.getCovidGraphProperties();
+	const description = covidGraphProperties['desc'];
+	
+	return description;
+
+}
