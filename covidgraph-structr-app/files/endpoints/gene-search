@@ -1,0 +1,37 @@
+${{
+
+	const request = $.get('request');
+	const term  = request.term;
+	
+	// construct query
+	const prefix      = 'MATCH (geneSymbol:GeneSymbol)';
+	const suffix      = 'RETURN ID(geneSymbol) AS id LIMIT 100';
+	const whereClause = "WHERE geneSymbol.sid =~ '(?i).*" + term + ".*'";
+
+	const query = prefix + ' ' + whereClause + ' ' + suffix;
+
+	// send query to covid-graph DB
+	const neoConnector = $.call('getCovidGraphConnector');
+	const geneSymbolsIds = neoConnector.query({query : query});
+
+	// format result
+	const geneSymbols = geneSymbolsIds.map(geneSymbolId => $.get_or_create('GeneSymbol', {
+		covidGraphId : geneSymbolId.id
+	}));
+
+	const result = {
+		results : geneSymbols.map(geneSymbol => {
+			return {
+				id   : geneSymbol.covidGraphId,
+				text : geneSymbol.name
+			}
+		})
+		//pagination : {
+		//	more : true
+		//}
+	};
+	
+	// print result as json
+	$.print(JSON.stringify(result));
+
+}}

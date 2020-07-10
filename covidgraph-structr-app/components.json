@@ -1,4 +1,11 @@
 {
+  "Data Browser Section-a3dd80b54883499cb5c191c223fae8fc": {
+    "contentType": "text/html",
+    "id": "a3dd80b54883499cb5c191c223fae8fc",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "Landing Page Template-c95c746c496043b6afd6ee04930edeed": {
     "contentType": "text/html",
     "id": "c95c746c496043b6afd6ee04930edeed",
@@ -12,6 +19,13 @@
     "shared": "true",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
+  },
+  "Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d": {
+    "contentType": "text/html",
+    "id": "c107a6f69ed04c89af4523683efeb58d",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
   },
   "Member Card Landing Page 1-a54fd4e81cb245d2a798e1810204dc1f": {
     "contentType": "text/html",
@@ -54,6 +68,33 @@
     "shared": "true",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
+  },
+  "Navigation Bottom (App)-634dad0c2a40485eaffc88f5e1de4cd5": {
+    "contentType": null,
+    "id": "634dad0c2a40485eaffc88f5e1de4cd5",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "Overview Section-82c8764825c54af8b9ff3e3cb1810e8a": {
+    "contentType": "text/html",
+    "id": "82c8764825c54af8b9ff3e3cb1810e8a",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "Partial Template-26590a1f6fcf44aeac8632812b4dd63b": {
+    "contentType": "text/plain",
+    "id": "26590a1f6fcf44aeac8632812b4dd63b",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "Sub Page Template (Light)-9a5c9dcac1ad4e77ae50ddc15533f37c": {
+    "contentType": "text/html",
+    "id": "9a5c9dcac1ad4e77ae50ddc15533f37c",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
   },
   "Sub Page Template-03c69b87b4f8420186f9393f469c678d": {
     "contentType": "text/html",

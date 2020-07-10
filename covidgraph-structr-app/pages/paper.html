@@ -1,0 +1,33 @@
+<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Sub Page Template (Light)-9a5c9dcac1ad4e77ae50ddc15533f37c" data-structr-meta-name="Sub Page Template (Light)">
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Overview Section-82c8764825c54af8b9ff3e3cb1810e8a" data-structr-meta-name="Overview Section">
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<h2><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${current.name}</h2>
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<p><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${{
+
+	const paper = $.get('current');
+	const authors = paper.getAuthors();
+
+	const authorLinks = authors.map(author =&gt;
+		"&lt;a href='/author/'" + author.id + "&gt;" + author.first + ' ' + author.last + '&lt;/a&gt;'
+	);
+  
+	const authorString = authorLinks.join(', ');
+	$.print(authorString);
+
+}}</p>
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<div><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Genes
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<p><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a class="gene gene-default" href="/gene-symbol/${geneSymbol.id}" data-structr-meta-data-key="geneSymbol" data-structr-meta-function-query="{
+
+  const paper = $.get('current');
+  const geneSymbols = paper.getGeneSymbols();
+
+  return geneSymbols;
+
+}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${geneSymbol.name}</a></p>
+		</div>
+	</structr:template>
+
+</structr:template>

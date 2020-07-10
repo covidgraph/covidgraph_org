@@ -1,0 +1,18 @@
+{
+
+	const credentials = {
+		url      : 'bolt://covid.petesis.com:7687', 
+		username : 'public', 
+		password : 'corona'
+	};
+	
+	const neoConnector = $.get_or_create('NeoConnector', {
+		name     : 'Covid-Graph Connector',
+		url      : credentials.url,
+		username : credentials.username,
+		password : credentials.password
+	});
+	
+	return neoConnector;
+
+}

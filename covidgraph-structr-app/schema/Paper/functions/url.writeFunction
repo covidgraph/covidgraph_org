@@ -1,0 +1,9 @@
+{
+
+	$.assert(
+		false,
+		'write_covid_graph_not_allowed',
+		"Writing covid-graph property 'url' of 'Paper' not allowed."
+	);
+
+}

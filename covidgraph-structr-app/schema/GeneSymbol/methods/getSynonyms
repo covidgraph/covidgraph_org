@@ -1,0 +1,18 @@
+{
+	
+	const self = $.this;
+
+	const neoConnector = $.call('getCovidGraphConnector');
+
+	const query = 'MATCH (geneSymbol:GeneSymbol)-[:SYNONYM*]-(synonym:GeneSymbol) ' +
+		'WHERE ID(geneSymbol) = ' + self.covidGraphId + ' ' +
+		'RETURN DISTINCT ID(synonym) AS id';
+	
+	const results = neoConnector.query({query : query});
+	const synonyms = results.map(result => $.get_or_create('GeneSymbol', {
+		covidGraphId : result.id
+	}));
+	
+	return synonyms;
+
+}

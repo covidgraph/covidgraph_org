@@ -1,0 +1,341 @@
+<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Sub Page Template (Light)-9a5c9dcac1ad4e77ae50ddc15533f37c" data-structr-meta-name="Sub Page Template (Light)">
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Plugins-2887761c34b7494f9013677fc9126cf4" data-structr-meta-name="Plugins">
+	</structr:template>
+
+	<!-- @structr:public, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Data Browser Section-a3dd80b54883499cb5c191c223fae8fc" data-structr-meta-name="Data Browser Section">
+		<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<div class="float-right checkbox">
+			<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<label class="row">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<input class="col-xs-4 filter" id="show-papers" type="checkbox" value="true" data-off="hide" data-offstyle="danger" data-on="show" data-onstyle="success" data-toggle="toggle">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="col-xs-4" style="margin: auto;"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Papers</div>
+			</label>
+			<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<label class="row">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<input class="col-xs-4 filter" id="show-patents" type="checkbox" value="true" data-off="hide" data-offstyle="danger" data-on="show" data-onstyle="success" data-toggle="toggle">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="col-xs-4" style="margin: auto;"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Patents</div>
+			</label>
+			<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<script type="text/javascript"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) -->$(function() {
+	
+	const filterPapers  = document.getElementById('show-papers');
+	const filterPatents = document.getElementById('show-patents');
+						   
+	// set both filters to show
+	$(filterPapers).bootstrapToggle('on');
+	filterPapers.value = true;
+	$(filterPatents).bootstrapToggle('on');
+	filterPatents.value = true;
+	
+	// pull value through and trigger partial reload
+	$(filterPapers).on('change', function() {
+		filterPapers.value = filterPapers.checked;
+		const url = buildUrl();
+		dataTable.ajax.url(url).load();
+	});
+	$(filterPatents).on('change', function() {
+		filterPatents.value = filterPatents.checked;
+		const url = buildUrl();
+		dataTable.ajax.url(url).load();
+	});
+
+});</script>
+		</div>
+		<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<div class="papers">
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<h1 id="result-count"></h1>
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div class="row pager" data-structr-meta-hide-conditions="true">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="col-4">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<div class="form-group col-2">
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<label><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Display</label>
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<select class="filter" id="pageSize" name="">
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<option selected="${is(eq(request.pageSize, 10), 'selected')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->10</option>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<option selected="${is(eq(request.pageSize, 50), 'selected')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->50</option>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<option selected="${is(eq(request.pageSize, 100), 'selected')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->100</option>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<option selected="${is(eq(request.pageSize, 1000), 'selected')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->1000</option>
+						</select>
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<label><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->results</label>
+					</div>
+				</div>
+				<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="col-8">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<ul class="pagination">
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<li class="page-item"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a class="btn"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Previous</a></li>
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<li class="page-item"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a class="btn"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->1</a></li>
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<li class="page-item"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a class="btn"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Next</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div class="table-responsive">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<table class="table table-bordered table-striped" id="table">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<thead>
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<tr>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Published</th>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Title</th>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Authors</th>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Abstract</th>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th style="min-width: 200px;"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Genes</th>
+						</tr>
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<tr>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th>
+								<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<input class="filter" id="publication-date" type="text">
+								<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<script type="text/javascript"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) -->$(function() {
+	
+	const publicationDateFilter = document.getElementById('publication-date');
+
+	$(publicationDateFilter).daterangepicker({
+		autoUpdateInput : false,
+		locale          : {
+			cancleLabel : 'Clear'
+		}
+	});
+	
+	$(publicationDateFilter).on('apply.daterangepicker', function(ev, picker) {
+		const startDate = picker.startDate;
+		const endDate   = picker.endDate;
+		if(startDate &amp;&amp; endDate) {
+			const formattedStartDate = startDate.format('YYYY-MM-DD');
+			const formattedEndDate   = endDate.format('YYYY-MM-DD');
+			if(formattedStartDate !== 'Invalid date' &amp;&amp; formattedEndDate !== 'Invalid date') {
+				$(this).val(formattedStartDate + ' - ' + formattedEndDate);
+				filter['publicationDate'] = JSON.stringify({
+					startDate : formattedStartDate,
+					endDate   : formattedEndDate
+				});
+			}
+		}
+		const url = buildUrl();
+		dataTable.ajax.url(url).load();
+	});
+
+});</script>
+							</th>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th>
+								<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<input class="filter" id="title">
+							</th>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th>
+								<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<select class="filter" id="authors" multiple="multiple"></select>
+								<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<script type="text/javascript"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) -->$('#authors').select2({
+
+	minimumInputLength : 1,
+	ajax: {
+		url: '/endpoints/author-search',
+		dataType: 'json'
+	}
+
+});</script>
+							</th>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Abstract</th>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<th>
+								<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<select class="filter" id="genes" multiple="multiple"></select>
+								<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<script type="text/javascript"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) -->$('#genes').select2({
+	minimumInputLength : 1,
+	ajax: {
+		url: '/endpoints/gene-search',
+		dataType: 'json'
+	}
+});</script>
+							</th>
+						</tr>
+					</thead>
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<tbody id="table-body"></tbody>
+				</table>
+			</div>
+		</div>
+	</structr:template>
+
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+	<script type="text/javascript"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) -->const baseUrl = '/endpoints/paper-patent-search'
+
+let filter = {};
+
+let dataTable
+
+/**
+ * add event listenener to filter elements
+ */
+
+function hookFilterListeners() {
+	
+	const filterElements = document.getElementsByClassName('filter');
+	for(let filterElement of filterElements) {
+
+		filterElement.addEventListener('input', function() {
+			const url = buildUrl();
+			dataTable.ajax.url(url).load();
+		});
+		
+		filterElement.addEventListener('change', function() {
+			const url = buildUrl();
+			dataTable.ajax.url(url).load();
+		});
+		
+		$(filterElement).on('select2:select', function() {
+			const url = buildUrl();
+			dataTable.ajax.url(url).load();
+		});
+		$(filterElement).on('select2:unselect', function(evt) {
+			$(evt.target).val(null).trigger('change');
+			const url = buildUrl();
+			dataTable.ajax.url(url).load();
+		});
+
+	}
+
+}
+
+function readFilters() {
+
+	const geneFilter  = document.getElementById('genes');
+	const titleFilter = document.getElementById('title');
+	
+	filter['genes'] = $(geneFilter).select2('data').map(selectedOption =&gt; selectedOption.id);
+	filter['title'] = titleFilter.value;
+
+}
+
+/**
+ * build get parameter string from filter
+ */
+
+function buildParameterString() {
+
+	readFilters();
+	const keyValueStrings = [];
+	for(let key in filter) {
+		let value = filter[key];
+		if(value &amp;&amp; value != '') {
+			let getString = key + '=' + value;
+			keyValueStrings.push(getString);
+		}
+	}
+	const parameterString = keyValueStrings.join('&amp;');
+	return parameterString;
+	
+}
+
+function buildUrl() {
+
+	const parameterString = buildParameterString();
+	let rawUrl = baseUrl;
+	if(parameterString !== '') rawUrl = rawUrl + '?' + parameterString;
+	const url = encodeURI(rawUrl);
+	return url;
+	
+}
+
+/**
+ * filter table on properties in filter
+ */
+
+async function loadFilteredTable() {
+	
+	// compute partial url
+	const url = buildUrl();
+	
+	// load partial
+	//const tableBody = document.getElementById('table-body');
+	//await loadPartial(url, tableBody);
+	dataTable = $('#table').DataTable({
+		processing    : true,
+		serverSide    : true,
+		ajax          : url,
+		orderCellsTop : true,
+		scrollX       : true,
+		fixedHeader   : true,
+		columnDefs    : [{
+			targets   : 'nosort',
+			orderable : false
+		}],
+		sDom : 'lrtip'
+	});
+	hookFilterListeners(dataTable);
+	
+	//updateResultCount();
+	
+}
+
+/**
+ * update result counts
+ */
+
+async function updateResultCount() {
+
+	const resultField = document.getElementById('result-count');
+	await loadPartial('/result-count-partial',  resultField);
+	
+}
+
+async function loadPartial(url, domNode, postData) {
+
+	let page;
+	
+	// make post request
+	if(postData) {
+		page = await fetch(url, {
+			method      : 'POST',
+			credentials : 'same-origin',
+			body        : JSON.stringify(postData),
+			headers     : {
+				'Content-Type' : 'application/json'
+			}
+		});
+	}
+	
+	// make get request
+	else {
+		page = await fetch(url);
+	}
+	
+	// render partial into page
+	const html = await page.text();
+	domNode.innerHTML = html;
+
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+	loadFilteredTable();
+});</script>
+</structr:template>

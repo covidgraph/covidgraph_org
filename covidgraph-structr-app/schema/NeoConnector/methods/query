@@ -1,0 +1,25 @@
+{
+
+	const self  = $.this;
+	const query = $.retrieve('query');
+	const cacheKey = self.id + '-' + query;
+
+	if(!$.has_cache_value(cacheKey)) {
+		
+		//$.log('NeoConnector(' + self.name + '): ' + query);
+
+		const result = $.remote_cypher(
+			self.url,
+			self.username,
+			self.password,
+			query
+		);
+
+		$.delete_cache_value(cacheKey);
+		$.cache(cacheKey, 60 * 60 * 24, result);
+		
+	}
+	
+	return $.get_cache_value(cacheKey);
+
+}

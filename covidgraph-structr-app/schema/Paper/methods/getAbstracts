@@ -1,0 +1,17 @@
+{
+	
+	const self = $.this;
+
+	const neoConnector = $.call('getCovidGraphConnector');
+
+	const query = 'MATCH (paper:Paper)' + 
+		'-[:PAPER_HAS_ABSTRACTCOLLECTION]->(:AbstractCollection)' +
+		'-[:ABSTRACTCOLLECTION_HAS_ABSTRACT]->(abstract:Abstract) ' +
+		'WHERE ID(paper) = ' + self.covidGraphId + ' ' +
+		'RETURN DISTINCT abstract';
+
+	const abstract = neoConnector.query({query : query});
+
+	return abstract;
+
+}
