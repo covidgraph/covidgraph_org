@@ -20,13 +20,6 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d": {
-    "contentType": "text/html",
-    "id": "c107a6f69ed04c89af4523683efeb58d",
-    "shared": "true",
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
-  },
   "Member Card Landing Page 1-a54fd4e81cb245d2a798e1810204dc1f": {
     "contentType": "text/html",
     "id": "a54fd4e81cb245d2a798e1810204dc1f",
@@ -72,6 +65,24 @@
   "Navigation Bottom (App)-634dad0c2a40485eaffc88f5e1de4cd5": {
     "contentType": null,
     "id": "634dad0c2a40485eaffc88f5e1de4cd5",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "Navigation Bottom (Application)-634dad0c2a40485eaffc88f5e1de4cd5": {
+    "contentType": null,
+    "id": "634dad0c2a40485eaffc88f5e1de4cd5",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "Navigation Left (Application)-2cd52bf19ccd4788bfabf908b21d2588": {
+    "contentType": null,
+    "id": "2cd52bf19ccd4788bfabf908b21d2588",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "Navigation Top (Application)-0dbda4548e354d22a45538869aa00b8f": {
+    "contentType": null,
+    "id": "0dbda4548e354d22a45538869aa00b8f",
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
   },
