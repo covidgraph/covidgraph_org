@@ -6,6 +6,8 @@
 			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 			<ul class="list-unstyled">
 				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<li class="${is(equal(page.category,'administration'),'active')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="#administration"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="iconsminds-gears"></i><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Administration</span></a></li>
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 				<li class="${is(equal(page.name,'dashboard'),'active')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="#dashboard"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="iconsminds-monitor-analytics"></i><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Dashboards</span></a></li>
 				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 				<li class="${is(equal(page.category,'list'),'active')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="#datalists"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="iconsminds-big-data"></i><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Data Lists</a></li>
@@ -16,6 +18,11 @@
 	<div class="sub-menu">
 		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 		<div class="scroll">
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<ul class="list-unstyled" id="administration" data-link="administration">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<li class="${is(equal(page.name,'news-editor'),'active')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="/news-editor"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="iconsminds-newspaper"></i><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="d-inline-block"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->News Editor</span></a></li>
+			</ul>
 			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 			<ul class="list-unstyled" data-link="dashboard">
 				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->

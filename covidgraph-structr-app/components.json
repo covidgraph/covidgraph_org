@@ -13,12 +13,25 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "Main Nav-135e3aacfc3b4516bb3871045009e940": {
+  "Main Nav (Old)-135e3aacfc3b4516bb3871045009e940": {
     "contentType": "text/html",
     "id": "135e3aacfc3b4516bb3871045009e940",
     "shared": "true",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
+  },
+  "Main Nav-fa4f43bf5f3d44c2a7a76effad43ed0c": {
+    "contentType": null,
+    "id": "fa4f43bf5f3d44c2a7a76effad43ed0c",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d": {
+    "contentType": "text/html",
+    "id": "c107a6f69ed04c89af4523683efeb58d",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
   },
   "Member Card Landing Page 1-a54fd4e81cb245d2a798e1810204dc1f": {
     "contentType": "text/html",
@@ -55,18 +68,19 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "Member Card_-a322d142848944e88c558ea05e18cd2d": {
+    "contentType": "text/html",
+    "id": "a322d142848944e88c558ea05e18cd2d",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "Mobile Menu-812dd7476ae44032978b19cb2fbc32f7": {
     "contentType": "text/html",
     "id": "812dd7476ae44032978b19cb2fbc32f7",
     "shared": "true",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
-  },
-  "Navigation Bottom (App)-634dad0c2a40485eaffc88f5e1de4cd5": {
-    "contentType": null,
-    "id": "634dad0c2a40485eaffc88f5e1de4cd5",
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
   },
   "Navigation Bottom (Application)-634dad0c2a40485eaffc88f5e1de4cd5": {
     "contentType": null,

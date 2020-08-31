@@ -1,28 +1,43 @@
 (
-	is(this.publicationAccepted,
-		(
-			mail_begin('no-reply@covidgraph.org', 'CovidGraph Feedback Form', 'New feedback via covidgraph.org',
+	mail_begin(
+		'no-reply@covidgraph.org',
+		'CovidGraph Feedback Form',
+		'New feedback via covidgraph.org',
+		
+		if(
+			this.publicationAccepted,
 
-				concat(
-					'<b>Application: </b>', this.application.name, '<br>\n',
-					'<b>Name:</b> ', this.name, '<br>\n',
-					'<b>E-Mail:</b> ', this.eMail, '<br>\n',
-					'<b>Text: </b><br>', str_replace(this.messageText, '\n', '<br>\n')
-				)
+			concat(
+				'<b>Application: </b>', this.application.name, '<br>\n',
+				'<b>Name:</b> ', this.name, '<br>\n',
+				'<b>E-Mail:</b> ', this.eMail, '<br>\n',
+				'<b>Text: </b><br>', str_replace(this.messageText, '\n', '<br>\n')
+			)
 
-				concat(
-					'Application: ', this.application.name, '\n',
-					'Name: ', this.name, '\n',
-					'E-Mail: ', this.eMail, '\n',
-					'Application: ', this.application.name, '\n',
-					'Text: \n', this.messageText, '\n'
-				)
+			concat(
+				'Application: ', this.application.name, '\n',
+				'Name: ', this.name, '\n',
+				'E-Mail: ', this.eMail, '\n',
+				'Application: ', this.application.name, '\n',
+				'Text: \n', this.messageText, '\n'
 			),
+			
+			concat(
+				'<b>Application: </b>', this.application.name, '<br>\n',
+				'<b>Text: </b><br>', str_replace(this.messageText, '\n', '<br>\n')
+			)
 
-			mail_add_to('vge@fire.fundersclub.com', 'Fire Inbox'),
+			concat(
+				'Application: ', this.application.name, '\n',
+				'Application: ', this.application.name, '\n',
+				'Text: \n', this.messageText, '\n'
+			)
 
-			mail_add_header('X-Mailer', 'Structr'),
-			mail_send()
 		)
-	)
+		
+	),
+
+	mail_add_to('vge@fire.fundersclub.com', 'Fire Inbox'),
+	mail_add_header('X-Mailer', 'Structr'),
+	mail_send()
 )

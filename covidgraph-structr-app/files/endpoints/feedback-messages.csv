@@ -1,0 +1,23 @@
+${{
+
+	const feedbackMessages = $.sort($.find('FeedbackMessage'), 'createdDate');
+	
+	const messageStrings = feedbackMessages.map(feedbackMessage => {
+
+		const name     = $.empty(feedbackMessage.name)             ? '' : feedbackMessage.name;
+		const email    = $.empty(feedbackMessage.eMail)            ? '' : feedbackMessage.eMail;
+		const interest = $.empty(feedbackMessage.application.name) ? '' : feedbackMessage.application.name;
+		const message  = $.empty(feedbackMessage.messageText)      ? '' : feedbackMessage.messageText;
+
+		return name + ',' + email + ',' + interest + ',"' + message + '"';
+
+	});
+	
+	const header = 'Name,eMail,Interest,Message';
+	const body   = messageStrings.join('\n');
+	
+	const result = header + '\n' + body;
+	
+	return result;
+
+}}

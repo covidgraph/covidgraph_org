@@ -219,6 +219,29 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/Dore-JQuery-Admin-Dashboard-2.3.1/Html/Source/package-lock.json": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/json",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "30ba65f66cee4054a6398d1f4ce76448",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/Dore-JQuery-Admin-Dashboard-2.3.1/Html/Source/package.json": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -11640,6 +11663,29 @@
       }
     ],
     "id": "70275f67662f4bc9a7e276e6ec3e5741",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/Gogo-React-Admin-Dashboard-4.2.8/Html-Version/Source/package-lock.json": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/json",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "8c2a75e68a364583b2fd4474942541a0",
     "includeInFrontendExport": false,
     "isTemplate": false,
     "owner": {
@@ -36940,6 +36986,29 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/Gogo-React-Admin-Dashboard-4.2.8/React-Version/Source/Gogo-React/.env": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/plain",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "16ab131ec9c44ba1b7d60d4de7a3267f",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/Gogo-React-Admin-Dashboard-4.2.8/React-Version/Source/Gogo-React/.gitignore": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -48589,6 +48658,29 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/Piaf-Vuejs-Admin-Dashboard-5.0.0/Html-Version/Source/package-lock.json": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/json",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "7712703a402e4c558281a98d1aaf396f",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/Piaf-Vuejs-Admin-Dashboard-5.0.0/Html-Version/Source/package.json": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -59979,14 +60071,44 @@
     "cacheForSeconds": null,
     "contentType": null,
     "enableBasicAuth": false,
-    "grantees": [],
-    "id": "6c5da8bc2d8d4187ba6e43fac0a0402f",
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "76314df31f9c410fbfda308d7517fc04",
     "includeInFrontendExport": false,
-    "owner": null,
+    "owner": {
+      "name": "admin"
+    },
     "type": "Folder",
     "useAsJavascriptLibrary": false,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/Piaf-Vuejs-Admin-Dashboard-5.0.0/Vue-Version/Source/Piaf-Vue-Start/.vscode/settings.json": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/json",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "3c6458da780942dbae7c6a3d9ac971b2",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
   },
   "/Piaf-Vuejs-Admin-Dashboard-5.0.0/Vue-Version/Source/Piaf-Vue-Start/README.md": {
     "basicAuthRealm": null,
@@ -60024,6 +60146,29 @@
       }
     ],
     "id": "9af60a9f7ebd464caaea3e919cf44555",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/Piaf-Vuejs-Admin-Dashboard-5.0.0/Vue-Version/Source/Piaf-Vue-Start/package-lock.json": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/json",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "7e2bb44916c64c9ab7ed290ed59c253c",
     "includeInFrontendExport": false,
     "isTemplate": false,
     "owner": {
@@ -69309,14 +69454,44 @@
     "cacheForSeconds": null,
     "contentType": null,
     "enableBasicAuth": false,
-    "grantees": [],
-    "id": "fb3e90685b9049518930d6b77e47ca59",
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "c5efc348b8dc4dbe9b4af370074c5232",
     "includeInFrontendExport": false,
-    "owner": null,
+    "owner": {
+      "name": "admin"
+    },
     "type": "Folder",
     "useAsJavascriptLibrary": false,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/Piaf-Vuejs-Admin-Dashboard-5.0.0/Vue-Version/Source/Piaf-Vue/.vscode/settings.json": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/json",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "a6ecac5359cc4ea89ed5c6258cd9cb22",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
   },
   "/Piaf-Vuejs-Admin-Dashboard-5.0.0/Vue-Version/Source/Piaf-Vue/README.md": {
     "basicAuthRealm": null,
@@ -69354,6 +69529,29 @@
       }
     ],
     "id": "3130b3a960c243bc8f2cf573cbfbbf13",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/Piaf-Vuejs-Admin-Dashboard-5.0.0/Vue-Version/Source/Piaf-Vue/package-lock.json": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/json",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "8838ee4513b74410ab2bc9241f4e776a",
     "includeInFrontendExport": false,
     "isTemplate": false,
     "owner": {
@@ -114815,6 +115013,29 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/Vien-Angular-Admin-Dashboard-1.0.2/Html-Version/Source/package-lock.json": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/json",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "b63a9b9592de4b1a9ed91d3228f0804b",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/Vien-Angular-Admin-Dashboard-1.0.2/Html-Version/Source/package.json": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -128328,6 +128549,50 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/css/pdf-viewer": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": null,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "25abc05c3403409da95099d7fcc7b32e",
+    "includeInFrontendExport": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Folder",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/css/pdf-viewer/viewer.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "dff678f5c44e4b5eac1033f22ff14ddb",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/css/vendor": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -129258,6 +129523,29 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": false
   },
+  "/endpoints/feedback-messages.csv": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/csv",
+    "dontCache": true,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "c13896cbe8cb4018bb36159e1722d9b4",
+    "includeInFrontendExport": false,
+    "isTemplate": true,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "/endpoints/gene": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -129461,20 +129749,6 @@
     "type": "File",
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": false
-  },
-  "/endpoints/typeahead": {
-    "basicAuthRealm": null,
-    "cacheForSeconds": null,
-    "contentType": null,
-    "enableBasicAuth": false,
-    "grantees": [],
-    "id": "352f8748a0df49afa4d4f9d0f7b98a15",
-    "includeInFrontendExport": false,
-    "owner": null,
-    "type": "Folder",
-    "useAsJavascriptLibrary": false,
-    "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
   },
   "/font": {
@@ -131504,6 +131778,60 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true,
     "width": 1617
+  },
+  "/img/content-img/Schema_v1.0_no_logo.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 1640,
+    "id": "1317adc39a724c1e928b3ea75d2d6e5c",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 2428
+  },
+  "/img/content-img/Schema_v1.0_no_logo.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 3279,
+    "id": "23d2b0816e5d4c2ca703c4217f39c99b",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 4855
   },
   "/img/content-img/bloom-Gene_ACE2_MENTIONED_Paper.jpg": {
     "basicAuthRealm": null,
@@ -133714,6 +134042,33 @@
     "visibleToPublicUsers": true,
     "width": 446
   },
+  "/img/members/anke.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 2654,
+    "id": "21e0e016967c4a598b162e8cbbf78d2b",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 1994
+  },
   "/img/members/axel.jpg": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -134641,6 +134996,73 @@
     "includeInFrontendExport": true,
     "isTemplate": false,
     "owner": null,
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/js/pdf-viewer": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": null,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "0a63e2f6c4854b4a89b19141e4c40c18",
+    "includeInFrontendExport": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Folder",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/js/pdf-viewer/pdf.js": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "7ab5041a6dd5470cbc5566ecd0073329",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/js/pdf-viewer/viewer.js": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "a2887ac36bdb4c3a8420aecebd0291ae",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
     "type": "File",
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": true,
@@ -140178,6 +140600,98 @@
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
+  },
+  "/themeforest-IOvCgJBx-piaf-vuejs-admin-dashboard.zip": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/zip",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "4f2f080d1a8b400ba2ea25b8f26358f1",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/themeforest-XJ1lQnTI-gogo-react-bootstrap-4-admin-dashboard.zip": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/zip",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "d2326bf981af4705a7d8b8dd7fadf7d3",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/themeforest-vwGBTah8-vien-angular-admin-template.zip": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/zip",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "a2c9a1e6942449e195ed3736328d25be",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "/themeforest-ybL4XZg1-dore-jquery-bootstrap-4-admin-dashboard.zip": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/zip",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "id": "f285faee60ad4b609f2801655b1a47bd",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
   },
   "/videos": {
     "basicAuthRealm": null,

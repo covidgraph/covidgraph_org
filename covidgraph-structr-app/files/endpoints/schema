@@ -1,7 +1,7 @@
 ${{
 
 	const request      = $.get('request');
-	const metaSchemaId = request['metaschema'];
+	let metaSchemaId = request['metaschema'];
 
 	
 	
@@ -11,6 +11,11 @@ ${{
 	 #COLLECT-SCHEMA
 	\****************************************/
 	
+	if($.empty(metaSchemaId)) {
+		const covidGraphConnector = $.call('getCovidGraphConnector');
+		covidGraphConnector.inferMetaSchema();
+		metaSchemaId = covidGraphConnector.metaSchema.id;
+	}
 	const metaSchema = $.find('MetaSchema', metaSchemaId);
 	const metaNodes = $.empty(metaSchema) ? [] : metaSchema.nodes;
 	const metaEdges = $.empty(metaSchema) ? [] : metaSchema.edges;

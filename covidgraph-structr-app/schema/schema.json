@@ -14382,6 +14382,11 @@
           },
           "type": "array"
         },
+        "positionInContribution": {
+          "default": "",
+          "indexed": true,
+          "type": "integer"
+        },
         "positionInOrderJoined": {
           "indexed": true,
           "type": "integer"
@@ -14408,6 +14413,7 @@
       "views": {
         "custom": [
           "bio",
+          "positionInContribution",
           "positionInOrderJoined",
           "websiteLink",
           "websiteLink2",

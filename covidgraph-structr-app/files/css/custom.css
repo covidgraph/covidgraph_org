@@ -122,15 +122,15 @@ b, strong {
 }
 
 .landing-page .card {
-	min-height: 48rem;
+	min-height: 35rem;
 }
 
 @media (max-width:1440px) {
 	.navbar-logo img, .landing-page .landing-page-nav .navbar-logo {
-		height: 40px;
+		height: 24px;
 	}
 	.landing-page .card {
-		min-height: 50rem;
+		min-height: 39rem;/*50rem;*/
 	}
 }
 
@@ -140,13 +140,13 @@ b, strong {
 		vertical-align: top;
 	}
 	.landing-page .card {
-		min-height: 54.5rem;
+		min-height: 44rem;/*54.5rem;*/
 	}
 }
 
 @media (max-width:991px) {
 	.landing-page .card {
-		min-height: 47rem;
+		min-height: 44rem;
 	}
 }
 

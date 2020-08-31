@@ -153,7 +153,7 @@
 
 	const container = document.getElementById('schema-graph');
 	
-	const endpoint = await fetch('/endpoints/schema?metaschema=c1700747ae084cc6850d8447512128a6');
+	const endpoint = await fetch('/endpoints/schema');
 	const text     = await endpoint.text();
 	const data     = JSON.parse(text);
 	

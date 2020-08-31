@@ -62,6 +62,13 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "Libraries-41a19e6577504d1fb5c162083c976888": {
+    "contentType": "text/html",
+    "id": "41a19e6577504d1fb5c162083c976888",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "Login Page Template-718ffe75a28640a8b148eb2cc955dae6": {
     "contentType": "text/html",
     "id": "718ffe75a28640a8b148eb2cc955dae6",
@@ -69,7 +76,7 @@
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": true
   },
-  "Main Nav-135e3aacfc3b4516bb3871045009e940": {
+  "Main Nav (Old)-135e3aacfc3b4516bb3871045009e940": {
     "contentType": "text/html",
     "id": "135e3aacfc3b4516bb3871045009e940",
     "shared": "true",
@@ -114,6 +121,13 @@
   "Member Card-57605fb0c4ae40148682f7958c03af11": {
     "contentType": "text/html",
     "id": "57605fb0c4ae40148682f7958c03af11",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "Member Card_-a322d142848944e88c558ea05e18cd2d": {
+    "contentType": "text/html",
+    "id": "a322d142848944e88c558ea05e18cd2d",
     "shared": "true",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
@@ -216,6 +230,13 @@
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
   },
+  "Team Section-b0f373023a034f94935ba85687d5e0ab": {
+    "contentType": "text/html",
+    "id": "b0f373023a034f94935ba85687d5e0ab",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "Team Section-c3bb7893c59741c094cae337a0089317": {
     "contentType": "text/html",
     "id": "c3bb7893c59741c094cae337a0089317",
@@ -264,6 +285,13 @@
     "shared": "false",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
+  },
+  "abbfc6224dab4836903a180f59ce8799": {
+    "contentType": "text/html",
+    "id": "abbfc6224dab4836903a180f59ce8799",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
   },
   "f7586eae18834057aaca1491e87a0946": {
     "contentType": "text/html",
