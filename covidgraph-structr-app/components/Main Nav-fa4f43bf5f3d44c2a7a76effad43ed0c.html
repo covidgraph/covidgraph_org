@@ -1,6 +1,6 @@
 <!-- @structr:public, @structr:owner(admin), @structr:grant(admin,arwd) --><nav class="landing-page-nav" data-structr-meta-name="Main Nav">
 	<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-	<div class="container d-flex align-items-center justify-content-between"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a class="navbar-logo pull-left scrollTo" href="/"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img src="/img/logos/covid%E2%9D%8Bgraph-logo-light.png"></a>
+	<div class="container d-flex align-items-center justify-content-between navigation-top"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a class="navbar-logo pull-left scrollTo" href="/"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img src="/img/logos/covid%E2%9D%8Bgraph-logo-light.png"></a>
 		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 		<ul class="navbar-nav d-none d-lg-flex flex-row">
 			<!-- @structr:protected, @structr:owner(admin), @structr:grant(admin,arwd) -->
@@ -10,9 +10,51 @@
 			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 			<li class="nav-item"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a class="scrollTo" href="/#who-we-are"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->WHO WE ARE</a></li>
 			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-			<li class="nav-item"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="/news"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->NEWS</a></li><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><!--li class="nav-item"><a href="/#how-to-help" class="scrollTo">HOW TO HELP</a></li--><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><!--li class="nav-item"><a href="/#data" class="scrollTo">DATA</a></li--><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><!--li class="nav-item"><a href="/#use-cases" class="scrollTo">USE CASES</a></li-->
+			<li class="nav-item"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->NEWS</a>
+				<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<ul>
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<li style="padding-left: 0;"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="/news"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->All News</a></li>
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<li style="padding-left: 0;"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="/news?type=articles"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Articles</a></li>
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<li style="padding-left: 0;"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="/news?type=videos"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Videos</a></li>
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<li style="padding-left: 0;"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="/news?type=linkedin"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->LinkedIn</a></li>
+				</ul>
+			</li><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><!--li class="nav-item"><a href="/#how-to-help" class="scrollTo">HOW TO HELP</a></li--><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><!--li class="nav-item"><a href="/#data" class="scrollTo">DATA</a></li--><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><!--li class="nav-item"><a href="/#use-cases" class="scrollTo">USE CASES</a></li-->
 			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 			<li class="nav-item pl-4"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a class="btn btn-outline-semi-light btn-sm pr-4 pl-4" href="/contact" target="_top"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->GET IN TOUCH</a></li>
 		</ul><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a class="mobile-menu-button" href="#"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="simple-icon-menu"></i></a>
 	</div>
+	<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+	<style><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/css) -->.navigation-top li ul {
+	display    : none;
+	width      : 5em;
+	position   : absolute;
+	background : #145388;
+	color      : white;
+	height     : auto;
+	width      : 5.75em;
+}
+
+.navigation-top li:hover &gt; ul {
+	display    : block;
+}
+
+.navigation-top a {
+	color       : white;
+	margin-left : 0.5em;
+}
+
+.navigation-top a:hover {
+	/*margin-left : 0.75em;*/
+}
+
+.navigation-top ul, li {
+	list-style-type     : none;
+	list-style-position : inside;
+	margin              : 0;
+	padding             : 0;
+}</style>
 </nav>

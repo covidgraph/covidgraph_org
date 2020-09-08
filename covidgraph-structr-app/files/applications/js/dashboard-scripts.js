@@ -50,7 +50,7 @@ function loadStyle(href, callback) {
 	if (typeof Storage !== "undefined") {
 		if (localStorage.getItem("dore-theme")) {
 			theme = localStorage.getItem("dore-theme");
-			theme = "dore.light.blue.min.css_";
+			theme = "dore.light.blue.min.css";
 		} else {
 			localStorage.setItem("dore-theme", theme);
 		}
@@ -71,7 +71,7 @@ function loadStyle(href, callback) {
 	$(".radius-radio[data-radius='" + radius + "']").attr("checked", true);
 	$("#switchDark").attr("checked", theme.indexOf("dark") > 0 ? true : false);
 
-	loadStyle("css/" + theme, onStyleComplete);
+	loadStyle('/applications/css/vendor/' + theme, onStyleComplete);
 	function onStyleComplete() {
 		setTimeout(onStyleCompleteDelayed, 300);
 	}

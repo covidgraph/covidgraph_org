@@ -69,6 +69,13 @@
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
   },
+  "LinkedIn News Article-812d6cfb6a5a4c17afda48c1bf12ca1f": {
+    "contentType": "text/html",
+    "id": "812d6cfb6a5a4c17afda48c1bf12ca1f",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "Login Page Template-718ffe75a28640a8b148eb2cc955dae6": {
     "contentType": "text/html",
     "id": "718ffe75a28640a8b148eb2cc955dae6",
@@ -139,20 +146,6 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "News Article Template-8fa193441c8c41d8b8082e9154cf7aba": {
-    "contentType": "text/html",
-    "id": "8fa193441c8c41d8b8082e9154cf7aba",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
-  "News Section-3362a362475e42b19870a6adeb350a8a": {
-    "contentType": "text/html",
-    "id": "3362a362475e42b19870a6adeb350a8a",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
   "Not found-dd59544118ad4246aea3ffcd8b08750f": {
     "contentType": "text/html",
     "id": "dd59544118ad4246aea3ffcd8b08750f",
@@ -194,6 +187,27 @@
     "shared": "false",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
+  },
+  "Render Articles-1ad0c04022664a8fa9a0bdf28a78bce6": {
+    "contentType": "text/html",
+    "id": "1ad0c04022664a8fa9a0bdf28a78bce6",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "Render News Article-8fa193441c8c41d8b8082e9154cf7aba": {
+    "contentType": "text/html",
+    "id": "8fa193441c8c41d8b8082e9154cf7aba",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "Render Video Article-3f8f50591f9b45b88e9238b9c23d9572": {
+    "contentType": "text/html",
+    "id": "3f8f50591f9b45b88e9238b9c23d9572",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
   },
   "Store Query-43cb723faecc40f6b6aeeab47d0b60c5": {
     "contentType": "text/plain",
