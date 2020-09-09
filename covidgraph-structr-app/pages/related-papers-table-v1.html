@@ -1,0 +1,40 @@
+<!-- @structr:grant(Sven,arwd), @structr:content(text/html) --><structr:template src="Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application)">
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<script type="text/javascript"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->document.addEventListener('DOMContentLoaded', async function() {
+
+	const paperId = '${request.paper}';
+	
+	const paper = $.find('Paper', paperID);
+	$.log('.....................................');
+	$.log(paper);
+	
+});</script>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<table>
+			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+			<thead>
+				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+				<th><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Name</th>
+			</thead>
+			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+			<tbody>
+				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+				<tr data-structr-meta-data-key="paper" data-structr-meta-function-query="find('Paper',  ($.get('request'))['paper']))">
+					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+					<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
+
+	const request = $.get('request');
+	const paperId = request['paper'];
+	
+	//const paperId = request.paper};
+	
+	return paperId;
+
+}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</structr:template>

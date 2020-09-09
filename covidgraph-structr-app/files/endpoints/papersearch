@@ -1,0 +1,94 @@
+${{
+
+	const request	= $.get('request');
+	let paperId		= request['paper'];
+	
+	/*const testpaper1 = '433509624beb47d29ccbed96d445e26c';
+	const testpaper2 = '5d98d2ea981e4078bbe04ab2aa87be9d';
+	paperId	= testpaper1;*/
+	
+	/****************************************\
+	 #COLLECT-SCHEMA
+	\****************************************/
+	
+	let nodes = [];
+	let edges = [];
+	
+	if(!$.empty(paperId))
+	{
+		let srcPaper = $.find('Paper', paperId);
+		
+		if(!$.empty(srcPaper))
+		{
+			nodes.push({
+				id		: srcPaper.id,
+				title	: srcPaper.name,
+				shape	: 'image',
+				image	: '/images/paper.png'
+			});			
+			
+			let relatedPapers = srcPaper.getRelatedPapersByGenes();
+
+			for (let papersAndGenes of relatedPapers)
+			{
+				let paperUUID 	= papersAndGenes[0];
+				let paper 		= $.find('Paper', paperUUID);
+				let genes 		= papersAndGenes[1];
+				let amountGenes = $.size(genes);
+
+				nodes.push({
+					id		: paper.id,
+					title	: paper.name,
+					shape	: 'image',
+					image	: '/images/paper.png',
+					value	: amountGenes
+				});
+
+				edges.push({
+					from	: paper.id, 
+					to		: srcPaper.id,
+					value	: amountGenes
+				});
+				
+				for (let geneUUID of genes)
+				{
+					let gene = $.find('Gene', geneUUID);
+
+					let contains = nodes.find(node=> node.id === gene.id);
+					
+					if($.empty(contains))
+					{
+						nodes.push({
+							id		: gene.id,
+							title	: gene.name,
+							shape	: 'image',
+							image	: '/images/gene.png'
+						});
+						
+						/*edges.push({
+							from	: gene.id,
+							to		: srcPaper.id
+						});*/
+					}
+	
+					edges.push({
+						from	: gene.id,
+						to		: paper.id
+					});
+				}
+			}
+		}
+	}
+	
+	const result = {
+		nodes : nodes,
+		edges : edges
+	};
+	
+	/****************************************\
+	 #PRINT-RESULT
+	\****************************************/
+	
+	return JSON.stringify(result, null, 2);
+
+}}

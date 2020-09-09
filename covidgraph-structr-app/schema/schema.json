@@ -52,6 +52,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -86,6 +89,9 @@
           "source": "./Abbr/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "AbstractFile": {
@@ -310,6 +316,9 @@
       "required": [
         "name"
       ],
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -466,6 +475,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "ApplicationConfigurationDataNode": {
@@ -485,6 +497,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "core"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -514,6 +529,9 @@
           "source": "./Area/methods/isVoidElement"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Article": {
@@ -525,6 +543,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Aside": {
@@ -536,6 +557,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Audio": {
@@ -573,6 +597,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -596,21 +623,12 @@
       "methods": {
         "getAffiliations": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Author/methods/getAffiliations.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
           "returnType": "void",
           "source": "./Author/methods/getAffiliations"
-        },
-        "getCovidGraphProperties": {
-          "callSuper": false,
-          "comment": "",
-          "doExport": false,
-          "exceptions": [],
-          "overridesExisting": false,
-          "returnType": "void",
-          "source": "./Author/methods/getCovidGraphProperties"
         }
       },
       "properties": {
@@ -629,6 +647,13 @@
           "type": "function",
           "typeHint": "string",
           "writeFunction": "./Author/functions/last.writeFunction"
+        },
+        "manyPapers": {
+          "$link": "#/definitions/PaperPAPER_HAS_AUTHORAuthor",
+          "items": {
+            "$ref": "#/definitions/Paper"
+          },
+          "type": "array"
         }
       },
       "type": "object",
@@ -660,6 +685,9 @@
           "source": "./B/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Base": {
@@ -699,6 +727,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -728,6 +759,9 @@
           "source": "./Bdi/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Bdo": {
@@ -750,6 +784,9 @@
           "source": "./Bdo/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Blockquote": {
@@ -761,6 +798,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Body": {
@@ -772,6 +812,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Br": {
@@ -794,6 +837,9 @@
           "source": "./Br/methods/isVoidElement"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Button": {
@@ -837,6 +883,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -871,6 +920,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -889,6 +941,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Cdata": {
@@ -932,6 +987,9 @@
           "source": "./Cite/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Code": {
@@ -954,6 +1012,9 @@
           "source": "./Code/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Col": {
@@ -976,6 +1037,9 @@
           "source": "./Col/methods/isVoidElement"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Colgroup": {
@@ -987,6 +1051,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Command": {
@@ -1009,6 +1076,9 @@
           "source": "./Command/methods/isVoidElement"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Comment": {
@@ -1040,6 +1110,9 @@
           "source": "./Comment/methods/render"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object"
     },
     "Component": {
@@ -1059,6 +1132,9 @@
           "type": "integer"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -1433,7 +1509,7 @@
       "methods": {
         "afterCreate": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./ContactRequest/methods/afterCreate.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -1442,7 +1518,7 @@
         },
         "onSave": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./ContactRequest/methods/onSave.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -1845,6 +1921,9 @@
           "type": "boolean"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -1962,6 +2041,9 @@
           "type": "integer"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -2043,6 +2125,9 @@
           "type": "integer"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -2069,9 +2154,25 @@
       "isBuiltinType": false,
       "isInterface": false,
       "methods": {
+        "getCovidGraphProperties": {
+          "callSuper": false,
+          "comment": "./CovidGraphNode/methods/getCovidGraphProperties.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./CovidGraphNode/methods/getCovidGraphProperties"
+        },
+        "onCreate": {
+          "callSuper": false,
+          "comment": "./CovidGraphNode/methods/onCreate.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./CovidGraphNode/methods/onCreate"
+        },
         "onSave": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./CovidGraphNode/methods/onSave.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -2087,17 +2188,6 @@
           "type": "string"
         }
       },
-      "type": "object"
-    },
-    "CsvFile": {
-      "$extends": "#/definitions/File",
-      "$implements": [
-        "https://structr.org/v1.1/definitions/CsvFile"
-      ],
-      "category": "ui",
-      "isAbstract": false,
-      "isBuiltinType": true,
-      "isInterface": false,
       "type": "object"
     },
     "CustomConceptAttribute": {
@@ -4804,6 +4894,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Dd": {
@@ -4815,6 +4908,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Definition": {
@@ -4856,6 +4952,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "DetailedTissue": {
@@ -4864,18 +4963,9 @@
       "isBuiltinType": false,
       "isInterface": false,
       "methods": {
-        "getCovidGraphProperties": {
-          "callSuper": false,
-          "comment": "",
-          "doExport": false,
-          "exceptions": [],
-          "overridesExisting": false,
-          "returnType": "void",
-          "source": "./DetailedTissue/methods/getCovidGraphProperties"
-        },
         "getTissues": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./DetailedTissue/methods/getTissues.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -4910,6 +5000,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Dfn": {
@@ -4932,6 +5025,9 @@
           "source": "./Dfn/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Div": {
@@ -4943,6 +5039,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Dl": {
@@ -4954,6 +5053,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "DocumentFragment": {
@@ -5112,6 +5214,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "EMailMessage": {
@@ -5378,6 +5483,9 @@
           "source": "./Em/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Embed": {
@@ -5414,6 +5522,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -5433,7 +5544,7 @@
       "methods": {
         "getCovidGraphProperties": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Entity/methods/getCovidGraphProperties.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -5505,6 +5616,9 @@
           "typeHint": "String"
         }
       },
+      "tags": [
+        "core"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -5929,7 +6043,7 @@
       "methods": {
         "afterCreate": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./FeedbackMessage/methods/afterCreate.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -5938,7 +6052,7 @@
         },
         "tmp": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./FeedbackMessage/methods/tmp.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -6006,6 +6120,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Figcaption": {
@@ -6017,6 +6134,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Figure": {
@@ -6028,6 +6148,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "File": {
@@ -6681,6 +6804,9 @@
           "type": "integer"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -6974,6 +7100,12 @@
           },
           "type": "array"
         },
+        "filesCount": {
+          "cachingEnabled": false,
+          "readFunction": "./Folder/functions/filesCount.readFunction",
+          "type": "function",
+          "typeHint": "int"
+        },
         "folderParent": {
           "$link": "#/definitions/FolderCONTAINSFolder",
           "$ref": "#/definitions/Folder",
@@ -6985,6 +7117,12 @@
             "$ref": "#/definitions/Folder"
           },
           "type": "array"
+        },
+        "foldersCount": {
+          "cachingEnabled": false,
+          "readFunction": "./Folder/functions/foldersCount.readFunction",
+          "type": "function",
+          "typeHint": "int"
         },
         "homeFolderOfUser": {
           "$link": "#/definitions/UserHOME_DIRFolder",
@@ -7039,13 +7177,18 @@
           "type": "array"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
         "public": [
           "enabledChecksums",
           "files",
+          "filesCount",
           "folders",
+          "foldersCount",
           "isFolder",
           "mountDoFulltextIndexing",
           "mountLastScanned",
@@ -7131,6 +7274,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Form": {
@@ -7179,6 +7325,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -7193,6 +7342,49 @@
           "_html_target"
         ]
       }
+    },
+    "Fragment": {
+      "$extends": "#/definitions/CovidGraphNode",
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "methods": {
+        "getGeneSymbols": {
+          "callSuper": false,
+          "comment": "./Fragment/methods/getGeneSymbols.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Fragment/methods/getGeneSymbols"
+        }
+      },
+      "properties": {
+        "manyGeneSymbols": {
+          "$link": "#/definitions/FragmentFRAGMENT_HAS_GENESYMBOLGeneSymbol",
+          "items": {
+            "$ref": "#/definitions/GeneSymbol"
+          },
+          "type": "array"
+        },
+        "manyPapers": {
+          "$link": "#/definitions/PaperPAPER_HAS_FRAGMENTFragment",
+          "items": {
+            "$ref": "#/definitions/Paper"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "FragmentFRAGMENT_HAS_GENESYMBOLGeneSymbol": {
+      "$source": "#/definitions/Fragment",
+      "$target": "#/definitions/GeneSymbol",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "FRAGMENT_HAS_GENESYMBOL",
+      "sourceName": "manyFragments",
+      "targetName": "manyGeneSymbols",
+      "type": "object"
     },
     "G": {
       "$extends": "#/definitions/DOMElement",
@@ -7214,6 +7406,9 @@
           "source": "./G/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Gene": {
@@ -7222,28 +7417,35 @@
       "isBuiltinType": false,
       "isInterface": false,
       "methods": {
-        "getCovidGraphProperties": {
-          "callSuper": false,
-          "comment": "",
-          "doExport": false,
-          "exceptions": [],
-          "overridesExisting": false,
-          "returnType": "void",
-          "source": "./Gene/methods/getCovidGraphProperties"
-        },
         "getGeneSymbols": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Gene/methods/getGeneSymbols.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
           "returnType": "void",
           "source": "./Gene/methods/getGeneSymbols"
+        },
+        "getPapers": {
+          "callSuper": false,
+          "comment": "./Gene/methods/getPapers.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Gene/methods/getPapers"
+        },
+        "onCreate": {
+          "callSuper": false,
+          "comment": "./Gene/methods/onCreate.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Gene/methods/onCreate"
         }
       },
       "properties": {
         "chromosome": {
-          "cachingEnabled": false,
+          "cachingEnabled": true,
           "default": "",
           "readFunction": "./Gene/functions/chromosome.readFunction",
           "type": "function",
@@ -7251,7 +7453,7 @@
           "writeFunction": "./Gene/functions/chromosome.writeFunction"
         },
         "description": {
-          "cachingEnabled": false,
+          "cachingEnabled": true,
           "default": "",
           "readFunction": "./Gene/functions/description.readFunction",
           "type": "function",
@@ -7259,7 +7461,7 @@
           "writeFunction": "./Gene/functions/description.writeFunction"
         },
         "featureType": {
-          "cachingEnabled": false,
+          "cachingEnabled": true,
           "default": "",
           "readFunction": "./Gene/functions/featureType.readFunction",
           "type": "function",
@@ -7267,20 +7469,46 @@
           "writeFunction": "./Gene/functions/featureType.writeFunction"
         },
         "geneType": {
-          "cachingEnabled": false,
+          "cachingEnabled": true,
           "default": "",
           "readFunction": "./Gene/functions/geneType.readFunction",
           "type": "function",
           "typeHint": "string",
           "writeFunction": "./Gene/functions/geneType.writeFunction"
         },
+        "manyGeneSymbols": {
+          "$link": "#/definitions/GeneGENE_HAS_GENESYMBOLGeneSymbol",
+          "items": {
+            "$ref": "#/definitions/GeneSymbol"
+          },
+          "type": "array"
+        },
         "name": {
-          "cachingEnabled": false,
+          "cachingEnabled": true,
           "default": "",
           "readFunction": "./Gene/functions/name.readFunction",
           "type": "function",
           "typeHint": "string",
           "writeFunction": "./Gene/functions/name.writeFunction"
+        },
+        "paperLookUp": {
+          "default": "",
+          "type": "boolean"
+        },
+        "papersMentioningGene": {
+          "$link": "#/definitions/PaperPAPER_MENTIONS_GENEGene",
+          "items": {
+            "$ref": "#/definitions/Paper"
+          },
+          "type": "array"
+        },
+        "score": {
+          "cachingEnabled": true,
+          "default": "",
+          "readFunction": "./Gene/functions/score.readFunction",
+          "type": "function",
+          "typeHint": "int",
+          "writeFunction": "./Gene/functions/score.writeFunction"
         }
       },
       "type": "object",
@@ -7291,9 +7519,21 @@
           "description",
           "featureType",
           "geneType",
-          "name"
+          "name",
+          "paperLookUp",
+          "score"
         ]
       }
+    },
+    "GeneGENE_HAS_GENESYMBOLGeneSymbol": {
+      "$source": "#/definitions/Gene",
+      "$target": "#/definitions/GeneSymbol",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "GENE_HAS_GENESYMBOL",
+      "sourceName": "manyGenes",
+      "targetName": "manyGeneSymbols",
+      "type": "object"
     },
     "GeneSymbol": {
       "$extends": "#/definitions/CovidGraphNode",
@@ -7301,18 +7541,9 @@
       "isBuiltinType": false,
       "isInterface": false,
       "methods": {
-        "getCovidGraphProperties": {
-          "callSuper": false,
-          "comment": "",
-          "doExport": false,
-          "exceptions": [],
-          "overridesExisting": false,
-          "returnType": "void",
-          "source": "./GeneSymbol/methods/getCovidGraphProperties"
-        },
         "getGene": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./GeneSymbol/methods/getGene.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -7321,24 +7552,29 @@
         },
         "getSynonyms": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./GeneSymbol/methods/getSynonyms.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
           "returnType": "void",
           "source": "./GeneSymbol/methods/getSynonyms"
-        },
-        "onCreate": {
-          "callSuper": false,
-          "comment": "",
-          "doExport": false,
-          "exceptions": [],
-          "overridesExisting": false,
-          "returnType": "void",
-          "source": "./GeneSymbol/methods/onCreate"
         }
       },
       "properties": {
+        "manyFragments": {
+          "$link": "#/definitions/FragmentFRAGMENT_HAS_GENESYMBOLGeneSymbol",
+          "items": {
+            "$ref": "#/definitions/Fragment"
+          },
+          "type": "array"
+        },
+        "manyGenes": {
+          "$link": "#/definitions/GeneGENE_HAS_GENESYMBOLGeneSymbol",
+          "items": {
+            "$ref": "#/definitions/Gene"
+          },
+          "type": "array"
+        },
         "name": {
           "cachingEnabled": false,
           "default": "",
@@ -7442,6 +7678,9 @@
       "required": [
         "name"
       ],
+      "tags": [
+        "core"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -7480,6 +7719,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "H2": {
@@ -7491,6 +7733,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "H3": {
@@ -7502,6 +7747,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "H4": {
@@ -7513,6 +7761,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "H5": {
@@ -7524,6 +7775,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "H6": {
@@ -7535,6 +7789,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Head": {
@@ -7546,6 +7803,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Header": {
@@ -7557,6 +7817,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Hgroup": {
@@ -7568,6 +7831,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "HistoryNote": {
@@ -7612,6 +7878,9 @@
           "source": "./Hr/methods/isVoidElement"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Html": {
@@ -7651,6 +7920,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -7683,6 +7955,9 @@
           "source": "./I/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Iframe": {
@@ -7720,6 +7995,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -8087,6 +8365,9 @@
           "type": "integer"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -8214,6 +8495,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -8437,6 +8721,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -8483,6 +8770,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "JavaScriptSource": {
@@ -8673,6 +8963,9 @@
           "source": "./Kbd/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Keygen": {
@@ -8695,6 +8988,9 @@
           "source": "./Keygen/methods/isVoidElement"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "LDAPGroup": {
@@ -9010,6 +9306,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -9028,6 +9327,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Li": {
@@ -9055,6 +9357,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -9112,6 +9417,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -9173,6 +9481,9 @@
           "type": "object"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -9225,6 +9536,9 @@
           "type": "array"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -9287,6 +9601,9 @@
       },
       "required": [
         "locale"
+      ],
+      "tags": [
+        "core"
       ],
       "type": "object",
       "viewOrder": {},
@@ -9358,6 +9675,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "core"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -9423,6 +9743,15 @@
           "returnType": "boolean",
           "source": "./MQTTClient/methods/getIsEnabled"
         },
+        "getPassword": {
+          "callSuper": false,
+          "codeType": "java",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "java.lang.String",
+          "source": "./MQTTClient/methods/getPassword"
+        },
         "getPort": {
           "callSuper": false,
           "codeType": "java",
@@ -9476,6 +9805,15 @@
           "overridesExisting": false,
           "returnType": "java.lang.String",
           "source": "./MQTTClient/methods/getUrl"
+        },
+        "getUsername": {
+          "callSuper": false,
+          "codeType": "java",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "java.lang.String",
+          "source": "./MQTTClient/methods/getUsername"
         },
         "messageCallback": {
           "callSuper": false,
@@ -9565,6 +9903,9 @@
         "isEnabled": {
           "type": "boolean"
         },
+        "password": {
+          "type": "string"
+        },
         "port": {
           "type": "integer"
         },
@@ -9578,6 +9919,9 @@
         },
         "url": {
           "type": "string"
+        },
+        "username": {
+          "type": "string"
         }
       },
       "type": "object",
@@ -9586,18 +9930,22 @@
         "public": [
           "isConnected",
           "isEnabled",
+          "password",
           "port",
           "protocol",
           "qos",
-          "url"
+          "url",
+          "username"
         ],
         "ui": [
           "isConnected",
           "isEnabled",
+          "password",
           "port",
           "protocol",
           "qos",
-          "url"
+          "url",
+          "username"
         ]
       }
     },
@@ -9655,6 +10003,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "core"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -9851,6 +10202,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Map": {
@@ -9862,6 +10216,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Mark": {
@@ -9884,6 +10241,9 @@
           "source": "./Mark/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Menu": {
@@ -9895,6 +10255,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "MessageClient": {
@@ -10183,6 +10546,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -10201,7 +10567,7 @@
       "methods": {
         "infer": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./MetaSchema/methods/infer.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -10210,7 +10576,7 @@
         },
         "onCreate": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./MetaSchema/methods/onCreate.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -10248,7 +10614,7 @@
       "methods": {
         "getCount": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./MetaSchemaEdge/methods/getCount.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -10315,7 +10681,7 @@
       "methods": {
         "getCount": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./MetaSchemaNode/methods/getCount.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -10407,6 +10773,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "MinifiedCssFile": {
@@ -10462,6 +10831,9 @@
           "type": "integer"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -10537,6 +10909,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -10561,6 +10936,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "NeoConnector": {
@@ -10570,7 +10948,7 @@
       "methods": {
         "inferMetaSchema": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./NeoConnector/methods/inferMetaSchema.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -10579,7 +10957,7 @@
         },
         "query": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./NeoConnector/methods/query.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -10946,6 +11324,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Note": {
@@ -11452,6 +11833,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -11493,6 +11877,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -11519,6 +11906,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -11551,6 +11941,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -11586,6 +11979,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "P": {
@@ -11597,6 +11993,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Page": {
@@ -12276,6 +12675,9 @@
           "type": "integer"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -12374,7 +12776,7 @@
       "methods": {
         "getAbstracts": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Paper/methods/getAbstracts.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -12383,42 +12785,89 @@
         },
         "getAuthors": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Paper/methods/getAuthors.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
           "returnType": "void",
           "source": "./Paper/methods/getAuthors"
         },
-        "getCovidGraphProperties": {
+        "getBodyTexts": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Paper/methods/getBodyTexts.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
-          "returnType": "void",
-          "source": "./Paper/methods/getCovidGraphProperties"
+          "source": "./Paper/methods/getBodyTexts"
+        },
+        "getFragments": {
+          "callSuper": false,
+          "comment": "./Paper/methods/getFragments.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Paper/methods/getFragments"
         },
         "getGeneSymbols": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Paper/methods/getGeneSymbols.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
           "returnType": "void",
           "source": "./Paper/methods/getGeneSymbols"
         },
-        "onCreate": {
+        "getGenes": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Paper/methods/getGenes.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
-          "returnType": "void",
+          "source": "./Paper/methods/getGenes"
+        },
+        "getRelatedPapersByGenes": {
+          "callSuper": false,
+          "comment": "./Paper/methods/getRelatedPapersByGenes.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Paper/methods/getRelatedPapersByGenes"
+        },
+        "onCreate": {
+          "callSuper": false,
+          "comment": "./Paper/methods/onCreate.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
           "source": "./Paper/methods/onCreate"
         }
       },
       "properties": {
+        "geneLookUp": {
+          "default": "",
+          "type": "boolean"
+        },
+        "manyAuthors": {
+          "$link": "#/definitions/PaperPAPER_HAS_AUTHORAuthor",
+          "items": {
+            "$ref": "#/definitions/Author"
+          },
+          "type": "array"
+        },
+        "manyFragments": {
+          "$link": "#/definitions/PaperPAPER_HAS_FRAGMENTFragment",
+          "items": {
+            "$ref": "#/definitions/Fragment"
+          },
+          "type": "array"
+        },
+        "mentionedGenes": {
+          "$link": "#/definitions/PaperPAPER_MENTIONS_GENEGene",
+          "items": {
+            "$ref": "#/definitions/Gene"
+          },
+          "type": "array"
+        },
         "name": {
           "cachingEnabled": true,
           "default": "",
@@ -12448,11 +12897,42 @@
       "viewOrder": {},
       "views": {
         "custom": [
+          "geneLookUp",
           "name",
           "publicationDate",
           "url"
         ]
       }
+    },
+    "PaperPAPER_HAS_AUTHORAuthor": {
+      "$source": "#/definitions/Paper",
+      "$target": "#/definitions/Author",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "PAPER_HAS_AUTHOR",
+      "sourceName": "manyPapers",
+      "targetName": "manyAuthors",
+      "type": "object"
+    },
+    "PaperPAPER_HAS_FRAGMENTFragment": {
+      "$source": "#/definitions/Paper",
+      "$target": "#/definitions/Fragment",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "PAPER_HAS_FRAGMENT",
+      "sourceName": "manyPapers",
+      "targetName": "manyFragments",
+      "type": "object"
+    },
+    "PaperPAPER_MENTIONS_GENEGene": {
+      "$source": "#/definitions/Paper",
+      "$target": "#/definitions/Gene",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "PAPER_MENTIONS_GENE",
+      "sourceName": "papersMentioningGene",
+      "targetName": "mentionedGenes",
+      "type": "object"
     },
     "Param": {
       "$extends": "#/definitions/DOMElement",
@@ -12479,6 +12959,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -12495,25 +12978,16 @@
       "methods": {
         "getApplicants": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Patent/methods/getApplicants.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
           "returnType": "void",
           "source": "./Patent/methods/getApplicants"
         },
-        "getCovidGraphProperties": {
-          "callSuper": false,
-          "comment": "",
-          "doExport": false,
-          "exceptions": [],
-          "overridesExisting": false,
-          "returnType": "void",
-          "source": "./Patent/methods/getCovidGraphProperties"
-        },
         "getGeneSymbols": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Patent/methods/getGeneSymbols.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -12522,7 +12996,7 @@
         },
         "getInventors": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Patent/methods/getInventors.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -12531,7 +13005,7 @@
         },
         "getOwners": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Patent/methods/getOwners.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -12540,7 +13014,7 @@
         },
         "getReferencedPatents": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Patent/methods/getReferencedPatents.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -12549,7 +13023,7 @@
         },
         "getReferencingPatents": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Patent/methods/getReferencingPatents.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -12558,7 +13032,7 @@
         },
         "getTitle": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Patent/methods/getTitle.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -13689,6 +14163,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "core"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -13749,6 +14226,9 @@
           "source": "./Pre/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "PreferredTerm": {
@@ -13791,6 +14271,15 @@
       "isBuiltinType": true,
       "isInterface": false,
       "methods": {
+        "addRefreshToken": {
+          "callSuper": false,
+          "codeType": "java",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": true,
+          "returnType": "void",
+          "source": "./Principal/methods/addRefreshToken"
+        },
         "addSessionId": {
           "callSuper": false,
           "codeType": "java",
@@ -13962,6 +14451,15 @@
           "overridesExisting": true,
           "returnType": "void",
           "source": "./Principal/methods/onAuthenticate"
+        },
+        "removeRefreshToken": {
+          "callSuper": false,
+          "codeType": "java",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": true,
+          "returnType": "void",
+          "source": "./Principal/methods/removeRefreshToken"
         },
         "removeSessionId": {
           "callSuper": false,
@@ -14270,6 +14768,13 @@
           },
           "type": "array"
         },
+        "refreshTokens": {
+          "indexed": true,
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "salt": {
           "type": "string"
         },
@@ -14294,6 +14799,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "core"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -14319,7 +14827,7 @@
       "methods": {
         "getBreadCrumbs": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Profile/methods/getBreadCrumbs.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -14363,6 +14871,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "ProjectMember": {
@@ -14427,17 +14938,6 @@
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
-      "methods": {
-        "getCovidGraphProperties": {
-          "callSuper": false,
-          "comment": "",
-          "doExport": false,
-          "exceptions": [],
-          "overridesExisting": false,
-          "returnType": "void",
-          "source": "./Protein/methods/getCovidGraphProperties"
-        }
-      },
       "properties": {
         "category": {
           "cachingEnabled": false,
@@ -14494,6 +14994,9 @@
           "source": "./Q/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "RemoteDocument": {
@@ -14613,6 +15116,9 @@
           "source": "./Rp/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Rt": {
@@ -14635,6 +15141,9 @@
           "source": "./Rt/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Ruby": {
@@ -14657,6 +15166,9 @@
           "source": "./Ruby/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "S": {
@@ -14679,6 +15191,9 @@
           "source": "./S/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Samp": {
@@ -14701,6 +15216,9 @@
           "source": "./Samp/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "ScopeNote": {
@@ -14775,6 +15293,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -14796,6 +15317,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Select": {
@@ -14833,6 +15357,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -14964,6 +15491,9 @@
           "type": "integer"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -15010,6 +15540,9 @@
           "source": "./Small/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "SoftwareApplication": {
@@ -15074,6 +15607,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -15104,6 +15640,9 @@
           "source": "./Span/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "SplitNonPreferredTerm": {
@@ -15155,6 +15694,9 @@
           "source": "./Strong/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "StructuredDocument": {
@@ -15438,6 +15980,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -15468,6 +16013,9 @@
           "source": "./Sub/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Summary": {
@@ -15479,6 +16027,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Sup": {
@@ -15501,6 +16052,9 @@
           "source": "./Sup/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Table": {
@@ -15512,6 +16066,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Tbody": {
@@ -15523,6 +16080,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Td": {
@@ -15553,6 +16113,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -15592,6 +16155,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -15674,6 +16240,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -15702,6 +16271,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Th": {
@@ -15732,6 +16304,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -15750,6 +16325,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Thesaurus": {
@@ -16921,6 +17499,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -16937,7 +17518,7 @@
       "methods": {
         "getCovidGraphProperties": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Tissue/methods/getCovidGraphProperties.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -16946,7 +17527,7 @@
         },
         "getDetailedTissues": {
           "callSuper": false,
-          "comment": "",
+          "comment": "./Tissue/methods/getDetailedTissues.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
@@ -16981,6 +17562,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Tr": {
@@ -16992,6 +17576,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Track": {
@@ -17031,6 +17618,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -17042,17 +17632,6 @@
           "_html_srclang"
         ]
       }
-    },
-    "Trash": {
-      "$extends": "#/definitions/Folder",
-      "$implements": [
-        "https://structr.org/v1.1/definitions/Trash"
-      ],
-      "category": "ui",
-      "isAbstract": false,
-      "isBuiltinType": true,
-      "isInterface": false,
-      "type": "object"
     },
     "U": {
       "$extends": "#/definitions/DOMElement",
@@ -17074,6 +17653,9 @@
           "source": "./U/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Ul": {
@@ -17085,6 +17667,9 @@
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "User": {
@@ -17257,6 +17842,9 @@
           "type": "object"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {
         "custom": "twitterName"
@@ -17291,6 +17879,7 @@
           "proxyUrl",
           "proxyUsername",
           "publicKey",
+          "refreshTokens",
           "sessionIds",
           "skipSecurityRelationships",
           "twitterName",
@@ -17353,6 +17942,9 @@
           "source": "./Var/methods/avoidWhitespace"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "VersionHistory": {
@@ -17456,6 +18048,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -18043,6 +18638,9 @@
           "source": "./Wbr/methods/isVoidElement"
         }
       },
+      "tags": [
+        "html"
+      ],
       "type": "object"
     },
     "Widget": {
@@ -18092,6 +18690,9 @@
           "type": "string"
         }
       },
+      "tags": [
+        "ui"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
@@ -18105,7 +18706,6 @@
           "isPageTemplate",
           "isWidget",
           "name",
-          "pictures",
           "selectors",
           "source",
           "treePath"
@@ -18115,7 +18715,6 @@
           "description",
           "isPageTemplate",
           "isWidget",
-          "pictures",
           "selectors",
           "source",
           "treePath"
@@ -18516,14 +19115,14 @@
   },
   "methods": [
     {
-      "comment": "",
+      "comment": "./_globalMethods/getCovidGraphConnector.comment",
       "name": "getCovidGraphConnector",
       "source": "./_globalMethods/getCovidGraphConnector",
       "visibleToAuthenticatedUsers": false,
       "visibleToPublicUsers": false
     },
     {
-      "comment": "",
+      "comment": "./_globalMethods/inferMetaSchema.comment",
       "name": "inferMetaSchema",
       "source": "./_globalMethods/inferMetaSchema",
       "visibleToAuthenticatedUsers": false,
