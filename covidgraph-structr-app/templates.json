@@ -6,6 +6,13 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": false
   },
+  "Contact Form Section-01e5d46cc7de406a91ee1ff51c146f32": {
+    "contentType": "text/html",
+    "id": "01e5d46cc7de406a91ee1ff51c146f32",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "Contact Form Section-699fbe0d92a741fd8eeb1e875eb141c2": {
     "contentType": "text/html",
     "id": "699fbe0d92a741fd8eeb1e875eb141c2",
@@ -254,6 +261,13 @@
   "Team Section-c3bb7893c59741c094cae337a0089317": {
     "contentType": "text/html",
     "id": "c3bb7893c59741c094cae337a0089317",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "Thanks-77b92641e91849d28c21cbe8c07a53fd": {
+    "contentType": "text/html",
+    "id": "77b92641e91849d28c21cbe8c07a53fd",
     "shared": "false",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true

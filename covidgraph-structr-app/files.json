@@ -126086,6 +126086,73 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": false
   },
+  "/applications/css/libs": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": null,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "id": "259e438c40d94a73b5f440e2da11fe62",
+    "includeInFrontendExport": false,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "Folder",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "/applications/css/libs/fontawsome-all.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "id": "a212570e416342049ba66217f2f83190",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "/applications/css/libs/vis-network.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "id": "a16e7911f5194d0ca6aebd134eb6091f",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "/applications/css/main.css": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -129281,6 +129348,52 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": false
   },
+  "/endpoints/papersearch": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": true,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "id": "dc91cdd0947b4ef4a87aa0cf70ac9ba5",
+    "includeInFrontendExport": false,
+    "isTemplate": true,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "/endpoints/papersearch.test": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": true,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Jakob"
+      }
+    ],
+    "id": "f29aaaf21a314d9c9489db511e8e291d",
+    "includeInFrontendExport": false,
+    "isTemplate": true,
+    "owner": {
+      "name": "Jakob"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "/endpoints/schema": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -130489,6 +130602,33 @@
     "visibleToPublicUsers": true,
     "width": 9
   },
+  "/images/gene.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "height": 200,
+    "id": "99814f5955ca42a5bb0468d07c329707",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false,
+    "width": 200
+  },
   "/images/nav-section.gif": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -130515,6 +130655,33 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true,
     "width": 9
+  },
+  "/images/paper.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "height": 512,
+    "id": "2110bb52f16b4bb9887764fb176e7443",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false,
+    "width": 512
   },
   "/images/slimbox": {
     "basicAuthRealm": null,
@@ -133659,6 +133826,33 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true,
     "width": 96
+  },
+  "/img/members/Alexander-Erdl.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 6240,
+    "id": "f9d2ed8b8dd24c6ab3eb3260e1c25a7a",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 4160
   },
   "/img/members/Axel_Morgner_420x420.png": {
     "basicAuthRealm": null,

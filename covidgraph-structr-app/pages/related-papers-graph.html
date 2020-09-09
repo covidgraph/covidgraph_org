@@ -1,0 +1,39 @@
+<!-- @structr:grant(Sven,arwd), @structr:content(text/html) --><structr:template src="Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application)">
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div>
+		<!-- @structr:protected, @structr:owner(admin), @structr:grant(Sven,arwd) -->
+		<script src="/applications/js/libs/vis-network.min.js" type="text/javascript"></script>
+		<!-- @structr:protected, @structr:owner(admin), @structr:grant(Sven,arwd) -->
+		<style type="text/css"><!-- @structr:owner(admin), @structr:grant(Sven,arwd), @structr:content(text/css) -->    html, body {
+      font: 10pt arial;
+    }
+    #paper-graph {
+      /*width: 600px;*/
+      height: 800px;
+      border: 1px solid lightgray;
+    }
+  </style>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<script type="text/javascript"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->document.addEventListener('DOMContentLoaded', async function() {
+
+	const container = document.getElementById('paper-graph');
+
+	const paperId = '${request.paper}';
+	
+	const endpoint = await fetch('/endpoints/papersearch?paper='+paperId);
+	const text     = await endpoint.text();
+	const data     = JSON.parse(text);
+	
+	const options = {
+		nodes: {
+			shape: 'dot'
+		}
+	};
+
+	const graph = new vis.Network(container, data, options);
+
+});</script>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<div id="paper-graph" style="/applications/css/libs/all.css"></div>
+	</div>
+</structr:template>

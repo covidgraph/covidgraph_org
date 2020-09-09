@@ -629,15 +629,6 @@
           "overridesExisting": false,
           "returnType": "void",
           "source": "./Author/methods/getAffiliations"
-        },
-        "getCovidGraphProperties": {
-          "callSuper": false,
-          "comment": "./Author/methods/getCovidGraphProperties.comment",
-          "doExport": false,
-          "exceptions": [],
-          "overridesExisting": false,
-          "returnType": "void",
-          "source": "./Author/methods/getCovidGraphProperties"
         }
       },
       "properties": {
@@ -656,6 +647,13 @@
           "type": "function",
           "typeHint": "string",
           "writeFunction": "./Author/functions/last.writeFunction"
+        },
+        "manyPapers": {
+          "$link": "#/definitions/PaperPAPER_HAS_AUTHORAuthor",
+          "items": {
+            "$ref": "#/definitions/Paper"
+          },
+          "type": "array"
         }
       },
       "type": "object",
@@ -2156,6 +2154,22 @@
       "isBuiltinType": false,
       "isInterface": false,
       "methods": {
+        "getCovidGraphProperties": {
+          "callSuper": false,
+          "comment": "./CovidGraphNode/methods/getCovidGraphProperties.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./CovidGraphNode/methods/getCovidGraphProperties"
+        },
+        "onCreate": {
+          "callSuper": false,
+          "comment": "./CovidGraphNode/methods/onCreate.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./CovidGraphNode/methods/onCreate"
+        },
         "onSave": {
           "callSuper": false,
           "comment": "./CovidGraphNode/methods/onSave.comment",
@@ -4949,15 +4963,6 @@
       "isBuiltinType": false,
       "isInterface": false,
       "methods": {
-        "getCovidGraphProperties": {
-          "callSuper": false,
-          "comment": "./DetailedTissue/methods/getCovidGraphProperties.comment",
-          "doExport": false,
-          "exceptions": [],
-          "overridesExisting": false,
-          "returnType": "void",
-          "source": "./DetailedTissue/methods/getCovidGraphProperties"
-        },
         "getTissues": {
           "callSuper": false,
           "comment": "./DetailedTissue/methods/getTissues.comment",
@@ -7338,6 +7343,49 @@
         ]
       }
     },
+    "Fragment": {
+      "$extends": "#/definitions/CovidGraphNode",
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "methods": {
+        "getGeneSymbols": {
+          "callSuper": false,
+          "comment": "./Fragment/methods/getGeneSymbols.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Fragment/methods/getGeneSymbols"
+        }
+      },
+      "properties": {
+        "manyGeneSymbols": {
+          "$link": "#/definitions/FragmentFRAGMENT_HAS_GENESYMBOLGeneSymbol",
+          "items": {
+            "$ref": "#/definitions/GeneSymbol"
+          },
+          "type": "array"
+        },
+        "manyPapers": {
+          "$link": "#/definitions/PaperPAPER_HAS_FRAGMENTFragment",
+          "items": {
+            "$ref": "#/definitions/Paper"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "FragmentFRAGMENT_HAS_GENESYMBOLGeneSymbol": {
+      "$source": "#/definitions/Fragment",
+      "$target": "#/definitions/GeneSymbol",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "FRAGMENT_HAS_GENESYMBOL",
+      "sourceName": "manyFragments",
+      "targetName": "manyGeneSymbols",
+      "type": "object"
+    },
     "G": {
       "$extends": "#/definitions/DOMElement",
       "$implements": [
@@ -7369,15 +7417,6 @@
       "isBuiltinType": false,
       "isInterface": false,
       "methods": {
-        "getCovidGraphProperties": {
-          "callSuper": false,
-          "comment": "./Gene/methods/getCovidGraphProperties.comment",
-          "doExport": false,
-          "exceptions": [],
-          "overridesExisting": false,
-          "returnType": "void",
-          "source": "./Gene/methods/getCovidGraphProperties"
-        },
         "getGeneSymbols": {
           "callSuper": false,
           "comment": "./Gene/methods/getGeneSymbols.comment",
@@ -7386,11 +7425,27 @@
           "overridesExisting": false,
           "returnType": "void",
           "source": "./Gene/methods/getGeneSymbols"
+        },
+        "getPapers": {
+          "callSuper": false,
+          "comment": "./Gene/methods/getPapers.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Gene/methods/getPapers"
+        },
+        "onCreate": {
+          "callSuper": false,
+          "comment": "./Gene/methods/onCreate.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Gene/methods/onCreate"
         }
       },
       "properties": {
         "chromosome": {
-          "cachingEnabled": false,
+          "cachingEnabled": true,
           "default": "",
           "readFunction": "./Gene/functions/chromosome.readFunction",
           "type": "function",
@@ -7398,7 +7453,7 @@
           "writeFunction": "./Gene/functions/chromosome.writeFunction"
         },
         "description": {
-          "cachingEnabled": false,
+          "cachingEnabled": true,
           "default": "",
           "readFunction": "./Gene/functions/description.readFunction",
           "type": "function",
@@ -7406,7 +7461,7 @@
           "writeFunction": "./Gene/functions/description.writeFunction"
         },
         "featureType": {
-          "cachingEnabled": false,
+          "cachingEnabled": true,
           "default": "",
           "readFunction": "./Gene/functions/featureType.readFunction",
           "type": "function",
@@ -7414,20 +7469,46 @@
           "writeFunction": "./Gene/functions/featureType.writeFunction"
         },
         "geneType": {
-          "cachingEnabled": false,
+          "cachingEnabled": true,
           "default": "",
           "readFunction": "./Gene/functions/geneType.readFunction",
           "type": "function",
           "typeHint": "string",
           "writeFunction": "./Gene/functions/geneType.writeFunction"
         },
+        "manyGeneSymbols": {
+          "$link": "#/definitions/GeneGENE_HAS_GENESYMBOLGeneSymbol",
+          "items": {
+            "$ref": "#/definitions/GeneSymbol"
+          },
+          "type": "array"
+        },
         "name": {
-          "cachingEnabled": false,
+          "cachingEnabled": true,
           "default": "",
           "readFunction": "./Gene/functions/name.readFunction",
           "type": "function",
           "typeHint": "string",
           "writeFunction": "./Gene/functions/name.writeFunction"
+        },
+        "paperLookUp": {
+          "default": "",
+          "type": "boolean"
+        },
+        "papersMentioningGene": {
+          "$link": "#/definitions/PaperPAPER_MENTIONS_GENEGene",
+          "items": {
+            "$ref": "#/definitions/Paper"
+          },
+          "type": "array"
+        },
+        "score": {
+          "cachingEnabled": true,
+          "default": "",
+          "readFunction": "./Gene/functions/score.readFunction",
+          "type": "function",
+          "typeHint": "int",
+          "writeFunction": "./Gene/functions/score.writeFunction"
         }
       },
       "type": "object",
@@ -7438,9 +7519,21 @@
           "description",
           "featureType",
           "geneType",
-          "name"
+          "name",
+          "paperLookUp",
+          "score"
         ]
       }
+    },
+    "GeneGENE_HAS_GENESYMBOLGeneSymbol": {
+      "$source": "#/definitions/Gene",
+      "$target": "#/definitions/GeneSymbol",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "GENE_HAS_GENESYMBOL",
+      "sourceName": "manyGenes",
+      "targetName": "manyGeneSymbols",
+      "type": "object"
     },
     "GeneSymbol": {
       "$extends": "#/definitions/CovidGraphNode",
@@ -7448,15 +7541,6 @@
       "isBuiltinType": false,
       "isInterface": false,
       "methods": {
-        "getCovidGraphProperties": {
-          "callSuper": false,
-          "comment": "./GeneSymbol/methods/getCovidGraphProperties.comment",
-          "doExport": false,
-          "exceptions": [],
-          "overridesExisting": false,
-          "returnType": "void",
-          "source": "./GeneSymbol/methods/getCovidGraphProperties"
-        },
         "getGene": {
           "callSuper": false,
           "comment": "./GeneSymbol/methods/getGene.comment",
@@ -7474,18 +7558,23 @@
           "overridesExisting": false,
           "returnType": "void",
           "source": "./GeneSymbol/methods/getSynonyms"
-        },
-        "onCreate": {
-          "callSuper": false,
-          "comment": "./GeneSymbol/methods/onCreate.comment",
-          "doExport": false,
-          "exceptions": [],
-          "overridesExisting": false,
-          "returnType": "void",
-          "source": "./GeneSymbol/methods/onCreate"
         }
       },
       "properties": {
+        "manyFragments": {
+          "$link": "#/definitions/FragmentFRAGMENT_HAS_GENESYMBOLGeneSymbol",
+          "items": {
+            "$ref": "#/definitions/Fragment"
+          },
+          "type": "array"
+        },
+        "manyGenes": {
+          "$link": "#/definitions/GeneGENE_HAS_GENESYMBOLGeneSymbol",
+          "items": {
+            "$ref": "#/definitions/Gene"
+          },
+          "type": "array"
+        },
         "name": {
           "cachingEnabled": false,
           "default": "",
@@ -12694,14 +12783,21 @@
           "returnType": "void",
           "source": "./Paper/methods/getAuthors"
         },
-        "getCovidGraphProperties": {
+        "getBodyTexts": {
           "callSuper": false,
-          "comment": "./Paper/methods/getCovidGraphProperties.comment",
+          "comment": "./Paper/methods/getBodyTexts.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
-          "returnType": "void",
-          "source": "./Paper/methods/getCovidGraphProperties"
+          "source": "./Paper/methods/getBodyTexts"
+        },
+        "getFragments": {
+          "callSuper": false,
+          "comment": "./Paper/methods/getFragments.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Paper/methods/getFragments"
         },
         "getGeneSymbols": {
           "callSuper": false,
@@ -12712,17 +12808,57 @@
           "returnType": "void",
           "source": "./Paper/methods/getGeneSymbols"
         },
+        "getGenes": {
+          "callSuper": false,
+          "comment": "./Paper/methods/getGenes.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Paper/methods/getGenes"
+        },
+        "getRelatedPapersByGenes": {
+          "callSuper": false,
+          "comment": "./Paper/methods/getRelatedPapersByGenes.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Paper/methods/getRelatedPapersByGenes"
+        },
         "onCreate": {
           "callSuper": false,
           "comment": "./Paper/methods/onCreate.comment",
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
-          "returnType": "void",
           "source": "./Paper/methods/onCreate"
         }
       },
       "properties": {
+        "geneLookUp": {
+          "default": "",
+          "type": "boolean"
+        },
+        "manyAuthors": {
+          "$link": "#/definitions/PaperPAPER_HAS_AUTHORAuthor",
+          "items": {
+            "$ref": "#/definitions/Author"
+          },
+          "type": "array"
+        },
+        "manyFragments": {
+          "$link": "#/definitions/PaperPAPER_HAS_FRAGMENTFragment",
+          "items": {
+            "$ref": "#/definitions/Fragment"
+          },
+          "type": "array"
+        },
+        "mentionedGenes": {
+          "$link": "#/definitions/PaperPAPER_MENTIONS_GENEGene",
+          "items": {
+            "$ref": "#/definitions/Gene"
+          },
+          "type": "array"
+        },
         "name": {
           "cachingEnabled": true,
           "default": "",
@@ -12752,11 +12888,42 @@
       "viewOrder": {},
       "views": {
         "custom": [
+          "geneLookUp",
           "name",
           "publicationDate",
           "url"
         ]
       }
+    },
+    "PaperPAPER_HAS_AUTHORAuthor": {
+      "$source": "#/definitions/Paper",
+      "$target": "#/definitions/Author",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "PAPER_HAS_AUTHOR",
+      "sourceName": "manyPapers",
+      "targetName": "manyAuthors",
+      "type": "object"
+    },
+    "PaperPAPER_HAS_FRAGMENTFragment": {
+      "$source": "#/definitions/Paper",
+      "$target": "#/definitions/Fragment",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "PAPER_HAS_FRAGMENT",
+      "sourceName": "manyPapers",
+      "targetName": "manyFragments",
+      "type": "object"
+    },
+    "PaperPAPER_MENTIONS_GENEGene": {
+      "$source": "#/definitions/Paper",
+      "$target": "#/definitions/Gene",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "PAPER_MENTIONS_GENE",
+      "sourceName": "papersMentioningGene",
+      "targetName": "mentionedGenes",
+      "type": "object"
     },
     "Param": {
       "$extends": "#/definitions/DOMElement",
@@ -12808,15 +12975,6 @@
           "overridesExisting": false,
           "returnType": "void",
           "source": "./Patent/methods/getApplicants"
-        },
-        "getCovidGraphProperties": {
-          "callSuper": false,
-          "comment": "./Patent/methods/getCovidGraphProperties.comment",
-          "doExport": false,
-          "exceptions": [],
-          "overridesExisting": false,
-          "returnType": "void",
-          "source": "./Patent/methods/getCovidGraphProperties"
         },
         "getGeneSymbols": {
           "callSuper": false,
@@ -14771,17 +14929,6 @@
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
-      "methods": {
-        "getCovidGraphProperties": {
-          "callSuper": false,
-          "comment": "./Protein/methods/getCovidGraphProperties.comment",
-          "doExport": false,
-          "exceptions": [],
-          "overridesExisting": false,
-          "returnType": "void",
-          "source": "./Protein/methods/getCovidGraphProperties"
-        }
-      },
       "properties": {
         "category": {
           "cachingEnabled": false,
