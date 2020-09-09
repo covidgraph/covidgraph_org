@@ -130,7 +130,7 @@ b, strong {
 		height: 24px;
 	}
 	.landing-page .card {
-		min-height: 39rem;/*50rem;*/
+		min-height: 44rem;/*50rem;*/
 	}
 }
 
@@ -140,13 +140,13 @@ b, strong {
 		vertical-align: top;
 	}
 	.landing-page .card {
-		min-height: 44rem;/*54.5rem;*/
+		min-height: 46rem;/*54.5rem;*/
 	}
 }
 
 @media (max-width:991px) {
 	.landing-page .card {
-		min-height: 44rem;
+		min-height: 46rem;
 	}
 }
 
@@ -343,7 +343,7 @@ b, strong {
 
 .subpage .card {
 	font-size: 1rem;
-	height: 35rem;
+	height: 36rem;
 	display: inline-block;
 	float: left;
 	margin: 1rem;

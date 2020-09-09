@@ -133866,6 +133866,33 @@
     "visibleToPublicUsers": true,
     "width": 96
   },
+  "/img/members/Alexander-Erdl.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 6240,
+    "id": "f9d2ed8b8dd24c6ab3eb3260e1c25a7a",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 4160
+  },
   "/img/members/Axel_Morgner_420x420.png": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
