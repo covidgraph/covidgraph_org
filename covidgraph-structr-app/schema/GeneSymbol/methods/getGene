@@ -4,9 +4,9 @@
 
 	const neoConnector = $.call('getCovidGraphConnector');
 
-	const query = 'MATCH (geneSymbol:GeneSymbol) ' +
+	const query = 'MATCH (geneSymbol:GeneSymbol)<-[]-(gene:Gene) ' +
 		'WHERE ID(geneSymbol) = ' + self.covidGraphId + ' ' +
-		'RETURN DISTINCT ID(geneSymbol) AS id';
+		'RETURN DISTINCT ID(gene) AS id';
 
 	
 	const results = neoConnector.query({query : query});
@@ -19,7 +19,7 @@
 
 	const geneId = $.first(results);
 	const gene = $.get_or_create('Gene', {
-		covidGraphId : geneId
+		covidGraphId : geneId.id
 	});
 
 	return gene;

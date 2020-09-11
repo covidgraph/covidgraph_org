@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><html>
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<head>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<title><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${capitalize(page.name)}</title>
+	</head>
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<body>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<div>
+			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+			<script type="text/javascript"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->document.addEventListener('DOMContentLoaded', async function() {
+
+	const paperId = '${request.paper}';
+	
+	const paper = $.find('Paper', paperID);
+	$.log('.....................................');
+	$.log(paper);
+	
+});</script>
+			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+			<table>
+				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+				<thead>
+					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+					<th><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Name</th>
+					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+					<th><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Publication</th>
+					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+					<th><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Authors</th>
+					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+					<th><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Mentioned Genes</th>
+				</thead>
+				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+				<tbody>
+					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+					<tr data-structr-meta-data-key="paper" data-structr-meta-function-query="find('Paper',  current)">
+						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+						<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${
+
+	paper.name
+	
+}</td>
+						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+						<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${paper.publicationDate}</td>
+						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+						<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${{
+
+	const paper = $.get('paper');
+	const authorlist = paper.manyAuthors;
+	
+	let list = '';
+	
+	for(let author of authorlist)
+	{
+		return author.first;
+	}
+	
+	return list;
+
+
+}}</td>
+						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+						<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Initial text for td</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

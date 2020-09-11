@@ -1,0 +1,7 @@
+{
+	const self = $.this;
+	
+	const score = $.size(self.papersMentioningGene);
+	
+	return $.int(score);
+}

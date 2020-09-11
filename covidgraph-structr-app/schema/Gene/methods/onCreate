@@ -1,0 +1,4 @@
+{
+	const self = $.this;
+	self.paperLookUp = false;
+}	

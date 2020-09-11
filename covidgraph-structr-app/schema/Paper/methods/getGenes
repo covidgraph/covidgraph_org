@@ -1,0 +1,30 @@
+{
+	
+	const self = $.this;
+
+	if(!self.geneLookUp)
+	{
+		const neoConnector = $.call('getCovidGraphConnector');
+
+		const query = 'MATCH (paper:Paper)' + 
+			'-[:PAPER_HAS_BODYTEXTCOLLECTION' +
+			  '|PAPER_HAS_ABSTRACTCOLLECTION]->()' +
+			'-[:BODYTEXTCOLLECTION_HAS_BODYTEXT' +
+			  '|ABSTRACTCOLLECTION_HAS_ABSTRACT]->()' +
+			'-[:HAS_FRAGMENT]->(:Fragment)' +
+			'-[:MENTIONS]->(geneSymbol:GeneSymbol) ' +
+			'<-[:MAPS]-(gene:Gene) ' +  
+			'WHERE ID(paper) = ' + self.covidGraphId + ' ' +
+			'RETURN DISTINCT ID(gene) AS id';
+
+		const geneIds = neoConnector.query({query : query});
+		self.mentionedGenes = geneIds.map(gene => $.get_or_create('Gene', {
+			covidGraphId : gene.id
+		}));
+	
+		self.geneLookUp = true;
+	}
+	
+	return self.mentionedGenes;
+
+}

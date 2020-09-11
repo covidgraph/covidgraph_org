@@ -1,0 +1,12 @@
+{
+
+	const self = $.this;
+
+	$.assert(
+		!$.empty(self.covidGraphId),
+		'creation_with_empty_covid_graph_id_disallowed',
+		"Creating '" + self.type + "' with empty 'covidGraphId' disallowed."
+	);
+
+	
+}

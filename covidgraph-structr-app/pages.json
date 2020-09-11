@@ -318,6 +318,33 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": false
   },
+  "gene-symbol-old": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "category": null,
+    "contentType": "text/html",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "hidden": false,
+    "hideConditions": null,
+    "id": "72945b19157842948880a57aa3ab066e",
+    "owner": {
+      "name": "admin"
+    },
+    "pageCreatesRawData": false,
+    "path": null,
+    "position": null,
+    "showConditions": null,
+    "showOnErrorCodes": null,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": false
+  },
   "genes": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -694,6 +721,87 @@
     "showConditions": null,
     "showOnErrorCodes": null,
     "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": false
+  },
+  "related-papers-graph": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "category": null,
+    "contentType": "text/html",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "hidden": false,
+    "hideConditions": null,
+    "id": "d3abc8e86ebc41c7a4890ddda8df101b",
+    "owner": {
+      "name": "Sven"
+    },
+    "pageCreatesRawData": false,
+    "path": null,
+    "position": null,
+    "showConditions": null,
+    "showOnErrorCodes": null,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "related-papers-table": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "category": null,
+    "contentType": "text/html",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "hidden": false,
+    "hideConditions": null,
+    "id": "9a33b3b535bb4737bfdd292e39817e67",
+    "owner": {
+      "name": "Sven"
+    },
+    "pageCreatesRawData": false,
+    "path": null,
+    "position": null,
+    "showConditions": null,
+    "showOnErrorCodes": null,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "related-papers-table-v1": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "category": null,
+    "contentType": "text/html",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "hidden": false,
+    "hideConditions": null,
+    "id": "b5182aec820e44cead7db9405c84cec0",
+    "owner": {
+      "name": "Sven"
+    },
+    "pageCreatesRawData": false,
+    "path": null,
+    "position": null,
+    "showConditions": null,
+    "showOnErrorCodes": null,
+    "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
   },
   "result-count-partial": {
