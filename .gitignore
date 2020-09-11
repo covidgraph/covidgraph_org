@@ -1,4 +1,5 @@
 export.sh
+data-export.sh
 import.sh
 covidgraph-structr-app/data
 covidgraph-structr-app/data.tar.gz

@@ -133995,6 +133995,33 @@
     "visibleToPublicUsers": true,
     "width": 420
   },
+  "/img/members/CR - black and white.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 2732,
+    "id": "c9e24e6fdb1745e9828bb81f4dcfe867",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 2732
+  },
   "/img/members/alessandro.jpg": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -134196,6 +134223,33 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true,
     "width": 1415
+  },
+  "/img/members/jakob_laenge.jpg": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/jpeg",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "height": 1157,
+    "id": "4dbff2d024364f1a8e7984ad05af679f",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "admin"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 850
   },
   "/img/members/jamie.jpg": {
     "basicAuthRealm": null,
