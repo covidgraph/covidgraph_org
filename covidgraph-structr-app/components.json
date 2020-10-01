@@ -82,12 +82,6 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "Navigation Bottom (Application)-634dad0c2a40485eaffc88f5e1de4cd5": {
-    "contentType": null,
-    "id": "634dad0c2a40485eaffc88f5e1de4cd5",
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
-  },
   "Navigation Left (Application)-2cd52bf19ccd4788bfabf908b21d2588": {
     "contentType": null,
     "id": "2cd52bf19ccd4788bfabf908b21d2588",

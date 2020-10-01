@@ -3,7 +3,7 @@
 	$.assert(
 		false,
 		'write_covid_graph_not_allowed',
-		"Writing covid-graph property 'name' of 'Gene' not allowed."
+		"Writing covid-graph property 'name' of 'Paper' not allowed."
 	);
 
 }

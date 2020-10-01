@@ -1,0 +1,20 @@
+{
+	
+	const self			= $.this;
+	
+	if(!self.sharedGeneLookUp)
+	{
+		const srcPaper		= self.srcPaper;
+		const relatedPaper	= srcPaper.relatedPapers;
+
+		let genes = [];
+
+		for(let paper of relatedPaper)
+			genes = $.merge_unique(genes, paper.sharedGenes);
+
+		self.sharedGenes = genes;
+		self.sharedGeneLookUp = true;
+	}
+	
+	return self.sharedGenes;
+}

@@ -8,10 +8,11 @@
 		'-[:PAPER_HAS_BODYTEXTCOLLECTION]->(:BodyTextCollection)' +
 		'-[:BODYTEXTCOLLECTION_HAS_BODYTEXT]->(bodyText:BodyText) ' +
 		'WHERE ID(paper) = ' + self.covidGraphId + ' ' +
-		'RETURN DISTINCT bodyText';
+		'RETURN DISTINCT bodyText ' +
+		'ORDER BY ID(bodyText)';
 
-	const abstracts = neoConnector.query({query : query});
+	const bodytexts = neoConnector.query({query : query});
 
-	return abstracts;
+	return bodytexts;
 
 }

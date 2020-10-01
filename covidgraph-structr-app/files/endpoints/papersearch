@@ -1,11 +1,9 @@
 ${{
 
-	const request	= $.get('request');
-	let paperId		= request['paper'];
+	const request			 = $.get('request');
+	let recommendationViewId = request['recommendationView'];
 	
-	/*const testpaper1 = '433509624beb47d29ccbed96d445e26c';
-	const testpaper2 = '5d98d2ea981e4078bbe04ab2aa87be9d';
-	paperId	= testpaper1;*/
+	//recommendationViewId = '0e0030f4924f4d3ea9d4f03e1b3e1a44';
 	
 	/****************************************\
 	 #COLLECT-SCHEMA
@@ -14,67 +12,86 @@ ${{
 	let nodes = [];
 	let edges = [];
 	
-	if(!$.empty(paperId))
+	if(!$.empty(recommendationViewId))
 	{
-		let srcPaper = $.find('Paper', paperId);
+		let rView = $.find('RecommendationView', recommendationViewId);
 		
-		if(!$.empty(srcPaper))
+		if(!$.empty(rView))
 		{
+			let srcPaper = rView.srcPaper;
+			
 			nodes.push({
 				id		: srcPaper.id,
 				title	: srcPaper.name,
 				shape	: 'image',
-				image	: '/images/paper.png'
+				image	: '/images/openbook.png'
 			});			
 			
 			let relatedPapers = srcPaper.getRelatedPapersByGenes();
 
-			for (let papersAndGenes of relatedPapers)
+			for (let rpCollection of relatedPapers)
 			{
-				let paperUUID 	= papersAndGenes[0];
-				let paper 		= $.find('Paper', paperUUID);
-				let genes 		= papersAndGenes[1];
+				let paper 		= rpCollection.referencedPaper;
+				let genes 		= rpCollection.sharedGenes;
 				let amountGenes = $.size(genes);
 
 				nodes.push({
 					id		: paper.id,
 					title	: paper.name,
 					shape	: 'image',
-					image	: '/images/paper.png',
-					value	: amountGenes
+					image	: '/images/closedbook.png',
+					//value	: amountGenes
 				});
 
 				edges.push({
 					from	: paper.id, 
 					to		: srcPaper.id,
-					value	: amountGenes
+					//value	: amountGenes
 				});
+			}
+			
+			//Create Nodes for openedPapers in RecommendationView
+			
+			let rvPapers = rView.papers;
+			
+			for(let openedPaper of rvPapers)
+			{
+				let relatedPapers = openedPaper.getRelatedPapersByGenes();
 				
-				for (let geneUUID of genes)
+				let openPaperNode = nodes.find(node=>node.id === openedPaper.id);
+				
+				if(!$.empty(openPaperNode))
+					openPaperNode.image = '/images/openbook.png';
+				
+				for(let rpCollection of relatedPapers)
 				{
-					let gene = $.find('Gene', geneUUID);
-
-					let contains = nodes.find(node=> node.id === gene.id);
+					let paper 		= rpCollection.referencedPaper;
+					let genes 		= rpCollection.sharedGenes;
+					let amountGenes = $.size(genes);
 					
-					if($.empty(contains))
+					let containsPaperNode = nodes.find(node=> node.id === paper.id);
+					
+					if($.empty(containsPaperNode))
 					{
 						nodes.push({
-							id		: gene.id,
-							title	: gene.name,
+							id		: paper.id,
+							title	: paper.name,
 							shape	: 'image',
-							image	: '/images/gene.png'
+							image	: '/images/closedbook.png',
+							//value	: amountGenes
 						});
-						
-						/*edges.push({
-							from	: gene.id,
-							to		: srcPaper.id
-						});*/
 					}
-	
-					edges.push({
-						from	: gene.id,
-						to		: paper.id
-					});
+					
+					let containsEdge = edges.find(edge=> (edge.from === paper.id && edge.to === openedPaper.id) || (edge.from === openedPaper.id && edge.to === paper.id));
+					
+					if($.empty(containsEdge))   
+					{
+						edges.push({
+							from	: paper.id,
+							to		: openedPaper.id,
+							//value	: amountGenes
+						});
+					}
 				}
 			}
 		}

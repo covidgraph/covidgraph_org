@@ -1,2 +1,73 @@
 <!-- @structr:owner(admin), @structr:content(text/html) --><structr:template src="Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application)">
+	<!-- @structr:private, @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
+
+const persistence = new Persistence();
+const current = '${current}';
+
+document.addEventListener('DOMContentLoaded', () =&gt; 
+{		
+	const editButton = document.getElementById('getRelatedPapers');
+	editButton.addEventListener('click', createRecommendationView);
+});
+
+async function createRecommendationView()
+{
+	const object = {
+		type		: 'RecommendationView',
+		srcPaper	: current
+	}
+	
+	const node = await persistence.createNode(object);
+	
+	let uuidRV = node.id;	
+	
+	
+	window.location.href = '/related-papers-graph/'+uuidRV;
+	
+}</script>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<h1><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><a href="${current.url}"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.name}</a></h1>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<h5><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.publicationDate}<!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
+
+	const current = $.get('current');
+	const authors = current.getAuthors();
+
+	let list = authors.map(author=&gt;author.first + ' ' + author.last);
+	
+	let printlist = list.join(', ');
+	
+	return printlist;
+
+}}</h5>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<button id="getRelatedPapers"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Find related Papers</button>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<section><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
+
+	const current = $.get('current');
+	const abstractTexts = current.getAbstracts();
+	
+	let text = abstractTexts.map(abstract=&gt;abstract.text);
+	
+	let joinedText = text.join('&lt;br&gt;');
+	
+	return joinedText;
+	
+}}</span><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
+
+	const current = $.get('current');
+	const bodyTexts = current.getBodyTexts();
+	
+	let text = bodyTexts.map(bodyText=&gt;bodyText.text);
+	
+	let joinedText = text.join('&lt;br&gt;');
+	
+	return '&lt;br&gt;&lt;br&gt;' + joinedText;
+	
+}}</span></section>
+	</div>
 </structr:template>

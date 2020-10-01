@@ -12,9 +12,9 @@
 		'-[:HAS_FRAGMENT]->(fragment:Fragment)' +
 		'WHERE ID(paper) = ' + self.covidGraphId + ' ' +
 		'RETURN DISTINCT ID(fragment) as id';
-
-	const fragments = neoConnector.query({query : query});
 	
+	const fragments = neoConnector.query({query : query});
+		
 	return fragments;
 
 }
