@@ -1,29 +1,17 @@
-<!-- @structr:grant(Sven,arwd), @structr:content(text/html) --><structr:template src="Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application)">
-	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+<!-- @structr:content(text/html) --><structr:template src="Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application)">
 	<div>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 		<table>
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 			<thead>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-				<th><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Publication</th>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-				<th><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Title</th>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-				<th><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Authors</th>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-				<th><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Mentioned Genes</th>
+				<th><!-- @structr:content(text/plain) -->Publication</th>
+				<th><!-- @structr:content(text/plain) -->Title</th>
+				<th><!-- @structr:content(text/plain) -->Authors</th>
+				<th><!-- @structr:content(text/plain) -->Mentioned Genes</th>
 			</thead>
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 			<tbody>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 				<tr>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.publicationDate}</td>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><a href="/paper/${current.id}"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.name}</a></td>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
+					<td><!-- @structr:content(text/plain) -->${current.publicationDate}</td>
+					<td><a href="/paper/${current.id}"><!-- @structr:content(text/plain) -->${current.name}</a></td>
+					<td><!-- @structr:content(text/javascript) -->${{
 
 	const current = $.get('current');
 	const authors = current.getAuthors();
@@ -35,20 +23,15 @@
 	return printlist;
 
 }}</td>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 					<td>
-						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) --><structr:template src="bca70d7b73e74147a5ef48b02b1494fb" data-structr-meta-data-key="gene" data-structr-meta-function-query="current.getGenes()"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="badge badge-pill ${gene.badgeColor}" id="gene-badge"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${gene.name}</span>
+						<!-- @structr:content(text/plain) --><structr:template src="bca70d7b73e74147a5ef48b02b1494fb" data-structr-meta-data-key="gene" data-structr-meta-function-query="current.getGenes()"><span class="badge badge-pill ${gene.badgeColor}" id="gene-badge"><!-- @structr:content(text/javascript) -->${gene.name}</span>
 						</structr:template>
 					</td>
 				</tr>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 				<tr data-structr-meta-data-key="paper" data-structr-meta-function-query="to_graph_object(current.getRelatedPapersByGenes())">
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${paper.values[0].publicationDate}</td>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><a href="/paper/${paper.values[0].id}" src="${link.path}"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${paper.values[0].name}</a></td>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
+					<td><!-- @structr:content(text/plain) -->${paper.values[0].publicationDate}</td>
+					<td><a href="/paper/${paper.values[0].id}" src="${link.path}"><!-- @structr:content(text/plain) -->${paper.values[0].name}</a></td>
+					<td><!-- @structr:content(text/javascript) -->${{
 
 	const current	= $.get('paper');
 	const paper		= current.values[0];
@@ -61,15 +44,13 @@
 	return printlist;
 
 }}</td>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 					<td>
-						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) --><structr:template src="5d5d16f2e54949208f9d36f6278ea980" data-structr-meta-data-key="gene" data-structr-meta-function-query="paper.values[1].values"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="badge badge-pill ${gene.badgeColor}" id="gene-badge"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${gene.name}</span>
+						<!-- @structr:content(text/plain) --><structr:template src="5d5d16f2e54949208f9d36f6278ea980" data-structr-meta-data-key="gene" data-structr-meta-function-query="paper.values[1].values"><span class="badge badge-pill ${gene.badgeColor}" id="gene-badge"><!-- @structr:content(text/javascript) -->${gene.name}</span>
 						</structr:template>
 					</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
-	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-	<div style="background-color:#3333FF"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->test for badges</div>
+	<div style="background-color:#3333FF"><!-- @structr:content(text/plain) -->test for badges</div>
 </structr:template>

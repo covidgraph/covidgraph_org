@@ -595,18 +595,11 @@
     "contentType": "text/html",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Jakob"
-      }
-    ],
+    "grantees": [],
     "hidden": false,
     "hideConditions": null,
     "id": "b0607cccb9394b2bac0d052e6e8cccc5",
-    "owner": {
-      "name": "Jakob"
-    },
+    "owner": null,
     "pageCreatesRawData": false,
     "path": null,
     "position": null,
@@ -622,18 +615,11 @@
     "contentType": "text/html",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
+    "grantees": [],
     "hidden": false,
     "hideConditions": null,
     "id": "d6e9009499eb49a99702ad7cabb11da3",
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "pageCreatesRawData": false,
     "path": null,
     "position": null,
@@ -649,18 +635,11 @@
     "contentType": "text/html",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Jakob"
-      }
-    ],
+    "grantees": [],
     "hidden": false,
     "hideConditions": null,
     "id": "b06e55287391456da8a0d171e9410f7c",
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "pageCreatesRawData": false,
     "path": null,
     "position": null,
@@ -811,18 +790,11 @@
     "contentType": "text/html",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
+    "grantees": [],
     "hidden": false,
     "hideConditions": null,
     "id": "d3abc8e86ebc41c7a4890ddda8df101b",
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "pageCreatesRawData": false,
     "path": null,
     "position": null,
@@ -838,18 +810,11 @@
     "contentType": "text/html",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
+    "grantees": [],
     "hidden": false,
     "hideConditions": null,
     "id": "b5182aec820e44cead7db9405c84cec0",
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "pageCreatesRawData": false,
     "path": null,
     "position": null,
@@ -946,18 +911,11 @@
     "contentType": "text/html",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
+    "grantees": [],
     "hidden": false,
     "hideConditions": null,
     "id": "19eb7fede491452892aacf71bd688f37",
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "pageCreatesRawData": false,
     "path": null,
     "position": null,

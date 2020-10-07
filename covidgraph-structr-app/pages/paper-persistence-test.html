@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><html>
-	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+<html>
 	<head>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<title><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${capitalize(page.name)}</title>
+		<title><!-- @structr:content(text/plain) -->${capitalize(page.name)}</title>
 	</head>
-	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 	<body>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
+		<script type="module"><!-- @structr:content(module) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
 import { StructrRest } from "/persistence-layer/rest/StructrRest.js";
 
 const persistence = new Persistence();
@@ -48,20 +44,13 @@ document.addEventListener('DOMContentLoaded', () =&gt; {
 		
 	const editButton = document.getElementById('updateNode');
 	editButton.addEventListener('click', updateNode);
-});
-</script>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<h1><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${capitalize(page.name)}</h1>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+});</script>
+		<h1><!-- @structr:content(text/plain) -->${capitalize(page.name)}</h1>
 		<div>
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 			<input id="uuidPaper" placeholder="Paper">
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 			<input id="uuidRecommendationView" placeholder="RecommendationView">
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-			<button id="updateNode"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Add Paper to RecommendationView</button>
+			<button id="updateNode"><!-- @structr:content(text/plain) -->Add Paper to RecommendationView</button>
 		</div>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<div id="text"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->#text</div>
+		<div id="text"><!-- @structr:content(text/plain) -->#text</div>
 	</body>
 </html>

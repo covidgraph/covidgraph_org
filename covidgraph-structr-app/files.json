@@ -126340,17 +126340,10 @@
     "cacheForSeconds": null,
     "contentType": null,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
+    "grantees": [],
     "id": "259e438c40d94a73b5f440e2da11fe62",
     "includeInFrontendExport": false,
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "type": "Folder",
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": false,
@@ -126362,18 +126355,11 @@
     "contentType": "text/css",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
+    "grantees": [],
     "id": "a212570e416342049ba66217f2f83190",
     "includeInFrontendExport": false,
     "isTemplate": false,
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "type": "File",
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": false,
@@ -126385,18 +126371,11 @@
     "contentType": "text/css",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
+    "grantees": [],
     "id": "a16e7911f5194d0ca6aebd134eb6091f",
     "includeInFrontendExport": false,
     "isTemplate": false,
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "type": "File",
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": false,
@@ -129475,18 +129454,11 @@
     "contentType": "application/pdf",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
+    "grantees": [],
     "id": "ef915e086aed4b6ca5301efac7438214",
     "includeInFrontendExport": false,
     "isTemplate": false,
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "type": "File",
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": false,
@@ -129688,18 +129660,11 @@
     "contentType": "application/javascript",
     "dontCache": true,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
+    "grantees": [],
     "id": "dc91cdd0947b4ef4a87aa0cf70ac9ba5",
     "includeInFrontendExport": false,
     "isTemplate": true,
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "type": "File",
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": false,
@@ -129711,18 +129676,11 @@
     "contentType": "application/javascript",
     "dontCache": true,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Jakob"
-      }
-    ],
+    "grantees": [],
     "id": "f29aaaf21a314d9c9489db511e8e291d",
     "includeInFrontendExport": false,
     "isTemplate": true,
-    "owner": {
-      "name": "Jakob"
-    },
+    "owner": null,
     "type": "File",
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": false,
@@ -130915,21 +130873,14 @@
     "contentType": "image/png",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
+    "grantees": [],
     "height": 520,
     "id": "371c0a9c7b124918b40259cdfc78d2c1",
     "includeInFrontendExport": false,
     "isImage": true,
     "isTemplate": false,
     "isThumbnail": false,
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "type": "Image",
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": false,
@@ -130969,21 +130920,14 @@
     "contentType": "image/png",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
+    "grantees": [],
     "height": 200,
     "id": "99814f5955ca42a5bb0468d07c329707",
     "includeInFrontendExport": false,
     "isImage": true,
     "isTemplate": false,
     "isThumbnail": false,
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "type": "Image",
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": false,
@@ -131023,21 +130967,14 @@
     "contentType": "image/png",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
+    "grantees": [],
     "height": 512,
     "id": "af0c67dacecb412dbf6e0c6339fe79b4",
     "includeInFrontendExport": false,
     "isImage": true,
     "isTemplate": false,
     "isThumbnail": false,
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "type": "Image",
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": false,
@@ -131050,21 +130987,14 @@
     "contentType": "image/png",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
+    "grantees": [],
     "height": 512,
     "id": "2110bb52f16b4bb9887764fb176e7443",
     "includeInFrontendExport": false,
     "isImage": true,
     "isTemplate": false,
     "isThumbnail": false,
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "type": "Image",
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": false,
@@ -134254,7 +134184,7 @@
         "name": "admin"
       }
     ],
-    "height": 6240,
+    "height": 4160,
     "id": "f9d2ed8b8dd24c6ab3eb3260e1c25a7a",
     "includeInFrontendExport": false,
     "isImage": true,
@@ -134267,7 +134197,7 @@
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true,
-    "width": 4160
+    "width": 6240
   },
   "/img/members/Axel_Morgner_420x420.png": {
     "basicAuthRealm": null,

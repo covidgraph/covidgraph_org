@@ -1,27 +1,17 @@
 <!DOCTYPE html>
-<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) --><html>
-	<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+<html>
 	<head>
-		<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
-		<title><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${capitalize(page.name)}</title>
+		<title><!-- @structr:content(text/plain) -->${capitalize(page.name)}</title>
 	</head>
-	<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
 	<body>
-		<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
-		<h1><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${capitalize(page.name)}</h1>
-		<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+		<h1><!-- @structr:content(text/plain) -->${capitalize(page.name)}</h1>
 		<div>
-			<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
 			<input id="uuidPaper" placeholder="Paper">
-			<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
 			<input id="uuidRecommendationView" placeholder="RecommendationView">
-			<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
-			<button id="updateNode"><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Add Paper to RecommendationView</button>
+			<button id="updateNode"><!-- @structr:content(text/plain) -->Add Paper to RecommendationView</button>
 		</div>
-		<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
-		<div id="text"><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->#text</div>
-		<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
-		<script type="module"><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/javascript) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
+		<div id="text"><!-- @structr:content(text/plain) -->#text</div>
+		<script type="module"><!-- @structr:content(module) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
 import { StructrRest } from "/persistence-layer/rest/StructrRest.js";
 
 const persistence = new Persistence();
@@ -53,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () =&gt; {
 	const editButton = document.getElementById('updateNode');
 	editButton.addEventListener('click', updateNode);
 
-});
-</script>
+});</script>
 	</body>
 </html>

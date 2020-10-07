@@ -1,10 +1,9 @@
-<!-- @structr:grant(Sven,arwd), @structr:content(text/html) --><structr:template src="Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application)">
-	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+<!-- @structr:content(text/html) --><structr:template src="Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application)">
 	<div style="">
-		<!-- @structr:protected, @structr:owner(admin), @structr:grant(Sven,arwd) -->
+		<!-- @structr:protected, @structr:owner(admin) -->
 		<script src="/applications/js/libs/vis-network.min.js" type="text/javascript"></script>
-		<!-- @structr:protected, @structr:owner(admin), @structr:grant(Sven,arwd) -->
-		<style type="text/css"><!-- @structr:owner(admin), @structr:grant(Sven,arwd), @structr:content(text/css) -->    html, body {
+		<!-- @structr:protected, @structr:owner(admin) -->
+		<style type="text/css"><!-- @structr:owner(admin), @structr:content(text/css) -->    html, body {
       font: 10pt arial;
     }
     #paper-graph {
@@ -13,8 +12,7 @@
       border: 1px solid lightgray;
     }
   </style>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
+		<script type="module"><!-- @structr:content(module) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
 import { StructrRest } from "/persistence-layer/rest/StructrRest.js";
 
 const persistence = new Persistence();
@@ -123,41 +121,27 @@ async function lableGenes()
 		}
 	}
 }</script>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 		<div id="paper-graph" style="width:40%; height:400px; float: left;"></div>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 		<div id="paper-table" style="width:60%; float: left;">
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 			<table>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 				<thead>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<th><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Title</th>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<th><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Mentioned Genes</th>
+					<th><!-- @structr:content(text/plain) -->Title</th>
+					<th><!-- @structr:content(text/plain) -->Mentioned Genes</th>
 				</thead>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 				<tbody>
 					<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Store Recommended Papers-07da195f1266446aa1c4ef3a00f213f2" data-structr-meta-name="Store Recommended Papers">
-						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 						<tr>
-							<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-							<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><a href="/paper/${current.srcPaper.id}"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.srcPaper.name}</a></td>
-							<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-							<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="badge badge-pill" id="" name="${gene.name}" data-structr-meta-data-key="gene" data-structr-meta-function-query="current.srcPaper.getGenes()"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${gene.name}</span></td>
+							<td><a href="/paper/${current.srcPaper.id}"><!-- @structr:content(text/plain) -->${current.srcPaper.name}</a></td>
+							<td><span class="badge badge-pill" id="" name="${gene.name}" data-structr-meta-data-key="gene" data-structr-meta-function-query="current.srcPaper.getGenes()"><!-- @structr:content(text/javascript) -->${gene.name}</span></td>
 						</tr>
-						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 						<tr data-structr-meta-data-key="relatedPaperCollection" data-structr-meta-function-query="current.srcPaper.getRelatedPapersByGenes()">
-							<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-							<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><a href="/paper/${relatedPaperCollection.referencedPaper.id}"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${relatedPaperCollection.referencedPaper.name}</a></td>
-							<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-							<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="badge badge-pill" id="" name="${gene.name}" data-structr-meta-data-key="gene" data-structr-meta-function-query="relatedPaperCollection.sharedGenes"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${gene.name}</span></td>
+							<td><a href="/paper/${relatedPaperCollection.referencedPaper.id}"><!-- @structr:content(text/plain) -->${relatedPaperCollection.referencedPaper.name}</a></td>
+							<td><span class="badge badge-pill" id="" name="${gene.name}" data-structr-meta-data-key="gene" data-structr-meta-function-query="relatedPaperCollection.sharedGenes"><!-- @structr:content(text/javascript) -->${gene.name}</span></td>
 						</tr>
 					</structr:template>
 				</tbody>
 			</table>
 		</div>
-		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-		<div id="paper-content" style="float: left;"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) --></div>
+		<div id="paper-content" style="float: left;"><!-- @structr:content(text/plain) --></div>
 	</div>
 </structr:template>

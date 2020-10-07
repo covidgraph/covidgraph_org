@@ -1,5 +1,5 @@
 <!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Sub Page Template-03c69b87b4f8420186f9393f469c678d" data-structr-meta-name="Sub Page Template">
-	<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 	<div class="section mb-0">
 		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 		<div class="container" id="data">
@@ -14,7 +14,7 @@
 				</div>
 			</div>
 			<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Render Articles-1ad0c04022664a8fa9a0bdf28a78bce6" data-structr-meta-name="Render Articles" data-structr-meta-data-key="article" data-structr-meta-function-query="find('NewsArticle', sort('publicationDate', true))">
-				<!-- @structr:public, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Render News Article-8fa193441c8c41d8b8082e9154cf7aba" data-structr-meta-name="Render News Article" data-structr-meta-show-conditions="and( 	or( 		empty(request.type), 		eq(request.type, 'articles') 	), 	eq(article.type, 'NewsArticle') )">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Render News Article-8fa193441c8c41d8b8082e9154cf7aba" data-structr-meta-name="Render News Article" data-structr-meta-show-conditions="and( 	or( 		empty(request.type), 		eq(request.type, 'articles') 	), 	eq(article.type, 'NewsArticle') )">
 				</structr:template>
 			
 				<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Render Video Article-3f8f50591f9b45b88e9238b9c23d9572" data-structr-meta-name="Render Video Article" data-structr-meta-show-conditions="and( 	or( 		empty(request.type), 		eq(request.type, 'videos') 	), 	eq(article.type, 'VideoArticle') )">
@@ -27,7 +27,7 @@
 		
 		</div>
 	</div>
-	<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 	<style type="text/css"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/css) -->.iframe-container {
 
 	overflow : hidden;

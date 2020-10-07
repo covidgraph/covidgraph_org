@@ -1,8 +1,7 @@
 <!-- @structr:owner(admin), @structr:content(text/html) --><structr:template src="Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application)">
-	<!-- @structr:private, @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<!-- @structr:private -->
 	<div>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
+		<script type="module"><!-- @structr:content(module) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
 
 const persistence = new Persistence();
 const current = '${current}';
@@ -28,10 +27,8 @@ async function createRecommendationView()
 	window.location.href = '/related-papers-graph/'+uuidRV;
 	
 }</script>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<h1><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><a href="${current.url}"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.name}</a></h1>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<h5><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.publicationDate}<!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
+		<h1><a href="${current.url}"><!-- @structr:content(text/plain) -->${current.name}</a></h1>
+		<h5><!-- @structr:content(text/plain) -->${current.publicationDate}<!-- @structr:content(text/javascript) -->${{
 
 	const current = $.get('current');
 	const authors = current.getAuthors();
@@ -43,10 +40,8 @@ async function createRecommendationView()
 	return printlist;
 
 }}</h5>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<button id="getRelatedPapers"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Find related Papers</button>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<section><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
+		<button id="getRelatedPapers"><!-- @structr:content(text/plain) -->Find related Papers</button>
+		<section><span><!-- @structr:content(text/javascript) -->${{
 
 	const current = $.get('current');
 	const abstractTexts = current.getAbstracts();
@@ -57,7 +52,7 @@ async function createRecommendationView()
 	
 	return joinedText;
 	
-}}</span><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
+}}</span><span><!-- @structr:content(text/javascript) -->${{
 
 	const current = $.get('current');
 	const bodyTexts = current.getBodyTexts();
