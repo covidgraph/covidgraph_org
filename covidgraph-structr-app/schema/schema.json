@@ -12898,6 +12898,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Paper/methods/getAbstracts"
         },
         "getAuthors": {
@@ -12906,6 +12907,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Paper/methods/getAuthors"
         },
         "getBodyTexts": {
@@ -15193,6 +15195,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./RecommendationView/methods/getSharedGenes"
         }
       },

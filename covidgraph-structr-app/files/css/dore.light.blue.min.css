@@ -5430,7 +5430,7 @@ select.form-control:not([size]):not([multiple]) {
 .landing-page .mobile-hero {
 	margin-left: 50%;
 	transform: translateX(-50%);
-	max-width: 135%;
+	max-width: 100%;
 	margin-bottom: 3rem
 }
 

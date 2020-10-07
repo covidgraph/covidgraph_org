@@ -7,7 +7,7 @@
 		<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
 		<div class="papers" data-structr-meta-show-conditions="or(eq(request.type, 'papers'),empty(request.type))">
 			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-			<h1><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${store('papers-count', first(remote_cypher('bolt://covid.petesis.com:7687', 'public', 'corona', '
+			<h1><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${store('papers-count', first(remote_cypher('bolt://db.covidgraph.org:7687', 'public', 'corona', '
 MATCH (n:Paper) RETURN COUNT(DISTINCT n) AS c
 ')).c)}
 Papers (${retrieve('papers-count')})</h1>
@@ -79,7 +79,7 @@ ${{
 							<tr data-structr-meta-data-key="result" data-structr-meta-function-query="{
 
   const credentials = {
-    url : 'bolt://covid.petesis.com:7687', 
+    url : 'bolt://db.covidgraph.org:7687', 
     username : 'public', 
     password : 'corona'
   };
@@ -118,7 +118,7 @@ ${{
 		<!-- @structr:public-only, @structr:owner(admin), @structr:grant(admin,arwd) -->
 		<div class="papers" data-structr-meta-show-conditions="eq(request.type, 'patents')">
 			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-			<h1><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${store('patents-count', first(remote_cypher('bolt://covid.petesis.com:7687', 'public', 'corona', '
+			<h1><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${store('patents-count', first(remote_cypher('bolt://db.covidgraph.org:7687', 'public', 'corona', '
 MATCH (n:Patent) RETURN COUNT(DISTINCT n) AS c
 ')).c)}
 Patents (${retrieve('patents-count')})</h1>
@@ -190,7 +190,7 @@ ${{
 							<tr data-structr-meta-data-key="result" data-structr-meta-function-query="{
 
   const credentials = {
-    url : 'bolt://covid.petesis.com:7687', 
+    url : 'bolt://db.covidgraph.org:7687', 
     username : 'public', 
     password : 'corona'
   };
