@@ -153,6 +153,20 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "News Article Template-8fa193441c8c41d8b8082e9154cf7aba": {
+    "contentType": "text/html",
+    "id": "8fa193441c8c41d8b8082e9154cf7aba",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "News Section-3362a362475e42b19870a6adeb350a8a": {
+    "contentType": "text/html",
+    "id": "3362a362475e42b19870a6adeb350a8a",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "Not found-dd59544118ad4246aea3ffcd8b08750f": {
     "contentType": "text/html",
     "id": "dd59544118ad4246aea3ffcd8b08750f",

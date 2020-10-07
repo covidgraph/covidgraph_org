@@ -36,6 +36,33 @@
     ],
     "hidden": false,
     "hideConditions": null,
+    "id": "c65c0f77ecce47ab8862ce2e3493ad07",
+    "owner": {
+      "name": "admin"
+    },
+    "pageCreatesRawData": false,
+    "path": null,
+    "position": null,
+    "showConditions": null,
+    "showOnErrorCodes": null,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "contact-old": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "category": null,
+    "contentType": "text/html",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "hidden": false,
+    "hideConditions": null,
     "id": "2bc5f5a42e6d4325b7f50a50de89e2a3",
     "owner": {
       "name": "admin"
@@ -199,33 +226,6 @@
     "hidden": false,
     "hideConditions": null,
     "id": "194efef4bea244c690d812b6b79897e1",
-    "owner": {
-      "name": "admin"
-    },
-    "pageCreatesRawData": false,
-    "path": null,
-    "position": null,
-    "showConditions": null,
-    "showOnErrorCodes": null,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
-  },
-  "feedback": {
-    "basicAuthRealm": null,
-    "cacheForSeconds": null,
-    "category": null,
-    "contentType": "text/html",
-    "dontCache": false,
-    "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "admin"
-      }
-    ],
-    "hidden": false,
-    "hideConditions": null,
-    "id": "c65c0f77ecce47ab8862ce2e3493ad07",
     "owner": {
       "name": "admin"
     },

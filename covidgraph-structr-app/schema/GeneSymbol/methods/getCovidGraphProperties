@@ -1,0 +1,23 @@
+{
+	
+	const self = $.this;
+
+	const neoConnector = $.call('getCovidGraphConnector');
+
+	const query = 'MATCH (geneSymbol:GeneSymbol) ' +
+		'WHERE ID(geneSymbol) = ' + self.covidGraphId + ' ' +
+		'RETURN geneSymbol';
+
+	
+	const results = neoConnector.query({query : query});
+	
+	if(results.length !== 1) {
+		$.log('Cardinality Mismatch for GeneSymbol.getCovidGraphProperties(', self.id, ')');
+		$.log('Query: ', query);
+		return {};
+	}
+
+	const geneSymbol = $.first(results);
+	return geneSymbol;
+
+}
