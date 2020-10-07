@@ -1,4 +1,5 @@
 {
 	const self = $.this;
 	self.geneLookUp = false;
+	self.paperLookUp = false;
 }	

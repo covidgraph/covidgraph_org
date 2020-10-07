@@ -16,12 +16,14 @@
 			'RETURN DISTINCT ID(paper) AS id';
 
 		const paperIds = neoConnector.query({query : query});
-		let allPapers = paperIds.map(paper => $.get_or_create('Paper', {
+		self.papersMentioningGene = paperIds.map(paper => $.get_or_create('Paper', {
 			covidGraphId : paper.id
 		}));
 	
-		self.papersMentioningGene = allPapers.filter(paper=>paper.geneScore<50);
+		//self.papersMentioningGene = allPapers.filter(paper=>paper.geneScore<50);
 		
+		//Read functionAttribute to update paperScore
+		let score = self.paperScore;
 		self.paperLookUp = true;
 	}
 	

@@ -7437,6 +7437,22 @@
           "returnType": "void",
           "source": "./Gene/methods/getPapers"
         },
+        "getPapersSortedByPublication": {
+          "callSuper": false,
+          "comment": "./Gene/methods/getPapersSortedByPublication.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Gene/methods/getPapersSortedByPublication"
+        },
+        "getPatents": {
+          "callSuper": false,
+          "comment": "./Gene/methods/getPatents.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Gene/methods/getPatents"
+        },
         "onCreate": {
           "callSuper": false,
           "comment": "./Gene/methods/onCreate.comment",
@@ -7480,6 +7496,13 @@
           "typeHint": "string",
           "writeFunction": "./Gene/functions/geneType.writeFunction"
         },
+        "mentionedByPatents": {
+          "$link": "#/definitions/PatentPATENT_HAS_GENEGene",
+          "items": {
+            "$ref": "#/definitions/Patent"
+          },
+          "type": "array"
+        },
         "name": {
           "cachingEnabled": true,
           "default": "",
@@ -7493,12 +7516,25 @@
           "default": "",
           "type": "boolean"
         },
+        "paperScore": {
+          "cachingEnabled": true,
+          "default": "",
+          "indexed": true,
+          "readFunction": "./Gene/functions/paperScore.readFunction",
+          "type": "function",
+          "typeHint": "int",
+          "writeFunction": "./Gene/functions/paperScore.writeFunction"
+        },
         "papersMentioningGene": {
           "$link": "#/definitions/PaperPAPER_MENTIONS_GENEGene",
           "items": {
             "$ref": "#/definitions/Paper"
           },
           "type": "array"
+        },
+        "patentLookUp": {
+          "default": "",
+          "type": "boolean"
         },
         "recommendationViews": {
           "$link": "#/definitions/RecommendationViewRECOMMENDATIONVIEW_HAS_GENESGene",
@@ -7524,7 +7560,9 @@
           "featureType",
           "geneType",
           "name",
-          "paperLookUp"
+          "paperLookUp",
+          "paperScore",
+          "patentLookUp"
         ]
       }
     },
@@ -8745,22 +8783,60 @@
       ],
       "type": "object"
     },
+    "Interview": {
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "properties": {
+        "aProjectMember": {
+          "$link": "#/definitions/ProjectMemberPROJECTMEMBER_HAS_INTERVIEWInterview",
+          "$ref": "#/definitions/ProjectMember",
+          "type": "object"
+        },
+        "questions": {
+          "$link": "#/definitions/InterviewINTERVIEW_HAS_QUESTIONSInterviewQuestion",
+          "items": {
+            "$ref": "#/definitions/InterviewQuestion"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
     "InterviewAnswer": {
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
       "properties": {
-        "aInterviewQuestion": {
+        "question": {
           "$link": "#/definitions/InterviewQuestionQUESTION_HAS_ANSWERInterviewAnswer",
           "$ref": "#/definitions/InterviewQuestion",
           "type": "object"
         },
-        "aProjectMemberInterview": {
-          "$link": "#/definitions/ProjectMemberInterviewPMINTERVIEW_HAS_ANSWERSInterviewAnswer",
-          "$ref": "#/definitions/PMInterview",
-          "type": "object"
+        "text": {
+          "default": "",
+          "format": "",
+          "indexed": true,
+          "type": "string"
         }
       },
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "text"
+        ]
+      }
+    },
+    "InterviewINTERVIEW_HAS_QUESTIONSInterviewQuestion": {
+      "$source": "#/definitions/Interview",
+      "$target": "#/definitions/InterviewQuestion",
+      "cardinality": "OneToMany",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "INTERVIEW_HAS_QUESTIONS",
+      "sourceName": "interview",
+      "targetName": "questions",
       "type": "object"
     },
     "InterviewQuestion": {
@@ -8768,18 +8844,36 @@
       "isBuiltinType": false,
       "isInterface": false,
       "properties": {
-        "aInterviewAnswer": {
+        "answer": {
           "$link": "#/definitions/InterviewQuestionQUESTION_HAS_ANSWERInterviewAnswer",
           "$ref": "#/definitions/InterviewAnswer",
           "type": "object"
         },
-        "aProjectMemberInterview": {
-          "$link": "#/definitions/ProjectMemberInterviewPMINTERVIEW_HAS_QUESTIONSInterviewQuestion",
-          "$ref": "#/definitions/PMInterview",
+        "interview": {
+          "$link": "#/definitions/InterviewINTERVIEW_HAS_QUESTIONSInterviewQuestion",
+          "$ref": "#/definitions/Interview",
           "type": "object"
+        },
+        "position": {
+          "default": "",
+          "indexed": true,
+          "type": "integer"
+        },
+        "text": {
+          "default": "",
+          "format": "",
+          "indexed": true,
+          "type": "string"
         }
       },
-      "type": "object"
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "position",
+          "text"
+        ]
+      }
     },
     "InterviewQuestionQUESTION_HAS_ANSWERInterviewAnswer": {
       "$source": "#/definitions/InterviewQuestion",
@@ -8788,8 +8882,8 @@
       "isAbstract": false,
       "isInterface": false,
       "rel": "QUESTION_HAS_ANSWER",
-      "sourceName": "aInterviewQuestion",
-      "targetName": "aInterviewAnswer",
+      "sourceName": "question",
+      "targetName": "answer",
       "type": "object"
     },
     "JavaScriptSource": {
@@ -12022,33 +12116,6 @@
       ],
       "type": "object"
     },
-    "PMInterview": {
-      "isAbstract": false,
-      "isBuiltinType": false,
-      "isInterface": false,
-      "properties": {
-        "aProjectMember": {
-          "$link": "#/definitions/ProjectMemberPROJECTMEMBER_HAS_PMINTERVIEWPMInterview",
-          "$ref": "#/definitions/ProjectMember",
-          "type": "object"
-        },
-        "manyInterviewAnswers": {
-          "$link": "#/definitions/ProjectMemberInterviewPMINTERVIEW_HAS_ANSWERSInterviewAnswer",
-          "items": {
-            "$ref": "#/definitions/InterviewAnswer"
-          },
-          "type": "array"
-        },
-        "manyQuestions": {
-          "$link": "#/definitions/ProjectMemberInterviewPMINTERVIEW_HAS_QUESTIONSInterviewQuestion",
-          "items": {
-            "$ref": "#/definitions/InterviewQuestion"
-          },
-          "type": "array"
-        }
-      },
-      "type": "object"
-    },
     "Page": {
       "$extends": "#/definitions/DOMNode",
       "$implements": [
@@ -12904,6 +12971,7 @@
         "geneScore": {
           "cachingEnabled": true,
           "default": "",
+          "indexed": true,
           "readFunction": "./Paper/functions/geneScore.readFunction",
           "type": "function",
           "typeHint": "int"
@@ -13131,6 +13199,13 @@
           "typeHint": "string",
           "writeFunction": "./Patent/functions/filingDate.writeFunction"
         },
+        "mentionedGenes": {
+          "$link": "#/definitions/PatentPATENT_HAS_GENEGene",
+          "items": {
+            "$ref": "#/definitions/Gene"
+          },
+          "type": "array"
+        },
         "patentType": {
           "cachingEnabled": false,
           "default": "",
@@ -13166,6 +13241,16 @@
           "url"
         ]
       }
+    },
+    "PatentPATENT_HAS_GENEGene": {
+      "$source": "#/definitions/Patent",
+      "$target": "#/definitions/Gene",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "PATENT_HAS_GENE",
+      "sourceName": "mentionedByPatents",
+      "targetName": "mentionedGenes",
+      "type": "object"
     },
     "PaymentItemNode": {
       "$implements": [
@@ -14969,8 +15054,8 @@
           "type": "string"
         },
         "interview": {
-          "$link": "#/definitions/ProjectMemberPROJECTMEMBER_HAS_PMINTERVIEWPMInterview",
-          "$ref": "#/definitions/PMInterview",
+          "$link": "#/definitions/ProjectMemberPROJECTMEMBER_HAS_INTERVIEWInterview",
+          "$ref": "#/definitions/Interview",
           "type": "object"
         },
         "newsArticleAuthors": {
@@ -15020,35 +15105,13 @@
         ]
       }
     },
-    "ProjectMemberInterviewPMINTERVIEW_HAS_ANSWERSInterviewAnswer": {
-      "$source": "#/definitions/PMInterview",
-      "$target": "#/definitions/InterviewAnswer",
-      "cardinality": "OneToMany",
-      "isAbstract": false,
-      "isInterface": false,
-      "rel": "PMINTERVIEW_HAS_ANSWERS",
-      "sourceName": "aProjectMemberInterview",
-      "targetName": "manyInterviewAnswers",
-      "type": "object"
-    },
-    "ProjectMemberInterviewPMINTERVIEW_HAS_QUESTIONSInterviewQuestion": {
-      "$source": "#/definitions/PMInterview",
-      "$target": "#/definitions/InterviewQuestion",
-      "cardinality": "OneToMany",
-      "isAbstract": false,
-      "isInterface": false,
-      "rel": "PMINTERVIEW_HAS_QUESTIONS",
-      "sourceName": "aProjectMemberInterview",
-      "targetName": "manyQuestions",
-      "type": "object"
-    },
-    "ProjectMemberPROJECTMEMBER_HAS_PMINTERVIEWPMInterview": {
+    "ProjectMemberPROJECTMEMBER_HAS_INTERVIEWInterview": {
       "$source": "#/definitions/ProjectMember",
-      "$target": "#/definitions/PMInterview",
+      "$target": "#/definitions/Interview",
       "cardinality": "OneToOne",
       "isAbstract": false,
       "isInterface": false,
-      "rel": "PROJECTMEMBER_HAS_PMINTERVIEW",
+      "rel": "PROJECTMEMBER_HAS_INTERVIEW",
       "sourceName": "aProjectMember",
       "targetName": "interview",
       "type": "object"

@@ -1,0 +1,27 @@
+{
+	
+	const self = $.this;
+
+	if(!self.patentLookUp) 
+	{
+		const neoConnector = $.call('getCovidGraphConnector');
+
+		
+		const query = 'MATCH(gene:Gene)-[:MAPS]->(:GeneSymbol)' +
+			'<-[:MENTIONS]-(:Fragment)<-[:HAS_FRAGMENT]-()<-' +
+			'[:PATENT_HAS_PATENTTITLE|:PATENT_HAS_PATENTABSTRACT|' +
+			':PATENT_HAS_PATENTDESCRIPTION|:PATENT_HAS_PATENTCLAIM]-(patent:Patent)' + 
+			'WHERE ID(gene) = ' + self.covidGraphId + ' ' + 
+			'RETURN DISTINCT ID(patent) as id';
+
+		const patentIds = neoConnector.query({query : query});
+		self.mentionedByPatents = patentIds.map(patent => $.get_or_create('Patent', {
+			covidGraphId : patent.id
+		}));
+	
+		self.patentLookUp = true;
+	}
+	
+	return self.mentionedByPatents;
+
+}

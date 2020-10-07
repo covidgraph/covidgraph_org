@@ -1,0 +1,18 @@
+${{
+
+	const current		= $.get('current');
+	const sortedPaper	= current.getPapersSortedByPublication();
+	let paperDate 		= [];
+	
+	for(let paper of sortedPaper)
+	{
+		let obj = {name: paper.name, date: paper.publicationDate};
+		paperDate.push(obj);
+	}
+		
+	$.store('paper', JSON.stringify(paperDate));
+	
+	const children = $.get('children');
+	$.render(children);
+
+}}

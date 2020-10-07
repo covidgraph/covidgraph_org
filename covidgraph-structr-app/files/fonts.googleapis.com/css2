@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Serif Pro Italic'), local('SourceSerifPro-It'), url(https://fonts.gstatic.com/s/sourceserifpro/v10/neIWzD-0qpwxpaWvjeD0X88SAOeauXE-pQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Source Serif Pro SemiBold Italic'), local('SourceSerifPro-SemiBoldIt'), url(https://fonts.gstatic.com/s/sourceserifpro/v10/neIVzD-0qpwxpaWvjeD0X88SAOeauXEGfS-qwQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Source Serif Pro Bold Italic'), local('SourceSerifPro-BoldIt'), url(https://fonts.gstatic.com/s/sourceserifpro/v10/neIVzD-0qpwxpaWvjeD0X88SAOeauXEGGS6qwQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Serif Pro'), local('SourceSerifPro-Regular'), url(https://fonts.gstatic.com/s/sourceserifpro/v10/neIQzD-0qpwxpaWvjeD0X88SAOeaiXM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Source Serif Pro SemiBold'), local('SourceSerifPro-SemiBold'), url(https://fonts.gstatic.com/s/sourceserifpro/v10/neIXzD-0qpwxpaWvjeD0X88SAOeasasahSs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Source Serif Pro Bold'), local('SourceSerifPro-Bold'), url(https://fonts.gstatic.com/s/sourceserifpro/v10/neIXzD-0qpwxpaWvjeD0X88SAOeasc8bhSs.ttf) format('truetype');
+}

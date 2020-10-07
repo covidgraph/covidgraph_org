@@ -122,7 +122,7 @@ b, strong {
 }
 
 .landing-page .card {
-	min-height: 37rem;
+	min-height: 35rem;
 }
 
 @media (max-width:1440px) {
@@ -140,13 +140,13 @@ b, strong {
 		vertical-align: top;
 	}
 	.landing-page .card {
-		min-height: 47rem;/*54.5rem;*/
+		min-height: 46rem;/*54.5rem;*/
 	}
 }
 
 @media (max-width:991px) {
 	.landing-page .card {
-		min-height: 47rem;
+		min-height: 46rem;
 	}
 }
 

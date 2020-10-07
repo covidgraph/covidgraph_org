@@ -588,6 +588,60 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": false
   },
+  "paper-d3-beeswarm": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "category": null,
+    "contentType": "text/html",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "hidden": false,
+    "hideConditions": null,
+    "id": "519636416fed44f9bd605cd7356d2174",
+    "owner": {
+      "name": "Sven"
+    },
+    "pageCreatesRawData": false,
+    "path": null,
+    "position": null,
+    "showConditions": null,
+    "showOnErrorCodes": null,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "paper-d3-beeswarm-mainpage-template": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "category": null,
+    "contentType": "text/html",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "hidden": false,
+    "hideConditions": null,
+    "id": "d79a409797f24313b39bd5197ad3aeba",
+    "owner": {
+      "name": "Sven"
+    },
+    "pageCreatesRawData": false,
+    "path": null,
+    "position": null,
+    "showConditions": null,
+    "showOnErrorCodes": null,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "paper-partial": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -642,7 +696,7 @@
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
   },
-  "paper-persistence-test-jakob": {
+  "paper-timeline": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
     "category": null,
@@ -652,12 +706,12 @@
     "grantees": [
       {
         "allowed": "accessControl,read,write,delete",
-        "name": "Jakob"
+        "name": "Sven"
       }
     ],
     "hidden": false,
     "hideConditions": null,
-    "id": "b06e55287391456da8a0d171e9410f7c",
+    "id": "c4bea81149d9419aa631ddf531bea55e",
     "owner": {
       "name": "Sven"
     },
@@ -964,7 +1018,7 @@
     "showConditions": null,
     "showOnErrorCodes": null,
     "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
+    "visibleToPublicUsers": true
   },
   "team_": {
     "basicAuthRealm": null,

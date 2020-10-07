@@ -1,0 +1,10 @@
+{
+	
+	const self = $.this;
+	
+	const papers					= self.getPapers();
+	let sortedPapersByPublication	= $.sort(papers, 'publicationDate');
+	
+	return sortedPapersByPublication;
+
+}

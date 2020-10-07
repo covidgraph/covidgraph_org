@@ -127103,6 +127103,52 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": false
   },
+  "/applications/js/libs/d3.js": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "id": "6989553427d14ed4aa5b2fa570dce9d9",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "/applications/js/libs/d3.min.js": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "id": "480a80195ea04664ad6d725740f4c7de",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "/applications/js/libs/vis-network.min.js": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -130446,6 +130492,29 @@
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
+  },
+  "/fonts.googleapis.com/css2": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/plain",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "id": "ead5b6d5dbcd4afc8584a96159aa3f0e",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
   },
   "/fonts/fontawesome-webfont.eot": {
     "basicAuthRealm": null,
@@ -135166,6 +135235,29 @@
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
+  },
+  "/js/random-data.js": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "id": "b5f0affbd4a741c8aa11fe5920a35cff",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
   },
   "/js/scripts.js": {
     "basicAuthRealm": null,
@@ -140700,6 +140792,100 @@
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
   },
+  "/static.observablehq.com": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": null,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "id": "bdb36c2784244d64ba0207f7e87cd744",
+    "includeInFrontendExport": true,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "Folder",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "/static.observablehq.com/favicon-512.e85350a27dfadeea7c7c78c797c24419525df5579de174d86d258c40ae57473a.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "height": 512,
+    "id": "f6f16bebc86e475ea134fd451f1909f6",
+    "includeInFrontendExport": true,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false,
+    "width": 512
+  },
+  "/static.observablehq.com/opensearch.9ea54d929e2d9a2da525b0985487891c504a502f819db5455ee71fb0c478e5ed.xml": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/xml",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "id": "c94843ca237c4eeaa12c20ba607eae3a",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "/static.observablehq.com/style.6948be028d7055519c3dea32aaf99b586aed94f60a0df011b49b42c5cc9dab9b.css": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "text/css",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "id": "ac49eafe636f4ccfa9d03c2f3a4a57d2",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "/videos": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -140782,6 +140968,50 @@
     "isTemplate": false,
     "owner": {
       "name": "admin"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "/www.google-analytics.com": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": null,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "id": "f806f1f9af0c4dfea5650464f30662c1",
+    "includeInFrontendExport": true,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "Folder",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "/www.google-analytics.com/analytics.js": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/javascript",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "id": "e40634892e2d46d4911cb5c52628a10a",
+    "includeInFrontendExport": true,
+    "isTemplate": false,
+    "owner": {
+      "name": "Sven"
     },
     "type": "File",
     "useAsJavascriptLibrary": false,

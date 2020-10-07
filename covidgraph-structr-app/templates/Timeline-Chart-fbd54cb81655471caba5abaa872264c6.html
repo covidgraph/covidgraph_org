@@ -1,0 +1,29 @@
+${{
+
+	const current		= $.get('current');
+	const sortedPaper	= current.getPapersSortedByPublication();
+	let paperArray 		= [];
+	
+	for(let paper of sortedPaper)
+	{
+		let obj = {type: paper.type, id: paper.id, name: paper.name, date: paper.publicationDate};
+		paperArray.push(obj);
+	}
+		
+	$.store('paper', JSON.stringify(paperArray));
+	
+	const patents = current.getPatents();
+	let patentArray = [];
+	
+	for(let patent of patents)
+	{
+		let obj = {type: patent.type, id: patent.id, name: patent.getTitle(), date: patent.publicationDate};
+		patentArray.push(obj);
+	}
+	
+	$.store('patent', JSON.stringify(patentArray));
+	
+	const children = $.get('children');
+	$.render(children);
+
+}}
