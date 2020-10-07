@@ -1,4 +1,11 @@
 {
+  "5d5d16f2e54949208f9d36f6278ea980": {
+    "contentType": "text/plain",
+    "id": "5d5d16f2e54949208f9d36f6278ea980",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "Confirmation successful-d12be2c6e42a4b00a4137c7f1b90f1af": {
     "contentType": "text/html",
     "id": "d12be2c6e42a4b00a4137c7f1b90f1af",
@@ -244,6 +251,13 @@
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
   },
+  "Store Recommended Papers-07da195f1266446aa1c4ef3a00f213f2": {
+    "contentType": "text/javascript",
+    "id": "07da195f1266446aa1c4ef3a00f213f2",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "Sub Page Template (Light)-9a5c9dcac1ad4e77ae50ddc15533f37c": {
     "contentType": "text/html",
     "id": "9a5c9dcac1ad4e77ae50ddc15533f37c",
@@ -331,6 +345,20 @@
   "abbfc6224dab4836903a180f59ce8799": {
     "contentType": "text/html",
     "id": "abbfc6224dab4836903a180f59ce8799",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "bca70d7b73e74147a5ef48b02b1494fb": {
+    "contentType": "text/plain",
+    "id": "bca70d7b73e74147a5ef48b02b1494fb",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "d12ac02be01841c08b3a019ad9b398f1": {
+    "contentType": "text/plain",
+    "id": "d12ac02be01841c08b3a019ad9b398f1",
     "shared": "false",
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false

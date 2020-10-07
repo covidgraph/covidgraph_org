@@ -647,13 +647,6 @@
           "type": "function",
           "typeHint": "string",
           "writeFunction": "./Author/functions/last.writeFunction"
-        },
-        "manyPapers": {
-          "$link": "#/definitions/PaperPAPER_HAS_AUTHORAuthor",
-          "items": {
-            "$ref": "#/definitions/Paper"
-          },
-          "type": "array"
         }
       },
       "type": "object",
@@ -2160,6 +2153,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./CovidGraphNode/methods/getCovidGraphProperties"
         },
         "onCreate": {
@@ -2168,6 +2162,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./CovidGraphNode/methods/onCreate"
         },
         "onSave": {
@@ -7355,6 +7350,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Fragment/methods/getGeneSymbols"
         }
       },
@@ -7366,15 +7362,21 @@
           },
           "type": "array"
         },
-        "manyPapers": {
-          "$link": "#/definitions/PaperPAPER_HAS_FRAGMENTFragment",
-          "items": {
-            "$ref": "#/definitions/Paper"
-          },
-          "type": "array"
+        "text": {
+          "cachingEnabled": true,
+          "default": "",
+          "readFunction": "./Fragment/functions/text.readFunction",
+          "type": "function",
+          "writeFunction": "./Fragment/functions/text.writeFunction"
         }
       },
-      "type": "object"
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "text"
+        ]
+      }
     },
     "FragmentFRAGMENT_HAS_GENESYMBOLGeneSymbol": {
       "$source": "#/definitions/Fragment",
@@ -7432,6 +7434,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Gene/methods/getPapers"
         },
         "onCreate": {
@@ -7440,6 +7443,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Gene/methods/onCreate"
         }
       },
@@ -7476,16 +7480,10 @@
           "typeHint": "string",
           "writeFunction": "./Gene/functions/geneType.writeFunction"
         },
-        "manyGeneSymbols": {
-          "$link": "#/definitions/GeneGENE_HAS_GENESYMBOLGeneSymbol",
-          "items": {
-            "$ref": "#/definitions/GeneSymbol"
-          },
-          "type": "array"
-        },
         "name": {
           "cachingEnabled": true,
           "default": "",
+          "indexed": true,
           "readFunction": "./Gene/functions/name.readFunction",
           "type": "function",
           "typeHint": "string",
@@ -7502,13 +7500,19 @@
           },
           "type": "array"
         },
-        "score": {
-          "cachingEnabled": true,
-          "default": "",
-          "readFunction": "./Gene/functions/score.readFunction",
-          "type": "function",
-          "typeHint": "int",
-          "writeFunction": "./Gene/functions/score.writeFunction"
+        "recommendationViews": {
+          "$link": "#/definitions/RecommendationViewRECOMMENDATIONVIEW_HAS_GENESGene",
+          "items": {
+            "$ref": "#/definitions/RecommendationView"
+          },
+          "type": "array"
+        },
+        "relatedPaperCollections": {
+          "$link": "#/definitions/RelatedPaperCollectionRELATEDPAPERCOLLECTION_HAS_GENESGene",
+          "items": {
+            "$ref": "#/definitions/RelatedPaperCollection"
+          },
+          "type": "array"
         }
       },
       "type": "object",
@@ -7520,20 +7524,9 @@
           "featureType",
           "geneType",
           "name",
-          "paperLookUp",
-          "score"
+          "paperLookUp"
         ]
       }
-    },
-    "GeneGENE_HAS_GENESYMBOLGeneSymbol": {
-      "$source": "#/definitions/Gene",
-      "$target": "#/definitions/GeneSymbol",
-      "isAbstract": false,
-      "isInterface": false,
-      "rel": "GENE_HAS_GENESYMBOL",
-      "sourceName": "manyGenes",
-      "targetName": "manyGeneSymbols",
-      "type": "object"
     },
     "GeneSymbol": {
       "$extends": "#/definitions/CovidGraphNode",
@@ -7565,13 +7558,6 @@
           "$link": "#/definitions/FragmentFRAGMENT_HAS_GENESYMBOLGeneSymbol",
           "items": {
             "$ref": "#/definitions/Fragment"
-          },
-          "type": "array"
-        },
-        "manyGenes": {
-          "$link": "#/definitions/GeneGENE_HAS_GENESYMBOLGeneSymbol",
-          "items": {
-            "$ref": "#/definitions/Gene"
           },
           "type": "array"
         },
@@ -8757,6 +8743,53 @@
       "tags": [
         "html"
       ],
+      "type": "object"
+    },
+    "InterviewAnswer": {
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "properties": {
+        "aInterviewQuestion": {
+          "$link": "#/definitions/InterviewQuestionQUESTION_HAS_ANSWERInterviewAnswer",
+          "$ref": "#/definitions/InterviewQuestion",
+          "type": "object"
+        },
+        "aProjectMemberInterview": {
+          "$link": "#/definitions/ProjectMemberInterviewPMINTERVIEW_HAS_ANSWERSInterviewAnswer",
+          "$ref": "#/definitions/PMInterview",
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "InterviewQuestion": {
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "properties": {
+        "aInterviewAnswer": {
+          "$link": "#/definitions/InterviewQuestionQUESTION_HAS_ANSWERInterviewAnswer",
+          "$ref": "#/definitions/InterviewAnswer",
+          "type": "object"
+        },
+        "aProjectMemberInterview": {
+          "$link": "#/definitions/ProjectMemberInterviewPMINTERVIEW_HAS_QUESTIONSInterviewQuestion",
+          "$ref": "#/definitions/PMInterview",
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "InterviewQuestionQUESTION_HAS_ANSWERInterviewAnswer": {
+      "$source": "#/definitions/InterviewQuestion",
+      "$target": "#/definitions/InterviewAnswer",
+      "cardinality": "OneToOne",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "QUESTION_HAS_ANSWER",
+      "sourceName": "aInterviewQuestion",
+      "targetName": "aInterviewAnswer",
       "type": "object"
     },
     "JavaScriptSource": {
@@ -11989,6 +12022,33 @@
       ],
       "type": "object"
     },
+    "PMInterview": {
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "properties": {
+        "aProjectMember": {
+          "$link": "#/definitions/ProjectMemberPROJECTMEMBER_HAS_PMINTERVIEWPMInterview",
+          "$ref": "#/definitions/ProjectMember",
+          "type": "object"
+        },
+        "manyInterviewAnswers": {
+          "$link": "#/definitions/ProjectMemberInterviewPMINTERVIEW_HAS_ANSWERSInterviewAnswer",
+          "items": {
+            "$ref": "#/definitions/InterviewAnswer"
+          },
+          "type": "array"
+        },
+        "manyQuestions": {
+          "$link": "#/definitions/ProjectMemberInterviewPMINTERVIEW_HAS_QUESTIONSInterviewQuestion",
+          "items": {
+            "$ref": "#/definitions/InterviewQuestion"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
     "Page": {
       "$extends": "#/definitions/DOMNode",
       "$implements": [
@@ -12771,7 +12831,6 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
-          "returnType": "void",
           "source": "./Paper/methods/getAbstracts"
         },
         "getAuthors": {
@@ -12780,7 +12839,6 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
-          "returnType": "void",
           "source": "./Paper/methods/getAuthors"
         },
         "getBodyTexts": {
@@ -12789,6 +12847,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Paper/methods/getBodyTexts"
         },
         "getFragments": {
@@ -12797,6 +12856,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Paper/methods/getFragments"
         },
         "getGeneSymbols": {
@@ -12814,6 +12874,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Paper/methods/getGenes"
         },
         "getRelatedPapersByGenes": {
@@ -12822,6 +12883,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Paper/methods/getRelatedPapersByGenes"
         },
         "onCreate": {
@@ -12830,6 +12892,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Paper/methods/onCreate"
         }
       },
@@ -12838,19 +12901,12 @@
           "default": "",
           "type": "boolean"
         },
-        "manyAuthors": {
-          "$link": "#/definitions/PaperPAPER_HAS_AUTHORAuthor",
-          "items": {
-            "$ref": "#/definitions/Author"
-          },
-          "type": "array"
-        },
-        "manyFragments": {
-          "$link": "#/definitions/PaperPAPER_HAS_FRAGMENTFragment",
-          "items": {
-            "$ref": "#/definitions/Fragment"
-          },
-          "type": "array"
+        "geneScore": {
+          "cachingEnabled": true,
+          "default": "",
+          "readFunction": "./Paper/functions/geneScore.readFunction",
+          "type": "function",
+          "typeHint": "int"
         },
         "mentionedGenes": {
           "$link": "#/definitions/PaperPAPER_MENTIONS_GENEGene",
@@ -12862,10 +12918,23 @@
         "name": {
           "cachingEnabled": true,
           "default": "",
+          "indexed": true,
           "readFunction": "./Paper/functions/name.readFunction",
           "type": "function",
           "typeHint": "string",
           "writeFunction": "./Paper/functions/name.writeFunction"
+        },
+        "numberGenes": {
+          "cachingEnabled": true,
+          "default": "",
+          "readFunction": "./Paper/functions/numberGenes.readFunction",
+          "type": "function",
+          "typeHint": "int",
+          "writeFunction": "./Paper/functions/numberGenes.writeFunction"
+        },
+        "paperLookUp": {
+          "default": "",
+          "type": "boolean"
         },
         "publicationDate": {
           "cachingEnabled": true,
@@ -12874,6 +12943,34 @@
           "type": "function",
           "typeHint": "string",
           "writeFunction": "./Paper/functions/publicationDate.writeFunction"
+        },
+        "recommendationViews": {
+          "$link": "#/definitions/RecommendationViewRECOMMENDATIONVIEW_HAS_PAPERPaper",
+          "items": {
+            "$ref": "#/definitions/RecommendationView"
+          },
+          "type": "array"
+        },
+        "referencedByRPCollection": {
+          "$link": "#/definitions/RelatedPaperCollectionRELATEDPAPERCOLLECTION_HAS_RELATEDPAPERPaper",
+          "items": {
+            "$ref": "#/definitions/RelatedPaperCollection"
+          },
+          "type": "array"
+        },
+        "relatedPapers": {
+          "$link": "#/definitions/PaperPAPER_HAS_RELATEDPAPERCOLLECTIONRelatedPaperCollection",
+          "items": {
+            "$ref": "#/definitions/RelatedPaperCollection"
+          },
+          "type": "array"
+        },
+        "srcRecommendationViews": {
+          "$link": "#/definitions/RecommendationViewRECOMMENDATIONVIEW_HAS_SRCPAPERPaper",
+          "items": {
+            "$ref": "#/definitions/RecommendationView"
+          },
+          "type": "array"
         },
         "url": {
           "cachingEnabled": true,
@@ -12889,30 +12986,24 @@
       "views": {
         "custom": [
           "geneLookUp",
+          "geneScore",
           "name",
+          "numberGenes",
+          "paperLookUp",
           "publicationDate",
           "url"
         ]
       }
     },
-    "PaperPAPER_HAS_AUTHORAuthor": {
+    "PaperPAPER_HAS_RELATEDPAPERCOLLECTIONRelatedPaperCollection": {
       "$source": "#/definitions/Paper",
-      "$target": "#/definitions/Author",
+      "$target": "#/definitions/RelatedPaperCollection",
+      "cardinality": "OneToMany",
       "isAbstract": false,
       "isInterface": false,
-      "rel": "PAPER_HAS_AUTHOR",
-      "sourceName": "manyPapers",
-      "targetName": "manyAuthors",
-      "type": "object"
-    },
-    "PaperPAPER_HAS_FRAGMENTFragment": {
-      "$source": "#/definitions/Paper",
-      "$target": "#/definitions/Fragment",
-      "isAbstract": false,
-      "isInterface": false,
-      "rel": "PAPER_HAS_FRAGMENT",
-      "sourceName": "manyPapers",
-      "targetName": "manyFragments",
+      "rel": "PAPER_HAS_RELATEDPAPERCOLLECTION",
+      "sourceName": "srcPaper",
+      "targetName": "relatedPapers",
       "type": "object"
     },
     "PaperPAPER_MENTIONS_GENEGene": {
@@ -14877,6 +14968,11 @@
           "indexed": true,
           "type": "string"
         },
+        "interview": {
+          "$link": "#/definitions/ProjectMemberPROJECTMEMBER_HAS_PMINTERVIEWPMInterview",
+          "$ref": "#/definitions/PMInterview",
+          "type": "object"
+        },
         "newsArticleAuthors": {
           "$link": "#/definitions/NewsArticleAUTHORProjectMember",
           "items": {
@@ -14923,6 +15019,39 @@
           "websiteLinkText2"
         ]
       }
+    },
+    "ProjectMemberInterviewPMINTERVIEW_HAS_ANSWERSInterviewAnswer": {
+      "$source": "#/definitions/PMInterview",
+      "$target": "#/definitions/InterviewAnswer",
+      "cardinality": "OneToMany",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "PMINTERVIEW_HAS_ANSWERS",
+      "sourceName": "aProjectMemberInterview",
+      "targetName": "manyInterviewAnswers",
+      "type": "object"
+    },
+    "ProjectMemberInterviewPMINTERVIEW_HAS_QUESTIONSInterviewQuestion": {
+      "$source": "#/definitions/PMInterview",
+      "$target": "#/definitions/InterviewQuestion",
+      "cardinality": "OneToMany",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "PMINTERVIEW_HAS_QUESTIONS",
+      "sourceName": "aProjectMemberInterview",
+      "targetName": "manyQuestions",
+      "type": "object"
+    },
+    "ProjectMemberPROJECTMEMBER_HAS_PMINTERVIEWPMInterview": {
+      "$source": "#/definitions/ProjectMember",
+      "$target": "#/definitions/PMInterview",
+      "cardinality": "OneToOne",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "PROJECTMEMBER_HAS_PMINTERVIEW",
+      "sourceName": "aProjectMember",
+      "targetName": "interview",
+      "type": "object"
     },
     "Protein": {
       "$extends": "#/definitions/CovidGraphNode",
@@ -14988,6 +15117,143 @@
       "tags": [
         "html"
       ],
+      "type": "object"
+    },
+    "RecommendationView": {
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "methods": {
+        "getSharedGenes": {
+          "callSuper": false,
+          "comment": "./RecommendationView/methods/getSharedGenes.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./RecommendationView/methods/getSharedGenes"
+        }
+      },
+      "properties": {
+        "papers": {
+          "$link": "#/definitions/RecommendationViewRECOMMENDATIONVIEW_HAS_PAPERPaper",
+          "items": {
+            "$ref": "#/definitions/Paper"
+          },
+          "type": "array"
+        },
+        "sharedGeneLookUp": {
+          "default": "",
+          "type": "boolean"
+        },
+        "sharedGenes": {
+          "$link": "#/definitions/RecommendationViewRECOMMENDATIONVIEW_HAS_GENESGene",
+          "items": {
+            "$ref": "#/definitions/Gene"
+          },
+          "type": "array"
+        },
+        "srcPaper": {
+          "$link": "#/definitions/RecommendationViewRECOMMENDATIONVIEW_HAS_SRCPAPERPaper",
+          "$ref": "#/definitions/Paper",
+          "type": "object"
+        }
+      },
+      "type": "object",
+      "viewOrder": {
+        "myView": "type,id,srcPaper,papers,sharedGenes",
+        "papers": "papers"
+      },
+      "views": {
+        "custom": [
+          "sharedGeneLookUp"
+        ],
+        "myView": [
+          "id",
+          "papers",
+          "sharedGenes",
+          "srcPaper",
+          "type"
+        ],
+        "papers": [
+          "papers"
+        ]
+      }
+    },
+    "RecommendationViewRECOMMENDATIONVIEW_HAS_GENESGene": {
+      "$source": "#/definitions/RecommendationView",
+      "$target": "#/definitions/Gene",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "RECOMMENDATIONVIEW_HAS_GENES",
+      "sourceName": "recommendationViews",
+      "targetName": "sharedGenes",
+      "type": "object"
+    },
+    "RecommendationViewRECOMMENDATIONVIEW_HAS_PAPERPaper": {
+      "$source": "#/definitions/RecommendationView",
+      "$target": "#/definitions/Paper",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "RECOMMENDATIONVIEW_HAS_PAPER",
+      "sourceName": "recommendationViews",
+      "targetName": "papers",
+      "type": "object"
+    },
+    "RecommendationViewRECOMMENDATIONVIEW_HAS_SRCPAPERPaper": {
+      "$source": "#/definitions/RecommendationView",
+      "$target": "#/definitions/Paper",
+      "cardinality": "ManyToOne",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "RECOMMENDATIONVIEW_HAS_SRCPAPER",
+      "sourceName": "srcRecommendationViews",
+      "targetName": "srcPaper",
+      "type": "object"
+    },
+    "RelatedPaperCollection": {
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "properties": {
+        "referencedPaper": {
+          "$link": "#/definitions/RelatedPaperCollectionRELATEDPAPERCOLLECTION_HAS_RELATEDPAPERPaper",
+          "$ref": "#/definitions/Paper",
+          "type": "object"
+        },
+        "sharedGenes": {
+          "$link": "#/definitions/RelatedPaperCollectionRELATEDPAPERCOLLECTION_HAS_GENESGene",
+          "items": {
+            "$ref": "#/definitions/Gene"
+          },
+          "type": "array"
+        },
+        "srcPaper": {
+          "$link": "#/definitions/PaperPAPER_HAS_RELATEDPAPERCOLLECTIONRelatedPaperCollection",
+          "$ref": "#/definitions/Paper",
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "RelatedPaperCollectionRELATEDPAPERCOLLECTION_HAS_GENESGene": {
+      "$source": "#/definitions/RelatedPaperCollection",
+      "$target": "#/definitions/Gene",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "RELATEDPAPERCOLLECTION_HAS_GENES",
+      "sourceName": "relatedPaperCollections",
+      "targetName": "sharedGenes",
+      "type": "object"
+    },
+    "RelatedPaperCollectionRELATEDPAPERCOLLECTION_HAS_RELATEDPAPERPaper": {
+      "$source": "#/definitions/RelatedPaperCollection",
+      "$target": "#/definitions/Paper",
+      "cardinality": "ManyToOne",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "RELATEDPAPERCOLLECTION_HAS_RELATEDPAPER",
+      "sourceName": "referencedByRPCollection",
+      "targetName": "referencedPaper",
       "type": "object"
     },
     "RemoteDocument": {

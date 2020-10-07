@@ -1,6 +1,6 @@
 <!-- @structr:grant(Sven,arwd), @structr:content(text/html) --><structr:template src="Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application)">
 	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-	<div>
+	<div style="">
 		<!-- @structr:protected, @structr:owner(admin), @structr:grant(Sven,arwd) -->
 		<script src="/applications/js/libs/vis-network.min.js" type="text/javascript"></script>
 		<!-- @structr:protected, @structr:owner(admin), @structr:grant(Sven,arwd) -->
@@ -8,32 +8,156 @@
       font: 10pt arial;
     }
     #paper-graph {
-      /*width: 600px;*/
-      height: 800px;
+      width	: 100%;
+      height: 100%;
       border: 1px solid lightgray;
     }
   </style>
 		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<script type="text/javascript"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->document.addEventListener('DOMContentLoaded', async function() {
+		<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
+import { StructrRest } from "/persistence-layer/rest/StructrRest.js";
 
-	const container = document.getElementById('paper-graph');
+const persistence = new Persistence();
+const structrRest = new StructrRest();
+const current = '${current}';
+let loadedPaper;
 
-	const paperId = '${request.paper}';
+document.addEventListener('DOMContentLoaded', loadGraph);
+
+async function loadGraph()
+{
+	await lableGenes();
 	
-	const endpoint = await fetch('/endpoints/papersearch?paper='+paperId);
-	const text     = await endpoint.text();
-	const data     = JSON.parse(text);
+	const container = document.getElementById('paper-graph');
+	const endpoint	= await fetch('/endpoints/papersearch?recommendationView='+current);
+	const text		= await endpoint.text();
+	const data		= JSON.parse(text);
 	
 	const options = {
-		nodes: {
-			shape: 'dot'
-		}
+		nodes			: { shape: 'dot' },
+		interaction		: { hover: true }
 	};
 
 	const graph = new vis.Network(container, data, options);
+	
+	graph.on("click", function (params) 
+	{	
+		let node = params.nodes[0];
+		
+		if(node != null &amp;&amp; node != loadedPaper)
+		{
+			let domNode = document.getElementById('paper-content');
+			let url = '/paper-partial/' + node;
+			
+			loadPartial(url, domNode);
+			
+			loadedPaper = node;
+		}
+	});
+	
+	graph.on("doubleClick", async function (params) 
+	{
+		let node = params.nodes[0];
+		
+		if(node != null)
+		{
+			await addPaperToRecommendationView(current, node);
+			await loadGraph();
+		}	
+	});
+}
 
-});</script>
+async function loadPartial(url, domNode) 
+{
+	const encodedUrl = encodeURI(url);
+	const page = await fetch(encodedUrl);
+	const html = await page.text();
+	domNode.innerHTML = html;
+}
+
+async function addPaperToRecommendationView(uuidRV, uuidPaper)
+{
+	const recommendationView 	= await structrRest.getById('RecommendationView', uuidRV, 'myView');
+	const rvSrcPaper 			= recommendationView.result.srcPaper.id;
+	const rvPapers 				= recommendationView.result.papers;
+	let arrayUUIDPapers 		= rvPapers.map(paper=&gt;paper.id);
+	
+	if(arrayUUIDPapers.indexOf(uuidPaper) == -1)
+	{
+		if(rvSrcPaper != uuidPaper)
+			arrayUUIDPapers.push(uuidPaper);
+	} else
+	{
+		arrayUUIDPapers = arrayUUIDPapers.filter(paper=&gt;paper!=uuidPaper);	
+	}
+	
+	const object = {
+		type		: 'RecommendationView',
+		id			: uuidRV,
+		papers		: arrayUUIDPapers
+	};
+	
+	await persistence._persistObject(object);
+}
+
+async function lableGenes()
+{
+	const recommendationView 	= await structrRest.getById('RecommendationView', current, 'myView');
+	const sharedGenes			= recommendationView.result.sharedGenes;
+	
+	const labels = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'];
+	let count = 0;
+	
+	for(let gene of sharedGenes)
+	{
+		let domNodes = document.getElementsByName(gene.name);
+		
+		if(count &gt;= labels.length)
+			count = 0;
+			
+		let className = 'badge badge-pill badge-'+labels[count++];	
+		
+		for(let domNode of domNodes)
+		{
+			domNode.classList = className;
+		}
+	}
+}</script>
 		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<div id="paper-graph" style="/applications/css/libs/all.css"></div>
+		<div id="paper-graph" style="width:40%; height:400px; float: left;"></div>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<div id="paper-table" style="width:60%; float: left;">
+			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+			<table>
+				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+				<thead>
+					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+					<th><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Title</th>
+					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+					<th><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Mentioned Genes</th>
+				</thead>
+				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+				<tbody>
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Store Recommended Papers-07da195f1266446aa1c4ef3a00f213f2" data-structr-meta-name="Store Recommended Papers">
+						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+						<tr>
+							<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+							<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><a href="/paper/${current.srcPaper.id}"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.srcPaper.name}</a></td>
+							<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+							<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="badge badge-pill" id="" name="${gene.name}" data-structr-meta-data-key="gene" data-structr-meta-function-query="current.srcPaper.getGenes()"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${gene.name}</span></td>
+						</tr>
+						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+						<tr data-structr-meta-data-key="relatedPaperCollection" data-structr-meta-function-query="current.srcPaper.getRelatedPapersByGenes()">
+							<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+							<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><a href="/paper/${relatedPaperCollection.referencedPaper.id}"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${relatedPaperCollection.referencedPaper.name}</a></td>
+							<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+							<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="badge badge-pill" id="" name="${gene.name}" data-structr-meta-data-key="gene" data-structr-meta-function-query="relatedPaperCollection.sharedGenes"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${gene.name}</span></td>
+						</tr>
+					</structr:template>
+				</tbody>
+			</table>
+		</div>
+		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+		<div id="paper-content" style="float: left;"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) --></div>
 	</div>
 </structr:template>

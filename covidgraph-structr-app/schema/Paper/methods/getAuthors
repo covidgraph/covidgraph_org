@@ -4,14 +4,24 @@
 
 	const neoConnector = $.call('getCovidGraphConnector');
 
-	const query = 'MATCH (paper:Paper)' + 
-		'-[:PAPER_HAS_AUTHORCOLLECTION]->(:AuthorCollection)' +
-		'-[:AUTHORCOLLECTION_HAS_AUTHOR]->(author:Author) ' +
-		'WHERE ID(paper) = ' + self.covidGraphId + ' ' +
-		'RETURN DISTINCT author';
+	const query = 'MATCH (paper:Paper)-[:PAPER_HAS_AUTHORCOLLECTION]->' +
+		  '(authorCollection:AuthorCollection) ' +
+		  'WHERE ID(paper) = ' + self.covidGraphId + ' ' +
+		  'RETURN DISTINCT authorCollection ' +
+		  'ORDER BY ID(authorCollection)';
 
-	const authors = neoConnector.query({query : query});
-
+	const authorCollections = neoConnector.query({query : query});
+	
+	if($.empty(authorCollections))
+		return [];
+	
+	const query2 = 'MATCH (authorCollection:AuthorCollection)' +
+		  '-[:AUTHORCOLLECTION_HAS_AUTHOR]-(author:Author) ' +
+		  'WHERE authorCollection.id = "' + authorCollections[0].id + '" ' +
+		  'RETURN author';
+	
+	const authors = neoConnector.query({query : query2});
+	
 	return authors;
 
 }

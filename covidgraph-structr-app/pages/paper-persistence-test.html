@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><html>
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<head>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<title><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${capitalize(page.name)}</title>
+	</head>
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<body>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
+import { StructrRest } from "/persistence-layer/rest/StructrRest.js";
+
+const persistence = new Persistence();
+const structrRest = new StructrRest();
+
+async function getRecommendationViewPapers(uuidRV)
+{
+	let node = await structrRest.getById('RecommendationView', uuidRV, 'myView');	
+	let papers = node.result.papers;
+	
+	return papers;
+}
+
+async function updateNode()
+{
+	const recommendationView = document.getElementById('uuidRecommendationView');
+	const paper = document.getElementById('uuidPaper');
+	
+	const uuidRV = recommendationView.value;
+	const uuidPaper = paper.value;
+	
+	const rvPapers = await getRecommendationViewPapers(uuidRV);
+	const paperIdArray = rvPapers.map(paper=&gt;paper.id);
+	paperIdArray.push(uuidPaper);
+	
+	const object = {
+		type		: 'RecommendationView',
+		id			: uuidRV,
+		srcPaper	: uuidPaper,
+		papers		: paperIdArray
+	}
+	
+	const node = await persistence._persistObject(object);
+}
+
+document.addEventListener('DOMContentLoaded', () =&gt; {
+		
+	const editButton = document.getElementById('updateNode');
+	editButton.addEventListener('click', updateNode);
+});
+</script>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<h1><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${capitalize(page.name)}</h1>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<div>
+			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+			<input id="uuidPaper" placeholder="Paper">
+			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+			<input id="uuidRecommendationView" placeholder="RecommendationView">
+			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+			<button id="updateNode"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Add Paper to RecommendationView</button>
+		</div>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<div id="text"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->#text</div>
+	</body>
+</html>

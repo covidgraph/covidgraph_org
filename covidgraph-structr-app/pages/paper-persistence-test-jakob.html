@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) --><html>
+	<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+	<head>
+		<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+		<title><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${capitalize(page.name)}</title>
+	</head>
+	<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+	<body>
+		<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+		<h1><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${capitalize(page.name)}</h1>
+		<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+		<div>
+			<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+			<input id="uuidPaper" placeholder="Paper">
+			<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+			<input id="uuidRecommendationView" placeholder="RecommendationView">
+			<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+			<button id="updateNode"><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Add Paper to RecommendationView</button>
+		</div>
+		<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+		<div id="text"><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->#text</div>
+		<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+		<script type="module"><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/javascript) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
+import { StructrRest } from "/persistence-layer/rest/StructrRest.js";
+
+const persistence = new Persistence();
+const structrRest = new StructrRest();
+
+async function getRecommendationView(id) {
+
+	let recommendationView = await structrRest.getById('RecommendationView', id, 'myView');	
+	return recommendationView.result;
+
+}
+
+async function updateNode() {
+
+	const recommendationViewInput = document.getElementById('uuidRecommendationView');
+	const paperInput              = document.getElementById('uuidPaper');
+	
+	const rvId    = recommendationViewInput.value;
+	const paperId = paperInput.value;
+	
+	const recommendationView = await getRecommendationView(rvId);
+	recommendationView.name = recommendationView.name + '123';
+	recommendationView.papers = recommendationView.papers.concat(rvId);
+
+}
+
+document.addEventListener('DOMContentLoaded', () =&gt; {
+		
+	const editButton = document.getElementById('updateNode');
+	editButton.addEventListener('click', updateNode);
+
+});
+</script>
+	</body>
+</html>

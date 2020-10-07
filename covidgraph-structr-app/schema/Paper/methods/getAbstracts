@@ -5,13 +5,24 @@
 	const neoConnector = $.call('getCovidGraphConnector');
 
 	const query = 'MATCH (paper:Paper)' + 
-		'-[:PAPER_HAS_ABSTRACTCOLLECTION]->(:AbstractCollection)' +
-		'-[:ABSTRACTCOLLECTION_HAS_ABSTRACT]->(abstract:Abstract) ' +
+		'-[:PAPER_HAS_ABSTRACTCOLLECTION]->' +
+		'(abstractcollection:AbstractCollection)' +
 		'WHERE ID(paper) = ' + self.covidGraphId + ' ' +
-		'RETURN DISTINCT abstract';
-
-	const abstracts = neoConnector.query({query : query});
-
+		'RETURN DISTINCT abstractcollection';
+	
+	const abstractCollections = neoConnector.query({query : query});
+	
+	if($.empty(abstractCollections))
+	   return [];
+	
+	const query2 = 'MATCH (abstractcollection:AbstractCollection)' + 
+		'-[:ABSTRACTCOLLECTION_HAS_ABSTRACT]->(abstract:Abstract) ' +
+		'WHERE abstractcollection.id = "' + abstractCollections[0].id + '" ' +
+		'RETURN DISTINCT abstract ' + 
+		'ORDER BY ID(abstract)';
+	
+	const abstracts = neoConnector.query({query : query2});
+	
 	return abstracts;
 
 }

@@ -588,6 +588,87 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": false
   },
+  "paper-partial": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "category": null,
+    "contentType": "text/html",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Jakob"
+      }
+    ],
+    "hidden": false,
+    "hideConditions": null,
+    "id": "b0607cccb9394b2bac0d052e6e8cccc5",
+    "owner": {
+      "name": "Jakob"
+    },
+    "pageCreatesRawData": false,
+    "path": null,
+    "position": null,
+    "showConditions": null,
+    "showOnErrorCodes": null,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "paper-persistence-test": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "category": null,
+    "contentType": "text/html",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "hidden": false,
+    "hideConditions": null,
+    "id": "d6e9009499eb49a99702ad7cabb11da3",
+    "owner": {
+      "name": "Sven"
+    },
+    "pageCreatesRawData": false,
+    "path": null,
+    "position": null,
+    "showConditions": null,
+    "showOnErrorCodes": null,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "paper-persistence-test-jakob": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "category": null,
+    "contentType": "text/html",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Jakob"
+      }
+    ],
+    "hidden": false,
+    "hideConditions": null,
+    "id": "b06e55287391456da8a0d171e9410f7c",
+    "owner": {
+      "name": "Sven"
+    },
+    "pageCreatesRawData": false,
+    "path": null,
+    "position": null,
+    "showConditions": null,
+    "showOnErrorCodes": null,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "papers": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -765,33 +846,6 @@
     ],
     "hidden": false,
     "hideConditions": null,
-    "id": "9a33b3b535bb4737bfdd292e39817e67",
-    "owner": {
-      "name": "Sven"
-    },
-    "pageCreatesRawData": false,
-    "path": null,
-    "position": null,
-    "showConditions": null,
-    "showOnErrorCodes": null,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
-  },
-  "related-papers-table-v1": {
-    "basicAuthRealm": null,
-    "cacheForSeconds": null,
-    "category": null,
-    "contentType": "text/html",
-    "dontCache": false,
-    "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
-    "hidden": false,
-    "hideConditions": null,
     "id": "b5182aec820e44cead7db9405c84cec0",
     "owner": {
       "name": "Sven"
@@ -884,6 +938,33 @@
     "showOnErrorCodes": null,
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
+  },
+  "team-interview": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "category": null,
+    "contentType": "text/html",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "hidden": false,
+    "hideConditions": null,
+    "id": "19eb7fede491452892aacf71bd688f37",
+    "owner": {
+      "name": "Sven"
+    },
+    "pageCreatesRawData": false,
+    "path": null,
+    "position": null,
+    "showConditions": null,
+    "showOnErrorCodes": null,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
   },
   "team_": {
     "basicAuthRealm": null,

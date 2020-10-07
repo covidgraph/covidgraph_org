@@ -126619,7 +126619,7 @@
         "name": "admin"
       }
     ],
-    "id": "44964777182441528655c65a8e7855bb",
+    "id": "c9ea2c993ec64caca3066b11c82c8902",
     "includeInFrontendExport": false,
     "isTemplate": false,
     "owner": {
@@ -126627,8 +126627,8 @@
     },
     "type": "File",
     "useAsJavascriptLibrary": false,
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
   },
   "/applications/css/vendor/fullcalendar.min.css": {
     "basicAuthRealm": null,
@@ -129469,6 +129469,29 @@
     "visibleToPublicUsers": false,
     "width": 256
   },
+  "/doc/mmr-19-05-4297.pdf": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "application/pdf",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "id": "ef915e086aed4b6ca5301efac7438214",
+    "includeInFrontendExport": false,
+    "isTemplate": false,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "File",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "/doc/nyt.png": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -130886,6 +130909,33 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "/images/closedbook.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "height": 520,
+    "id": "371c0a9c7b124918b40259cdfc78d2c1",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false,
+    "width": 900
+  },
   "/images/external-site.gif": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -130966,6 +131016,33 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true,
     "width": 9
+  },
+  "/images/openbook.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Sven"
+      }
+    ],
+    "height": 512,
+    "id": "af0c67dacecb412dbf6e0c6339fe79b4",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "Sven"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false,
+    "width": 512
   },
   "/images/paper.png": {
     "basicAuthRealm": null,
