@@ -595,18 +595,11 @@
     "contentType": "text/html",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
+    "grantees": [],
     "hidden": false,
     "hideConditions": null,
     "id": "519636416fed44f9bd605cd7356d2174",
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "pageCreatesRawData": false,
     "path": null,
     "position": null,
@@ -622,18 +615,11 @@
     "contentType": "text/html",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "Sven"
-      }
-    ],
+    "grantees": [],
     "hidden": false,
     "hideConditions": null,
     "id": "d79a409797f24313b39bd5197ad3aeba",
-    "owner": {
-      "name": "Sven"
-    },
+    "owner": null,
     "pageCreatesRawData": false,
     "path": null,
     "position": null,

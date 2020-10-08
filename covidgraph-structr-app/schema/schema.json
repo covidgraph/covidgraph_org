@@ -7443,6 +7443,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Gene/methods/getPapersSortedByPublication"
         },
         "getPatents": {
@@ -7451,6 +7452,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Gene/methods/getPatents"
         },
         "onCreate": {
@@ -8801,7 +8803,9 @@
           "type": "array"
         }
       },
-      "type": "object"
+      "type": "object",
+      "visibleToAuthenticatedUsers": true,
+      "visibleToPublicUsers": true
     },
     "InterviewAnswer": {
       "isAbstract": false,
@@ -8826,7 +8830,9 @@
         "custom": [
           "text"
         ]
-      }
+      },
+      "visibleToAuthenticatedUsers": true,
+      "visibleToPublicUsers": true
     },
     "InterviewINTERVIEW_HAS_QUESTIONSInterviewQuestion": {
       "$source": "#/definitions/Interview",
@@ -8873,7 +8879,9 @@
           "position",
           "text"
         ]
-      }
+      },
+      "visibleToAuthenticatedUsers": true,
+      "visibleToPublicUsers": true
     },
     "InterviewQuestionQUESTION_HAS_ANSWERInterviewAnswer": {
       "$source": "#/definitions/InterviewQuestion",

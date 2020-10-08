@@ -1,13 +1,9 @@
-<!-- @structr:grant(Sven,arwd), @structr:content(text/html) --><structr:template src="Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application)">
-	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+<!-- @structr:content(text/html) --><structr:template src="Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application)">
 	<div>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) --><structr:template src="Timeline-Chart-f0bb2596b4864f55bc9d3e1ea5b633c0" data-structr-meta-name="Timeline-Chart">
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<!-- @structr:content(text/javascript) --><structr:template src="Timeline-Chart-f0bb2596b4864f55bc9d3e1ea5b633c0" data-structr-meta-name="Timeline-Chart">
 			<script src="/applications/js/libs/d3.js" type="text/javascript"></script>
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 			<div>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-				<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->const height	= 240;
+				<script type="module"><!-- @structr:content(module) -->const height	= 240;
 const width		= 700;
 const radius	= 3;
 const padding	= 1.5;
@@ -110,16 +106,12 @@ svgPaper.append('g')
 						if(d.data.type == 'Patent')
 							return 'red';})
 	.append('title')
-		.text(d =&gt; d.data.name);
-</script>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-				<h4><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Paper &amp; Patent - Chart</h4>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		.text(d =&gt; d.data.name);</script>
+				<h4><!-- @structr:content(text/plain) -->Paper &amp; Patent - Chart</h4>
 				<svg id="paper-patent-chart"></svg>
 			</div>
 		</structr:template>
 	
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<h4><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->outsidetemplate</h4>
+		<h4><!-- @structr:content(text/plain) -->outsidetemplate</h4>
 	</div>
 </structr:template>

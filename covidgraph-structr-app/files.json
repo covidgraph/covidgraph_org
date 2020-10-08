@@ -141108,7 +141108,7 @@
     "type": "File",
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
+    "visibleToPublicUsers": false,
     "id": "f285faee60ad4b609f2801655b1a47bd",
     "includeInFrontendExport": true,
     "isTemplate": false,
