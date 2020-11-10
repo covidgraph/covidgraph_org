@@ -2185,6 +2185,190 @@
       },
       "type": "object"
     },
+    "CssDeclaration": {
+      "$implements": [
+        "https://structr.org/v1.1/definitions/CssDeclaration"
+      ],
+      "category": "html",
+      "isAbstract": false,
+      "isBuiltinType": true,
+      "isInterface": false,
+      "properties": {
+        "rule": {
+          "$link": "#/definitions/CssRuleHAS_DECLARATIONCssDeclaration",
+          "$ref": "#/definitions/CssRule",
+          "type": "object"
+        }
+      },
+      "tags": [
+        "html"
+      ],
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "ui": [
+          "rule"
+        ]
+      }
+    },
+    "CssRule": {
+      "$implements": [
+        "https://structr.org/v1.1/definitions/CssRule"
+      ],
+      "category": "html",
+      "isAbstract": false,
+      "isBuiltinType": true,
+      "isInterface": false,
+      "properties": {
+        "childRules": {
+          "$link": "#/definitions/CssRuleCONTAINSCssRule",
+          "items": {
+            "$ref": "#/definitions/CssRule"
+          },
+          "type": "array"
+        },
+        "cssText": {
+          "indexed": true,
+          "type": "string"
+        },
+        "declarations": {
+          "$link": "#/definitions/CssRuleHAS_DECLARATIONCssDeclaration",
+          "items": {
+            "$ref": "#/definitions/CssDeclaration"
+          },
+          "type": "array"
+        },
+        "parentRule": {
+          "$link": "#/definitions/CssRuleCONTAINSCssRule",
+          "$ref": "#/definitions/CssRule",
+          "type": "object"
+        },
+        "ruleType": {
+          "indexed": true,
+          "type": "integer"
+        },
+        "selectors": {
+          "$link": "#/definitions/CssRuleHAS_SELECTORCssSelector",
+          "items": {
+            "$ref": "#/definitions/CssSelector"
+          },
+          "type": "array"
+        }
+      },
+      "tags": [
+        "html"
+      ],
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "ui": [
+          "childRules",
+          "cssText",
+          "declarations",
+          "ruleType",
+          "selectors"
+        ]
+      }
+    },
+    "CssRuleCONTAINSCssRule": {
+      "$source": "#/definitions/CssRule",
+      "$target": "#/definitions/CssRule",
+      "cardinality": "OneToMany",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "CONTAINS",
+      "sourceName": "parentRule",
+      "targetName": "childRules",
+      "type": "object"
+    },
+    "CssRuleHAS_DECLARATIONCssDeclaration": {
+      "$source": "#/definitions/CssRule",
+      "$target": "#/definitions/CssDeclaration",
+      "cardinality": "OneToMany",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "HAS_DECLARATION",
+      "sourceName": "rule",
+      "targetName": "declarations",
+      "type": "object"
+    },
+    "CssRuleHAS_SELECTORCssSelector": {
+      "$source": "#/definitions/CssRule",
+      "$target": "#/definitions/CssSelector",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "HAS_SELECTOR",
+      "sourceName": "rules",
+      "targetName": "selectors",
+      "type": "object"
+    },
+    "CssSelector": {
+      "$implements": [
+        "https://structr.org/v1.1/definitions/CssSelector"
+      ],
+      "category": "html",
+      "isAbstract": false,
+      "isBuiltinType": true,
+      "isInterface": false,
+      "properties": {
+        "rules": {
+          "$link": "#/definitions/CssRuleHAS_SELECTORCssSelector",
+          "items": {
+            "$ref": "#/definitions/CssRule"
+          },
+          "type": "array"
+        },
+        "semanticClasses": {
+          "$link": "#/definitions/CssSemanticClassMAPS_TOCssSelector",
+          "items": {
+            "$ref": "#/definitions/CssSemanticClass"
+          },
+          "type": "array"
+        }
+      },
+      "tags": [
+        "html"
+      ],
+      "type": "object"
+    },
+    "CssSemanticClass": {
+      "$implements": [
+        "https://structr.org/v1.1/definitions/CssSemanticClass"
+      ],
+      "category": "html",
+      "isAbstract": false,
+      "isBuiltinType": true,
+      "isInterface": false,
+      "properties": {
+        "selectors": {
+          "$link": "#/definitions/CssSemanticClassMAPS_TOCssSelector",
+          "items": {
+            "$ref": "#/definitions/CssSelector"
+          },
+          "type": "array"
+        }
+      },
+      "tags": [
+        "html"
+      ],
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "ui": [
+          "selectors"
+        ]
+      }
+    },
+    "CssSemanticClassMAPS_TOCssSelector": {
+      "$source": "#/definitions/CssSemanticClass",
+      "$target": "#/definitions/CssSelector",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "MAPS_TO",
+      "sourceName": "semanticClasses",
+      "targetName": "selectors",
+      "type": "object"
+    },
     "CustomConceptAttribute": {
       "$implements": [
         "https://structr.org/v1.1/definitions/CustomConceptAttribute"
@@ -2782,6 +2966,15 @@
           "returnType": "void",
           "source": "./DOMElement/methods/getElementsByTagNameNS"
         },
+        "getEventMapping": {
+          "callSuper": false,
+          "codeType": "java",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "java.lang.String",
+          "source": "./DOMElement/methods/getEventMapping"
+        },
         "getHtmlAttributeNames": {
           "callSuper": false,
           "codeType": "java",
@@ -2943,6 +3136,24 @@
           "overridesExisting": true,
           "returnType": "void",
           "source": "./DOMElement/methods/item"
+        },
+        "onCreation": {
+          "callSuper": true,
+          "codeType": "java",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": true,
+          "returnType": "void",
+          "source": "./DOMElement/methods/onCreation"
+        },
+        "onModification": {
+          "callSuper": true,
+          "codeType": "java",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": true,
+          "returnType": "void",
+          "source": "./DOMElement/methods/onModification"
         },
         "openingTag": {
           "callSuper": false,
@@ -3389,6 +3600,11 @@
           "hint": "The name of the property (for create/save actions with custom form)",
           "type": "string"
         },
+        "data-structr-options": {
+          "category": "Edit Mode Binding",
+          "hint": "Configuration options for simple interactive elements, reserved for future use.",
+          "type": "string"
+        },
         "data-structr-options-key": {
           "category": "Edit Mode Binding",
           "hint": "Key used to display option labels for collection properties (default: name)",
@@ -3409,14 +3625,34 @@
           "hint": "If active, the page will refresh after a successfull action.",
           "type": "boolean"
         },
+        "data-structr-reload-target": {
+          "category": "Edit Mode Binding",
+          "hint": "CSS selector that specifies which partials to reload.",
+          "type": "string"
+        },
         "data-structr-return": {
           "category": "Edit Mode Binding",
           "hint": "Return URI after successful action",
           "type": "string"
         },
+        "data-structr-target": {
+          "category": "Edit Mode Binding",
+          "hint": "Event target, usually something like ${dataKey.id} for custom, update and delete events, or the entity type for create events.",
+          "type": "string"
+        },
+        "data-structr-tree-children": {
+          "category": "Edit Mode Binding",
+          "hint": "Toggles automatic visibility for tree child items when the \u0027toggle-tree-item\u0027 event is mapped. This field must contain the data key on which the tree is based, e.g. \u0027item\u0027.",
+          "type": "string"
+        },
         "data-structr-type": {
           "category": "Edit Mode Binding",
           "hint": "Type hint for the attribute (e.g. Date, Boolean; default: String)",
+          "type": "string"
+        },
+        "eventMapping": {
+          "category": "Edit Mode Binding",
+          "hint": "A mapping between the desired Javascript event (click, drop, dragOver, ...) and the server-side event that should be triggered: (create | update | delete | \u003cmethod name\u003e).",
           "type": "string"
         },
         "fromWidget": {
@@ -3429,6 +3665,20 @@
         "path": {
           "indexed": true,
           "type": "string"
+        },
+        "reloadSources": {
+          "$link": "#/definitions/DOMElementRELOADSDOMElement",
+          "items": {
+            "$ref": "#/definitions/DOMElement"
+          },
+          "type": "array"
+        },
+        "reloadTargets": {
+          "$link": "#/definitions/DOMElementRELOADSDOMElement",
+          "items": {
+            "$ref": "#/definitions/DOMElement"
+          },
+          "type": "array"
         },
         "tag": {
           "category": "Page Structure",
@@ -3513,6 +3763,9 @@
           "_html_title",
           "_html_translate"
         ],
+        "_html_name": [
+          "ui"
+        ],
         "public": [
           "children",
           "cypherQuery",
@@ -3550,13 +3803,18 @@
           "data-structr-id",
           "data-structr-insert",
           "data-structr-name",
+          "data-structr-options",
           "data-structr-options-key",
           "data-structr-placeholder",
           "data-structr-raw-value",
           "data-structr-reload",
+          "data-structr-reload-target",
           "data-structr-return",
+          "data-structr-target",
+          "data-structr-tree-children",
           "data-structr-type",
           "dataKey",
+          "eventMapping",
           "flow",
           "functionQuery",
           "hideConditions",
@@ -3579,6 +3837,16 @@
           "xpathQuery"
         ]
       }
+    },
+    "DOMElementRELOADSDOMElement": {
+      "$source": "#/definitions/DOMElement",
+      "$target": "#/definitions/DOMElement",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "RELOADS",
+      "sourceName": "reloadSources",
+      "targetName": "reloadTargets",
+      "type": "object"
     },
     "DOMNode": {
       "$extends": "https://structr.org/v1.1/definitions/org.structr.core.entity.LinkedTreeNodeImpl?typeParameters\u003dorg.structr.web.entity.dom.DOMNode",
@@ -8318,6 +8586,13 @@
           "indexed": true,
           "type": "integer"
         },
+        "image": {
+          "$link": "#/definitions/InterviewImageINTERVIEWIMAGE_HAS_IMAGEImage",
+          "items": {
+            "$ref": "#/definitions/InterviewImage"
+          },
+          "type": "array"
+        },
         "imageData": {
           "fqcn": "org.structr.web.property.ImageDataProperty",
           "type": "custom",
@@ -8342,6 +8617,13 @@
         "isThumbnail": {
           "indexed": true,
           "type": "boolean"
+        },
+        "newsArticles": {
+          "$link": "#/definitions/NewsArticleNEWSARTICLE_HAS_THUMBNAILImage",
+          "items": {
+            "$ref": "#/definitions/NewsArticle"
+          },
+          "type": "array"
         },
         "orientation": {
           "indexed": true,
@@ -8790,7 +9072,14 @@
       "isBuiltinType": false,
       "isInterface": false,
       "properties": {
-        "aProjectMember": {
+        "interviewImages": {
+          "$link": "#/definitions/InterviewINTERVIEW_HAS_INTERVIEWIMAGEInterviewImage",
+          "items": {
+            "$ref": "#/definitions/InterviewImage"
+          },
+          "type": "array"
+        },
+        "projectMember": {
           "$link": "#/definitions/ProjectMemberPROJECTMEMBER_HAS_INTERVIEWInterview",
           "$ref": "#/definitions/ProjectMember",
           "type": "object"
@@ -8804,8 +9093,7 @@
         }
       },
       "type": "object",
-      "visibleToAuthenticatedUsers": true,
-      "visibleToPublicUsers": true
+      "visibleToAuthenticatedUsers": true
     },
     "InterviewAnswer": {
       "isAbstract": false,
@@ -8834,6 +9122,17 @@
       "visibleToAuthenticatedUsers": true,
       "visibleToPublicUsers": true
     },
+    "InterviewINTERVIEW_HAS_INTERVIEWIMAGEInterviewImage": {
+      "$source": "#/definitions/Interview",
+      "$target": "#/definitions/InterviewImage",
+      "cardinality": "OneToMany",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "INTERVIEW_HAS_INTERVIEWIMAGE",
+      "sourceName": "interview",
+      "targetName": "interviewImages",
+      "type": "object"
+    },
     "InterviewINTERVIEW_HAS_QUESTIONSInterviewQuestion": {
       "$source": "#/definitions/Interview",
       "$target": "#/definitions/InterviewQuestion",
@@ -8843,6 +9142,43 @@
       "rel": "INTERVIEW_HAS_QUESTIONS",
       "sourceName": "interview",
       "targetName": "questions",
+      "type": "object"
+    },
+    "InterviewImage": {
+      "$extends": "https://structr.org/v1.1/definitions/AbstractNode",
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "properties": {
+        "image": {
+          "$link": "#/definitions/InterviewImageINTERVIEWIMAGE_HAS_IMAGEImage",
+          "$ref": "#/definitions/Image",
+          "type": "object"
+        },
+        "interview": {
+          "$link": "#/definitions/InterviewINTERVIEW_HAS_INTERVIEWIMAGEInterviewImage",
+          "$ref": "#/definitions/Interview",
+          "type": "object"
+        },
+        "position": {
+          "default": "",
+          "indexed": true,
+          "type": "integer"
+        }
+      },
+      "type": "object",
+      "visibleToAuthenticatedUsers": true,
+      "visibleToPublicUsers": true
+    },
+    "InterviewImageINTERVIEWIMAGE_HAS_IMAGEImage": {
+      "$source": "#/definitions/InterviewImage",
+      "$target": "#/definitions/Image",
+      "cardinality": "ManyToOne",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "INTERVIEWIMAGE_HAS_IMAGE",
+      "sourceName": "image",
+      "targetName": "image",
       "type": "object"
     },
     "InterviewQuestion": {
@@ -8988,7 +9324,7 @@
           "source": "./KafkaClient/methods/onModification"
         },
         "sendMessage": {
-          "callSuper": true,
+          "callSuper": false,
           "codeType": "java",
           "doExport": false,
           "exceptions": [],
@@ -9674,7 +10010,24 @@
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
-      "type": "object"
+      "properties": {
+        "height": {
+          "default": "",
+          "type": "integer"
+        },
+        "width": {
+          "default": "",
+          "type": "integer"
+        }
+      },
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "height",
+          "width"
+        ]
+      }
     },
     "Localization": {
       "$implements": [
@@ -9851,6 +10204,15 @@
           "returnType": "void",
           "source": "./MQTTClient/methods/connectionStatusCallback"
         },
+        "getFallbackBrokerURLs": {
+          "callSuper": false,
+          "codeType": "java",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "java.lang.String[]",
+          "source": "./MQTTClient/methods/getFallbackBrokerURLs"
+        },
         "getIsConnected": {
           "callSuper": false,
           "codeType": "java",
@@ -9868,6 +10230,15 @@
           "overridesExisting": false,
           "returnType": "boolean",
           "source": "./MQTTClient/methods/getIsEnabled"
+        },
+        "getMainBrokerURL": {
+          "callSuper": false,
+          "codeType": "java",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "java.lang.String",
+          "source": "./MQTTClient/methods/getMainBrokerURL"
         },
         "getPassword": {
           "callSuper": false,
@@ -9978,7 +10349,7 @@
           "source": "./MQTTClient/methods/onModification"
         },
         "sendMessage": {
-          "callSuper": true,
+          "callSuper": false,
           "codeType": "java",
           "doExport": false,
           "exceptions": [],
@@ -10023,11 +10394,20 @@
         }
       },
       "properties": {
+        "fallbackBrokerURLs": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "isConnected": {
           "type": "boolean"
         },
         "isEnabled": {
           "type": "boolean"
+        },
+        "mainBrokerURL": {
+          "type": "string"
         },
         "password": {
           "type": "string"
@@ -10050,27 +10430,28 @@
           "type": "string"
         }
       },
+      "required": [
+        "mainBrokerURL"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
         "public": [
+          "fallbackBrokerURLs",
           "isConnected",
           "isEnabled",
+          "mainBrokerURL",
           "password",
-          "port",
-          "protocol",
           "qos",
-          "url",
           "username"
         ],
         "ui": [
+          "fallbackBrokerURLs",
           "isConnected",
           "isEnabled",
+          "mainBrokerURL",
           "password",
-          "port",
-          "protocol",
           "qos",
-          "url",
           "username"
         ]
       }
@@ -11161,12 +11542,25 @@
           "indexed": true,
           "type": "string"
         },
+        "tags": {
+          "default": "",
+          "indexed": true,
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "text": {
           "contentType": "text/html",
           "default": "",
           "format": "",
           "indexed": true,
           "type": "string"
+        },
+        "thumbnail": {
+          "$link": "#/definitions/NewsArticleNEWSARTICLE_HAS_THUMBNAILImage",
+          "$ref": "#/definitions/Image",
+          "type": "object"
         },
         "title": {
           "indexed": true,
@@ -11185,6 +11579,7 @@
           "linkText",
           "linkURL",
           "publicationDate",
+          "tags",
           "text",
           "title"
         ]
@@ -11198,6 +11593,17 @@
       "rel": "AUTHOR",
       "sourceName": "newsArticleAuthors",
       "targetName": "authors",
+      "type": "object"
+    },
+    "NewsArticleNEWSARTICLE_HAS_THUMBNAILImage": {
+      "$source": "#/definitions/NewsArticle",
+      "$target": "#/definitions/Image",
+      "cardinality": "ManyToOne",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "NEWSARTICLE_HAS_THUMBNAIL",
+      "sourceName": "newsArticles",
+      "targetName": "thumbnail",
       "type": "object"
     },
     "NodeLabel": {
@@ -15122,7 +15528,7 @@
       "isAbstract": false,
       "isInterface": false,
       "rel": "PROJECTMEMBER_HAS_INTERVIEW",
-      "sourceName": "aProjectMember",
+      "sourceName": "projectMember",
       "targetName": "interview",
       "type": "object"
     },

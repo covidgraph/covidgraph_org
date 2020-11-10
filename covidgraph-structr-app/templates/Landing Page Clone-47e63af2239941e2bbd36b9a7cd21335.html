@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	${log('Called[', ip, ']')}
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>CovidGraph - Main Page</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="font/iconsmind/style.css">
+		<link rel="stylesheet" href="font/simple-line-icons/css/simple-line-icons.css">
+
+		<link rel="stylesheet" href="css/vendor/bootstrap-stars.css">
+		<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+		<link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/vendor/bootstrap-stars.css">
+		<link rel="stylesheet" href="css/vendor/video-js.css">
+		<link rel="stylesheet" href="css/dore.light.blue.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/custom.css">
+	</head>
+
+	<body class="show-spinner">
+		<div class="landing-page">
+			
+			${include('Mobile Menu')}	
+	
+			<div class="main-container">
+
+				${include('Main Nav')}	
+
+				<div class="content-container" id="home">
+
+					<div class="section hero" style="height:950px">
+						<div class="container">
+							<div class="row home-row">
+								<div class="col-12 d-block d-md-none">
+									<a href="/" target="_blank">
+										<!--<img alt="mobile hero" class="mobile-hero" src="/img/content-img/data_model_with_logos_and_numbers.png">-->
+										<img alt="mobile hero" class="mobile-hero" src="/img/content-img/Schema_v1.1_no_logo.png">
+									</a>
+								</div>
+
+								<div class="col-12 col-xl-4 col-lg-5 col-md-6">
+									<div class="home-text">
+										<div class="display-1">COVID-19<br>Knowledge Graph</div>
+										<p class="white mb-5">
+											CovidGraph is a non-profit collaboration of researchers, software developers, data scientists and medical professionals.
+											<br><br>
+											We have built a research and communication platform that encompasses over 40,000 publications, case statistics, genes and functions, molecular data and much more.
+										</p>
+										<a class="btn btn-outline-semi-light btn-xl mr-2 mb-2 scrollTo" href="#aims">READ MORE <i class="simple-icon-arrow-right"></i></a>
+
+									</div>
+								</div>
+								<div class="col-12 col-xl-7 offset-xl-1 col-lg-7 col-md-6 d-none d-md-block">
+									<!--<img class="hero" alt="hero" src="/img/content-img/data_model_with_logos_and_numbers.png">-->
+									<img alt="mobile hero" class="mobile-hero" src="/img/content-img/Schema_v1.1_no_logo.png">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					${render(children)}
+
+					<div class="section footer mb-0">
+						<div class="container">
+							<div class="row footer-row">
+								<div class="col-12 text-right">
+									<a class="btn btn-circle btn-outline-semi-light footer-circle-button scrollTo" href="#home" id="footerCircleButton"><i class="simple-icon-arrow-up"></i></a>
+								</div>
+								<div class="col-12 text-center footer-content">
+									<a href="#home" class="scrollTo">
+										<img class="footer-logo" alt="footer logo" src="img/virus-logo.svg">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="separator mt-5"></div>
+						<div class="container copyright pt-5 pb-5">
+							<div class="row">
+								<div class="col-12 mb-4 text-center">
+									<small>
+										This site uses Matomo to analyze traffic and help us to improve your user experience. We process your IP address. This data is only processed by us and our web hosting platform.
+									</small>
+									<br>
+								</div>
+								<div class="col-12 text-center">
+									<p class="mb-0">© 2020 The CovidGraph Project.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/privacy-policy">Privacy Policy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/legal">Legal</a></p>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<script src="js/vendor/jquery-3.3.1.min.js"></script>
+		<script src="js/vendor/bootstrap.bundle.min.js"></script>
+		<script src="js/vendor/owl.carousel.min.js"></script>
+		<script src="js/vendor/jquery.barrating.min.js"></script>
+		<script src="js/vendor/dropzone.min.js"></script>
+		<script src="js/vendor/landing-page/headroom.min.js"></script>
+		<script src="js/vendor/landing-page/jQuery.headroom.js"></script>
+		<script src="js/vendor/landing-page/jquery.scrollTo.min.js"></script>
+		<script src="js/vendor/landing-page/jquery.autoellipsis.js"></script>
+		<script src="js/dore.scripts.landingpage.js"></script>
+		<script src="js/scripts.single.theme.js"></script>
+		<!-- Matomo -->
+		<script type="text/javascript">
+			var _paq = window._paq || [];
+			/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+			_paq.push(['trackPageView']);
+			_paq.push(['disableCookies']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+				var u="//covidgraph.org/matomo/";
+				_paq.push(['setTrackerUrl', u+'matomo.php']);
+				_paq.push(['setSiteId', '1']);
+				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+				g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+			})();
+		</script>
+		<!-- End Matomo Code -->
+
+	</body>
+</html>
