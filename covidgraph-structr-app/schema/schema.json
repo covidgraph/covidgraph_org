@@ -2371,190 +2371,6 @@
       "targetName": "selectors",
       "type": "object"
     },
-    "CssDeclaration": {
-      "$implements": [
-        "https://structr.org/v1.1/definitions/CssDeclaration"
-      ],
-      "category": "html",
-      "isAbstract": false,
-      "isBuiltinType": true,
-      "isInterface": false,
-      "properties": {
-        "rule": {
-          "$link": "#/definitions/CssRuleHAS_DECLARATIONCssDeclaration",
-          "$ref": "#/definitions/CssRule",
-          "type": "object"
-        }
-      },
-      "tags": [
-        "html"
-      ],
-      "type": "object",
-      "viewOrder": {},
-      "views": {
-        "ui": [
-          "rule"
-        ]
-      }
-    },
-    "CssRule": {
-      "$implements": [
-        "https://structr.org/v1.1/definitions/CssRule"
-      ],
-      "category": "html",
-      "isAbstract": false,
-      "isBuiltinType": true,
-      "isInterface": false,
-      "properties": {
-        "childRules": {
-          "$link": "#/definitions/CssRuleCONTAINSCssRule",
-          "items": {
-            "$ref": "#/definitions/CssRule"
-          },
-          "type": "array"
-        },
-        "cssText": {
-          "indexed": true,
-          "type": "string"
-        },
-        "declarations": {
-          "$link": "#/definitions/CssRuleHAS_DECLARATIONCssDeclaration",
-          "items": {
-            "$ref": "#/definitions/CssDeclaration"
-          },
-          "type": "array"
-        },
-        "parentRule": {
-          "$link": "#/definitions/CssRuleCONTAINSCssRule",
-          "$ref": "#/definitions/CssRule",
-          "type": "object"
-        },
-        "ruleType": {
-          "indexed": true,
-          "type": "integer"
-        },
-        "selectors": {
-          "$link": "#/definitions/CssRuleHAS_SELECTORCssSelector",
-          "items": {
-            "$ref": "#/definitions/CssSelector"
-          },
-          "type": "array"
-        }
-      },
-      "tags": [
-        "html"
-      ],
-      "type": "object",
-      "viewOrder": {},
-      "views": {
-        "ui": [
-          "childRules",
-          "cssText",
-          "declarations",
-          "ruleType",
-          "selectors"
-        ]
-      }
-    },
-    "CssRuleCONTAINSCssRule": {
-      "$source": "#/definitions/CssRule",
-      "$target": "#/definitions/CssRule",
-      "cardinality": "OneToMany",
-      "isAbstract": false,
-      "isInterface": false,
-      "rel": "CONTAINS",
-      "sourceName": "parentRule",
-      "targetName": "childRules",
-      "type": "object"
-    },
-    "CssRuleHAS_DECLARATIONCssDeclaration": {
-      "$source": "#/definitions/CssRule",
-      "$target": "#/definitions/CssDeclaration",
-      "cardinality": "OneToMany",
-      "isAbstract": false,
-      "isInterface": false,
-      "rel": "HAS_DECLARATION",
-      "sourceName": "rule",
-      "targetName": "declarations",
-      "type": "object"
-    },
-    "CssRuleHAS_SELECTORCssSelector": {
-      "$source": "#/definitions/CssRule",
-      "$target": "#/definitions/CssSelector",
-      "isAbstract": false,
-      "isInterface": false,
-      "rel": "HAS_SELECTOR",
-      "sourceName": "rules",
-      "targetName": "selectors",
-      "type": "object"
-    },
-    "CssSelector": {
-      "$implements": [
-        "https://structr.org/v1.1/definitions/CssSelector"
-      ],
-      "category": "html",
-      "isAbstract": false,
-      "isBuiltinType": true,
-      "isInterface": false,
-      "properties": {
-        "rules": {
-          "$link": "#/definitions/CssRuleHAS_SELECTORCssSelector",
-          "items": {
-            "$ref": "#/definitions/CssRule"
-          },
-          "type": "array"
-        },
-        "semanticClasses": {
-          "$link": "#/definitions/CssSemanticClassMAPS_TOCssSelector",
-          "items": {
-            "$ref": "#/definitions/CssSemanticClass"
-          },
-          "type": "array"
-        }
-      },
-      "tags": [
-        "html"
-      ],
-      "type": "object"
-    },
-    "CssSemanticClass": {
-      "$implements": [
-        "https://structr.org/v1.1/definitions/CssSemanticClass"
-      ],
-      "category": "html",
-      "isAbstract": false,
-      "isBuiltinType": true,
-      "isInterface": false,
-      "properties": {
-        "selectors": {
-          "$link": "#/definitions/CssSemanticClassMAPS_TOCssSelector",
-          "items": {
-            "$ref": "#/definitions/CssSelector"
-          },
-          "type": "array"
-        }
-      },
-      "tags": [
-        "html"
-      ],
-      "type": "object",
-      "viewOrder": {},
-      "views": {
-        "ui": [
-          "selectors"
-        ]
-      }
-    },
-    "CssSemanticClassMAPS_TOCssSelector": {
-      "$source": "#/definitions/CssSemanticClass",
-      "$target": "#/definitions/CssSelector",
-      "isAbstract": false,
-      "isInterface": false,
-      "rel": "MAPS_TO",
-      "sourceName": "semanticClasses",
-      "targetName": "selectors",
-      "type": "object"
-    },
     "CustomConceptAttribute": {
       "$implements": [
         "https://structr.org/v1.1/definitions/CustomConceptAttribute"
@@ -13534,6 +13350,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Paper/methods/getAbstracts"
         },
         "getAuthors": {
@@ -13542,6 +13359,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Paper/methods/getAuthors"
         },
         "getBodyTexts": {
@@ -13768,6 +13586,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Patent/methods/getAbstract"
         },
         "getApplicants": {
@@ -13785,6 +13604,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Patent/methods/getClaim"
         },
         "getDescription": {
@@ -13793,6 +13613,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Patent/methods/getDescription"
         },
         "getGeneSymbols": {
@@ -13810,6 +13631,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Patent/methods/getGenes"
         },
         "getInventors": {
@@ -13863,6 +13685,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Patent/methods/onCreate"
         }
       },
@@ -15874,6 +15697,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./RecommendationView/methods/getSharedGenes"
         }
       },

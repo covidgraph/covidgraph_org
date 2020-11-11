@@ -58,18 +58,18 @@
     "grantees": [
       {
         "allowed": "accessControl,read,write,delete",
-        "name": "admin"
+        "name": "Jakob"
       }
     ],
     "hidden": false,
     "hideConditions": null,
-    "id": "2bc5f5a42e6d4325b7f50a50de89e2a3",
+    "id": "ba7edf4176b04a17b470ee31438c35be",
     "owner": {
-      "name": "admin"
+      "name": "Jakob"
     },
     "pageCreatesRawData": false,
     "path": null,
-    "position": 300,
+    "position": null,
     "showConditions": null,
     "showOnErrorCodes": null,
     "visibleToAuthenticatedUsers": true,

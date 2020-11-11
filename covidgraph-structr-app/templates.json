@@ -1,46 +1,4 @@
 {
-  "1fc2cb8e3c9a4a5e83da32239e552e6d": {
-    "contentType": "text/html",
-    "id": "1fc2cb8e3c9a4a5e83da32239e552e6d",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
-  },
-  "05656767a10b4f4785e52f580d2afe2c": {
-    "contentType": "text/html",
-    "id": "05656767a10b4f4785e52f580d2afe2c",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
-  },
-  "65cfcfcf551a4bb18b6e183cb62613f6": {
-    "contentType": "text/html",
-    "id": "65cfcfcf551a4bb18b6e183cb62613f6",
-	"shared": "false",
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
-  },
-  "2275770bed18464b936e5597cdf6c686": {
-    "contentType": "text/html",
-    "id": "2275770bed18464b936e5597cdf6c686",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
-  },
-  "5d5d16f2e54949208f9d36f6278ea980": {
-    "contentType": "text/plain",
-    "id": "5d5d16f2e54949208f9d36f6278ea980",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
-  },
-  "7a106e5c8ed74a7aa5354d93f25abf77": {
-    "contentType": "text/html",
-    "id": "7a106e5c8ed74a7aa5354d93f25abf77",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
-  },
   "Applications-86824ba6e2e141559437d6479e71faf0": {
     "contentType": "text/javascript",
     "id": "86824ba6e2e141559437d6479e71faf0",
@@ -69,16 +27,16 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "Contact Form Section-699fbe0d92a741fd8eeb1e875eb141c2": {
+  "Contact Form Section-56f2bdb54d0343a3a5db611418a33b86": {
     "contentType": "text/html",
-    "id": "699fbe0d92a741fd8eeb1e875eb141c2",
+    "id": "56f2bdb54d0343a3a5db611418a33b86",
     "shared": "false",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "Contact Form Section-f349530096ce48cbaf190a7aac09df0e": {
+  "Contact Form Section-699fbe0d92a741fd8eeb1e875eb141c2": {
     "contentType": "text/html",
-    "id": "f349530096ce48cbaf190a7aac09df0e",
+    "id": "699fbe0d92a741fd8eeb1e875eb141c2",
     "shared": "false",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
@@ -156,13 +114,6 @@
   "LinkedIn News Article-1919007aa1c6486190cafbb5275cc547": {
     "contentType": "text/html",
     "id": "1919007aa1c6486190cafbb5275cc547",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
-  "LinkedIn News Article-812d6cfb6a5a4c17afda48c1bf12ca1f": {
-    "contentType": "text/html",
-    "id": "812d6cfb6a5a4c17afda48c1bf12ca1f",
     "shared": "false",
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
@@ -328,23 +279,9 @@
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
   },
-  "Render Articles-3e3fb3f0bb2b4686a0eab1817a92525b": {
-    "contentType": "text/html",
-    "id": "3e3fb3f0bb2b4686a0eab1817a92525b",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
   "Render Card-8db188996bf446eea7bd935cc25cabcd": {
     "contentType": "text/javascript",
     "id": "8db188996bf446eea7bd935cc25cabcd",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
-  "Render News Article-377d83eddc8b469fb06cba275acf5c04": {
-    "contentType": "text/html",
-    "id": "377d83eddc8b469fb06cba275acf5c04",
     "shared": "false",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
@@ -370,19 +307,12 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "Render Video Article-3f8f50591f9b45b88e9238b9c23d9572": {
-    "contentType": "text/html",
-    "id": "3f8f50591f9b45b88e9238b9c23d9572",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
-  },
   "Render Video Article-429d6322895e40fd9f5c96ecf4b46be4": {
     "contentType": "text/html",
     "id": "429d6322895e40fd9f5c96ecf4b46be4",
     "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
   },
   "Store Query-43cb723faecc40f6b6aeeab47d0b60c5": {
     "contentType": "text/plain",
@@ -394,13 +324,6 @@
   "Store Query-89bc3191114f4a6f82296d0979e2cc84": {
     "contentType": "text/plain",
     "id": "89bc3191114f4a6f82296d0979e2cc84",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
-  },
-  "Store Recommended Papers-07da195f1266446aa1c4ef3a00f213f2": {
-    "contentType": "text/javascript",
-    "id": "07da195f1266446aa1c4ef3a00f213f2",
     "shared": "false",
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
@@ -433,6 +356,13 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "Thanks-608df71001e5439987c0bc245e220aa8": {
+    "contentType": "text/html",
+    "id": "608df71001e5439987c0bc245e220aa8",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
   "Thanks-77b92641e91849d28c21cbe8c07a53fd": {
     "contentType": "text/html",
     "id": "77b92641e91849d28c21cbe8c07a53fd",
@@ -443,13 +373,6 @@
   "Thanks-78c681a24a8b4d21bfe19d00769d646f": {
     "contentType": "text/html",
     "id": "78c681a24a8b4d21bfe19d00769d646f",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
-  "Thanks-7a88c7e638e341e59ead30961115953b": {
-    "contentType": "text/html",
-    "id": "7a88c7e638e341e59ead30961115953b",
     "shared": "false",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
@@ -527,13 +450,6 @@
   "abbfc6224dab4836903a180f59ce8799": {
     "contentType": "text/html",
     "id": "abbfc6224dab4836903a180f59ce8799",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
-  },
-  "bca70d7b73e74147a5ef48b02b1494fb": {
-    "contentType": "text/plain",
-    "id": "bca70d7b73e74147a5ef48b02b1494fb",
     "shared": "false",
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false

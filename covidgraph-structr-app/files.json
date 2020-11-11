@@ -133139,6 +133139,60 @@
     "visibleToPublicUsers": true,
     "width": 4855
   },
+  "/img/content-img/Schema_v1.1_no_logo.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Jakob"
+      }
+    ],
+    "height": 819,
+    "id": "49ebb6c1adfd46ae8617f21c13e80dc8",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "Jakob"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 1212
+  },
+  "/img/content-img/Schema_v1.1_no_logo_2020-11-11-081434298.png": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "contentType": "image/png",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Jakob"
+      }
+    ],
+    "height": 819,
+    "id": "a197c385a7fc40c686da0324544fe755",
+    "includeInFrontendExport": false,
+    "isImage": true,
+    "isTemplate": false,
+    "isThumbnail": false,
+    "owner": {
+      "name": "Jakob"
+    },
+    "type": "Image",
+    "useAsJavascriptLibrary": false,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true,
+    "width": 1212
+  },
   "/img/content-img/bloom-Gene_ACE2_MENTIONED_Paper.jpg": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
@@ -138232,11 +138286,18 @@
     "contentType": "application/javascript",
     "dontCache": false,
     "enableBasicAuth": false,
-    "grantees": [],
-    "id": "b5f0affbd4a741c8aa11fe5920a35cff",
-    "includeInFrontendExport": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "Jakob"
+      }
+    ],
+    "id": "c56384602a7d4bc69b7935ce895ca1b2",
+    "includeInFrontendExport": true,
     "isTemplate": false,
-    "owner": null,
+    "owner": {
+      "name": "Jakob"
+    },
     "type": "File",
     "useAsJavascriptLibrary": false,
     "visibleToAuthenticatedUsers": false,
@@ -143826,6 +143887,7 @@
   "/source.unsplash.com/600x800_2020-11-05-081318051": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
+    "contentType": "image/jpeg",
     "dontCache": false,
     "enableBasicAuth": false,
     "grantees": [

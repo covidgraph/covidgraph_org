@@ -1,7 +1,7 @@
 <!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Landing Page Clone-47e63af2239941e2bbd36b9a7cd21335" data-structr-meta-name="Landing Page Clone">
 	<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="News Section-64480da180cf43cb973c0316c9c86a43" data-structr-meta-name="News Section">
 		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-		<script src="/structr/js/frontend/frontend.js" type="module" defer="defer"></script>
+		<script defer="defer" src="/structr/js/frontend/frontend.js" type="module"></script>
 		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 		<div class="container" id="news-section">
 			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
@@ -103,7 +103,7 @@
 		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 		<div class="modal fade" id="article-modal" role="dialog" tabindex="-1" aria-hidden="true" aria-labelledby="exampleModalCenterTitle"></div>
 		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-		<style><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/css) -->.card.news-card {
+		<style type="text/css"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/css) -->.card.news-card {
 
 	border-radius : 0.75rem;
 	
@@ -286,9 +286,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
 						<div class="tab-content row">
 							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 							<div class="tab-pane fade justify-content-center active show" id="visual-graph-explorer" role="tabpanel">
-								<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
-								<div class="row"><!-- @structr:public, @structr:owner(admin), @structr:grant(admin,arwd) --><a class="col-9" href="https://live.yworks.com/covidgraph" target="_blank"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img alt="app image" class="app-image" src="https://raw.githubusercontent.com/covidgraph/visual-graph-explorer/master/docs/screenshot.png"></a>
-									<!-- @structr:public, @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<div class="row"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a class="col-9" href="https://live.yworks.com/covidgraph" target="_blank"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img alt="app image" class="app-image" src="https://raw.githubusercontent.com/covidgraph/visual-graph-explorer/master/docs/screenshot.png"></a>
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 									<div class="col-3">
 										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 										<p><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --> This application is provided by yWorks and allows you to explore the knowledge data in a visual way. </p>
@@ -297,9 +297,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
 							</div>
 							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 							<div class="tab-pane fade justify-content-center" id="neo4j-browser" role="tabpanel">
-								<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
-								<div class="row"><!-- @structr:public, @structr:owner(admin), @structr:grant(admin,arwd) --><a class="col-9" href="https://db.covidgraph.org/browser/" target="_blank"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img alt="app image" class="app-image" src="/img/content-img/screenshot-neo4j-browser.jpg"></a>
-									<!-- @structr:public, @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<div class="row"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a class="col-9" href="https://db.covidgraph.org/browser/" target="_blank"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img alt="app image" class="app-image" src="/img/content-img/screenshot-neo4j-browser.jpg"></a>
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 									<div class="col-3">
 										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 										<p><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --> The Neo4j browser is a user interface for querying the graph directly on database level by pattern matching via Cypher. It offers a basic visualization of the result graph as well as data export and API access. A public version is available at:
@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 								</div>
 							</div><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><!--div class="tab-pane fade justify-content-center" id="data-browser" role="tabpanel">
 											<a target="_blank" href="https://covidgraph.org/data-browser?type=papers&pageSize=1000">
-												<img alt="app image" class="app-image" src="/img/content-img/screenshot-databrowser.jpg">
+												<img alt="app image" class="app-image" src="/img/content-img/screenshot-databrowser.jpg"/>
 											</a>
 											<div class="mt-5">
 												<p>

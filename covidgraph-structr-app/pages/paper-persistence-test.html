@@ -8,7 +8,7 @@
 	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 	<body>
 		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
+		<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(module) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
 import { StructrRest } from "/persistence-layer/rest/StructrRest.js";
 
 const persistence = new Persistence();
@@ -48,8 +48,7 @@ document.addEventListener('DOMContentLoaded', () =&gt; {
 		
 	const editButton = document.getElementById('updateNode');
 	editButton.addEventListener('click', updateNode);
-});
-</script>
+});</script>
 		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 		<h1><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${capitalize(page.name)}</h1>
 		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
