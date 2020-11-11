@@ -1,0 +1,73 @@
+<!-- @structr:owner(admin), @structr:grant(Jakob,arwd), @structr:content(text/html) --><structr:template src="Main Page Template (Application_)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application_)">
+	<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+	<script type="module"><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/javascript) -->document.addEventListener('DOMContentLoaded', function() {
+
+	const editButton = document.getElementById('getPaperTimeline');
+
+	editButton.addEventListener('click', function() {
+		window.location.href = '/paper-timeline/${current.id}';	
+	});
+
+});</script>
+	<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+	<div class="row">
+		<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+		<h1 class="col-9"><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${current.name}<!-- @structr:private, @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) --> (${current.covidGraphId})</h1>
+		<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+		<div class="col-2">
+			<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+			<button class="" id="getPaperTimeline" style="float: right;"><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Paper Timeline</button>
+		</div>
+	</div>
+	<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+	<div class="row" style="text-align:justify; margin-top: 2rem;" data-structr-meta-hide-conditions="empty(current.source)">
+		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+		<h5 class="col-2"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Source:</h5><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) --><span class="col-9"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${current.sid} (${current.source})</span>
+	</div>
+	<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+	<div class="row" style="text-align:justify; margin-top: 2rem;" data-structr-meta-hide-conditions="empty(current.synonyms)">
+		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+		<h5 class="col-2"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Synonyms:</h5><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) --><span class="col-9">
+			<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/javascript) --><structr:template src="Render Synonyms-d109bf94282a425a94a463d7d9f20c5d" data-structr-meta-name="Render Synonyms" data-structr-meta-data-key="synonym" data-structr-meta-function-query="to_graph_object(current.synonyms)"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span class="gene gene-default"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${synonym.value}</span>
+			</structr:template>
+		</span>
+	</div>
+	<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+	<div class="row" style="text-align:justify; margin-top: 2rem;" data-structr-meta-hide-conditions="empty(current.description)">
+		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+		<h5 class="col-2"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Description:</h5><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) --><span class="col-9"><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/javascript) -->${current.description}</span>
+	</div>
+	<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+	<div class="row" style="text-align:justify; margin-top: 2rem;" data-structr-meta-hide-conditions="empty(current.featureType)">
+		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+		<h5 class="col-2"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Feature Types:</h5><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) --><span class="col-9">
+			<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+			<div class="row" data-structr-meta-data-key="feature" data-structr-meta-function-query="{
+
+  const current = $.get('current');
+  const featureTypes = current.featureType;
+  const features = Object.keys(featureTypes);
+  return $.to_graph_object(features);
+
+}"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span class=" col-2"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${feature.value}</span><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span class=" col-10"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span class="gene gene-default" data-structr-meta-data-key="value" data-structr-meta-function-query="{
+
+  const current = $.get('current');
+  const feature = $.get('feature').value;
+  const featureTypes = current.featureType;
+  const featureValues = featureTypes[feature];
+  return $.to_graph_object(featureValues);
+
+}"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${value.value}</span></span></div>
+		</span>
+	</div>
+	<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+	<div class="row" style="text-align:justify; margin-top: 2rem;" data-structr-meta-hide-conditions="empty(current.tissues)">
+		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+		<h5 class="col-2"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Tissues:</h5><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) --><span class="col-9"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span class="gene gene-default" data-structr-meta-data-key="tissue" data-structr-meta-function-query="current.tissues"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${tissue.name}</span></span>
+	</div>
+	<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+	<div class="row" style="text-align:justify; margin-top: 2rem;">
+		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+		<h5 class="col-2"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Transcript:</h5><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) --><span class="col-9"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span data-structr-meta-data-key="transcript" data-structr-meta-function-query="current.transcripts"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${transcript.sid} (${transcript.source})</span></span>
+	</div>
+</structr:template>

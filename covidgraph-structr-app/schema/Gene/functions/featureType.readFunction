@@ -25,6 +25,6 @@
 
 	}
 	
-	return JSON.stringify(featureType);
+	return featureType;
 
 }

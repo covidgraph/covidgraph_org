@@ -70,7 +70,7 @@ ${{
 		recordsFiltered : $.first(count).numGenes,
 		data            : genes.map(gene => {
 			const id   = gene.covidGraphId;
-			const name = gene.name;
+			const name = "<a href='/gene/" + gene.id + "'>" + gene.name + "</a>";
 			const geneType = gene.geneType;
 			const description = gene.description;
 			const chromosome = gene.chromosome;

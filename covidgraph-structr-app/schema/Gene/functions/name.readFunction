@@ -9,15 +9,15 @@
 		return name;
 	}
 	
-	const fullName = covidGraphProperties['Full_name_from_nomenclature_authority'];
-	if(!$.empty(fullName) && fullName !== '-') {
-		return fullName;
-	}
-	
 	const symbol = covidGraphProperties['Symbol'];
 	if(!$.empty(symbol) && symbol !== '-') {
 		return symbol;
 	}
+	
+	const fullName = covidGraphProperties['Full_name_from_nomenclature_authority'];
+	if(!$.empty(fullName) && fullName !== '-') {
+		return fullName;
+	}	
 	
 	return 'unknown';
 

@@ -14,10 +14,10 @@
 		'WHERE ID(paper) = ' + self.covidGraphId + ' ' +
 		'RETURN DISTINCT ID(geneSymbol) AS id';
 
-	const geneSymbols = neoConnector.query({query : query});
-	/*const geneSymbols = geneSymbolIds.map(geneSymbol => $.get_or_create('GeneSymbol', {
+	const geneSymbolIds = neoConnector.query({query : query});
+	const geneSymbols = geneSymbolIds.map(geneSymbol => $.get_or_create('GeneSymbol', {
 		covidGraphId : geneSymbol.id
-	}));*/
+	}));
 	
 	return geneSymbols;
 

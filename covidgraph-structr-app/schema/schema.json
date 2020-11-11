@@ -2143,6 +2143,7 @@
       }
     },
     "CovidGraphNode": {
+      "changelogDisabled": true,
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -2183,6 +2184,191 @@
           "type": "string"
         }
       },
+      "type": "object",
+      "visibleToAuthenticatedUsers": true
+    },
+    "CssDeclaration": {
+      "$implements": [
+        "https://structr.org/v1.1/definitions/CssDeclaration"
+      ],
+      "category": "html",
+      "isAbstract": false,
+      "isBuiltinType": true,
+      "isInterface": false,
+      "properties": {
+        "rule": {
+          "$link": "#/definitions/CssRuleHAS_DECLARATIONCssDeclaration",
+          "$ref": "#/definitions/CssRule",
+          "type": "object"
+        }
+      },
+      "tags": [
+        "html"
+      ],
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "ui": [
+          "rule"
+        ]
+      }
+    },
+    "CssRule": {
+      "$implements": [
+        "https://structr.org/v1.1/definitions/CssRule"
+      ],
+      "category": "html",
+      "isAbstract": false,
+      "isBuiltinType": true,
+      "isInterface": false,
+      "properties": {
+        "childRules": {
+          "$link": "#/definitions/CssRuleCONTAINSCssRule",
+          "items": {
+            "$ref": "#/definitions/CssRule"
+          },
+          "type": "array"
+        },
+        "cssText": {
+          "indexed": true,
+          "type": "string"
+        },
+        "declarations": {
+          "$link": "#/definitions/CssRuleHAS_DECLARATIONCssDeclaration",
+          "items": {
+            "$ref": "#/definitions/CssDeclaration"
+          },
+          "type": "array"
+        },
+        "parentRule": {
+          "$link": "#/definitions/CssRuleCONTAINSCssRule",
+          "$ref": "#/definitions/CssRule",
+          "type": "object"
+        },
+        "ruleType": {
+          "indexed": true,
+          "type": "integer"
+        },
+        "selectors": {
+          "$link": "#/definitions/CssRuleHAS_SELECTORCssSelector",
+          "items": {
+            "$ref": "#/definitions/CssSelector"
+          },
+          "type": "array"
+        }
+      },
+      "tags": [
+        "html"
+      ],
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "ui": [
+          "childRules",
+          "cssText",
+          "declarations",
+          "ruleType",
+          "selectors"
+        ]
+      }
+    },
+    "CssRuleCONTAINSCssRule": {
+      "$source": "#/definitions/CssRule",
+      "$target": "#/definitions/CssRule",
+      "cardinality": "OneToMany",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "CONTAINS",
+      "sourceName": "parentRule",
+      "targetName": "childRules",
+      "type": "object"
+    },
+    "CssRuleHAS_DECLARATIONCssDeclaration": {
+      "$source": "#/definitions/CssRule",
+      "$target": "#/definitions/CssDeclaration",
+      "cardinality": "OneToMany",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "HAS_DECLARATION",
+      "sourceName": "rule",
+      "targetName": "declarations",
+      "type": "object"
+    },
+    "CssRuleHAS_SELECTORCssSelector": {
+      "$source": "#/definitions/CssRule",
+      "$target": "#/definitions/CssSelector",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "HAS_SELECTOR",
+      "sourceName": "rules",
+      "targetName": "selectors",
+      "type": "object"
+    },
+    "CssSelector": {
+      "$implements": [
+        "https://structr.org/v1.1/definitions/CssSelector"
+      ],
+      "category": "html",
+      "isAbstract": false,
+      "isBuiltinType": true,
+      "isInterface": false,
+      "properties": {
+        "rules": {
+          "$link": "#/definitions/CssRuleHAS_SELECTORCssSelector",
+          "items": {
+            "$ref": "#/definitions/CssRule"
+          },
+          "type": "array"
+        },
+        "semanticClasses": {
+          "$link": "#/definitions/CssSemanticClassMAPS_TOCssSelector",
+          "items": {
+            "$ref": "#/definitions/CssSemanticClass"
+          },
+          "type": "array"
+        }
+      },
+      "tags": [
+        "html"
+      ],
+      "type": "object"
+    },
+    "CssSemanticClass": {
+      "$implements": [
+        "https://structr.org/v1.1/definitions/CssSemanticClass"
+      ],
+      "category": "html",
+      "isAbstract": false,
+      "isBuiltinType": true,
+      "isInterface": false,
+      "properties": {
+        "selectors": {
+          "$link": "#/definitions/CssSemanticClassMAPS_TOCssSelector",
+          "items": {
+            "$ref": "#/definitions/CssSelector"
+          },
+          "type": "array"
+        }
+      },
+      "tags": [
+        "html"
+      ],
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "ui": [
+          "selectors"
+        ]
+      }
+    },
+    "CssSemanticClassMAPS_TOCssSelector": {
+      "$source": "#/definitions/CssSemanticClass",
+      "$target": "#/definitions/CssSelector",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "MAPS_TO",
+      "sourceName": "semanticClasses",
+      "targetName": "selectors",
       "type": "object"
     },
     "CustomConceptAttribute": {
@@ -2782,6 +2968,15 @@
           "returnType": "void",
           "source": "./DOMElement/methods/getElementsByTagNameNS"
         },
+        "getEventMapping": {
+          "callSuper": false,
+          "codeType": "java",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "java.lang.String",
+          "source": "./DOMElement/methods/getEventMapping"
+        },
         "getHtmlAttributeNames": {
           "callSuper": false,
           "codeType": "java",
@@ -2943,6 +3138,24 @@
           "overridesExisting": true,
           "returnType": "void",
           "source": "./DOMElement/methods/item"
+        },
+        "onCreation": {
+          "callSuper": true,
+          "codeType": "java",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": true,
+          "returnType": "void",
+          "source": "./DOMElement/methods/onCreation"
+        },
+        "onModification": {
+          "callSuper": true,
+          "codeType": "java",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": true,
+          "returnType": "void",
+          "source": "./DOMElement/methods/onModification"
         },
         "openingTag": {
           "callSuper": false,
@@ -3389,6 +3602,11 @@
           "hint": "The name of the property (for create/save actions with custom form)",
           "type": "string"
         },
+        "data-structr-options": {
+          "category": "Edit Mode Binding",
+          "hint": "Configuration options for simple interactive elements, reserved for future use.",
+          "type": "string"
+        },
         "data-structr-options-key": {
           "category": "Edit Mode Binding",
           "hint": "Key used to display option labels for collection properties (default: name)",
@@ -3409,14 +3627,34 @@
           "hint": "If active, the page will refresh after a successfull action.",
           "type": "boolean"
         },
+        "data-structr-reload-target": {
+          "category": "Edit Mode Binding",
+          "hint": "CSS selector that specifies which partials to reload.",
+          "type": "string"
+        },
         "data-structr-return": {
           "category": "Edit Mode Binding",
           "hint": "Return URI after successful action",
           "type": "string"
         },
+        "data-structr-target": {
+          "category": "Edit Mode Binding",
+          "hint": "Event target, usually something like ${dataKey.id} for custom, update and delete events, or the entity type for create events.",
+          "type": "string"
+        },
+        "data-structr-tree-children": {
+          "category": "Edit Mode Binding",
+          "hint": "Toggles automatic visibility for tree child items when the \u0027toggle-tree-item\u0027 event is mapped. This field must contain the data key on which the tree is based, e.g. \u0027item\u0027.",
+          "type": "string"
+        },
         "data-structr-type": {
           "category": "Edit Mode Binding",
           "hint": "Type hint for the attribute (e.g. Date, Boolean; default: String)",
+          "type": "string"
+        },
+        "eventMapping": {
+          "category": "Edit Mode Binding",
+          "hint": "A mapping between the desired Javascript event (click, drop, dragOver, ...) and the server-side event that should be triggered: (create | update | delete | \u003cmethod name\u003e).",
           "type": "string"
         },
         "fromWidget": {
@@ -3429,6 +3667,20 @@
         "path": {
           "indexed": true,
           "type": "string"
+        },
+        "reloadSources": {
+          "$link": "#/definitions/DOMElementRELOADSDOMElement",
+          "items": {
+            "$ref": "#/definitions/DOMElement"
+          },
+          "type": "array"
+        },
+        "reloadTargets": {
+          "$link": "#/definitions/DOMElementRELOADSDOMElement",
+          "items": {
+            "$ref": "#/definitions/DOMElement"
+          },
+          "type": "array"
         },
         "tag": {
           "category": "Page Structure",
@@ -3513,6 +3765,9 @@
           "_html_title",
           "_html_translate"
         ],
+        "_html_name": [
+          "ui"
+        ],
         "public": [
           "children",
           "cypherQuery",
@@ -3550,13 +3805,18 @@
           "data-structr-id",
           "data-structr-insert",
           "data-structr-name",
+          "data-structr-options",
           "data-structr-options-key",
           "data-structr-placeholder",
           "data-structr-raw-value",
           "data-structr-reload",
+          "data-structr-reload-target",
           "data-structr-return",
+          "data-structr-target",
+          "data-structr-tree-children",
           "data-structr-type",
           "dataKey",
+          "eventMapping",
           "flow",
           "functionQuery",
           "hideConditions",
@@ -3579,6 +3839,16 @@
           "xpathQuery"
         ]
       }
+    },
+    "DOMElementRELOADSDOMElement": {
+      "$source": "#/definitions/DOMElement",
+      "$target": "#/definitions/DOMElement",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "RELOADS",
+      "sourceName": "reloadSources",
+      "targetName": "reloadTargets",
+      "type": "object"
     },
     "DOMNode": {
       "$extends": "https://structr.org/v1.1/definitions/org.structr.core.entity.LinkedTreeNodeImpl?typeParameters\u003dorg.structr.web.entity.dom.DOMNode",
@@ -4951,40 +5221,6 @@
         "html"
       ],
       "type": "object"
-    },
-    "DetailedTissue": {
-      "$extends": "#/definitions/CovidGraphNode",
-      "isAbstract": false,
-      "isBuiltinType": false,
-      "isInterface": false,
-      "methods": {
-        "getTissues": {
-          "callSuper": false,
-          "comment": "./DetailedTissue/methods/getTissues.comment",
-          "doExport": false,
-          "exceptions": [],
-          "overridesExisting": false,
-          "returnType": "void",
-          "source": "./DetailedTissue/methods/getTissues"
-        }
-      },
-      "properties": {
-        "name": {
-          "cachingEnabled": false,
-          "default": "",
-          "readFunction": "./DetailedTissue/functions/name.readFunction",
-          "type": "function",
-          "typeHint": "string",
-          "writeFunction": "./DetailedTissue/functions/name.writeFunction"
-        }
-      },
-      "type": "object",
-      "viewOrder": {},
-      "views": {
-        "custom": [
-          "name"
-        ]
-      }
     },
     "Details": {
       "$extends": "#/definitions/DOMElement",
@@ -7549,6 +7785,43 @@
             "$ref": "#/definitions/RelatedPaperCollection"
           },
           "type": "array"
+        },
+        "sid": {
+          "cachingEnabled": true,
+          "default": "",
+          "readFunction": "./Gene/functions/sid.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Gene/functions/sid.writeFunction"
+        },
+        "source": {
+          "cachingEnabled": true,
+          "default": "",
+          "readFunction": "./Gene/functions/source.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Gene/functions/source.writeFunction"
+        },
+        "synonyms": {
+          "cachingEnabled": true,
+          "default": "",
+          "readFunction": "./Gene/functions/synonyms.readFunction",
+          "type": "function",
+          "writeFunction": "./Gene/functions/synonyms.writeFunction"
+        },
+        "tissues": {
+          "cachingEnabled": true,
+          "default": "",
+          "readFunction": "./Gene/functions/tissues.readFunction",
+          "type": "function",
+          "writeFunction": "./Gene/functions/tissues.writeFunction"
+        },
+        "transcripts": {
+          "cachingEnabled": true,
+          "default": "",
+          "readFunction": "./Gene/functions/transcripts.readFunction",
+          "type": "function",
+          "writeFunction": "./Gene/functions/transcripts.writeFunction"
         }
       },
       "type": "object",
@@ -7562,7 +7835,12 @@
           "name",
           "paperLookUp",
           "paperScore",
-          "patentLookUp"
+          "patentLookUp",
+          "sid",
+          "source",
+          "synonyms",
+          "tissues",
+          "transcripts"
         ]
       }
     },
@@ -7733,6 +8011,40 @@
       "sourceName": "groups",
       "targetName": "members",
       "type": "object"
+    },
+    "GtexDetailedTissue": {
+      "$extends": "#/definitions/CovidGraphNode",
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "methods": {
+        "getTissues": {
+          "callSuper": false,
+          "comment": "./GtexDetailedTissue/methods/getTissues.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "void",
+          "source": "./GtexDetailedTissue/methods/getTissues"
+        }
+      },
+      "properties": {
+        "name": {
+          "cachingEnabled": false,
+          "default": "",
+          "readFunction": "./GtexDetailedTissue/functions/name.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./GtexDetailedTissue/functions/name.writeFunction"
+        }
+      },
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "name"
+        ]
+      }
     },
     "H1": {
       "$extends": "#/definitions/DOMElement",
@@ -8854,11 +9166,6 @@
           "$ref": "#/definitions/Interview",
           "type": "object"
         },
-        "position": {
-          "default": "",
-          "indexed": true,
-          "type": "integer"
-        },
         "text": {
           "default": "",
           "format": "",
@@ -8870,7 +9177,6 @@
       "viewOrder": {},
       "views": {
         "custom": [
-          "position",
           "text"
         ]
       }
@@ -8980,7 +9286,7 @@
           "source": "./KafkaClient/methods/onModification"
         },
         "sendMessage": {
-          "callSuper": true,
+          "callSuper": false,
           "codeType": "java",
           "doExport": false,
           "exceptions": [],
@@ -9843,6 +10149,15 @@
           "returnType": "void",
           "source": "./MQTTClient/methods/connectionStatusCallback"
         },
+        "getFallbackBrokerURLs": {
+          "callSuper": false,
+          "codeType": "java",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "java.lang.String[]",
+          "source": "./MQTTClient/methods/getFallbackBrokerURLs"
+        },
         "getIsConnected": {
           "callSuper": false,
           "codeType": "java",
@@ -9860,6 +10175,15 @@
           "overridesExisting": false,
           "returnType": "boolean",
           "source": "./MQTTClient/methods/getIsEnabled"
+        },
+        "getMainBrokerURL": {
+          "callSuper": false,
+          "codeType": "java",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "returnType": "java.lang.String",
+          "source": "./MQTTClient/methods/getMainBrokerURL"
         },
         "getPassword": {
           "callSuper": false,
@@ -9970,7 +10294,7 @@
           "source": "./MQTTClient/methods/onModification"
         },
         "sendMessage": {
-          "callSuper": true,
+          "callSuper": false,
           "codeType": "java",
           "doExport": false,
           "exceptions": [],
@@ -10015,11 +10339,20 @@
         }
       },
       "properties": {
+        "fallbackBrokerURLs": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "isConnected": {
           "type": "boolean"
         },
         "isEnabled": {
           "type": "boolean"
+        },
+        "mainBrokerURL": {
+          "type": "string"
         },
         "password": {
           "type": "string"
@@ -10042,27 +10375,28 @@
           "type": "string"
         }
       },
+      "required": [
+        "mainBrokerURL"
+      ],
       "type": "object",
       "viewOrder": {},
       "views": {
         "public": [
+          "fallbackBrokerURLs",
           "isConnected",
           "isEnabled",
+          "mainBrokerURL",
           "password",
-          "port",
-          "protocol",
           "qos",
-          "url",
           "username"
         ],
         "ui": [
+          "fallbackBrokerURLs",
           "isConnected",
           "isEnabled",
+          "mainBrokerURL",
           "password",
-          "port",
-          "protocol",
           "qos",
-          "url",
           "username"
         ]
       }
@@ -12898,7 +13232,6 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
-          "returnType": "void",
           "source": "./Paper/methods/getAbstracts"
         },
         "getAuthors": {
@@ -12907,7 +13240,6 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
-          "returnType": "void",
           "source": "./Paper/methods/getAuthors"
         },
         "getBodyTexts": {
@@ -13128,6 +13460,14 @@
       "isBuiltinType": false,
       "isInterface": false,
       "methods": {
+        "getAbstract": {
+          "callSuper": false,
+          "comment": "./Patent/methods/getAbstract.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Patent/methods/getAbstract"
+        },
         "getApplicants": {
           "callSuper": false,
           "comment": "./Patent/methods/getApplicants.comment",
@@ -13137,6 +13477,22 @@
           "returnType": "void",
           "source": "./Patent/methods/getApplicants"
         },
+        "getClaim": {
+          "callSuper": false,
+          "comment": "./Patent/methods/getClaim.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Patent/methods/getClaim"
+        },
+        "getDescription": {
+          "callSuper": false,
+          "comment": "./Patent/methods/getDescription.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Patent/methods/getDescription"
+        },
         "getGeneSymbols": {
           "callSuper": false,
           "comment": "./Patent/methods/getGeneSymbols.comment",
@@ -13145,6 +13501,14 @@
           "overridesExisting": false,
           "returnType": "void",
           "source": "./Patent/methods/getGeneSymbols"
+        },
+        "getGenes": {
+          "callSuper": false,
+          "comment": "./Patent/methods/getGenes.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Patent/methods/getGenes"
         },
         "getInventors": {
           "callSuper": false,
@@ -13190,6 +13554,14 @@
           "overridesExisting": false,
           "returnType": "void",
           "source": "./Patent/methods/getTitle"
+        },
+        "onCreate": {
+          "callSuper": false,
+          "comment": "./Patent/methods/onCreate.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Patent/methods/onCreate"
         }
       },
       "properties": {
@@ -13200,6 +13572,10 @@
           "type": "function",
           "typeHint": "string",
           "writeFunction": "./Patent/functions/filingDate.writeFunction"
+        },
+        "geneLookUp": {
+          "default": "",
+          "type": "boolean"
         },
         "mentionedGenes": {
           "$link": "#/definitions/PatentPATENT_HAS_GENEGene",
@@ -13238,6 +13614,7 @@
       "views": {
         "custom": [
           "filingDate",
+          "geneLookUp",
           "patentType",
           "publicationDate",
           "url"
@@ -15195,7 +15572,6 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
-          "returnType": "void",
           "source": "./RecommendationView/methods/getSharedGenes"
         }
       },
@@ -17956,6 +18332,38 @@
         ]
       }
     },
+    "Transcript": {
+      "$extends": "#/definitions/CovidGraphNode",
+      "isAbstract": false,
+      "isBuiltinType": false,
+      "isInterface": false,
+      "properties": {
+        "sid": {
+          "cachingEnabled": true,
+          "default": "",
+          "readFunction": "./Transcript/functions/sid.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Transcript/functions/sid.writeFunction"
+        },
+        "source": {
+          "cachingEnabled": true,
+          "default": "",
+          "readFunction": "./Transcript/functions/source.readFunction",
+          "type": "function",
+          "typeHint": "string",
+          "writeFunction": "./Transcript/functions/source.writeFunction"
+        }
+      },
+      "type": "object",
+      "viewOrder": {},
+      "views": {
+        "custom": [
+          "sid",
+          "source"
+        ]
+      }
+    },
     "U": {
       "$extends": "#/definitions/DOMElement",
       "$implements": [
@@ -19434,14 +19842,14 @@
       "comment": "./_globalMethods/getCovidGraphConnector.comment",
       "name": "getCovidGraphConnector",
       "source": "./_globalMethods/getCovidGraphConnector",
-      "visibleToAuthenticatedUsers": false,
+      "visibleToAuthenticatedUsers": true,
       "visibleToPublicUsers": false
     },
     {
       "comment": "./_globalMethods/inferMetaSchema.comment",
       "name": "inferMetaSchema",
       "source": "./_globalMethods/inferMetaSchema",
-      "visibleToAuthenticatedUsers": false,
+      "visibleToAuthenticatedUsers": true,
       "visibleToPublicUsers": false
     }
   ]

@@ -1,0 +1,49 @@
+<!-- @structr:grant(Sven,arwd), @structr:content(text/html) --><structr:template src="Main Page Template (Application_)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application_)">
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<h1><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.name}</h1>
+	</div>
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<p data-structr-meta-data-key="gene" data-structr-meta-function-query="current.getGenes()"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><a href="/paper-timeline/${gene.id}"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${gene.name}</a></p>
+	</div>
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<h2><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Abstract:</h2>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<p><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.getAbstract()}</p>
+	</div>
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<h2><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Claim:</h2>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<p><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
+
+	const current = $.get('current');
+	
+	let text = current.getClaim();
+	
+	return text;
+	
+}}</p>
+	</div>
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<h2><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Description:</h2>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<p><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
+
+	const current = $.get('current');
+	
+	let text = current.getDescription();
+	
+	return text;
+	
+}}</p>
+	</div>
+</structr:template>

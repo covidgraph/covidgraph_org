@@ -1,0 +1,276 @@
+<!-- @structr:grant(Sven,arwd), @structr:content(text/html) --><structr:template src="Main Page Template (Application_)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application_)">
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<h2 class=""><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.srcPaper.name}</h2>
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div class="row" style="">
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<script type="text/javascript"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
+
+	const current	= $.get('current');
+	const srcPaper	= current.srcPaper;
+	srcPaper.getRelatedPapersByGenes();
+	current.getSharedGenes()
+	
+}}</script>
+		<!-- @structr:protected, @structr:owner(admin), @structr:grant(Sven,arwd) -->
+		<script src="/applications/js/libs/vis-network.min.js" type="text/javascript"></script>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
+import { StructrRest } from "/persistence-layer/rest/StructrRest.js";
+
+const persistence = new Persistence();
+const structrRest = new StructrRest();
+const current = '${current}';
+
+
+
+document.addEventListener('DOMContentLoaded', async function ()
+{					  
+	await loadVisGraph();
+	await lableGenes();
+	
+	const modal = document.getElementById('myModal');
+	const span = document.getElementsByClassName('close')[0];
+
+	// When the user clicks on &lt;span&gt; (x), close the modal
+	span.onclick = function() {
+		modal.style.display = 'none';
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = 'none';
+		}
+	}
+});
+	
+async function loadVisGraph()
+{
+	const container = document.getElementById('paper-graph');
+	const endpoint	= await fetch('/endpoints/papersearch?recommendationView='+current);
+	const text		= await endpoint.text();
+	const data		= JSON.parse(text);
+	
+	const options = {
+		nodes			: { shape: 'dot' },
+		autoResize		: true,
+		width			: 100 + '%',
+		height			: 500 + 'px',
+		interaction		: { hover: true }
+	};
+
+	const graph = new vis.Network(container, data, options);
+	
+	
+	const doubleClickTime 	= 0;
+	const threshold 		= 200;
+	
+	graph.on('click', function (params)
+	{
+		let t0 = new Date();
+		if (t0 - doubleClickTime &gt; threshold)
+		{
+			setTimeout(function() {
+				if(t0 - doubleClickTime &gt; threshold) {
+					doOnClick(params);
+				}
+			}, threshold);
+		}
+	});
+				
+	
+	function doOnClick(params) 
+	{	
+		let node = params.nodes[0];
+		console.log('click event');
+		
+		if(node != null)
+		{
+			let domNode = document.getElementById('paper-content');
+			let url = '/paper-partial/' + node;
+			
+			var modal = document.getElementById('myModal');
+			modal.style.display = 'block';
+			
+			loadPartial(url, domNode);
+		}
+	}
+	
+	graph.on('doubleClick', async function (params) 
+	{
+		let node = params.nodes[0];
+		console.log('doubleclick event');
+		
+		if(node != null)
+		{
+			await addPaperToRecommendationView(current, node);
+			await loadVisGraph();
+		}	
+	});
+}
+
+async function loadPartial(url, domNode) 
+{
+	const encodedUrl = encodeURI(url);
+	const page = await fetch(encodedUrl);
+	const html = await page.text();
+	domNode.innerHTML = html;
+}
+
+async function addPaperToRecommendationView(uuidRV, uuidPaper)
+{
+	const recommendationView 	= await structrRest.getById('RecommendationView', uuidRV, 'myView');
+	const rvSrcPaper 			= recommendationView.result.srcPaper.id;
+	const rvPapers 				= recommendationView.result.papers;
+	let arrayUUIDPapers 		= rvPapers.map(paper=&gt;paper.id);
+	
+	if(arrayUUIDPapers.indexOf(uuidPaper) == -1)
+	{
+		if(rvSrcPaper != uuidPaper)
+			arrayUUIDPapers.push(uuidPaper);
+	} else
+	{
+		arrayUUIDPapers = arrayUUIDPapers.filter(paper=&gt;paper!=uuidPaper);	
+	}
+	
+	const object = {
+		type		: 'RecommendationView',
+		id			: uuidRV,
+		papers		: arrayUUIDPapers
+	};
+	
+	await persistence._persistObject(object);
+}
+
+async function lableGenes()
+{
+	const recommendationView 	= await structrRest.getById('RecommendationView', current, 'myView');
+	const sharedGenes			= recommendationView.result.sharedGenes;
+	
+	const labels = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark'];
+	let count = 0;
+	
+	for(let gene of sharedGenes)
+	{
+		let domNodes = document.getElementsByName(gene.name);
+		
+		if(count &gt;= labels.length)
+			count = 0;
+			
+		let className = 'badge badge-pill badge-'+labels[count++];	
+		
+		for(let domNode of domNodes)
+		{
+			domNode.classList = className;
+		}
+	}
+}</script>
+		<!-- @structr:protected, @structr:owner(admin), @structr:grant(Sven,arwd) -->
+		<style type="text/css"><!-- @structr:owner(admin), @structr:grant(Sven,arwd), @structr:content(text/css) -->html, body {
+	font: 10pt arial;
+}
+
+#paper-graph {
+	width		: 100%;
+	height		: 100%;
+	border		: 2px solid lightgray;
+	min-height	: 500px;
+}
+
+#paper-table {
+	width	: 100%;
+	height	: 100%;
+	border	: 2px solid lightgray;
+}</style>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<div class="col-7" id="" style="">
+			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+			<table class="table table-bordered" id="paper-table" style="border: 2px solid lightgrey;">
+				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+				<thead class="" style="">
+					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+					<th class="" style=""><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Title</th>
+					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+					<th class="" style=""><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Mentioned Genes</th>
+				</thead>
+				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+				<tbody>
+					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+					<tr>
+						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+						<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><a href="/paper/${current.srcPaper.id}"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.srcPaper.name}</a></td>
+						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+						<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="badge badge-pill badge-light" id="" style="margin: 0.1rem;" name="${gene.name}" data-structr-meta-data-key="gene" data-structr-meta-function-query="current.srcPaper.getGenes()"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${gene.name}</span></td>
+					</tr>
+					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+					<tr class="" style="border: 1px solid lightgray;" data-structr-meta-data-key="relatedPaperCollection" data-structr-meta-function-query="current.srcPaper.getRelatedPapersByGenes()">
+						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+						<td class="" style=""><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><a href="/paper/${relatedPaperCollection.referencedPaper.id}"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${relatedPaperCollection.referencedPaper.name}</a></td>
+						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+						<td class="" style=""><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="badge badge-pill badge-light" id="" style="margin: 0.1rem;" name="${gene.name}" data-structr-meta-data-key="gene" data-structr-meta-function-query="relatedPaperCollection.sharedGenes"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${gene.name}</span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<div class="col-5" id="paper-graph" style=""></div>
+	</div>
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div class="row">
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<style><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/css) -->body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #888;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}</style>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<div class="modal" id="myModal">
+			<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+			<div class="col-lg-6 offset-lg-1 col-md-8 offset-md-2 col-sm-10 offset-sm-1 modal-content " id="" style="">
+				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+				<div class="col-1 offset-11">
+					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+					<p class="close"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->x</p>
+				</div>
+				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+				<p class="col-12" id="paper-content"></p>
+			</div>
+		</div>
+	</div>
+</structr:template>

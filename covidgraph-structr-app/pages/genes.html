@@ -1,131 +1,144 @@
-<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application)">
-	<!-- @structr:content(text/html) --><structr:template src="Table Card-e2e3acb68b924649bda36d0d6c7ea916" data-structr-meta-name="Table Card">
-		<thead>
-			<tr>
-				<td><!-- @structr:content(text/plain) -->Name</td>
-				<td><!-- @structr:content(text/plain) -->Type</td>
-				<td><!-- @structr:content(text/plain) -->Description</td>
-				<td><!-- @structr:content(text/plain) -->Chromosome</td>
-				<td><!-- @structr:content(text/plain) -->Feature Types</td>
-				<td><!-- @structr:content(text/plain) -->Symbols</td>
-			</tr>
-		</thead>
-		<tbody id="table-body"></tbody>
-		<script type="text/javascript"><!-- @structr:content(text/javascript) -->const baseUrl = '/endpoints/search/gene-search'
-
-let filter = {};
-
-let dataTable;
-
-/**
- * add event listenener to filter elements
- */
-
-function hookFilterListeners() {
-	
-	const filterElements = document.getElementsByClassName('filter');
-	for(let filterElement of filterElements) {
-
-		filterElement.addEventListener('input', function() {
-			const url = buildUrl();
-			dataTable.ajax.url(url).load();
-		});
-		
-		filterElement.addEventListener('change', function() {
-			const url = buildUrl();
-			dataTable.ajax.url(url).load();
-		});
-		
-		$(filterElement).on('select2:select', function() {
-			const url = buildUrl();
-			dataTable.ajax.url(url).load();
-		});
-		$(filterElement).on('select2:unselect', function(evt) {
-			$(evt.target).val(null).trigger('change');
-			const url = buildUrl();
-			dataTable.ajax.url(url).load();
-		});
-
-	}
-
-}
-
-function readFilters() {
-
-	const geneFilter   = document.getElementById('genes');
-	const authorFilter = document.getElementById('authors');
-	const titleFilter  = document.getElementById('title');
-	
-	//filter['genes']   = $(geneFilter).select2('data').map(selectedOption =&gt; selectedOption.id);
-	//filter['authors'] = $(authorFilter).select2('data').map(selectedOption =&gt; selectedOption.id);
-	//filter['title']   = titleFilter.value;
-
-}
-
-/**
- * build get parameter string from filter
- */
-
-function buildParameterString() {
-
-	readFilters();
-	const keyValueStrings = [];
-	for(let key in filter) {
-		let value = filter[key];
-		if(value &amp;&amp; value != '') {
-			let getString = key + '=' + value;
-			keyValueStrings.push(getString);
-		}
-	}
-	const parameterString = keyValueStrings.join('&amp;');
-	return parameterString;
-	
-}
-
-function buildUrl() {
-
-	const parameterString = buildParameterString();
-	let rawUrl = baseUrl;
-	if(parameterString !== '') rawUrl = rawUrl + '?' + parameterString;
-	const url = encodeURI(rawUrl);
-	return url;
-	
-}
-
-/**
- * filter table on properties in filter
- */
-
-async function loadFilteredTable() {
-	
-	// compute partial url
-	const url = buildUrl();
-	
-	// load partial
-	//const tableBody = document.getElementById('table-body');
-	//await loadPartial(url, tableBody);
-	dataTable = $('#table').DataTable({
-		processing    : true,
-		serverSide    : true,
-		ajax          : url,
-		orderCellsTop : true,
-		scrollX       : true,
-		fixedHeader   : true,
-		columnDefs    : [{
-			targets   : 'nosort',
-			orderable : false
-		}],
-		sDom : 'lrtip'
-	});
-	
-	hookFilterListeners(dataTable);
-		
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-	loadFilteredTable();
-});</script>
-	</structr:template>
-
+<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><structr:template src="Main Page Template (Application)-2d7cd886fba4475695d433564536f055" data-structr-meta-name="Main Page Template (Application)"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Page Heading -->
+	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+	<div class="d-sm-flex align-items-center justify-content-between mb-4">
+		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+		<h1 class="h3 mb-0 text-gray-800"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Genes</h1>
+	</div><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Main Card-->
+	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+	<div class="row"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!-- Area Chart -->
+		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+		<div class="col-12">
+			<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+			<div class="card shadow mb-4"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!-- Card Header - Dropdown -->
+				<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+				<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+					<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+					<h6 class="m-0 font-weight-bold text-primary"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Genes</h6>
+					<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+					<div class="dropdown no-arrow"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" href="#"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-download fa-sm text-white-50"></i><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) --> Download CSV</a></div>
+				</div><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!-- Card Body -->
+				<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+				<div class="card-body">
+					<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+					<div class="table-responsive">
+						<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+						<div class="dataTables_wrapper dt-bootstrap4" id="dataTable_wrapper"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Pagination Top-->
+							<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+							<div class="row">
+								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+								<div class="col-sm-12 col-md-6">
+									<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+									<div class="dataTables_length" id="dataTable_length">
+										<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+										<label><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Show 
+											<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+											<select class="custom-select custom-select-sm form-control form-control-sm" name="dataTable_length" aria-controls="dataTable">
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<option value="10"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->10</option>
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<option value="25"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->25</option>
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<option value="50"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->50</option>
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<option value="100"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->100</option>
+											</select><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) --> entries
+										</label>
+									</div>
+								</div>
+								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+								<div class="col-sm-12 col-md-6">
+									<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+									<div class="dataTables_filter" id="dataTable_filter">
+										<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+										<label><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Search:
+											<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+											<input class="form-control form-control-sm" placeholder="" type="search" aria-controls="dataTable">
+										</label>
+									</div>
+								</div>
+							</div><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Table-->
+							<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+							<div class="row">
+								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+								<div class="col-sm-12">
+									<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+									<table class="table table-bordered dataTable" id="dataTable" role="grid" style="width: 100%;" aria-describedby="dataTable_info">
+										<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+										<thead>
+											<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+											<tr role="row">
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<th class="sorting_asc" colspan="1" rowspan="1" style="width: 134px;" tabindex="0" aria-controls="dataTable" aria-label="Name: activate to sort column descending" aria-sort="ascending"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Name</th>
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<th class="sorting" colspan="1" rowspan="1" style="width: 223px;" tabindex="0" aria-controls="dataTable" aria-label="Position: activate to sort column ascending"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Type</th>
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<th class="sorting" colspan="1" rowspan="1" style="width: 95px;" tabindex="0" aria-controls="dataTable" aria-label="Office: activate to sort column ascending"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Description</th>
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<th class="sorting" colspan="1" rowspan="1" style="width: 39px;" tabindex="0" aria-controls="dataTable" aria-label="Age: activate to sort column ascending"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Chromosome</th>
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<th class="sorting" colspan="1" rowspan="1" style="width: 87px;" tabindex="0" aria-controls="dataTable" aria-label="Start date: activate to sort column ascending"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Feature Types</th>
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<th class="sorting" colspan="1" rowspan="1" style="width: 80px;" tabindex="0" aria-controls="dataTable" aria-label="Salary: activate to sort column ascending"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Symbols</th>
+											</tr>
+										</thead>
+										<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+										<tbody>
+											<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+											<tr id="${gene}" data-structr-meta-data-key="gene" data-structr-meta-rest-query="Gene?page=1&amp;pageSize=10">
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<td><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${gene.name}</td>
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<td><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${gene.geneType}</td>
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<td><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${gene.description}</td>
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<td><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${gene.chromosome}</td>
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<td><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${to_json(gene.featureType)}</td>
+												<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+												<td><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a data-structr-meta-data-key="geneSymbol" data-structr-meta-function-query="gene.getGeneSymbols()"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${symbol.name}</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Pagination Bottom-->
+							<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+							<div class="row">
+								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+								<div class="col-sm-12 col-md-5">
+									<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+									<div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Showing 1 to 10 of 57 entries</div>
+								</div>
+								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+								<div class="col-sm-12 col-md-7">
+									<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+									<div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+										<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+										<ul class="pagination">
+											<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+											<li class="paginate_button page-item previous disabled" id="dataTable_previous"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="page-link" href="#" tabindex="0" aria-controls="dataTable" data-dt-idx="0"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Previous</a></li>
+											<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+											<li class="paginate_button page-item active"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="page-link" href="#" tabindex="0" aria-controls="dataTable" data-dt-idx="1"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->1</a></li>
+											<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+											<li class="paginate_button page-item "><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="page-link" href="#" tabindex="0" aria-controls="dataTable" data-dt-idx="2"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->2</a></li>
+											<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+											<li class="paginate_button page-item "><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="page-link" href="#" tabindex="0" aria-controls="dataTable" data-dt-idx="3"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->3</a></li>
+											<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+											<li class="paginate_button page-item "><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="page-link" href="#" tabindex="0" aria-controls="dataTable" data-dt-idx="4"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->4</a></li>
+											<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+											<li class="paginate_button page-item "><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="page-link" href="#" tabindex="0" aria-controls="dataTable" data-dt-idx="5"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->5</a></li>
+											<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+											<li class="paginate_button page-item "><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="page-link" href="#" tabindex="0" aria-controls="dataTable" data-dt-idx="6"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->6</a></li>
+											<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+											<li class="paginate_button page-item next" id="dataTable_next"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="page-link" href="#" tabindex="0" aria-controls="dataTable" data-dt-idx="7"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Next</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </structr:template>

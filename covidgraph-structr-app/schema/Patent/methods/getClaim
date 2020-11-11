@@ -1,0 +1,24 @@
+{
+	
+	const self = $.this;
+	
+	const neoConnector = $.call('getCovidGraphConnector');
+	
+	const query = 'MATCH (patent:Patent)-' + 
+		  '[:PATENT_HAS_PATENTCLAIM]->(patentClaim:PatentClaim) ' +
+		  'WHERE ID(patent) = ' + self.covidGraphId + ' ' +
+		  'RETURN DISTINCT patentClaim';
+	
+	const patentClaims = neoConnector.query({query : query});
+	
+	const englishClaim = patentClaims.find(claim => (claim.lang === 'en'));
+	if(!$.empty(englishClaim))
+		return englishClaim.text;
+	
+	const arbitraryClaim = $.first(patentClaims);
+	if(!$.empty(arbitraryClaim))
+		return arbitraryClaim.text;
+	
+	return '';
+	
+}

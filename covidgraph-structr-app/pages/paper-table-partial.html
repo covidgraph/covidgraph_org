@@ -1,0 +1,30 @@
+<!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) --><structr:template src="Partial Template-390ca8ba0b2f4978b6a145a9500aa499" data-structr-meta-name="Partial Template">
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
+	const requestParams = $.get('request');
+	
+	$.store('requestParameter', JSON.stringify(requestParams));
+	
+}}
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<script type="text/javascript"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->document.addEventListener('DOMContentLoaded', loadendpoint());
+
+
+
+
+async function loadendpoint()
+{
+	var url_string = window.location.href; // www.test.com?filename=test
+	var url = new URL(url_string);
+	var paramValue = url.searchParams;
+	
+	const endpoint	= await fetch('/pagination-test/paper-table-endpoint?start=10&amp;length=25');
+	const text		= await endpoint.text();
+	
+	const domNode = document.getElementById('content');
+	domNode.innerHTML = text;
+	
+	console.log(paramValue.get('start'));
+}</script><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span id="content"></span>
+	</div>
+</structr:template>

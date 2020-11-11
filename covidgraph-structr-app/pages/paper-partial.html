@@ -1,7 +1,10 @@
-<!-- @structr:owner(admin), @structr:content(text/plain) --><structr:template src="Partial Template-26590a1f6fcf44aeac8632812b4dd63b" data-structr-meta-name="Partial Template">
+<!-- @structr:owner(admin), @structr:grant(Jakob,arwd), @structr:content(text/plain) --><structr:template src="Partial Template-26590a1f6fcf44aeac8632812b4dd63b" data-structr-meta-name="Partial Template">
+	<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
 	<div>
-		<h1><a href="${current.url}"><!-- @structr:content(text/plain) -->${current.name}</a></h1>
-		<h5><!-- @structr:content(text/plain) -->${current.publicationDate}<!-- @structr:content(text/javascript) -->${{
+		<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+		<h1><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) --><a href="${current.url}"><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${current.name}</a></h1>
+		<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+		<h5><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${current.publicationDate}<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/javascript) -->${{
 
 	const current = $.get('current');
 	const authors = current.getAuthors();
@@ -13,7 +16,8 @@
 	return printlist;
 
 }}</h5>
-		<section><span><!-- @structr:content(text/javascript) -->${{
+		<!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) -->
+		<section><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) --><span><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/javascript) -->${{
 
 	const current = $.get('current');
 	const abstractTexts = current.getAbstracts();
@@ -24,7 +28,7 @@
 	
 	return joinedText;
 	
-}}</span><span><!-- @structr:content(text/javascript) -->${{
+}}</span><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd) --><span><!-- @structr:owner(Sven), @structr:grant(Jakob,arwd), @structr:content(text/javascript) -->${{
 
 	const current = $.get('current');
 	const bodyTexts = current.getBodyTexts();

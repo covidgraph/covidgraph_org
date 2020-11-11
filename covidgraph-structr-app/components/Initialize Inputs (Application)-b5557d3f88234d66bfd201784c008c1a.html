@@ -1,0 +1,86 @@
+<!-- @structr:private, @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><script type="text/javascript" data-structr-meta-name="Initialize Inputs (Application)"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/javascript) -->function initializeSpecialElements() {
+
+	initializeSelect2();
+	initializeDatepicker();
+	hookSidebarToggleTop();
+	hookSidebarToggleBottom();
+
+}
+
+function initializeSelect2() {
+
+	const selectElements = document.getElementsByClassName('select2-input');
+	for(let selectElement of selectElements) {
+	
+		let jQueryElement = $(selectElement)
+		jQueryElement.select2();
+		
+	}
+	
+}
+
+function initializeDatepicker() {
+
+	const inputElements = document.getElementsByClassName('datepicker');
+	for(let inputElement of inputElements) {
+	
+		let jQueryElement = $(inputElement);
+		jQueryElement.datepicker();
+	
+	}
+
+}
+
+function hookSidebarToggleBottom() {
+
+	const sidebarToggle = document.getElementById('sidebarToggle');
+	if(sidebarToggle) {
+	
+		sidebarToggle.addEventListener('click', function(event) {
+
+			event.preventDefault();
+
+			$('#page-top').toggleClass('sidebar-toggled');
+			$('#accordionSidebar').toggleClass('toggled');
+			$('.collapsableMenuItem').removeClass('show');
+
+			const visible = !$('#page-top')[0].classList.contains('sidebar-toggled');
+			if(visible) {
+				if('${page.category}' === 'components') {
+					$('#collapseTwo').addClass('show');
+				}
+				if('${page.category}' === 'inventory') {
+					$('#collapseUtilities').addClass('show');
+				}
+			}
+
+		});
+
+	}
+
+}
+
+function hookSidebarToggleTop() {
+
+	const sidebarToggleTopButton = document.getElementById('sidebarToggleTop');
+	sidebarToggleTopButton.addEventListener('click', function(event) {
+
+		const pageBody = document.getElementById('page-top');
+		if(pageBody) {
+			pageBody.classList.toggle('sidebar-toggled');
+		}
+
+		const sidebar = document.getElementById('accordionSidebar');
+		if(sidebar) {
+			sidebar.classList.toggle('toggled');
+		}
+
+	});
+	
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+
+	initializeSpecialElements();
+	
+});</script>
