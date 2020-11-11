@@ -1,0 +1,350 @@
+<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Landing Page Clone-47e63af2239941e2bbd36b9a7cd21335" data-structr-meta-name="Landing Page Clone">
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="News Section-64480da180cf43cb973c0316c9c86a43" data-structr-meta-name="News Section">
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<script src="/structr/js/frontend/frontend.js" type="module" defer="defer"></script>
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<div class="container" id="news-section">
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div class="row mb-4 mt-5">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="col-12 offset-0 col-lg-8 offset-lg-2">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<h2 class="text-center"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->News on CovidGraph</h2>
+				</div>
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Render Card-8db188996bf446eea7bd935cc25cabcd" data-structr-meta-name="Render Card" data-structr-meta-data-key="article" data-structr-meta-rest-query="LinkedInNewsArticle?page=${request.page!1}&amp;pageSize=8&amp;sort=position&amp;order=desc">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<div class="col-xl-3 col-lg-4 col-12 col-sm-6 mb-4">
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<div class="card news-card" id="${article}" data-target="article-modal" data-toggle="modal">
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<div class="position-relative"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img alt="Card image cap" class="card-img-top" src="${article.thumbnail.path}">
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Render Tags-31012778510f480d9d813b96b02f8222" data-structr-meta-name="Render Tags" data-structr-meta-data-key="tag" data-structr-meta-function-query="sort(article.tags, 'value')"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-primary position-absolute ${retrieve('position')}" data-structr-meta-name="NEW" data-structr-meta-show-conditions="equal(tag.value, 'new')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->NEW</span><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-warning position-absolute ${retrieve('position')}" data-structr-meta-name="TALK" data-structr-meta-show-conditions="equal(tag.value, 'talk')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->TALK</span><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-danger position-absolute ${retrieve('position')}" data-structr-meta-name="VIDEO" data-structr-meta-show-conditions="equal(tag.value, 'video')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->VIDEO</span><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-success position-absolute ${retrieve('position')}" data-structr-meta-name="INTERVIEW" data-structr-meta-show-conditions="equal(tag.value, 'interview')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->INTERVIEW</span>
+								</structr:template>
+							</div>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<div class="card-body" style="padding-top: -2rem;"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${article.title}
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<div class="row" data-structr-meta-hide-conditions="true">
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<div class="col-2" data-structr-meta-hide-conditions="true">
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<div class="custom-control custom-checkbox pl-1">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<label class="custom-control custom-checkbox mb-0">
+												<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+												<input class="custom-control-input" type="checkbox"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="custom-control-label"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --> </span>
+											</label>
+										</div>
+									</div>
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<div class="col-10">
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<p class="list-item-heading mb-4 pt-1"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${article.title}</p>
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<footer>
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<p class="text-muted text-small mb-0 font-weight-light"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${article.publicationDate}</p>
+										</footer>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</structr:template>
+			
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="col-12">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<nav class="mt-4 mb-3">
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<ul class="pagination justify-content-center mb-0" id="pagination-controls">
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Pagination Menu-7a964387a67c4bd495f0d215da034397" data-structr-meta-name="Pagination Menu">
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<li class="page-item">
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<button class="page-link first" id="first-page-button" data-page="${retrieve('firstPage')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="simple-icon-control-start"></i></button>
+								</li>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<li class="page-item" id="">
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<button class="page-link prev" disabled="${is(retrieve('isFirstPage'), 'disabled')}" data-structr-reload-target="#news-section" data-structr-target="page" data-structr-meta-event-mapping="{ &quot;click&quot;: &quot;previous-page&quot; }"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="simple-icon-arrow-left"></i></button>
+								</li>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<li class="page-item ${is(retrieve('isFirstPage'), 'active')}">
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<button class="page-link" data-page="${retrieve('pageOne')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${retrieve('pageOne')}</button>
+								</li>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<li class="page-item ${is(not(or(retrieve('isFirstPage'),retrieve('isLastPage'))), 'active')}">
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<button class="page-link" data-page="${retrieve('pageTwo')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${retrieve('pageTwo')}</button>
+								</li>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<li class="page-item ${is(retrieve('isLastPage'), 'active')}">
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<button class="page-link" data-page="${retrieve('pageThree')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${retrieve('pageThree')}</button>
+								</li>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<li class="page-item">
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<button class="page-link next" disabled="${is(retrieve('isLastPage'), 'disabled')}" data-structr-reload-target="#news-section" data-structr-target="page" data-structr-meta-event-mapping="{ &quot;click&quot;: &quot;next-page&quot; }"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="simple-icon-arrow-right"></i></button>
+								</li>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<li class="page-item">
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<button class="page-link last" id="last-page-button" data-page="${retrieve('lastPage')}"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="simple-icon-control-end"></i></button>
+								</li>
+							</structr:template>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<div class="modal fade" id="article-modal" role="dialog" tabindex="-1" aria-hidden="true" aria-labelledby="exampleModalCenterTitle"></div>
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<style><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/css) -->.card.news-card {
+
+	border-radius : 0.75rem;
+	
+	min-height : 380px;
+	max-height : 380px;
+	
+	cursor : pointer;
+	
+}
+
+.card-img-top {
+
+	padding-top : 5px;
+
+	object-fit : contain;
+
+	min-height : 150px;
+	max-height : 150px;
+	
+}
+
+.badge {
+
+	padding: 0.25rem;
+
+}
+
+.badge.badge-top-left   { left: -15px; top:  8px; }
+.badge.badge-top-left-2 { left: -15px; top: 32px; }
+.badge.badge-top-left-3 { left: -15px; top: 56px; }
+
+.landing-page .page-item .page-link {
+
+	line-height: 1;
+	
+}</style>
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<script type="text/javascript"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) -->async function loadPartial(url, domNode) {
+	const encodedUrl = encodeURI(url);
+	const page = await fetch(encodedUrl);
+	const html = await page.text();
+	domNode.innerHTML = html;
+}
+
+async function loadArticle(id) {
+
+	const articleModal   = document.getElementById('article-modal');
+	const articlePartial = '/linkedin-modal/' + id;
+
+	await loadPartial(articlePartial, articleModal);
+	
+	// hook close events
+	const closeButtons = document.getElementsByClassName('close-modal-button');
+	for(let closeButton of closeButtons) {
+
+		closeButton.addEventListener('click', function(event) {
+			$(articleModal).modal('hide');
+		});
+
+	}
+
+	$(articleModal).modal('show');
+	
+}
+
+function hookNewsCardListeners() {
+
+	$('body').on('click', 'div.news-card', function(event) {
+
+		const button = event.currentTarget;
+		const id = button.id;
+		loadArticle(id);
+
+	});
+
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+
+	hookNewsCardListeners();
+	
+});</script>
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<script type="text/javascript"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) -->const baseURI = '/structr/html/891e754a08cb44f2800790e1673c8bba';
+const reloadTargetId = 'news-section'
+
+async function loadPartial(uri, domNode) {
+	const encodedURI = encodeURI(uri);
+	const page = await fetch(encodedURI);
+	const html = await page.text();
+	domNode.innerHTML = html;
+}
+
+function hookPagerButtons() {
+
+	$('body').on('click', 'button.page-link', function(event) {
+
+		const button = event.currentTarget;
+		const page = button.dataset.page;
+		
+		const parameters = {
+			page : page
+		};
+		
+		const uri = baseURI + buildParameterString(parameters);
+		const reloadTarget = document.getElementById(reloadTargetId);
+
+		loadPartial(uri, reloadTarget);
+		
+	});
+
+}
+
+function buildParameterString(parameters) {
+
+	const parameterPairs = [];
+	for(let key in parameters) {
+		
+		let value = parameters[key];
+		let parameterPair = key + '=' + value;
+		parameterPairs.push(parameterPair);
+
+	}
+
+	const prefix = (parameterPairs.length) ? '?' : '';
+	const suffix = parameterPairs.join('&amp;');
+
+	const parameterString = prefix + suffix;
+	return parameterString;
+
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+
+	hookPagerButtons();
+	
+});</script>
+	</structr:template>
+
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Who Is This Project Aimed At?-d9199f2ae6114e5ca9e29370b39a4fa3" data-structr-meta-name="Who Is This Project Aimed At?">
+	</structr:template>
+
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Applications-86824ba6e2e141559437d6479e71faf0" data-structr-meta-name="Applications">
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<div class="section background">
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div class="container" id="applications">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="row">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center mb-4">
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<h2><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Applications</h2>
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<p class="section-text"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --> The CovidGraph project provides a growing number of applications to interact with the data stored in the Knowledge Graph. Please feel free to use these apps free of charge, no registration/sign-up needed. </p>
+					</div>
+				</div>
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="row screenshots">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<div class="col-12 mb-4">
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<ul class="nav nav-tabs justify-content-center mb-4" role="tablist">
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<li class="nav-item"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a class="nav-link active" href="#visual-graph-explorer" role="tab" aria-selected="true" data-toggle="tab">
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<p><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Visual Graph Explorer</p>
+								</a></li>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<li class="nav-item"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a class="nav-link" href="#neo4j-browser" role="tab" aria-selected="false" data-toggle="tab">
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<p><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Neo4j Browser</p>
+								</a></li><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><!--li class="nav-item">
+											<a class="nav-link" data-toggle="tab" href="#data-browser" role="tab">
+												<p>Text Browser</p>
+											</a>
+										</li-->
+						</ul>
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<div class="tab-content row">
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<div class="tab-pane fade justify-content-center active show" id="visual-graph-explorer" role="tabpanel">
+								<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<div class="row"><!-- @structr:public, @structr:owner(admin), @structr:grant(admin,arwd) --><a class="col-9" href="https://live.yworks.com/covidgraph" target="_blank"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img alt="app image" class="app-image" src="https://raw.githubusercontent.com/covidgraph/visual-graph-explorer/master/docs/screenshot.png"></a>
+									<!-- @structr:public, @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<div class="col-3">
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<p><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --> This application is provided by yWorks and allows you to explore the knowledge data in a visual way. </p>
+									</div>
+								</div>
+							</div>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<div class="tab-pane fade justify-content-center" id="neo4j-browser" role="tabpanel">
+								<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<div class="row"><!-- @structr:public, @structr:owner(admin), @structr:grant(admin,arwd) --><a class="col-9" href="https://db.covidgraph.org/browser/" target="_blank"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img alt="app image" class="app-image" src="/img/content-img/screenshot-neo4j-browser.jpg"></a>
+									<!-- @structr:public, @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<div class="col-3">
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<p><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --> The Neo4j browser is a user interface for querying the graph directly on database level by pattern matching via Cypher. It offers a basic visualization of the result graph as well as data export and API access. A public version is available at:
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<br>
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<br><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --> HTTPS
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<br><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="https://db.covidgraph.org" target="_blank"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->https://db.covidgraph.org</a>
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<br>
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<br><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><b><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->User:</b><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --> public
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<br><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><b><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Password:</b><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --> corona 
+										</p>
+									</div>
+								</div>
+							</div><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><!--div class="tab-pane fade justify-content-center" id="data-browser" role="tabpanel">
+											<a target="_blank" href="https://covidgraph.org/data-browser?type=papers&pageSize=1000">
+												<img alt="app image" class="app-image" src="/img/content-img/screenshot-databrowser.jpg">
+											</a>
+											<div class="mt-5">
+												<p>
+													Allows you to browse through papers and patents.
+												</p>
+											</div>
+										</div-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</structr:template>
+
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="What We Do-952b3d573fc64f09af6ebab7dd6faaf9" data-structr-meta-name="What We Do">
+	</structr:template>
+
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Who we are-e33549741001499bac6d59f8c3cef9ed" data-structr-meta-name="Who we are">
+	</structr:template>
+
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Datasets-37733b279eea4929bce40a14efde7560" data-structr-meta-name="Datasets">
+	</structr:template>
+
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Comment-0cb97afd7e3246f3854977eef8a30176" data-structr-meta-name="Comment">
+	</structr:template>
+
+</structr:template>

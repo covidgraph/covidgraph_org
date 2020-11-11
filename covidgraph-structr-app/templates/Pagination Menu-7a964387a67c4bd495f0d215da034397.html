@@ -1,0 +1,40 @@
+${{
+
+	const request = $.get('request');
+	
+	const numPages    = $.size($.find('LinkedInNewsArticle')) / 8;
+	const currentPage = $.empty(request['page']) ? 1 : $.int(request['page']);
+
+	const isFirstPage = (currentPage <= 1);
+	const isLastPage  = (numPages <= currentPage);
+
+	let pageOne   = currentPage - 1;
+	let pageTwo   = currentPage;
+	let pageThree = currentPage + 1;
+	
+	if(isFirstPage) {
+		pageOne++;
+		pageTwo++;
+		pageThree++;
+	}
+	
+	if(isLastPage) {
+		pageOne--;
+		pageTwo--;
+		pageThree--;
+	}
+	
+	$.store('firstPage', $.int(1));
+	$.store('lastPage', $.int(Math.ceil(numPages)));
+	
+	$.store('isFirstPage', isFirstPage);
+	$.store('isLastPage',  isLastPage);
+	
+	$.store('pageOne',   $.int(pageOne));
+	$.store('pageTwo',   $.int(pageTwo));
+	$.store('pageThree', $.int(pageThree));
+  
+	const children = $.get('children');
+	$.render(children);
+
+}}

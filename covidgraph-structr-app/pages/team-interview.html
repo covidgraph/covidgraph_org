@@ -1,18 +1,22 @@
-<!-- @structr:public, @structr:owner(admin), @structr:grant(Sven,arwd), @structr:content(text/html) --><structr:template src="Sub Page Template-03c69b87b4f8420186f9393f469c678d" data-structr-meta-name="Sub Page Template">
-	<!-- @structr:public-only, @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/html) --><structr:template src="Interview Section-516c166a317e484494f95610bfa45a48" data-structr-meta-name="Interview Section">
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/html) --><structr:template src="Project Member-1e26a4f87f9649cc8538bb91e642c848" data-structr-meta-name="Project Member" data-structr-meta-data-key="member" data-structr-meta-function-query="current.aProjectMember">
+<!-- @structr:owner(admin), @structr:content(text/html) --><structr:template src="Sub Page Template-03c69b87b4f8420186f9393f469c678d" data-structr-meta-name="Sub Page Template">
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+	<style><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/css) -->.subpage .card img {
+
+    min-width: 100%;
+	
+}</style>
+	<!-- @structr:content(text/html) --><structr:template src="Interview Section-516c166a317e484494f95610bfa45a48" data-structr-meta-name="Interview Section">
+		<!-- @structr:content(text/html) --><structr:template src="Project Member-1e26a4f87f9649cc8538bb91e642c848" data-structr-meta-name="Project Member" data-structr-meta-data-key="member" data-structr-meta-function-query="current.projectMember">
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div style="text-align:center;" data-structr-meta-data-key="interviewImage" data-structr-meta-function-query="current.interviewImages"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img src="${interviewImage.image.path}" style="margin-top: 2rem;"></div>
 		</structr:template>
 	
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<div class="col-lg-7 col-md-7 col-sm-7 p-0" id="interview" style="text-align:justify; margin-left: 1rem;">
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-			<p data-structr-meta-data-key="question" data-structr-meta-function-query="sort(current.questions, position)">
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-				<h4><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${
+		<div class="col-lg-7 col-md-7 col-sm-7 p-0" id="interview" style="text-align:justify; margin-left: 0rem; padding-left: 0rem;">
+			<p data-structr-meta-data-key="question" data-structr-meta-function-query="sort(current.questions, 'position')">
+				<h4><!-- @structr:content(text/javascript) -->${
 	question.text
 }</h4>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-				<p><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${question.answer.text}</p>
+				<p><!-- @structr:content(text/markdown) -->${question.answer.text}</p>
 			</p>
 		</div>
 	</structr:template>

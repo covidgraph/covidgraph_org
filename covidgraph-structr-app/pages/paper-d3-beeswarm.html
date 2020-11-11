@@ -1,18 +1,12 @@
 <!DOCTYPE html>
-<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><html>
-	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+<html>
 	<head>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<title><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${capitalize(page.name)}</title>
+		<title><!-- @structr:content(text/plain) -->${capitalize(page.name)}</title>
 	</head>
-	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 	<body>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<h2><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.name}</h2>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) --><structr:template src="Timeline-Chart-fbd54cb81655471caba5abaa872264c6" data-structr-meta-name="Timeline-Chart">
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<h2><!-- @structr:content(text/plain) -->${current.name}</h2>
+		<!-- @structr:content(text/javascript) --><structr:template src="Timeline-Chart-fbd54cb81655471caba5abaa872264c6" data-structr-meta-name="Timeline-Chart">
 			<script src="/applications/js/libs/d3.js" type="text/javascript"></script>
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 			<div>
 				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 				<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->const height	= 200;
@@ -113,7 +107,6 @@ svgPatent.append('g')
 				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 				<svg id="paper-chart" style="width: 40%"></svg>
 			</div>
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 			<div>
 				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 				<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->const height	= 200;
@@ -214,10 +207,8 @@ svgPatent.append('g')
 				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 				<svg id="patent-chart" style="width:40%"></svg>
 			</div>
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 			<div>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-				<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->const height	= 240;
+				<script type="module"><!-- @structr:content(module) -->const height	= 240;
 const width		= 700;
 const radius	= 3;
 const padding	= 1.5;

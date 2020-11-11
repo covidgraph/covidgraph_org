@@ -17,10 +17,10 @@
 				<!-- @structr:public, @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Render News Article-8fa193441c8c41d8b8082e9154cf7aba" data-structr-meta-name="Render News Article" data-structr-meta-show-conditions="and( 	or( 		empty(request.type), 		eq(request.type, 'articles') 	), 	eq(article.type, 'NewsArticle') )">
 				</structr:template>
 			
-				<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Render Video Article-3f8f50591f9b45b88e9238b9c23d9572" data-structr-meta-name="Render Video Article" data-structr-meta-show-conditions="and( 	or( 		empty(request.type), 		eq(request.type, 'videos') 	), 	eq(article.type, 'VideoArticle') )">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Render Video Article-429d6322895e40fd9f5c96ecf4b46be4" data-structr-meta-name="Render Video Article" data-structr-meta-show-conditions="and( 	or( 		empty(request.type), 		eq(request.type, 'videos') 	), 	eq(article.type, 'VideoArticle') )">
 				</structr:template>
 			
-				<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="LinkedIn News Article-812d6cfb6a5a4c17afda48c1bf12ca1f" data-structr-meta-name="LinkedIn News Article" data-structr-meta-show-conditions="and( 	or( 		empty(request.type), 		eq(request.type, 'linkedin') 	), 	eq(article.type, 'LinkedInNewsArticle') )">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="LinkedIn News Article-1919007aa1c6486190cafbb5275cc547" data-structr-meta-name="LinkedIn News Article" data-structr-meta-show-conditions="and( 	or( 		empty(request.type), 		eq(request.type, 'linkedin') 	), 	eq(article.type, 'LinkedInNewsArticle') )">
 				</structr:template>
 			
 			</structr:template>
@@ -29,21 +29,20 @@
 	</div>
 	<!-- @structr:private, @structr:owner(admin), @structr:grant(admin,arwd) -->
 	<style type="text/css"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/css) -->.iframe-container {
-
-	overflow : hidden;
-	position : relative;
-	padding-top: 100%;
-
+	overflow      : hidden;
+	position      : relative;
+	padding-top   : 2rem;
+	height        : 450px;
+	margin-bottom : 1.5rem
 }
 
 .iframe-container iframe {
-
-	border : 0px;
-	top    : 0px;
-	left   : 0px;
+	border   : none;
+	top      : 0px;
+	left     : 0px;
 	position : absolute;
-	width : 100%;
-	height: 100%;
+	width    : 100%;
+	height   : 100%;
 
 }</style>
 </structr:template>
