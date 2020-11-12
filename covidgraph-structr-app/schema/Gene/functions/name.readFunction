@@ -2,7 +2,11 @@
 
 	const self = $.this;
 	
+	$.log('Gene.name [', self.id, ']');
+	
 	const covidGraphProperties = self.getCovidGraphProperties();
+	
+	$.log('1');
 	
 	const name = covidGraphProperties['name'];
 	if(!$.empty(name) && name !== '-') {
@@ -17,7 +21,7 @@
 	const fullName = covidGraphProperties['Full_name_from_nomenclature_authority'];
 	if(!$.empty(fullName) && fullName !== '-') {
 		return fullName;
-	}	
+	}
 	
 	return 'unknown';
 

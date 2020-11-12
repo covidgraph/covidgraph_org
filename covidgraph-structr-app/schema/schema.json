@@ -7664,6 +7664,14 @@
           "returnType": "void",
           "source": "./Gene/methods/getGeneSymbols"
         },
+        "getInstances": {
+          "callSuper": false,
+          "comment": "./Gene/methods/getInstances.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./Gene/methods/getInstances"
+        },
         "getPapers": {
           "callSuper": false,
           "comment": "./Gene/methods/getPapers.comment",

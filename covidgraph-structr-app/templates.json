@@ -314,6 +314,13 @@
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
   },
+  "Store Pagination Parameters-daec111640984d238284ed2d5e8587bd": {
+    "contentType": "text/javascript",
+    "id": "daec111640984d238284ed2d5e8587bd",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "Store Query-43cb723faecc40f6b6aeeab47d0b60c5": {
     "contentType": "text/plain",
     "id": "43cb723faecc40f6b6aeeab47d0b60c5",
