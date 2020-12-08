@@ -1,0 +1,30 @@
+<!-- @structr:public, @structr:owner(admin), @structr:grant(admin,arwd) --><div class="col-lg-3 col-md-4 col-sm-6 p-0" data-structr-meta-name="Member Card New">
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+	<div class="card" style="height: auto;">
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<div class="card-body">
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div>
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="thumbnail"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img src="${if(not(empty(retrieve('member').roundImg)),retrieve('member').roundImg.path,retrieve('member').img.path)}"></div>
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<br>
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<h4 class="mb-10 font-weight-semibold"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --> ${retrieve('member').name} </h4>
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="mb-3 d-flex justify-content-around"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="https://github.com/${retrieve('member').gitHubUrl}" data-structr-meta-hide-conditions="empty(retrieve('member').gitHubUrl)"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img class="link-icon" src="/img/logos/link-logos/github-small.png"></a><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="https://www.linkedin.com/in/${retrieve('member').linkedInUrl}" data-structr-meta-hide-conditions="empty(retrieve('member').linkedInUrl)"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img class="link-icon" src="/img/logos/link-logos/linkedin-small.png"></a><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="https://matrix.to/#/@user:${retrieve('member').matrixId}" data-structr-meta-hide-conditions="empty(retrieve('member').matrixId)"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img class="link-icon" src="/img/logos/link-logos/element-small.svg"></a></div><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="${retrieve('member').websiteLink}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${retrieve('member').websiteLinkText}</a>
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<br><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="${retrieve('member').websiteLink2}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${retrieve('member').websiteLinkText2}</a>
+			</div>
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div>
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<p class="detail-text"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --> ${retrieve('member').bio} </p>
+			</div>
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div style="text-align:center;" data-structr-meta-data-key="interviewImage" data-structr-meta-function-query="current.interviewImages" data-structr-meta-show-conditions="or(equal(page.name, 'team-interview'),equal(page.name, 'team-interview-new'))"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img src="${interviewImage.image.path}" style="margin-top: 2rem;"></div>
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div data-structr-meta-hide-conditions="equal(page.name, 'team-interview')"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="/team-interview/${retrieve('member').interview}" data-structr-meta-hide-conditions="empty(retrieve('member').interview)"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->More about me...</a></div>
+		</div>
+	</div>
+</div>

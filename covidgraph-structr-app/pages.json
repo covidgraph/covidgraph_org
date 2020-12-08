@@ -387,6 +387,33 @@
     ],
     "hidden": false,
     "hideConditions": null,
+    "id": "39d709eb931c482eb5d345e7df67c680",
+    "owner": {
+      "name": "admin"
+    },
+    "pageCreatesRawData": false,
+    "path": null,
+    "position": 9,
+    "showConditions": null,
+    "showOnErrorCodes": null,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "landing-page-1": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "category": null,
+    "contentType": "text/html",
+    "dontCache": false,
+    "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "hidden": false,
+    "hideConditions": null,
     "id": "d6b22a68c3fc4593ac9cf761ed659553",
     "owner": {
       "name": "admin"
@@ -399,7 +426,7 @@
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
   },
-  "landing-page-new": {
+  "landing-page-2": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
     "category": null,
@@ -423,8 +450,8 @@
     "position": 10,
     "showConditions": null,
     "showOnErrorCodes": null,
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
   },
   "legal": {
     "basicAuthRealm": null,
@@ -448,33 +475,6 @@
     "pageCreatesRawData": false,
     "path": null,
     "position": 80,
-    "showConditions": null,
-    "showOnErrorCodes": null,
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
-  "linkedin-inline": {
-    "basicAuthRealm": null,
-    "cacheForSeconds": null,
-    "category": null,
-    "contentType": "text/html",
-    "dontCache": false,
-    "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "admin"
-      }
-    ],
-    "hidden": false,
-    "hideConditions": null,
-    "id": "39d709eb931c482eb5d345e7df67c680",
-    "owner": {
-      "name": "admin"
-    },
-    "pageCreatesRawData": false,
-    "path": null,
-    "position": null,
     "showConditions": null,
     "showOnErrorCodes": null,
     "visibleToAuthenticatedUsers": true,
@@ -549,7 +549,7 @@
     ],
     "hidden": false,
     "hideConditions": null,
-    "id": "f9527539ca7d4530be420b99f9b8a6b6",
+    "id": "59b42d9f398b4beca61a826744765290",
     "owner": {
       "name": "admin"
     },
@@ -561,10 +561,10 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "news-editor": {
+  "news-old": {
     "basicAuthRealm": null,
     "cacheForSeconds": null,
-    "category": "administration",
+    "category": null,
     "contentType": "text/html",
     "dontCache": false,
     "enableBasicAuth": false,
@@ -576,17 +576,17 @@
     ],
     "hidden": false,
     "hideConditions": null,
-    "id": "6902e87fbd4e4a21b65507eff32a43f4",
+    "id": "f9527539ca7d4530be420b99f9b8a6b6",
     "owner": {
       "name": "admin"
     },
     "pageCreatesRawData": false,
     "path": null,
-    "position": null,
+    "position": 70,
     "showConditions": null,
     "showOnErrorCodes": null,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
   },
   "not-found": {
     "basicAuthRealm": null,
@@ -986,7 +986,7 @@
     ],
     "hidden": false,
     "hideConditions": null,
-    "id": "069ccaf0ccc44278ba67d51b08f97bc4",
+    "id": "8302680309eb46a0ad4226d32e68c0e0",
     "owner": {
       "name": "admin"
     },
@@ -1005,6 +1005,31 @@
     "contentType": "text/html",
     "dontCache": false,
     "enableBasicAuth": false,
+    "grantees": [
+      {
+        "allowed": "accessControl,read,write,delete",
+        "name": "admin"
+      }
+    ],
+    "hidden": false,
+    "hideConditions": null,
+    "id": "7e7fd75405d84c209bf97c97aa3940af",
+    "owner": null,
+    "pageCreatesRawData": false,
+    "path": null,
+    "position": null,
+    "showConditions": null,
+    "showOnErrorCodes": null,
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "team-interview-old": {
+    "basicAuthRealm": null,
+    "cacheForSeconds": null,
+    "category": null,
+    "contentType": "text/html",
+    "dontCache": false,
+    "enableBasicAuth": false,
     "grantees": [],
     "hidden": false,
     "hideConditions": null,
@@ -1017,33 +1042,6 @@
     "showOnErrorCodes": null,
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
-  },
-  "team_": {
-    "basicAuthRealm": null,
-    "cacheForSeconds": null,
-    "category": null,
-    "contentType": "text/html",
-    "dontCache": false,
-    "enableBasicAuth": false,
-    "grantees": [
-      {
-        "allowed": "accessControl,read,write,delete",
-        "name": "admin"
-      }
-    ],
-    "hidden": false,
-    "hideConditions": null,
-    "id": "274eb8742e9741f98902cb21061e20e4",
-    "owner": {
-      "name": "admin"
-    },
-    "pageCreatesRawData": false,
-    "path": null,
-    "position": null,
-    "showConditions": null,
-    "showOnErrorCodes": null,
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
   },
   "tissues": {
     "basicAuthRealm": null,

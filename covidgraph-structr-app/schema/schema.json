@@ -8639,6 +8639,13 @@
           "$ref": "#/definitions/VideoFile",
           "type": "object"
         },
+        "projectMembers": {
+          "$link": "#/definitions/ProjectMemberPROJECTMEMBER_HAS_IMAGEImage",
+          "items": {
+            "$ref": "#/definitions/ProjectMember"
+          },
+          "type": "array"
+        },
         "thumbnails": {
           "$link": "#/definitions/ImageTHUMBNAILImage",
           "items": {
@@ -11505,6 +11512,16 @@
       "isBuiltinType": false,
       "isInterface": false,
       "properties": {
+        "articleType": {
+          "default": "",
+          "enum": [
+            "ARTICLE",
+            "LINKEDIN",
+            "VIDEO"
+          ],
+          "indexed": true,
+          "type": "string"
+        },
         "authors": {
           "$link": "#/definitions/NewsArticleAUTHORProjectMember",
           "items": {
@@ -11518,6 +11535,11 @@
         "introText": {
           "indexed": true,
           "type": "string"
+        },
+        "isLongArticle": {
+          "default": "",
+          "indexed": true,
+          "type": "boolean"
         },
         "link2Desc": {
           "type": "string"
@@ -11571,8 +11593,10 @@
       "viewOrder": {},
       "views": {
         "custom": [
+          "articleType",
           "imageURL",
           "introText",
+          "isLongArticle",
           "link2Desc",
           "link2Text",
           "link2URL",
@@ -15469,10 +15493,28 @@
           "indexed": true,
           "type": "string"
         },
+        "gitHubUrl": {
+          "default": "",
+          "format": "",
+          "indexed": true,
+          "type": "string"
+        },
         "interview": {
           "$link": "#/definitions/ProjectMemberPROJECTMEMBER_HAS_INTERVIEWInterview",
           "$ref": "#/definitions/Interview",
           "type": "object"
+        },
+        "linkedInUrl": {
+          "default": "",
+          "format": "",
+          "indexed": true,
+          "type": "string"
+        },
+        "matrixId": {
+          "default": "",
+          "format": "",
+          "indexed": true,
+          "type": "string"
         },
         "newsArticleAuthors": {
           "$link": "#/definitions/NewsArticleAUTHORProjectMember",
@@ -15489,6 +15531,11 @@
         "positionInOrderJoined": {
           "indexed": true,
           "type": "integer"
+        },
+        "roundImg": {
+          "$link": "#/definitions/ProjectMemberPROJECTMEMBER_HAS_IMAGEImage",
+          "$ref": "#/definitions/Image",
+          "type": "object"
         },
         "websiteLink": {
           "type": "string"
@@ -15512,6 +15559,9 @@
       "views": {
         "custom": [
           "bio",
+          "gitHubUrl",
+          "linkedInUrl",
+          "matrixId",
           "positionInContribution",
           "positionInOrderJoined",
           "websiteLink",
@@ -15520,6 +15570,17 @@
           "websiteLinkText2"
         ]
       }
+    },
+    "ProjectMemberPROJECTMEMBER_HAS_IMAGEImage": {
+      "$source": "#/definitions/ProjectMember",
+      "$target": "#/definitions/Image",
+      "cardinality": "ManyToOne",
+      "isAbstract": false,
+      "isInterface": false,
+      "rel": "PROJECTMEMBER_HAS_IMAGE",
+      "sourceName": "projectMembers",
+      "targetName": "roundImg",
+      "type": "object"
     },
     "ProjectMemberPROJECTMEMBER_HAS_INTERVIEWInterview": {
       "$source": "#/definitions/ProjectMember",

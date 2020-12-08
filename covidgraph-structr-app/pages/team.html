@@ -1,5 +1,66 @@
 <!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Sub Page Template-03c69b87b4f8420186f9393f469c678d" data-structr-meta-name="Sub Page Template">
-	<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Team Section-c3bb7893c59741c094cae337a0089317" data-structr-meta-name="Team Section">
-	</structr:template>
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+	<div class="section">
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<div class="container" id="who-we-are">
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div class="row">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<h2><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Who we are</h2>
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<p><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --> We are a diverse team of scientists, developers and data people from academia and industry. </p>
+				</div>
+			</div>
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div class="row">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Render Project Members-012a6957b68a4f9b9b190d9180bcdd17" data-structr-meta-name="Render Project Members" data-structr-meta-data-key="member" data-structr-meta-function-query="find('ProjectMember', 'visibleToPublicUsers', true, sort('positionInContribution'))">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<structr:component src="Member Card New-f1cf7538e1394d00ab7bf2fcd223706a" data-structr-meta-shared-component-configuration="store('member', member)" data-structr-meta-name="Member Card New">
+					</structr:component>
+				</structr:template>
+			</div>
+		</div>
+	</div>
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+	<style><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/css) -->.subpage .card img.link-icon {
+	padding: 0;
+	width: 2rem;
+}
 
+.thumbnail {
+
+	/* place image in center */
+	display      : block;
+	margin-left  : auto;
+	margin-right : auto;
+	
+	/* crop image to fixes square */
+	position : relative;
+	width    : 200px;
+	height   : 200px;
+	overflow : hidden;
+
+}
+.thumbnail img {
+
+	
+	position : absolute;
+	left     : 50%;
+	top      : 50%;
+	height   : 100%;
+	width    : auto;
+		-webkit-transform : translate(-50%,-50%);
+		    -ms-transform : translate(-50%,-50%);
+                transform : translate(-50%,-50%);
+	
+	/* make image round*/
+	border-radius : 50%;
+
+}
+.thumbnail img.portrait {
+  width: 100%;
+  height: auto;
+}</style>
 </structr:template>

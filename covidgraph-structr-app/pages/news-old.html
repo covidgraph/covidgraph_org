@@ -1,0 +1,48 @@
+<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Sub Page Template-03c69b87b4f8420186f9393f469c678d" data-structr-meta-name="Sub Page Template">
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+	<div class="section mb-0">
+		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+		<div class="container" id="data">
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+			<div class="row mb-5">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<h2><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain), @structr:show(empty(request.type)) -->All News<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain), @structr:show(eq(request.type, 'articles')) -->News Articles<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain), @structr:show(eq(request.type, 'videos')) -->Videos<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain), @structr:show(eq(request.type, 'linkedin')) -->LinkedIn</h2>
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<p><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --> Here we publish information about the current development of the project. </p>
+				</div>
+			</div>
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Render Articles-3e3fb3f0bb2b4686a0eab1817a92525b" data-structr-meta-name="Render Articles" data-structr-meta-data-key="article" data-structr-meta-function-query="sort(find('NewsArticle'), 'publicationDate')">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Render News Article-377d83eddc8b469fb06cba275acf5c04" data-structr-meta-name="Render News Article" data-structr-meta-show-conditions="and( 	or( 		empty(request.type), 		eq(request.type, 'articles') 	), 	eq(article.type, 'NewsArticle') )">
+				</structr:template>
+			
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Render Video Article-429d6322895e40fd9f5c96ecf4b46be4" data-structr-meta-name="Render Video Article" data-structr-meta-show-conditions="and( 	or( 		empty(request.type), 		eq(request.type, 'videos') 	), 	eq(article.type, 'VideoArticle') )">
+				</structr:template>
+			
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="LinkedIn News Article-1919007aa1c6486190cafbb5275cc547" data-structr-meta-name="LinkedIn News Article" data-structr-meta-show-conditions="and( 	or( 		empty(request.type), 		eq(request.type, 'linkedin') 	), 	eq(article.type, 'LinkedInNewsArticle') )" data-structr-meta-hide-conditions="true">
+				</structr:template>
+			
+			</structr:template>
+		
+		</div>
+	</div>
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+	<style type="text/css"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/css) -->.iframe-container {
+	overflow      : hidden;
+	position      : relative;
+	padding-top   : 2rem;
+	height        : 450px;
+	margin-bottom : 1.5rem
+}
+
+.iframe-container iframe {
+	border   : none;
+	top      : 0px;
+	left     : 0px;
+	position : absolute;
+	width    : 100%;
+	height   : 100%;
+
+}</style>
+</structr:template>

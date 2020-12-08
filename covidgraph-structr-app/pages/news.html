@@ -8,41 +8,435 @@
 				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 				<div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center">
 					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-					<h2><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain), @structr:show(empty(request.type)) -->All News<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain), @structr:show(eq(request.type, 'articles')) -->News Articles<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain), @structr:show(eq(request.type, 'videos')) -->Videos<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain), @structr:show(eq(request.type, 'linkedin')) -->LinkedIn</h2>
+					<h2><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->News on CovidGraph</h2>
 					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 					<p><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --> Here we publish information about the current development of the project. </p>
 				</div>
 			</div>
-			<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Render Articles-3e3fb3f0bb2b4686a0eab1817a92525b" data-structr-meta-name="Render Articles" data-structr-meta-data-key="article" data-structr-meta-function-query="sort(find('NewsArticle'), 'publicationDate')">
-				<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Render News Article-377d83eddc8b469fb06cba275acf5c04" data-structr-meta-name="Render News Article" data-structr-meta-show-conditions="and( 	or( 		empty(request.type), 		eq(request.type, 'articles') 	), 	eq(article.type, 'NewsArticle') )">
-				</structr:template>
-			
-				<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Render Video Article-429d6322895e40fd9f5c96ecf4b46be4" data-structr-meta-name="Render Video Article" data-structr-meta-show-conditions="and( 	or( 		empty(request.type), 		eq(request.type, 'videos') 	), 	eq(article.type, 'VideoArticle') )">
-				</structr:template>
-			
-				<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="LinkedIn News Article-1919007aa1c6486190cafbb5275cc547" data-structr-meta-name="LinkedIn News Article" data-structr-meta-show-conditions="and( 	or( 		empty(request.type), 		eq(request.type, 'linkedin') 	), 	eq(article.type, 'LinkedInNewsArticle') )">
-				</structr:template>
-			
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Render LinkedIn Articles-2c45bf246c7b4e198288d78d319e04a5" data-structr-meta-name="Render LinkedIn Articles">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="container" id="news-section">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<div class="row mb-4 mt-5">
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<div class="col-12 offset-0 col-lg-8 offset-lg-2">
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<h2 class="text-center"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->LinkedIn</h2>
+						</div>
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Render Card-1009978b67874f8ab4a2af715dfb02d3" data-structr-meta-name="Render Card" data-structr-meta-data-key="article" data-structr-meta-rest-query="LinkedInNewsArticle?page=${request.page!1}&amp;pageSize=8&amp;sort=position&amp;order=desc">
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<div class="col-xl-3 col-lg-4 col-12 col-sm-6 mb-4">
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<div class="card news-card" id="${article}" data-target="article-modal" data-toggle="modal">
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<div class="position-relative"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img alt="Card image cap" class="card-img-top" src="${article.thumbnail.path}">
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Render Tags-d24dee5e1b4d407f915436152f4a08ae" data-structr-meta-name="Render Tags" data-structr-meta-data-key="tag" data-structr-meta-function-query="sort(article.tags, 'value')"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-primary position-absolute ${retrieve('position')}" data-structr-meta-name="NEW" data-structr-meta-show-conditions="equal(tag.value, 'new')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->NEW</span><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-warning position-absolute ${retrieve('position')}" data-structr-meta-name="TALK" data-structr-meta-show-conditions="equal(tag.value, 'talk')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->TALK</span><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-danger position-absolute ${retrieve('position')}" data-structr-meta-name="VIDEO" data-structr-meta-show-conditions="equal(tag.value, 'video')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->VIDEO</span><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-success position-absolute ${retrieve('position')}" data-structr-meta-name="INTERVIEW" data-structr-meta-show-conditions="equal(tag.value, 'interview')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->INTERVIEW</span>
+										</structr:template>
+									</div>
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<div class="card-body" style="padding-top: -2rem;"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/markdown) -->${article.title}
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<div class="row">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<div class="col-2" data-structr-meta-hide-conditions="true">
+												<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+												<div class="custom-control custom-checkbox pl-1">
+													<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+													<label class="custom-control custom-checkbox mb-0">
+														<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+														<input class="custom-control-input" type="checkbox"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="custom-control-label"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) --> </span>
+													</label>
+												</div>
+											</div>
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<div class="col-10">
+												<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+												<p class="list-item-heading mb-4 pt-1" data-structr-meta-hide-conditions="true"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${article.title}</p>
+												<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+												<footer>
+													<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+													<p class="text-muted text-small mb-0 font-weight-light"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${date_format(article.publicationDate, 'MMMM dd, yyyy')}</p>
+												</footer>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</structr:template>
+					
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<div class="col-12">
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<nav class="mt-4 mb-3">
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<ul class="pagination justify-content-center mb-0" id="pagination-controls">
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Pagination Menu-bd3dff39cc044b9ea2b0277c33bd29f5" data-structr-meta-name="Pagination Menu">
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<li class="page-item">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<button class="page-link first" id="first-page-button" data-page="${retrieve('firstPage')}" data-reload-target="news-section"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="simple-icon-control-start"></i></button>
+										</li>
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<li class="page-item" id="">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<button class="page-link prev" disabled="${is(retrieve('isFirstPage'), 'disabled')}" data-reload-target="news-section" data-structr-reload-target="#news-section" data-structr-target="page" data-structr-meta-event-mapping="{ &quot;click&quot;: &quot;previous-page&quot; }"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="simple-icon-arrow-left"></i></button>
+										</li>
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<li class="page-item ${is(retrieve('isFirstPage'), 'active')}">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<button class="page-link" data-page="${retrieve('pageOne')}" data-reload-target="news-section"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${retrieve('pageOne')}</button>
+										</li>
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<li class="page-item ${is(not(or(retrieve('isFirstPage'),retrieve('isLastPage'))), 'active')}">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<button class="page-link" data-page="${retrieve('pageTwo')}" data-reload-target="news-section"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${retrieve('pageTwo')}</button>
+										</li>
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<li class="page-item ${is(retrieve('isLastPage'), 'active')}">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<button class="page-link" data-page="${retrieve('pageThree')}" data-reload-target="news-section"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${retrieve('pageThree')}</button>
+										</li>
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<li class="page-item">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<button class="page-link next" disabled="${is(retrieve('isLastPage'), 'disabled')}" data-reload-target="news-section" data-structr-reload-target="#news-section" data-structr-target="page" data-structr-meta-event-mapping="{ &quot;click&quot;: &quot;next-page&quot; }"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="simple-icon-arrow-right"></i></button>
+										</li>
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<li class="page-item">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<button class="page-link last" id="last-page-button" data-page="${retrieve('lastPage')}" data-reload-target="news-section"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="simple-icon-control-end"></i></button>
+										</li>
+									</structr:template>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="modal fade" id="article-modal" role="dialog" tabindex="-1" aria-hidden="true" aria-labelledby="exampleModalCenterTitle"></div>
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<script type="text/javascript"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) -->async function loadPartial(url, domNode) {
+	const encodedUrl = encodeURI(url);
+	const page = await fetch(encodedUrl);
+	const html = await page.text();
+	domNode.innerHTML = html;
+}
+
+async function loadArticle(id) {
+
+	const articleModal   = document.getElementById('article-modal');
+	const articlePartial = '/linkedin-modal/' + id;
+
+	await loadPartial(articlePartial, articleModal);
+	
+	// hook close events
+	const closeButtons = document.getElementsByClassName('close-modal-button');
+	for(let closeButton of closeButtons) {
+
+		closeButton.addEventListener('click', function(event) {
+			$(articleModal).modal('hide');
+		});
+
+	}
+
+	$(articleModal).modal('show');
+	
+}
+
+function hookNewsCardListeners() {
+
+	$('body').on('click', 'div.news-card', function(event) {
+
+		const button = event.currentTarget;
+		const id = button.id;
+		loadArticle(id);
+
+	});
+
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+
+	hookNewsCardListeners();
+	
+});</script>
+			</structr:template>
+		
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Render Video Articles-9bda2677fe494b52ba83422dad3f65d6" data-structr-meta-name="Render Video Articles">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="container" id="videos-section">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<div class="row mb-4 mt-5">
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<div class="col-12 offset-0 col-lg-8 offset-lg-2">
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<h2 class="text-center"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->YouTube</h2>
+						</div>
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Render Card-f81fabe73a7545b08db50d9737627990" data-structr-meta-name="Render Card" data-structr-meta-data-key="article" data-structr-meta-rest-query="VideoArticle?page=${request.page!1}&amp;pageSize=1&amp;sort=publicationDate&amp;order=desc">
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<div class="row pt-5" id="${clean(article.name)}">
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<div class="col-12 col-md-6 col-lg-6 mb-3"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><small><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${date_format(article.publicationDate, 'MMMM dd, YYYY')}</small>
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<h3><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${article.title}</h3>
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<p class="intro-text"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${article.introText}</p>
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<div class="article-text"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${article.text}</div>
+								</div>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<div class="col-12 col-md-6 col-lg-6" style="padding: 2rem 0 0 3rem">
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+									<div class="embed-container">
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<iframe allowfullscreen="" height="315" src="${article.linkURL}" width="560"></iframe>
+									</div>
+								</div>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<div class="col-12 mb-5"></div>
+							</div>
+						</structr:template>
+					
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<div class="col-12">
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<nav class="mt-4 mb-3">
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<ul class="pagination justify-content-center mb-0" id="pagination-controls">
+									<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Pagination Menu-b5f4b969d18a417e83f5e0a8a45ea96f" data-structr-meta-name="Pagination Menu">
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<li class="page-item">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<button class="page-link first" id="first-page-button" data-page="${retrieve('firstPage')}" data-reload-target="videos-section"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="simple-icon-control-start"></i></button>
+										</li>
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<li class="page-item" id="">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<button class="page-link prev" disabled="${is(retrieve('isFirstPage'), 'disabled')}" data-reload-target="videos-section" data-structr-reload-target="#videos-section" data-structr-target="page" data-structr-meta-event-mapping="{ &quot;click&quot;: &quot;previous-page&quot; }"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="simple-icon-arrow-left"></i></button>
+										</li>
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<li class="page-item ${is(retrieve('isFirstPage'), 'active')}">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<button class="page-link" data-page="${retrieve('pageOne')}" data-reload-target="videos-section"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${retrieve('pageOne')}</button>
+										</li>
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<li class="page-item ${is(not(or(retrieve('isFirstPage'),retrieve('isLastPage'))), 'active')}">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<button class="page-link" data-page="${retrieve('pageTwo')}" data-reload-target="videos-section"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${retrieve('pageTwo')}</button>
+										</li>
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<li class="page-item ${is(retrieve('isLastPage'), 'active')}">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<button class="page-link" data-page="${retrieve('pageThree')}" data-reload-target="videos-section"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${retrieve('pageThree')}</button>
+										</li>
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<li class="page-item">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<button class="page-link next" disabled="${is(retrieve('isLastPage'), 'disabled')}" data-reload-target="videos-section" data-structr-reload-target="#videos-section" data-structr-target="page" data-structr-meta-event-mapping="{ &quot;click&quot;: &quot;next-page&quot; }"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="simple-icon-arrow-right"></i></button>
+										</li>
+										<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+										<li class="page-item">
+											<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+											<button class="page-link last" id="last-page-button" data-page="${retrieve('lastPage')}" data-reload-target="videos-section"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><i class="simple-icon-control-end"></i></button>
+										</li>
+									</structr:template>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="modal fade" id="article-modal" role="dialog" tabindex="-1" aria-hidden="true" aria-labelledby="exampleModalCenterTitle"></div>
+			</structr:template>
+		
+			<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Render News Articles-095cdc6a60924f4382bb17951f616b54" data-structr-meta-name="Render News Articles">
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<div class="container" id="articles-section">
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+					<div class="row mb-4 mt-5">
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<div class="col-12 offset-0 col-lg-8 offset-lg-2">
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<h2 class="text-center"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->Articles</h2>
+						</div>
+					</div>
+					<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Render Article-29d3b873da14415fb780350450f37099" data-structr-meta-name="Render Article" data-structr-meta-data-key="article" data-structr-meta-function-query="sort(find('NewsArticle', 'articleType', 'ARTICLE'), 'publicationDate', true)">
+						<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+						<div class="row pt-5" id="${clean(article.name)}">
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<div class="col-12 col-md-6 col-lg-6 mb-3"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><small><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${date_format(article.publicationDate, 'MMMM dd, YYYY')}</small>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<h3><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${article.title}</h3>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<p class="intro-text"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${article.introText}</p>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<div class="article-text" id="${article}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) -->${{
+
+	const article = $.get('article');
+	const text = article.text;
+
+	if(!article.isLongArticle) {
+		return text;
+	}
+
+	const shortText = text.slice(0, 1000) + '...';
+	$.print(shortText);
+
+	$.print('&lt;br&gt;');
+	
+	$.print("&lt;button class='btn btn-primary read-more' data-article-id='" + article.id + "'&gt;Read More&lt;/button&gt;");
+
+}}</div>
+							</div>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<div class="col-12 col-md-6 col-lg-6" style="padding: 2rem 0 0 3rem"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a class="btn btn-secondary btn-xl" href="${article.link2URL}" target="_top"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${article.link2Text}</a>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<br><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><small><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${article.link2Desc}</small>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<br>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<br><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="${article.linkURL}"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img class="img-fluid border-radius depth-2 mb-3 semi-rounded" src="${article.imageURL}"></a>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+								<br><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><a href="${article.linkURL}"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->${article.linkText}</a>
+							</div>
+							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+							<div class="col-12 mb-5"></div>
+						</div>
+					</structr:template>
+				
+				</div>
+				<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+				<script type="text/javascript"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) -->async function loadText(uri, domNode) {
+	const encodedURI   = encodeURI(uri);
+	const response     = await fetch(encodedURI);
+	const responseText = await response.text();
+	const responseJson = JSON.parse(responseText);
+	const result       = responseJson['result'][0];
+	const text         = result.text;
+	domNode.innerHTML  = text;
+}
+
+function hookReadMoreButtons() {
+
+	$('body').on('click', 'button.read-more', function(event) {
+
+		const button       = event.currentTarget;
+		const articleId    = button.dataset['articleId'];
+		const reloadTarget   = document.getElementById(articleId);
+		
+		const uri = '/structr/rest/NewsArticle/' + articleId + '/text';
+		loadText(uri, reloadTarget);
+		
+	});
+
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+
+	hookReadMoreButtons();
+	
+});</script>
 			</structr:template>
 		
 		</div>
 	</div>
 	<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-	<style type="text/css"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/css) -->.iframe-container {
-	overflow      : hidden;
-	position      : relative;
-	padding-top   : 2rem;
-	height        : 450px;
-	margin-bottom : 1.5rem
+	<style><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/css) -->.card.news-card {
+
+	border-radius : 0.75rem;
+	
+	min-height : 380px;
+	max-height : 400px;
+	
+	cursor : pointer;
+	
 }
 
-.iframe-container iframe {
-	border   : none;
-	top      : 0px;
-	left     : 0px;
-	position : absolute;
-	width    : 100%;
-	height   : 100%;
+.card-img-top {
 
+	padding-top : 5px;
+
+	object-fit : contain;
+
+	min-height : 150px;
+	max-height : 150px;
+	
+}
+
+.badge {
+
+	padding: 0.25rem;
+
+}
+
+.badge.badge-top-left   { left: -15px; top:  8px; }
+.badge.badge-top-left-2 { left: -15px; top: 32px; }
+.badge.badge-top-left-3 { left: -15px; top: 56px; }
+
+.landing-page .page-item .page-link {
+
+	line-height: 1;
+	
 }</style>
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+	<script src="/structr/js/frontend/frontend.js" type="module" defer="defer"></script>
+	<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
+	<script type="text/javascript"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) -->const baseURI = '/structr/html/';
+
+async function loadPartial(uri, domNode) {
+	const encodedURI = encodeURI(uri);
+	const page = await fetch(encodedURI);
+	const html = await page.text();
+	domNode.innerHTML = html;
+}
+
+function hookPagerButtons() {
+
+	$('body').on('click', 'button.page-link', function(event) {
+
+		const button         = event.currentTarget;
+		const page           = button.dataset.page;
+		const reloadTargetId = button.dataset.reloadTarget;
+		const reloadTarget   = document.getElementById(reloadTargetId);
+		
+		if(reloadTarget) {
+			
+			const parameters = {
+				page : page
+			};
+			
+			const reloadTargetStructrId = reloadTarget.dataset.structrId;
+			const uri = baseURI + reloadTargetStructrId + buildParameterString(parameters);
+			loadPartial(uri, reloadTarget);
+
+		}
+		
+	});
+
+}
+
+function buildParameterString(parameters) {
+
+	const parameterPairs = [];
+	for(let key in parameters) {
+		
+		let value = parameters[key];
+		let parameterPair = key + '=' + value;
+		parameterPairs.push(parameterPair);
+
+	}
+
+	const prefix = (parameterPairs.length) ? '?' : '';
+	const suffix = parameterPairs.join('&amp;');
+
+	const parameterString = prefix + suffix;
+	return parameterString;
+
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+
+	hookPagerButtons();
+	
+});</script>
 </structr:template>
