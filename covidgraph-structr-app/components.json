@@ -6,6 +6,12 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "Initialize Inputs (Application)-b5557d3f88234d66bfd201784c008c1a": {
+    "contentType": null,
+    "id": "b5557d3f88234d66bfd201784c008c1a",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "Landing Page Template-c95c746c496043b6afd6ee04930edeed": {
     "contentType": "text/html",
     "id": "c95c746c496043b6afd6ee04930edeed",
@@ -26,7 +32,14 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d": {
+  "Main Page Template (Application)-2d7cd886fba4475695d433564536f055": {
+    "contentType": "text/html",
+    "id": "2d7cd886fba4475695d433564536f055",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "Main Page Template (Application_)-c107a6f69ed04c89af4523683efeb58d": {
     "contentType": "text/html",
     "id": "c107a6f69ed04c89af4523683efeb58d",
     "shared": "true",
@@ -88,16 +101,34 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "Navigation Left (Application)-2cd52bf19ccd4788bfabf908b21d2588": {
+  "Navigation Bottom (Application)-976ac87278f1463ba346f3d5adb22c5c": {
     "contentType": null,
-    "id": "2cd52bf19ccd4788bfabf908b21d2588",
+    "id": "976ac87278f1463ba346f3d5adb22c5c",
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
   },
-  "Navigation Top (Application)-0dbda4548e354d22a45538869aa00b8f": {
+  "Navigation Left (Application)-6affe1798fa74ba4b02a28ae5a154ef9": {
+    "contentType": null,
+    "id": "6affe1798fa74ba4b02a28ae5a154ef9",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "Navigation Left (Application_)-2cd52bf19ccd4788bfabf908b21d2588": {
+    "contentType": null,
+    "id": "2cd52bf19ccd4788bfabf908b21d2588",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": false
+  },
+  "Navigation Top (Application)-cd2b62eff1c1491b944846219929a8f5": {
+    "contentType": null,
+    "id": "cd2b62eff1c1491b944846219929a8f5",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "Navigation Top (Application_)-0dbda4548e354d22a45538869aa00b8f": {
     "contentType": null,
     "id": "0dbda4548e354d22a45538869aa00b8f",
-    "visibleToAuthenticatedUsers": false,
+    "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": false
   },
   "Overview Section-82c8764825c54af8b9ff3e3cb1810e8a": {

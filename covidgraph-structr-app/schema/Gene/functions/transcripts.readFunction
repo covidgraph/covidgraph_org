@@ -1,0 +1,30 @@
+{
+
+	const self = $.this;
+
+	const query = 
+		'MATCH (gene:Gene)-[:CODES]->(transcript:Transcript) ' + 
+		'WHERE ID(gene) = ' + self.covidGraphId + ' ' +
+		'RETURN ID(transcript) AS id';
+
+	$.log('Transcripts: ', query);
+	
+	const neoConnector = $.call('getCovidGraphConnector');
+	
+	const transcriptIds = neoConnector.query({
+		query : query
+	});
+	
+	const transcripts = transcriptIds.map(transcriptId => $.get_or_create('Transcript', {
+		covidGraphId : transcriptId.id
+	}));
+	
+	transcripts.sort(function(a, b) {
+		if(a.name < b.name) return -1;
+		if(b.name < a.name) return 1;
+		return 0;
+	});
+	
+	return transcripts;
+
+}

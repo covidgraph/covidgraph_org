@@ -1,7 +1,6 @@
-<!-- @structr:owner(admin), @structr:content(text/html) --><structr:template src="Main Page Template (Application)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application)">
-	<!-- @structr:private -->
-	<div>
-		<script type="module"><!-- @structr:content(module) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
+<!-- @structr:owner(admin), @structr:content(text/html) --><structr:template src="Main Page Template (Application_)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application_)">
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(module) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
 
 const persistence = new Persistence();
 const current = '${current}';
@@ -21,27 +20,29 @@ async function createRecommendationView()
 	
 	const node = await persistence.createNode(object);
 	
-	let uuidRV = node.id;	
+	let uuidRV = node.id;
+		
+	const endpoint	= await fetch('/endpoints/papersearch?recommendationView='+uuidRV);
+	console.log(endpoint);
 	
-	
-	window.location.href = '/related-papers-graph/'+uuidRV;
+	window.location.href = '/related-paper/'+uuidRV;
 	
 }</script>
-		<h1><a href="${current.url}"><!-- @structr:content(text/plain) -->${current.name}</a></h1>
-		<h5><!-- @structr:content(text/plain) -->${current.publicationDate}<!-- @structr:content(text/javascript) -->${{
-
-	const current = $.get('current');
-	const authors = current.getAuthors();
-
-	let list = authors.map(author=&gt;author.first + ' ' + author.last);
-	
-	let printlist = list.join(', ');
-	
-	return printlist;
-
-}}</h5>
-		<button id="getRelatedPapers"><!-- @structr:content(text/plain) -->Find related Papers</button>
-		<section><span><!-- @structr:content(text/javascript) -->${{
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div class="row">
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<h1 class="col-9"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.name}<!-- @structr:private, @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) --> (${current.covidGraphId})</h1>
+	</div>
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div class="row"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="col-1"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.publicationDate}</span><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="col-6"><!-- @structr:private, @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span class="gene gene-default" data-structr-meta-data-key="author" data-structr-meta-function-query="current.getAuthors()"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${author.first} ${author.last}</span></span>
+		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<div class="col-2">
+			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+			<button class="" id="getRelatedPapers" style="float: right;"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Related Paper</button>
+		</div>
+	</div>
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div class="row" style="text-align:justify; margin-top: 2rem;"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="col-9"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
 
 	const current = $.get('current');
 	const abstractTexts = current.getAbstracts();
@@ -52,7 +53,9 @@ async function createRecommendationView()
 	
 	return joinedText;
 	
-}}</span><span><!-- @structr:content(text/javascript) -->${{
+}}</span></div>
+	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div class="row" style="text-align:justify; margin-top: 1rem;"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="col-9"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
 
 	const current = $.get('current');
 	const bodyTexts = current.getBodyTexts();
@@ -61,8 +64,7 @@ async function createRecommendationView()
 	
 	let joinedText = text.join('&lt;br&gt;');
 	
-	return '&lt;br&gt;&lt;br&gt;' + joinedText;
+	return joinedText;
 	
-}}</span></section>
-	</div>
+}}</span></div>
 </structr:template>

@@ -3,61 +3,67 @@ ${{
 	const request      = $.get('request');
 	let metaSchemaId = request['metaschema'];
 
+	$.log('Meta Schema ID: ', metaSchemaId);
+	$.log('Cache Key: ', 'schema-' + metaSchemaId);
 	
+	const cacheKey = 'schema-' + metaSchemaId;
 	
-	
-	
-	/****************************************\
-	 #COLLECT-SCHEMA
-	\****************************************/
-	
-	if($.empty(metaSchemaId)) {
-		const covidGraphConnector = $.call('getCovidGraphConnector');
-		covidGraphConnector.inferMetaSchema();
-		metaSchemaId = covidGraphConnector.metaSchema.id;
+	function compileSchema() {
+		
+		/****************************************\
+		 #COLLECT-SCHEMA
+		\****************************************/
+
+		$.log('1. Meta Schema ID: ', metaSchemaId);
+		
+		if($.empty(metaSchemaId)) {
+			const covidGraphConnector = $.call('getCovidGraphConnector');
+			covidGraphConnector.inferMetaSchema();
+			metaSchemaId = covidGraphConnector.metaSchema.id;
+		}
+		const metaSchema = $.find('MetaSchema', metaSchemaId);
+		const metaNodes = $.empty(metaSchema) ? [] : metaSchema.nodes;
+		const metaEdges = $.empty(metaSchema) ? [] : metaSchema.edges;
+
+		$.log('2. metaSchemaId: ', metaSchemaId);
+
+		
+		
+		/****************************************\
+		 #TRANSFORM-OUTPUT
+		\****************************************/
+
+		const nodes = metaNodes.map(node => {
+			return {
+				id    : node.id,
+				value : node.getCount(),
+				label : node.name
+			};
+		});
+
+		const edges = metaEdges.map(edge => {
+			return {
+				from    : edge.source.id,
+				to      : edge.target.id,
+				value   : edge.getCount(),
+				label   : edge.name
+			};
+		});
+
+		const schema = {
+			nodes : nodes,
+			edges : edges
+		};	
+		
+		return JSON.stringify(schema);
+		
 	}
-	const metaSchema = $.find('MetaSchema', metaSchemaId);
-	const metaNodes = $.empty(metaSchema) ? [] : metaSchema.nodes;
-	const metaEdges = $.empty(metaSchema) ? [] : metaSchema.edges;
 
-
-	
-	
-	
-	/****************************************\
-	 #TRANSFORM-OUTPUT
-	\****************************************/
-
-	const nodes = metaNodes.map(node => {
-		return {
-			id    : node.id,
-			value : node.getCount(),
-			label : node.name
-		};
-	});
-	
-	const edges = metaEdges.map(edge => {
-		return {
-			from    : edge.source.id,
-			to      : edge.target.id,
-			value   : edge.getCount(),
-			label   : edge.name
-		};
-	});
-
-	const result = {
-		nodes : nodes,
-		edges : edges
-	};
-	
-	
-	
-	
+	const result = $.cache(cacheKey, (60 * 60 * 24), compileSchema);
 	
 	/****************************************\
 	 #PRINT-RESULT
 	\****************************************/
 	
-	return JSON.stringify(result, null, 2);
-
+	return result;
 }}

@@ -1,0 +1,21 @@
+{
+	
+	const pageSize   = $.empty($.retrieve('pageSize'))   ? 1 : $.retrieve('pageSize');
+	const pageNumber = $.empty($.retrieve('pageNumber')) ? 1 : $.retrieve('pageNumber');
+	
+	const skip = pageSize + (pageNumber - 1);
+
+	const neoConnector = $.call('getCovidGraphConnector');
+	const query = 'MATCH (gene:Gene) ' +
+		'RETURN DISTINCT ID(gene) AS id SKIP ' + skip + ' LIMIT ' + pageSize + ';';
+
+	$.log('Query: ', query);
+
+	const geneIds = neoConnector.query({query : query});
+	const genes = geneIds.map(geneId => $.get_or_create('Gene', {
+		covidGraphId : geneId.id
+	}));
+
+	return genes;
+
+}

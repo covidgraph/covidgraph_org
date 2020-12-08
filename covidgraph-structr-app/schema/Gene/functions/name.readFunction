@@ -2,21 +2,25 @@
 
 	const self = $.this;
 	
+	$.log('Gene.name [', self.id, ']');
+	
 	const covidGraphProperties = self.getCovidGraphProperties();
+	
+	$.log('1');
 	
 	const name = covidGraphProperties['name'];
 	if(!$.empty(name) && name !== '-') {
 		return name;
 	}
 	
-	const fullName = covidGraphProperties['Full_name_from_nomenclature_authority'];
-	if(!$.empty(fullName) && fullName !== '-') {
-		return fullName;
-	}
-	
 	const symbol = covidGraphProperties['Symbol'];
 	if(!$.empty(symbol) && symbol !== '-') {
 		return symbol;
+	}
+	
+	const fullName = covidGraphProperties['Full_name_from_nomenclature_authority'];
+	if(!$.empty(fullName) && fullName !== '-') {
+		return fullName;
 	}
 	
 	return 'unknown';

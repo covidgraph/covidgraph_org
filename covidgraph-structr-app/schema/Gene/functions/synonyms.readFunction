@@ -1,0 +1,17 @@
+{
+
+	const self = $.this;
+	
+	const covidGraphProperties = self.getCovidGraphProperties();
+	const rawSynonyms = covidGraphProperties['Synonyms'];
+	
+	let synonyms = [];
+	if(!$.empty(rawSynonyms) && rawSynonyms !== '-') {
+
+		synonyms = rawSynonyms.split('|');
+
+	}
+	
+	return synonyms;
+
+}

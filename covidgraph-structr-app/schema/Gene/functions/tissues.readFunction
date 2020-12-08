@@ -1,0 +1,30 @@
+{
+
+	const self = $.this;
+
+	const query = 
+		'MATCH (gene:Gene)-[:EXPRESSED]->(tissue:GtexDetailedTissue) ' + 
+		'WHERE ID(gene) = ' + self.covidGraphId + ' ' +
+		'RETURN ID(tissue) AS id';
+
+	$.log('Expressed Tissues: ', query);
+	
+	const neoConnector = $.call('getCovidGraphConnector');
+	
+	const tissueIds = neoConnector.query({
+		query : query
+	});
+	
+	const tissues = tissueIds.map(tissueId => $.get_or_create('GtexDetailedTissue', {
+		covidGraphId : tissueId.id
+	}));
+	
+	tissues.sort(function(a, b) {
+		if(a.name < b.name) return -1;
+		if(b.name < a.name) return 1;
+		return 0;
+	});
+	
+	return tissues;
+
+}

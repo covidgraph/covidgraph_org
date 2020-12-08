@@ -2,23 +2,32 @@
 	
 	const self = $.this;
 
-	const neoConnector = $.call('getCovidGraphConnector');
+	const cacheKey = self.covidGraphId + '-covidGraphProperties';
 
-	const query = 'MATCH (n:' + self.type + ') ' +
-		'WHERE ID(n) = ' + self.covidGraphId + ' ' +
-		'RETURN n;'
+	if(!$.has_cache_value(cacheKey)) {
+	
+		const neoConnector = $.call('getCovidGraphConnector');
 
-	
-	const results = neoConnector.query({query : query});
-	
-	if(results.length !== 1) {
-		$.log('Cardinality Mismatch for ' + self.type + 
-			  '.getCovidGraphProperties(', self.id, ')');
+		const query = 'MATCH (n:' + self.type + ') ' +
+			'WHERE ID(n) = ' + self.covidGraphId + ' ' +
+			'RETURN n;'
+
 		$.log('Query: ', query);
-		return {};
+
+		const results = neoConnector.query({query : query});
+
+		if(results.length !== 1) {
+			$.log('Cardinality Mismatch for ' + self.type + 
+				  '.getCovidGraphProperties(', self.id, ')');
+			$.log('Query: ', query);
+			return {};
+		}
+
+		const covidGraphNode = $.first(results);
+		$.cache(cacheKey, 1000 * 60 * 60 * 24, covidGraphNode);
+		
 	}
-	
-	const covidGraphNode = $.first(results);
-	return covidGraphNode;
+
+	return $.get_cache_value(cacheKey);
 
 }
