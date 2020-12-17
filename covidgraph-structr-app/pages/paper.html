@@ -1,6 +1,5 @@
 <!-- @structr:owner(admin), @structr:content(text/html) --><structr:template src="Main Page Template (Application_)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application_)">
-	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-	<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(module) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
+	<script type="module"><!-- @structr:content(module) -->import { Persistence } from "/persistence-layer/persistence/Persistence.js";
 
 const persistence = new Persistence();
 const current = '${current}';
@@ -28,21 +27,15 @@ async function createRecommendationView()
 	window.location.href = '/related-paper/'+uuidRV;
 	
 }</script>
-	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 	<div class="row">
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<h1 class="col-9"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.name}<!-- @structr:private, @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) --> (${current.covidGraphId})</h1>
+		<h1 class="col-9"><!-- @structr:content(text/plain) -->${current.name}<!-- @structr:private, @structr:content(text/plain) --> (${current.covidGraphId})</h1>
 	</div>
-	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-	<div class="row"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="col-1"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.publicationDate}</span><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="col-6"><!-- @structr:private, @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span class="gene gene-default" data-structr-meta-data-key="author" data-structr-meta-function-query="current.getAuthors()"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${author.first} ${author.last}</span></span>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+	<div class="row"><span class="col-1"><!-- @structr:content(text/plain) -->${current.publicationDate}</span><span class="col-6"><!-- @structr:private --><span class="gene gene-default" data-structr-meta-data-key="author" data-structr-meta-function-query="current.getAuthors()"><!-- @structr:content(text/plain) -->${author.first} ${author.last}</span></span>
 		<div class="col-2">
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-			<button class="" id="getRelatedPapers" style="float: right;"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Related Paper</button>
+			<button class="" id="getRelatedPapers" style="float: right;"><!-- @structr:content(text/plain) -->Related Paper</button>
 		</div>
 	</div>
-	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-	<div class="row" style="text-align:justify; margin-top: 2rem;"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="col-9"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
+	<div class="row" style="text-align:justify; margin-top: 2rem;"><span class="col-9"><!-- @structr:content(text/javascript) -->${{
 
 	const current = $.get('current');
 	const abstractTexts = current.getAbstracts();
@@ -54,8 +47,7 @@ async function createRecommendationView()
 	return joinedText;
 	
 }}</span></div>
-	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-	<div class="row" style="text-align:justify; margin-top: 1rem;"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="col-9"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) -->${{
+	<div class="row" style="text-align:justify; margin-top: 1rem;"><span class="col-9"><!-- @structr:content(text/javascript) -->${{
 
 	const current = $.get('current');
 	const bodyTexts = current.getBodyTexts();

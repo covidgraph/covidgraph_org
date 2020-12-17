@@ -7074,6 +7074,14 @@
         "https://structr.org/v1.1/definitions/Folder"
       ],
       "category": "ui",
+      "grants": {
+        "Content Manager": {
+          "accessControl": false,
+          "delete": false,
+          "read": false,
+          "write": false
+        }
+      },
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
@@ -7670,6 +7678,7 @@
           "doExport": false,
           "exceptions": [],
           "overridesExisting": false,
+          "returnType": "void",
           "source": "./Gene/methods/getInstances"
         },
         "getPapers": {
@@ -8365,6 +8374,14 @@
         "https://structr.org/v1.1/definitions/Image"
       ],
       "category": "ui",
+      "grants": {
+        "Content Manager": {
+          "accessControl": false,
+          "delete": false,
+          "read": true,
+          "write": true
+        }
+      },
       "isAbstract": false,
       "isBuiltinType": true,
       "isInterface": false,
@@ -10063,6 +10080,16 @@
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
+      "methods": {
+        "onCreate": {
+          "callSuper": false,
+          "comment": "./LinkedInNewsArticle/methods/onCreate.comment",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": false,
+          "source": "./LinkedInNewsArticle/methods/onCreate"
+        }
+      },
       "properties": {
         "height": {
           "default": "",
@@ -10099,6 +10126,15 @@
           "overridesExisting": true,
           "returnType": "void",
           "source": "./Localization/methods/onCreation"
+        },
+        "onDeletion": {
+          "callSuper": true,
+          "codeType": "java",
+          "doExport": false,
+          "exceptions": [],
+          "overridesExisting": true,
+          "returnType": "void",
+          "source": "./Localization/methods/onDeletion"
         },
         "onModification": {
           "callSuper": true,
@@ -11554,6 +11590,14 @@
     },
     "NewsArticle": {
       "$extends": "#/definitions/ContentItem",
+      "grants": {
+        "Content Manager": {
+          "accessControl": true,
+          "delete": true,
+          "read": true,
+          "write": true
+        }
+      },
       "isAbstract": false,
       "isBuiltinType": false,
       "isInterface": false,
@@ -11606,6 +11650,8 @@
           "type": "string"
         },
         "publicationDate": {
+          "datePattern": "dd-MM-yyyy",
+          "default": "",
           "format": "date-time",
           "indexed": true,
           "type": "string"
@@ -11653,7 +11699,8 @@
           "text",
           "title"
         ]
-      }
+      },
+      "visibleToAuthenticatedUsers": true
     },
     "NewsArticleAUTHORProjectMember": {
       "$source": "#/definitions/NewsArticle",
@@ -20045,6 +20092,20 @@
       "name": "inferMetaSchema",
       "source": "./_globalMethods/inferMetaSchema",
       "visibleToAuthenticatedUsers": true,
+      "visibleToPublicUsers": false
+    },
+    {
+      "comment": "./_globalMethods/isStatic.comment",
+      "name": "isStatic",
+      "source": "./_globalMethods/isStatic",
+      "visibleToAuthenticatedUsers": false,
+      "visibleToPublicUsers": false
+    },
+    {
+      "comment": "./_globalMethods/makeStatic.comment",
+      "name": "makeStatic",
+      "source": "./_globalMethods/makeStatic",
+      "visibleToAuthenticatedUsers": false,
       "visibleToPublicUsers": false
     }
   ]

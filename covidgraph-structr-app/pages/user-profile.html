@@ -1,5 +1,229 @@
-<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Sub Page Template-03c69b87b4f8420186f9393f469c678d" data-structr-meta-name="Sub Page Template">
-	<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="User Profile Section-3fe7fa643bb44eb3a23a2f200d50de01" data-structr-meta-name="User Profile Section">
-	</structr:template>
+<!-- @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Main Page Template (Application)-2d7cd886fba4475695d433564536f055" data-structr-meta-name="Main Page Template (Application)"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/html) --><!--Form-->
+	<!-- @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+	<div class="d-sm-flex align-items-center justify-content-between mb-4">
+		<!-- @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+		<h1 class="h3 mb-0 text-gray-800"><!-- @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/plain) -->User Profile</h1>
+	</div><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/html) --><!--Heading-->
+	<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+	<div class="card shadow mb-4">
+		<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+		<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+			<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+			<h6 class="m-0 font-weight-bold text-primary"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/plain) -->User</h6>
+		</div>
+		<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+		<div class="card-body form-group" id="card-body"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/html) --><!--Name-->
+			<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+			<div class="row mb-4">
+				<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+				<label class="col-3"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/plain) -->Name</label>
+				<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+				<input class="col-9 form-control" id="name" value="${current.name}">
+			</div><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/html) --><!--E-Mail-->
+			<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+			<div class="row mb-4">
+				<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+				<label class="col-3"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/plain) -->E-Mail</label>
+				<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+				<input class="col-9 form-control" id="email" value="${current.eMail}">
+			</div><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/html) --><!--Password-->
+			<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+			<div class="row mb-4">
+				<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+				<label class="col-3"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/plain) -->Password</label>
+				<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+				<input class="col-9 form-control" id="password" type="password">
+			</div><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/html) --><!--User Groups-->
+			<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+			<div class="row mb-4">
+				<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+				<label class="col-3"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/plain) -->Groups</label>
+				<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+				<select class="col-9 form-control select2-input" id="groups" multiple="multiple">
+					<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+					<option></option>
+					<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+					<option selected="${is(contains(current.groups,group),'selected')}" value="${group}" data-structr-meta-data-key="group" data-structr-meta-function-query="sort(find('Group'), 'name')"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/plain) -->${group.name}</option>
+				</select>
+			</div><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/html) --><!--Biography-->
+			<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+			<div class="row mb-4">
+				<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+				<label class="col-3"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/plain) -->Biography</label>
+				<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+				<div class="col-9"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) --><textarea class="form-control" id="biography" rows="10"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/plain) -->${current.bio}</textarea><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/markdown) -->*Input to the title is in Markdown, see [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)</div>
+			</div><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/html) --><!--Thumbnail-->
+			<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+			<div class="row mb-4" id="thumbnail-row">
+				<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Render Thumbnail-3f321113d0494a0f9c44a697f3d81c40" data-structr-meta-name="Render Thumbnail">
+					<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+					<label class="col-3"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/plain) -->Image</label>
+					<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+					<div class="col-9">
+						<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+						<input id="thumbnail" type="hidden" value="${if(empty(request.thumbnail),current.img,request.thumbnail)}"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) --><img class="mb-1" src="${if(empty(request.thumbnail),current.img.path,find('File',request.thumbnail).path)}" style="width: 400px;">
+						<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/html) --><structr:template src="Dropzone-87d8e5541d1245789c707d995f0e8aa8" data-structr-meta-name="Dropzone">
+						</structr:template>
+					
+						<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+						<style><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/css) -->#dropzone {
 
+	width         : 400px;
+	height        : 200px;
+	border        : 1px dashed #000CCC;
+	border-radius : 7px;
+	text-align    : center;
+	line-height   : 8em;
+	color         : #A5A5A5;
+	font-size     : 2em;
+
+}
+
+#dropzone:hover {
+
+	color: #000CCC;
+	cursor: pointer;
+
+}</style>
+					</div>
+				</structr:template>
+			</div><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/html) --><!--Actions-->
+			<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+			<div class="row mb-4">
+				<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+				<button class="btn btn-success mr-1" id="create-article" data-structr-meta-show-conditions="empty(current)"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/plain) -->Create</button>
+				<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+				<button class="btn btn-success mr-1" id="save-article" data-structr-meta-hide-conditions="empty(current)"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/plain) -->Save</button>
+				<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+				<button class="btn btn-danger mr-1" id="delete-article"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/plain) -->Delete</button>
+				<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+				<button class="btn btn-warning mr-1" id="cancel-article"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/plain) -->Cancel</button><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) --><a class="btn btn-info mr-1" href="/user-management"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/plain) -->Return</a>
+			</div>
+		</div>
+	</div><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/html) --><!--Save Script-->
+	<!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd) -->
+	<script type="text/javascript"><!-- @structr:owner(admin), @structr:grant(Content Manager,r), @structr:grant(admin,arwd), @structr:content(text/javascript) -->async function loadPartial(url, domNode) {
+	const encodedUrl = encodeURI(url);
+	const page = await fetch(encodedUrl);
+	const html = await page.text();
+	domNode.innerHTML = html;
+}
+
+async function reloadForm(id) {
+
+	//const cardBody     = document.getElementById('card-body');
+	//const cardEndpoint = '/structr/html/4314a9eb2f044763a42df973612e9738?' + id;
+	//await loadPartial(cardEndpoint, cardBody);
+	
+	const suffix = (id) ? '/' + id : '';
+	
+	window.location = '/user-profile' + suffix;
+	
+}
+
+async function getId(response) {
+
+	const rawResult = await response.text();
+	const result    = JSON.parse(rawResult);
+	const id        = result.result[0];
+	
+	return id;
+
+}
+
+function collectProperties() {
+
+	const properties = {};
+	
+	// collect node properties
+	const name      = document.getElementById('name');
+	const email     = document.getElementById('email');
+	const password  = document.getElementById('password');
+	const groups    = document.getElementById('groups');
+	const biography = document.getElementById('biography');
+
+	if('${current}') properties['id']       = '${current}';
+	if(name)         properties['name']     = name.value;
+	if(email)        properties['eMail']    = email.value;
+	if(password)     properties['password'] = password.value;
+	if(groups)       properties['groups']   = $(groups).val();
+	if(biography)    properties['bio']      = biography.value;
+	
+	return properties;
+
+}
+
+async function createArticle(event) {
+	
+	const properties = collectProperties();
+
+	const response = await fetch('/structr/rest/ProjectMember', {
+		headers: new Headers(),
+		method: 'POST',
+		body: JSON.stringify(properties),
+		credentials: 'same-origin'
+	});
+	const id = await getId(response);
+	
+	reloadForm(id);
+	
+}
+
+async function saveArticle() {
+	
+	const properties = collectProperties();
+	const articleId  = properties['id'];
+	
+	if(articleId) {
+	
+		await fetch('/structr/rest/ProjectMember/' + articleId, {
+			headers: new Headers(),
+			method: 'PUT',
+			body: JSON.stringify(properties),
+			credentials: 'same-origin'
+		});
+	
+	}
+	
+	reloadForm(articleId);
+	
+}
+
+async function deleteArticle() {
+	
+	if (window.confirm('Are you sure you want to delete this article?')) {
+		
+		const properties  = collectProperties();
+		const articleId = properties['id'];
+
+		if(articleId) {
+
+			await fetch('/structr/rest/ProjectMember/' + articleId, {
+				headers: new Headers(),
+				method: 'DELETE',
+				credentials: 'same-origin'
+			});
+
+		}
+
+		window.location = '/news-editor';
+		
+	}	
+	
+}
+
+function cancleArticle(event) {
+
+	reloadForm();
+
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+
+	$('body').on('click', 'button#create-article', createArticle);
+	$('body').on('click', 'button#save-article',   saveArticle);
+	$('body').on('click', 'button#delete-article', deleteArticle);
+	$('body').on('click', 'button#cancel-article', cancleArticle);
+	
+});</script>
 </structr:template>

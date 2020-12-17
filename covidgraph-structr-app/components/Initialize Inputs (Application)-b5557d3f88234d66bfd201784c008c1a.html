@@ -1,4 +1,4 @@
-<!-- @structr:private, @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><script type="text/javascript" data-structr-meta-name="Initialize Inputs (Application)"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/javascript) -->function initializeSpecialElements() {
+<!-- @structr:protected --><script type="text/javascript" data-structr-meta-name="Initialize Inputs (Application)"><!-- @structr:content(text/javascript) -->function initializeSpecialElements() {
 
 	initializeSelect2();
 	initializeDatepicker();
@@ -25,7 +25,9 @@ function initializeDatepicker() {
 	for(let inputElement of inputElements) {
 	
 		let jQueryElement = $(inputElement);
-		jQueryElement.datepicker();
+		jQueryElement.datepicker({
+			format : 'dd-mm-yyyy'
+		});
 	
 	}
 

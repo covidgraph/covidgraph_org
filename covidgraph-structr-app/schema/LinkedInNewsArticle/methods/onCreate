@@ -1,0 +1,33 @@
+{
+
+	const self = $.this;
+	
+	const maximumPosition = findMaximumPosition();
+	const nextPosition    = maximumPosition + 1;
+	
+	$.log('Max Pos: ', maximumPosition);
+	$.log('Next Pos: ', nextPosition);
+	
+	self.position = nextPosition;
+	
+	
+	
+	
+	
+	/**************************************\
+	 #HELPER-FUNCTIONS
+	\**************************************/
+	
+	function findMaximumPosition() {
+	
+		const articlePositions = $.find('LinkedInNewsArticle', 
+			$.predicate.not($.predicate.empty('position'))
+		);
+		const sortedArticlePositions = $.sort(articlePositions, 'position', true);
+		const maximumPosition = sortedArticlePositions[0].position;
+		
+		return maximumPosition;
+		
+	}
+	
+}

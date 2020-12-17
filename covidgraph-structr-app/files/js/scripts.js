@@ -164,7 +164,8 @@ $(function() {
 			}),
 			statusCode: {
 				200: function(resp) {
-					window.location.href = "/user-profile";
+					//window.location.href = "/user-profile";
+					window.location.href = "/dashboard";
 				},
 				401: function() {
 					$.notify({
@@ -228,7 +229,8 @@ $(function() {
 			data: JSON.stringify({img:null}),
 			statusCode: {
 				200: function(resp) {
-					window.location.href = "/user-profile";
+					//window.location.href = "/user-profile";
+					window.location.href = "/dashboard";
 				},
 				401: function() {
 					$.notify({
@@ -281,7 +283,8 @@ $(function() {
 			data: JSON.stringify(data),
 			statusCode: {
 				200: function(resp) {
-					window.location.href = "/user-profile?login";
+					//window.location.href = "/user-profile?login";
+					window.location.href = "/dashboard";
 				},
 				401: function() {
 					//toastr.error("Wrong e-mail or password, please try again.", "Invalid Login!");

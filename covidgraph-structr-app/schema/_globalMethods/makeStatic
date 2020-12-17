@@ -1,0 +1,21 @@
+{
+
+	const typeName   = $.retrieve('type');
+	$.assert(!$.empty(typeName), 'missing_type_name', 'No type name provided!');
+	
+	const methodName = $.retrieve('method');
+	$.assert(!$.empty(methodName), 'missing_method_name', 'No method name provided!');
+	
+	const schemaNode = $.first($.find('SchemaNode', {
+		name : typeName
+	}));
+	$.assert(!$.empty(schemaNode), 'missing_schema_node', 'No schema node with name ' + typeName + ' found!');
+	
+	const schemaMethods = schemaNode.schemaMethods;
+	const schemaMethod = schemaMethods.find(method => method.name === methodName);
+	$.assert(!$.empty(schemaMethod), 'missing_schema_method', 'No schema method with name ' + methodName + ' found!');
+	
+	schemaMethod.isStatic = true;
+	return schemaMethod.isStatic;
+	
+}

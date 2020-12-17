@@ -1,0 +1,70 @@
+<div>
+
+	<div id='dropzone'>
+		<i class='fas fa-upload fa-2x text-gray-300 upload-icon'></i>
+	</div>
+
+	<script>
+		
+		async function loadPartial(url, domNode) {
+			const encodedUrl = encodeURI(url);
+			const page = await fetch(encodedUrl);
+			const html = await page.text();
+			domNode.innerHTML = html;
+		}
+		
+		async function setVisibility(id) {
+		
+			const file = await fetch('/structr/rest/Image/' + id, {
+				headers: new Headers(),
+				method: 'PUT',
+				body: JSON.stringify({
+					visibleToPublicUsers        : true,
+					visibleToAuthenticatedUsers : true
+				}),
+				credentials: 'same-origin'
+			});
+			
+			return file;
+			
+			/*await fetch('/structr/rest/Image/' + fileId, {
+				headers: new Headers(),
+				method: 'PUT',
+				body: JSON.stringify({
+				}),
+				credentials: 'same-origin'
+			});*/
+			
+		}
+		
+		document.addEventListener('DOMContentLoaded', function() {		
+
+			const uploader = new Dropzone('#dropzone', {
+				url: '/structr/upload',
+				method: 'POST'
+			});
+			uploader.on('sending', function(file, xhr, formData) {
+				formData.append('uploadFolderPath', 'application/data/upload/linkedin');
+			});
+			uploader.on('success', function(file) {
+
+				const fileId = file.xhr.response;
+
+				setVisibility(fileId);
+				
+				const partialEndpoint = '/structr/html/6d0875bb43494672856c0d34edcc6c12?thumbnail=' + fileId;
+				const thumbnailRow = document.getElementById('thumbnail-row');
+				
+				loadPartial(partialEndpoint, thumbnailRow);
+
+			});
+			
+			$(document).on('click', '.upload-icon', function() {
+				$('#dropzone').click();
+			});
+
+		});
+
+	</script>
+
+</div>

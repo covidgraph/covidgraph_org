@@ -4,7 +4,7 @@
 
 	<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="News Section-64480da180cf43cb973c0316c9c86a43" data-structr-meta-name="News Section">
 		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-		<script src="/structr/js/frontend/frontend.js" type="module" defer="defer"></script>
+		<script defer="defer" src="/structr/js/frontend/frontend.js" type="module"></script>
 		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 		<div class="section background" id="news-section">
 			<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
@@ -21,7 +21,7 @@
 						<div class="card news-card" id="${article}" data-target="article-modal" data-toggle="modal">
 							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 							<div class="position-relative"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><img alt="Card image cap" class="card-img-top" src="${article.thumbnail.path}">
-								<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Render Tags-31012778510f480d9d813b96b02f8222" data-structr-meta-name="Render Tags" data-structr-meta-data-key="tag" data-structr-meta-function-query="sort(article.tags, 'value')"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-primary position-absolute ${retrieve('position')}" data-structr-meta-name="NEW" data-structr-meta-show-conditions="equal(tag.value, 'new')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->NEW</span><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-warning position-absolute ${retrieve('position')}" data-structr-meta-name="TALK" data-structr-meta-show-conditions="equal(tag.value, 'talk')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->TALK</span><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-danger position-absolute ${retrieve('position')}" data-structr-meta-name="VIDEO" data-structr-meta-show-conditions="equal(tag.value, 'video')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->VIDEO</span><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-success position-absolute ${retrieve('position')}" data-structr-meta-name="INTERVIEW" data-structr-meta-show-conditions="equal(tag.value, 'interview')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->INTERVIEW</span>
+								<!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/javascript) --><structr:template src="Render Tags-10c189ebdae849379804652d8df05ead" data-structr-meta-name="Render Tags" data-structr-meta-data-key="tag" data-structr-meta-function-query="sort(article.tags, 'value')"><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-primary position-absolute ${retrieve('position')}" data-structr-meta-name="NEW" data-structr-meta-show-conditions="equal(tag.value, 'new')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->NEW</span><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-warning position-absolute ${retrieve('position')}" data-structr-meta-name="TALK" data-structr-meta-show-conditions="equal(tag.value, 'talk')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->TALK</span><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-danger position-absolute ${retrieve('position')}" data-structr-meta-name="VIDEO" data-structr-meta-show-conditions="equal(tag.value, 'video')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->VIDEO</span><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-success position-absolute ${retrieve('position')}" data-structr-meta-name="INTERVIEW" data-structr-meta-show-conditions="equal(tag.value, 'interview')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->INTERVIEW</span><!-- @structr:owner(admin), @structr:grant(admin,arwd) --><span class="badge badge-pill badge-info position-absolute ${retrieve('position')}" data-structr-meta-name="PODCAST" data-structr-meta-show-conditions="equal(tag.value, 'podcast')"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/plain) -->PODCAST</span>
 								</structr:template>
 							</div>
 							<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
@@ -117,7 +117,7 @@
 		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
 		<div class="modal fade" id="article-modal" role="dialog" tabindex="-1" aria-hidden="true" aria-labelledby="exampleModalCenterTitle"></div>
 		<!-- @structr:owner(admin), @structr:grant(admin,arwd) -->
-		<style><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/css) -->.card.news-card {
+		<style type="text/css"><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/css) -->.card.news-card {
 
 	border-radius : 0.75rem;
 	
@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 								</div>
 							</div><!-- @structr:owner(admin), @structr:grant(admin,arwd), @structr:content(text/html) --><!--div class="tab-pane fade justify-content-center" id="data-browser" role="tabpanel">
 											<a target="_blank" href="https://covidgraph.org/data-browser?type=papers&pageSize=1000">
-												<img alt="app image" class="app-image" src="/img/content-img/screenshot-databrowser.jpg">
+												<img alt="app image" class="app-image" src="/img/content-img/screenshot-databrowser.jpg"/>
 											</a>
 											<div class="mt-5">
 												<p>

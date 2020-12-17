@@ -1,25 +1,15 @@
-<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><structr:template src="Main Page Template (Application)-2d7cd886fba4475695d433564536f055" data-structr-meta-name="Main Page Template (Application)">
-	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+<!-- @structr:content(text/html) --><structr:template src="Main Page Template (Application)-2d7cd886fba4475695d433564536f055" data-structr-meta-name="Main Page Template (Application)">
 	<div class="d-sm-flex align-items-center justify-content-between mb-4">
-		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-		<h1 class="h3 mb-0 text-gray-800"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Dashboard</h1>
+		<h1 class="h3 mb-0 text-gray-800"><!-- @structr:content(text/plain) -->Dashboard</h1>
 	</div>
-	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-	<div class="row"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Genes-->
-		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-		<div class="custom-col mb-4"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a href="/genes">
-				<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+	<div class="row"><!-- @structr:content(text/html) --><!--Genes-->
+		<div class="custom-col mb-4"><a href="/genes">
 				<div class="card border-left-primary shadow h-100 py-2">
-					<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 					<div class="card-body">
-						<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 						<div class="row no-gutters align-items-center">
-							<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 							<div class="col mr-2">
-								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-								<div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Genes</div>
-								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-								<div class="h5 mb-0 font-weight-bold text-gray-800"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${{
+								<div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><!-- @structr:content(text/plain) -->Genes</div>
+								<div class="h5 mb-0 font-weight-bold text-gray-800"><!-- @structr:content(text/plain) -->${{
 	
 	const neoConnector = $.call('getCovidGraphConnector');
 	const query        = 'MATCH (gene:Gene) RETURN COUNT(DISTINCT gene) AS numGenes';
@@ -29,26 +19,18 @@
 	
 }}</div>
 							</div>
-							<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-							<div class="col-auto"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-dna fa-2x text-gray-300"></i></div>
+							<div class="col-auto"><i class="fas fa-dna fa-2x text-gray-300"></i></div>
 						</div>
 					</div>
 				</div>
-			</a></div><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Papers-->
-		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-		<div class="custom-col mb-4"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a href="/papers">
-				<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+			</a></div><!-- @structr:content(text/html) --><!--Papers-->
+		<div class="custom-col mb-4"><a href="/papers">
 				<div class="card border-left-success shadow h-100 py-2">
-					<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 					<div class="card-body">
-						<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 						<div class="row no-gutters align-items-center">
-							<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 							<div class="col mr-2">
-								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-								<div class="text-xs font-weight-bold text-success text-uppercase mb-1"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Papers</div>
-								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-								<div class="h5 mb-0 font-weight-bold text-gray-800"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${{
+								<div class="text-xs font-weight-bold text-success text-uppercase mb-1"><!-- @structr:content(text/plain) -->Papers</div>
+								<div class="h5 mb-0 font-weight-bold text-gray-800"><!-- @structr:content(text/plain) -->${{
 	
 	const neoConnector = $.call('getCovidGraphConnector');
 	const query        = 'MATCH (paper:Paper) RETURN COUNT(DISTINCT paper) AS numPapers';
@@ -58,30 +40,20 @@
 	
 }}</div>
 							</div>
-							<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-							<div class="col-auto"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-book fa-2x text-gray-300"></i></div>
+							<div class="col-auto"><i class="fas fa-book fa-2x text-gray-300"></i></div>
 						</div>
 					</div>
 				</div>
-			</a></div><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Patents-->
-		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-		<div class="custom-col mb-4"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a href="/patents">
-				<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+			</a></div><!-- @structr:content(text/html) --><!--Patents-->
+		<div class="custom-col mb-4"><a href="/patents">
 				<div class="card border-left-info shadow h-100 py-2">
-					<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 					<div class="card-body">
-						<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 						<div class="row no-gutters align-items-center">
-							<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 							<div class="col mr-2">
-								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-								<div class="text-xs font-weight-bold text-info text-uppercase mb-1"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Patents</div>
-								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+								<div class="text-xs font-weight-bold text-info text-uppercase mb-1"><!-- @structr:content(text/plain) -->Patents</div>
 								<div class="row no-gutters align-items-center">
-									<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 									<div class="col-auto">
-										<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-										<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${{
+										<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><!-- @structr:content(text/plain) -->${{
 	
 	const neoConnector = $.call('getCovidGraphConnector');
 	const query        = 'MATCH (patent:Patent) RETURN COUNT(DISTINCT patent) AS numPatents';
@@ -93,26 +65,18 @@
 									</div>
 								</div>
 							</div>
-							<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-							<div class="col-auto"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-scroll fa-2x text-gray-300"></i></div>
+							<div class="col-auto"><i class="fas fa-scroll fa-2x text-gray-300"></i></div>
 						</div>
 					</div>
 				</div>
-			</a></div><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Authors-->
-		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-		<div class="custom-col mb-4"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a href="/authors">
-				<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+			</a></div><!-- @structr:content(text/html) --><!--Authors-->
+		<div class="custom-col mb-4"><a href="/authors">
 				<div class="card border-left-warning shadow h-100 py-2">
-					<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 					<div class="card-body">
-						<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 						<div class="row no-gutters align-items-center">
-							<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 							<div class="col mr-2">
-								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Authors</div>
-								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-								<div class="h5 mb-0 font-weight-bold text-gray-800"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${{
+								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><!-- @structr:content(text/plain) -->Authors</div>
+								<div class="h5 mb-0 font-weight-bold text-gray-800"><!-- @structr:content(text/plain) -->${{
 	
 	const neoConnector = $.call('getCovidGraphConnector');
 	const query        = 'MATCH (author:Author) RETURN COUNT(DISTINCT author) AS numAuthors';
@@ -122,26 +86,18 @@
 	
 }}</div>
 							</div>
-							<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-							<div class="col-auto"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-user-tie fa-2x text-gray-300"></i></div>
+							<div class="col-auto"><i class="fas fa-user-tie fa-2x text-gray-300"></i></div>
 						</div>
 					</div>
 				</div>
-			</a></div><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Proteins-->
-		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-		<div class="custom-col mb-4"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a href="/proteins">
-				<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+			</a></div><!-- @structr:content(text/html) --><!--Proteins-->
+		<div class="custom-col mb-4"><a href="/proteins">
 				<div class="card border-left-secondary shadow h-100 py-2">
-					<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 					<div class="card-body">
-						<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 						<div class="row no-gutters align-items-center">
-							<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 							<div class="col mr-2">
-								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-								<div class="text-xs font-weight-bold text-secondary text-uppercase mb-1"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Proteins</div>
-								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-								<div class="h5 mb-0 font-weight-bold text-gray-800"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${{
+								<div class="text-xs font-weight-bold text-secondary text-uppercase mb-1"><!-- @structr:content(text/plain) -->Proteins</div>
+								<div class="h5 mb-0 font-weight-bold text-gray-800"><!-- @structr:content(text/plain) -->${{
 	
 	const neoConnector = $.call('getCovidGraphConnector');
 	const query        = 'MATCH (protein:Protein) RETURN COUNT(DISTINCT protein) AS numProteins';
@@ -151,26 +107,18 @@
 	
 }}</div>
 							</div>
-							<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-							<div class="col-auto"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-atom fa-2x text-gray-300"></i></div>
+							<div class="col-auto"><i class="fas fa-atom fa-2x text-gray-300"></i></div>
 						</div>
 					</div>
 				</div>
-			</a></div><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Tissues-->
-		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-		<div class="custom-col mb-4"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a href="/tissues">
-				<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+			</a></div><!-- @structr:content(text/html) --><!--Tissues-->
+		<div class="custom-col mb-4"><a href="/tissues">
 				<div class="card border-left-danger shadow h-100 py-2">
-					<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 					<div class="card-body">
-						<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 						<div class="row no-gutters align-items-center">
-							<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 							<div class="col mr-2">
-								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-								<div class="text-xs font-weight-bold text-danger text-uppercase mb-1"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Tissues</div>
-								<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-								<div class="h5 mb-0 font-weight-bold text-gray-800"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->${{
+								<div class="text-xs font-weight-bold text-danger text-uppercase mb-1"><!-- @structr:content(text/plain) -->Tissues</div>
+								<div class="h5 mb-0 font-weight-bold text-gray-800"><!-- @structr:content(text/plain) -->${{
 	
 	const neoConnector = $.call('getCovidGraphConnector');
 	const query        = 'MATCH (tissue:GtexDetailedTissue) RETURN COUNT(DISTINCT tissue) AS numTissues';
@@ -180,14 +128,12 @@
 	
 }}</div>
 							</div>
-							<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-							<div class="col-auto"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-box-tissue fa-2x text-gray-300"></i></div>
+							<div class="col-auto"><i class="fas fa-box-tissue fa-2x text-gray-300"></i></div>
 						</div>
 					</div>
 				</div>
-			</a></div><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Custom Column Styles-->
-		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-		<style type="text/css"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/css) -->@media (min-width: 0px) {
+			</a></div><!-- @structr:content(text/html) --><!--Custom Column Styles-->
+		<style type="text/css"><!-- @structr:content(text/css) -->@media (min-width: 0px) {
 
 	.custom-col {
 
@@ -255,30 +201,25 @@
 
 }</style>
 	</div>
-	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-	<div class="row"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!-- Area Chart -->
-		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+	<div class="row"><!-- @structr:content(text/html) --><!-- Area Chart -->
 		<div class="col-12">
-			<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-			<div class="card shadow mb-4"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!-- Card Header - Dropdown -->
-				<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+			<div class="card shadow mb-4"><!-- @structr:content(text/html) --><!-- Card Header - Dropdown -->
 				<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-					<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-					<h6 class="m-0 font-weight-bold text-primary"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Covidgraph Schema</h6>
-				</div><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!-- Card Body -->
-				<!-- @structr:protected, @structr:owner(admin), @structr:grant(Jakob,arwd) -->
+					<h6 class="m-0 font-weight-bold text-primary"><!-- @structr:content(text/plain) -->Covidgraph Schema</h6>
+				</div><!-- @structr:content(text/html) --><!-- Card Body -->
+				<!-- @structr:owner(admin) -->
 				<div class="card-body">
-					<!-- @structr:owner(admin), @structr:grant(Jakob,arwd) -->
+					<!-- @structr:owner(admin) -->
 					<script src="/applications/js/libs/vis-network.min.js" type="text/javascript"></script>
-					<!-- @structr:owner(admin), @structr:grant(Jakob,arwd) -->
-					<style type="text/css"><!-- @structr:owner(admin), @structr:grant(Jakob,arwd), @structr:content(text/css) -->#schema-graph {
+					<!-- @structr:owner(admin) -->
+					<style type="text/css"><!-- @structr:owner(admin), @structr:content(text/css) -->#schema-graph {
 	/*width: 600px;*/
 	height: 800px;
 	border: 1px solid lightgray;
 }
   </style>
-					<!-- @structr:owner(admin), @structr:grant(Jakob,arwd) -->
-					<script type="text/javascript"><!-- @structr:owner(admin), @structr:grant(Jakob,arwd), @structr:content(text/javascript) -->document.addEventListener('DOMContentLoaded', async function() {
+					<!-- @structr:owner(admin) -->
+					<script type="text/javascript"><!-- @structr:owner(admin), @structr:content(text/javascript) -->document.addEventListener('DOMContentLoaded', async function() {
 
 	const container = document.getElementById('schema-graph');
 	
@@ -295,7 +236,7 @@
 	const graph = new vis.Network(container, data, options);
 
 });</script>
-					<!-- @structr:owner(admin), @structr:grant(Jakob,arwd) -->
+					<!-- @structr:owner(admin) -->
 					<div id="schema-graph" style="min-height: 800px; "></div>
 				</div>
 			</div>

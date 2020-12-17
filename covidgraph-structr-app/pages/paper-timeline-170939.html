@@ -1,17 +1,11 @@
-<!-- @structr:grant(Sven,arwd), @structr:content(text/html) --><structr:template src="Main Page Template (Application_)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application_)">
-	<!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/javascript) --><structr:template src="Timeline-Chart-2123d8c89ffc44498e92e5e8a3afbad7" data-structr-meta-name="Timeline-Chart">
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+<!-- @structr:content(text/html) --><structr:template src="Main Page Template (Application_)-c107a6f69ed04c89af4523683efeb58d" data-structr-meta-name="Main Page Template (Application_)">
+	<!-- @structr:content(text/javascript) --><structr:template src="Timeline-Chart-2123d8c89ffc44498e92e5e8a3afbad7" data-structr-meta-name="Timeline-Chart">
 		<script src="/pagination-test/pager.js" type="module"></script>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 		<script src="/applications/js/libs/d3.min.js" type="text/javascript"></script>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-		<h2><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${current.name}</h2>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+		<h2><!-- @structr:content(text/plain) -->${current.name}</h2>
 		<div class="">
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 			<div class="">
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-				<style type="text/css"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/css) -->/* The switch - the box around the slider */
+				<style type="text/css"><!-- @structr:content(text/css) -->/* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
@@ -69,26 +63,18 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }</style>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 				<label class="switch">
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<input checked="true" id="paper-checkbox" onclick="" type="checkbox"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="slider round"></span>
+					<input checked="true" id="paper-checkbox" onclick="" type="checkbox"><span class="slider round"></span>
 				</label>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-				<label for="paper-checkbox"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Paper</label>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+				<label for="paper-checkbox"><!-- @structr:content(text/plain) -->Paper</label>
 				<label class="switch" style="margin-left: 1rem;">
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<input checked="true" class="toggle" id="patent-checkbox" onclick="" size="" style="" type="checkbox"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span class="slider round"></span>
+					<input checked="true" class="toggle" id="patent-checkbox" onclick="" size="" style="" type="checkbox"><span class="slider round"></span>
 				</label>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-				<label for="patent-checkbox"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Patent</label>
+				<label for="patent-checkbox"><!-- @structr:content(text/plain) -->Patent</label>
 			</div>
 		</div>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 		<div>
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-			<script type="module"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(module) -->const height	= 400;
+			<script type="module"><!-- @structr:content(module) -->const height	= 400;
 const width		= 700;
 const radius	= 3;
 const padding	= 1.5;
@@ -213,69 +199,43 @@ function loadTimeline()
 		.append('title')
 			.text(d =&gt; d.data.name);
 }</script>
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 			<svg id="paper-patent-chart" style="width:60%"></svg>
 		</div>
-		<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 		<div>
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-			<label class="" style=""><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Show
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
+			<label class="" style=""><!-- @structr:content(text/plain) -->Show
 				<select class="" id="page-size" style="margin: 0.5rem;">
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<option><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->10</option>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<option><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->25</option>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<option><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->50</option>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<option><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->100</option>
-				</select><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Paper
+					<option><!-- @structr:content(text/plain) -->10</option>
+					<option><!-- @structr:content(text/plain) -->25</option>
+					<option><!-- @structr:content(text/plain) -->50</option>
+					<option><!-- @structr:content(text/plain) -->100</option>
+				</select><!-- @structr:content(text/plain) -->Paper
 			</label>
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 			<table id="table-container">
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 				<thead>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<th><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Publication</th>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<th><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Title</th>
+					<th><!-- @structr:content(text/plain) -->Publication</th>
+					<th><!-- @structr:content(text/plain) -->Title</th>
 				</thead>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 				<tbody>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 					<tr data-structr-meta-data-key="paper" data-structr-meta-function-query="first(current.getPapers())">
-						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-						<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${paper.publicationDate}</td>
-						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-						<td><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><a href="/paper/${paper.id}"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->${paper.name}</a></td>
+						<td><!-- @structr:content(text/plain) -->${paper.publicationDate}</td>
+						<td><a href="/paper/${paper.id}"><!-- @structr:content(text/plain) -->${paper.name}</a></td>
 					</tr>
 				</tbody>
 			</table>
-			<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 			<nav>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-				<style type="text/css"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/css) -->.page-link {
+				<style type="text/css"><!-- @structr:content(text/css) -->.page-link {
 	border: 1px solid lightgrey;
 	margin: 0.1rem;
 }</style>
-				<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 				<div>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
 					<ul class="pagination">
-						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-						<li class="page-link" id="previous-page"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Previous</li>
-						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-						<li class="page-link active"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->1</li>
-						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-						<li class="page-link"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->2</li>
-						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-						<li class="page-link"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->3</li>
-						<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-						<li class="page-link" id="next-page"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd), @structr:content(text/plain) -->Next</li>
+						<li class="page-link" id="previous-page"><!-- @structr:content(text/plain) -->Previous</li>
+						<li class="page-link active"><!-- @structr:content(text/plain) -->1</li>
+						<li class="page-link"><!-- @structr:content(text/plain) -->2</li>
+						<li class="page-link"><!-- @structr:content(text/plain) -->3</li>
+						<li class="page-link" id="next-page"><!-- @structr:content(text/plain) -->Next</li>
 					</ul>
-					<!-- @structr:owner(Sven), @structr:grant(Sven,arwd) -->
-					<input disabled="true" id="page-number" type="number" value="1"><!-- @structr:owner(Sven), @structr:grant(Sven,arwd) --><span id="result-count"></span>
+					<input disabled="true" id="page-number" type="number" value="1"><span id="result-count"></span>
 				</div>
 			</nav>
 		</div>

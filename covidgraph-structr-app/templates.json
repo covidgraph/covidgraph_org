@@ -20,13 +20,6 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": false
   },
-  "Contact Form Section-01e5d46cc7de406a91ee1ff51c146f32": {
-    "contentType": "text/html",
-    "id": "01e5d46cc7de406a91ee1ff51c146f32",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
   "Contact Form Section-56f2bdb54d0343a3a5db611418a33b86": {
     "contentType": "text/html",
     "id": "56f2bdb54d0343a3a5db611418a33b86",
@@ -76,12 +69,19 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "Interview Section-516c166a317e484494f95610bfa45a48": {
+  "Dropzone-87d8e5541d1245789c707d995f0e8aa8": {
     "contentType": "text/html",
-    "id": "516c166a317e484494f95610bfa45a48",
+    "id": "87d8e5541d1245789c707d995f0e8aa8",
     "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
+  "Dropzone-f4f0d5310ad645e9ad2d468a9226558a": {
+    "contentType": "text/html",
+    "id": "f4f0d5310ad645e9ad2d468a9226558a",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
   },
   "Interview Section-c9e4c7d40df54ff5a100c11d171220a8": {
     "contentType": "text/html",
@@ -118,13 +118,6 @@
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
   },
-  "LinkedIn News Article-1919007aa1c6486190cafbb5275cc547": {
-    "contentType": "text/html",
-    "id": "1919007aa1c6486190cafbb5275cc547",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
-  },
   "Login Page Template-718ffe75a28640a8b148eb2cc955dae6": {
     "contentType": "text/html",
     "id": "718ffe75a28640a8b148eb2cc955dae6",
@@ -143,7 +136,7 @@
     "contentType": "text/html",
     "id": "2d7cd886fba4475695d433564536f055",
     "shared": "true",
-    "visibleToAuthenticatedUsers": false,
+    "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": false
   },
   "Main Page Template (Application_)-c107a6f69ed04c89af4523683efeb58d": {
@@ -209,6 +202,13 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
+  "No Linebreak-33075814a0ac449989e5e7dc9a8b940f": {
+    "contentType": "text/html",
+    "id": "33075814a0ac449989e5e7dc9a8b940f",
+    "shared": "true",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
+  },
   "Not found-dd59544118ad4246aea3ffcd8b08750f": {
     "contentType": "text/html",
     "id": "dd59544118ad4246aea3ffcd8b08750f",
@@ -233,13 +233,6 @@
   "Pagination Menu-7a964387a67c4bd495f0d215da034397": {
     "contentType": "text/javascript",
     "id": "7a964387a67c4bd495f0d215da034397",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
-  "Pagination Menu-a125b0cc27be432e85b7b22521a0d074": {
-    "contentType": "text/javascript",
-    "id": "a125b0cc27be432e85b7b22521a0d074",
     "shared": "false",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
@@ -293,26 +286,12 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "Project Member-1e26a4f87f9649cc8538bb91e642c848": {
-    "contentType": "text/html",
-    "id": "1e26a4f87f9649cc8538bb91e642c848",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
   "Render Article-29d3b873da14415fb780350450f37099": {
     "contentType": "text/html",
     "id": "29d3b873da14415fb780350450f37099",
     "shared": "false",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
-  },
-  "Render Articles-1ad0c04022664a8fa9a0bdf28a78bce6": {
-    "contentType": "text/html",
-    "id": "1ad0c04022664a8fa9a0bdf28a78bce6",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": false,
-    "visibleToPublicUsers": false
   },
   "Render Card-1009978b67874f8ab4a2af715dfb02d3": {
     "contentType": "text/javascript",
@@ -342,20 +321,6 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "Render News Article-377d83eddc8b469fb06cba275acf5c04": {
-    "contentType": "text/html",
-    "id": "377d83eddc8b469fb06cba275acf5c04",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
-  "Render News Article-8fa193441c8c41d8b8082e9154cf7aba": {
-    "contentType": "text/html",
-    "id": "8fa193441c8c41d8b8082e9154cf7aba",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
   "Render News Articles-095cdc6a60924f4382bb17951f616b54": {
     "contentType": "text/javascript",
     "id": "095cdc6a60924f4382bb17951f616b54",
@@ -370,26 +335,26 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "Render Tags-03b7e993a89a46d49b3a3733af504a69": {
-    "contentType": "text/javascript",
-    "id": "03b7e993a89a46d49b3a3733af504a69",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
-  "Render Tags-31012778510f480d9d813b96b02f8222": {
-    "contentType": "text/javascript",
-    "id": "d109bf94282a425a94a463d7d9f20c5d",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": false
-  },
   "Render Synonyms-d109bf94282a425a94a463d7d9f20c5d": {
     "contentType": "text/javascript",
     "id": "d109bf94282a425a94a463d7d9f20c5d",
     "shared": "false",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": false
+  },
+  "Render Tags-10c189ebdae849379804652d8df05ead": {
+    "contentType": "text/javascript",
+    "id": "10c189ebdae849379804652d8df05ead",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": true,
+    "visibleToPublicUsers": true
+  },
+  "Render Tags-5943ff4329494af6a6531cdc0ed96e83": {
+    "contentType": "text/javascript",
+    "id": "5943ff4329494af6a6531cdc0ed96e83",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": true
   },
   "Render Tags-d24dee5e1b4d407f915436152f4a08ae": {
     "contentType": "text/javascript",
@@ -398,23 +363,23 @@
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
   },
-  "Render Video Article-3f8f50591f9b45b88e9238b9c23d9572": {
-    "contentType": "text/html",
-    "id": "3f8f50591f9b45b88e9238b9c23d9572",
+  "Render Tags-d326fb103dfe4ad2b96168d46eeab631": {
+    "contentType": "text/javascript",
+    "id": "d326fb103dfe4ad2b96168d46eeab631",
     "shared": "false",
-    "visibleToAuthenticatedUsers": true,
+    "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": true
   },
-  "Render Video Article-429d6322895e40fd9f5c96ecf4b46be4": {
-    "contentType": "text/html",
-    "id": "429d6322895e40fd9f5c96ecf4b46be4",
+  "Render Thumbnail-3f321113d0494a0f9c44a697f3d81c40": {
+    "contentType": "text/javascript",
+    "id": "3f321113d0494a0f9c44a697f3d81c40",
     "shared": "false",
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
   },
-  "Store Pagination Parameters-daec111640984d238284ed2d5e8587bd": {
+  "Render Thumbnail-6d0875bb43494672856c0d34edcc6c12": {
     "contentType": "text/javascript",
-    "id": "daec111640984d238284ed2d5e8587bd",
+    "id": "6d0875bb43494672856c0d34edcc6c12",
     "shared": "false",
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
@@ -425,6 +390,13 @@
     "shared": "false",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true
+  },
+  "Store Pagination Parameters-daec111640984d238284ed2d5e8587bd": {
+    "contentType": "text/javascript",
+    "id": "daec111640984d238284ed2d5e8587bd",
+    "shared": "false",
+    "visibleToAuthenticatedUsers": false,
+    "visibleToPublicUsers": false
   },
   "Store Query-43cb723faecc40f6b6aeeab47d0b60c5": {
     "contentType": "text/plain",
@@ -461,23 +433,9 @@
     "visibleToAuthenticatedUsers": false,
     "visibleToPublicUsers": false
   },
-  "Team Section-c3bb7893c59741c094cae337a0089317": {
-    "contentType": "text/html",
-    "id": "c3bb7893c59741c094cae337a0089317",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
   "Thanks-608df71001e5439987c0bc245e220aa8": {
     "contentType": "text/html",
     "id": "608df71001e5439987c0bc245e220aa8",
-    "shared": "false",
-    "visibleToAuthenticatedUsers": true,
-    "visibleToPublicUsers": true
-  },
-  "Thanks-77b92641e91849d28c21cbe8c07a53fd": {
-    "contentType": "text/html",
-    "id": "77b92641e91849d28c21cbe8c07a53fd",
     "shared": "false",
     "visibleToAuthenticatedUsers": true,
     "visibleToPublicUsers": true

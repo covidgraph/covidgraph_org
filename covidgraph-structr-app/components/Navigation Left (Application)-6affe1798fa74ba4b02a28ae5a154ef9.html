@@ -1,45 +1,52 @@
-<!-- @structr:private, @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" data-structr-meta-name="Navigation Left (Application)"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--CovidGraph Logo--><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://www.covidgraph.org/" target="_blank"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><img src="/application/images/logo.svg" style="width: 100%;"></a><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Divider-->
-	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-	<hr class="sidebar-divider my-0"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Dashboard-->
-	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-	<li class="nav-item ${is(eq(page.name, 'dashboard'), 'active')}"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="nav-link" href="/dashboard"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-fw fa-chart-line"></i><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Dashboard</span></a></li><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Divider-->
-	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-	<hr class="sidebar-divider"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Overview Tables-->
-	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-	<div class="sidebar-heading"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Overview Tables</div><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!--Lists-->
-	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-	<li class="nav-item "><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="nav-link collapsed" href="#" aria-controls="collapseTwo" aria-expanded="true" data-target="#collapseTwo" data-toggle="collapse"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-fw fa-list-alt"></i><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Lists</span></a>
-		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+<!-- @structr:protected --><ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" data-structr-meta-name="Navigation Left (Application)"><!-- @structr:content(text/html) --><!--CovidGraph Logo--><a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://www.covidgraph.org/" target="_blank"><img src="/application/images/logo.svg" style="width: 100%;"></a><!-- @structr:content(text/html) --><!--Divider-->
+	<hr class="sidebar-divider my-0"><!-- @structr:content(text/html) --><!--Dashboard-->
+	<li class="nav-item ${is(eq(page.name, 'dashboard'), 'active')}"><a class="nav-link" href="/dashboard"><i class="fas fa-fw fa-chart-line"></i><span><!-- @structr:content(text/plain) -->Dashboard</span></a></li><!-- @structr:content(text/html) --><!--Divider-->
+	<hr class="sidebar-divider"><!-- @structr:content(text/html) --><!--Admin Area-->
+	<!-- @structr:private, @structr:grant(Content Manager,r) -->
+	<div class="sidebar-heading"><!-- @structr:grant(Content Manager,r), @structr:content(text/plain) -->Admin Area</div><!-- @structr:content(text/html) --><!--Administration-->
+	<!-- @structr:private, @structr:grant(Content Manager,r) -->
+	<li class="nav-item "><!-- @structr:grant(Content Manager,r) --><a class="nav-link collapsed" href="#" aria-controls="collapseTwo" aria-expanded="true" data-target="#collapseAdministration" data-toggle="collapse"><!-- @structr:grant(Content Manager,r) --><i class="fas fa-fw fa-tools"></i><!-- @structr:grant(Content Manager,r) --><span><!-- @structr:grant(Content Manager,r), @structr:content(text/plain) -->Administration</span></a>
+		<!-- @structr:grant(Content Manager,r) -->
+		<div class="collapse ${is(equal(page.category, 'administration'), 'show')}" id="collapseAdministration" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+			<!-- @structr:grant(Content Manager,r) -->
+			<div class="bg-white py-2 collapse-inner rounded">
+				<!-- @structr:grant(Content Manager,r) -->
+				<h6 class="collapse-header"><!-- @structr:grant(Content Manager,r), @structr:content(text/plain) -->Administration Area</h6><!-- @structr:grant(Content Manager,r) --><a class="collapse-item ${is(eq(page.name, 'user-management'), 'active')}" href="/user-management"><!-- @structr:grant(Content Manager,r) --><i class="fas fa-fw fa-users-cog"></i><!-- @structr:grant(Content Manager,r) --><span><!-- @structr:grant(Content Manager,r), @structr:content(text/plain) --> User Management</span></a><!-- @structr:grant(Content Manager,r) --><a class="collapse-item ${is(eq(page.name, 'news-editor'), 'active')}" href="/news-editor"><!-- @structr:grant(Content Manager,r) --><i class="fas fa-fw fa-newspaper"></i><!-- @structr:grant(Content Manager,r) --><span><!-- @structr:grant(Content Manager,r), @structr:content(text/plain) --> News Editor</span></a>
+			</div>
+		</div>
+	</li><!-- @structr:content(text/html) --><!-- Divider -->
+	<!-- @structr:private, @structr:grant(Content Manager,r) -->
+	<hr class="sidebar-divider"><!-- @structr:grant(admin,arwd), @structr:content(text/html) --><!--Overview Tables-->
+	<!-- @structr:grant(admin,arwd) -->
+	<div class="sidebar-heading"><!-- @structr:grant(admin,arwd), @structr:content(text/plain) -->Overview Tables</div><!-- @structr:grant(admin,arwd), @structr:content(text/html) --><!--Lists-->
+	<!-- @structr:grant(admin,arwd) -->
+	<li class="nav-item "><!-- @structr:grant(admin,arwd) --><a class="nav-link collapsed" href="#" aria-controls="collapseTwo" aria-expanded="true" data-target="#collapseTwo" data-toggle="collapse"><!-- @structr:grant(admin,arwd) --><i class="fas fa-fw fa-list-alt"></i><!-- @structr:grant(admin,arwd) --><span><!-- @structr:grant(admin,arwd), @structr:content(text/plain) -->Lists</span></a>
+		<!-- @structr:grant(admin,arwd) -->
 		<div class="collapsableMenuItem collapse " id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-			<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+			<!-- @structr:grant(admin,arwd) -->
 			<div class="bg-white py-2 collapse-inner rounded">
-				<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-				<h6 class="collapse-header"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Data Lists:</h6><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="collapse-item ${is(eq(page.name, 'genes'), 'active')}" href="/genes"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-fw fa-dna"></i><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) --> Genes</span></a><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="collapse-item ${is(eq(page.name, 'papers'), 'active')}" href="/papers"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-fw fa-book"></i><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) --> Papers</span></a><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="collapse-item ${is(eq(page.name, 'patents'), 'active')}" href="/patents"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-fw fa-scroll"></i><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) --> Patents</span></a><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="collapse-item ${is(eq(page.name, 'authors'), 'active')}" href="/authors"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-fw fa-user-tie"></i><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) --> Authors</span></a><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="collapse-item ${is(eq(page.name, 'proteins'), 'active')}" href="/proteins"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-fw fa-atom"></i><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) --> Proteins</span></a><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="collapse-item ${is(eq(page.name, 'tissues'), 'active')}" href="/tissues"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-fw fa-box-tissue"></i><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) --> Tissues</span></a>
+				<!-- @structr:grant(admin,arwd) -->
+				<h6 class="collapse-header"><!-- @structr:grant(admin,arwd), @structr:content(text/plain) -->Data Lists:</h6><!-- @structr:grant(admin,arwd) --><a class="collapse-item ${is(eq(page.name, 'genes'), 'active')}" href="/genes"><!-- @structr:grant(admin,arwd) --><i class="fas fa-fw fa-dna"></i><!-- @structr:grant(admin,arwd) --><span><!-- @structr:grant(admin,arwd), @structr:content(text/plain) --> Genes</span></a><!-- @structr:grant(admin,arwd) --><a class="collapse-item ${is(eq(page.name, 'papers'), 'active')}" href="/papers"><!-- @structr:grant(admin,arwd) --><i class="fas fa-fw fa-book"></i><!-- @structr:grant(admin,arwd) --><span><!-- @structr:grant(admin,arwd), @structr:content(text/plain) --> Papers</span></a><!-- @structr:grant(admin,arwd) --><a class="collapse-item ${is(eq(page.name, 'patents'), 'active')}" href="/patents"><!-- @structr:grant(admin,arwd) --><i class="fas fa-fw fa-scroll"></i><!-- @structr:grant(admin,arwd) --><span><!-- @structr:grant(admin,arwd), @structr:content(text/plain) --> Patents</span></a><!-- @structr:grant(admin,arwd) --><a class="collapse-item ${is(eq(page.name, 'authors'), 'active')}" href="/authors"><!-- @structr:grant(admin,arwd) --><i class="fas fa-fw fa-user-tie"></i><!-- @structr:grant(admin,arwd) --><span><!-- @structr:grant(admin,arwd), @structr:content(text/plain) --> Authors</span></a><!-- @structr:grant(admin,arwd) --><a class="collapse-item ${is(eq(page.name, 'proteins'), 'active')}" href="/proteins"><!-- @structr:grant(admin,arwd) --><i class="fas fa-fw fa-atom"></i><!-- @structr:grant(admin,arwd) --><span><!-- @structr:grant(admin,arwd), @structr:content(text/plain) --> Proteins</span></a><!-- @structr:grant(admin,arwd) --><a class="collapse-item ${is(eq(page.name, 'tissues'), 'active')}" href="/tissues"><!-- @structr:grant(admin,arwd) --><i class="fas fa-fw fa-box-tissue"></i><!-- @structr:grant(admin,arwd) --><span><!-- @structr:grant(admin,arwd), @structr:content(text/plain) --> Tissues</span></a>
 			</div>
 		</div>
-	</li><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!-- Nav Item - Utilities Collapse Menu -->
-	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-	<li class="nav-item "><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="nav-link collapsed" href="#" aria-controls="collapseUtilities" aria-expanded="true" data-target="#collapseUtilities" data-toggle="collapse"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-fw fa-table"></i><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) --> Authors</span></a>
-		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+	</li><!-- @structr:grant(admin,arwd), @structr:content(text/html) --><!-- Nav Item - Utilities Collapse Menu -->
+	<!-- @structr:grant(admin,arwd) -->
+	<li class="nav-item "><!-- @structr:grant(admin,arwd) --><a class="nav-link collapsed" href="#" aria-controls="collapseUtilities" aria-expanded="true" data-target="#collapseUtilities" data-toggle="collapse"><!-- @structr:grant(admin,arwd) --><i class="fas fa-fw fa-table"></i><!-- @structr:grant(admin,arwd) --><span><!-- @structr:grant(admin,arwd), @structr:content(text/plain) --> Authors</span></a>
+		<!-- @structr:grant(admin,arwd) -->
 		<div class="collapsableMenuItem collapse " id="collapseUtilities" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-			<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+			<!-- @structr:grant(admin,arwd) -->
 			<div class="bg-white py-2 collapse-inner rounded">
-				<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-				<h6 class="collapse-header"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Inventory Tables</h6><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="collapse-item " href="/lab-inventory"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-fw fa-flask"></i><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) --> Lab Inventory</span></a><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="collapse-item " href="/network-inventory"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-fw fa-satellite-dish"></i><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) --> Network Inventory</span></a>
+				<!-- @structr:grant(admin,arwd) -->
+				<h6 class="collapse-header"><!-- @structr:grant(admin,arwd), @structr:content(text/plain) -->Inventory Tables</h6><!-- @structr:grant(admin,arwd) --><a class="collapse-item " href="/lab-inventory"><!-- @structr:grant(admin,arwd) --><i class="fas fa-fw fa-flask"></i><!-- @structr:grant(admin,arwd) --><span><!-- @structr:grant(admin,arwd), @structr:content(text/plain) --> Lab Inventory</span></a><!-- @structr:grant(admin,arwd) --><a class="collapse-item " href="/network-inventory"><!-- @structr:grant(admin,arwd) --><i class="fas fa-fw fa-satellite-dish"></i><!-- @structr:grant(admin,arwd) --><span><!-- @structr:grant(admin,arwd), @structr:content(text/plain) --> Network Inventory</span></a>
 			</div>
 		</div>
-	</li><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!-- Divider -->
-	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+	</li><!-- @structr:grant(admin,arwd), @structr:content(text/html) --><!-- Divider -->
+	<!-- @structr:grant(admin,arwd) -->
 	<hr class="sidebar-divider">
-	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-	<div class="sidebar-heading"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Data</div>
-	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-	<li class="nav-item "><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><a class="nav-link" href="/files"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><i class="fas fa-fw fa-file"></i><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) --><span><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/plain) -->Files</span></a></li>
-	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
-	<hr class="sidebar-divider d-none d-md-block"><!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd), @structr:content(text/html) --><!-- Sidebar Toggler (Sidebar) -->
-	<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
+	<div class="sidebar-heading"><!-- @structr:content(text/plain) -->Data</div>
+	<li class="nav-item "><a class="nav-link" href="/files"><i class="fas fa-fw fa-file"></i><span><!-- @structr:content(text/plain) -->Files</span></a></li>
+	<hr class="sidebar-divider d-none d-md-block"><!-- @structr:content(text/html) --><!-- Sidebar Toggler (Sidebar) -->
 	<div class="text-center d-none d-md-inline">
-		<!-- @structr:owner(Jakob), @structr:grant(Jakob,arwd) -->
 		<button class="rounded-circle border-0" id="sidebarToggle"></button>
 	</div>
 </ul>
